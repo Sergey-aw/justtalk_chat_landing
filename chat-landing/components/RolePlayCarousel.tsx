@@ -152,7 +152,7 @@ function ScrollingRow({ rolePlays, direction = 'left', offset = 0 }: ScrollingRo
 
 export function RolePlayCarousel() {
   return (
-    <div className="flex flex-col gap-3 w-full overflow-hidden max-w-full">
+    <div className="flex flex-col gap-2 w-full overflow-hidden max-w-full">
       <ScrollingRow rolePlays={row1RolePlays} direction="left" offset={0} />
       <ScrollingRow rolePlays={row2RolePlays} direction="left" offset={-60} />
       <ScrollingRow rolePlays={row3RolePlays} direction="left" offset={-120} />

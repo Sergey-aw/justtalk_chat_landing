@@ -65,8 +65,8 @@ export function DialogueAnimation() {
   };
 
   return (
-    <div className="relative w-full h-full bg-[#F5F5F7] rounded-2xl p-4 md:p-6 overflow-hidden">
-      <div className="flex flex-col gap-3 md:gap-4">
+    <div className="relative w-full h-full bg-[#F5F5F7] rounded-2xl overflow-hidden">
+      <div className="flex flex-col gap-3 md:gap-4 p-3 md:p-6 overflow-y-auto h-full">
         <AnimatePresence>
           {messages.map((message, index) => {
             if (!visibleMessages.includes(index)) return null;
