@@ -4,6 +4,7 @@ import { PersonalityCarousel } from '@/components/PersonalityCarousel';
 import { HeroCarousel } from '@/components/HeroCarousel';
 import { DialogueAnimation } from '@/components/DialogueAnimation';
 import { RolePlayCarousel } from '@/components/RolePlayCarousel';
+import { PricingSection } from '@/components/PricingSection';
 
 export default function Home() {
   return (
@@ -73,14 +74,18 @@ export default function Home() {
             {/* CTA Buttons - Centered Below */}
             <div className="pt-8 flex justify-center">
               <div className="flex flex-col sm:flex-row gap-[17px] items-center">
-                <Button className="cursor-pointer">
-                  Start now
-                  <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
-                </Button>
-                <Button variant="outline" className="cursor-pointer">
-                  Learn about JustTalk AI platform
-                  <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
-                </Button>
+                <a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" target="_blank" rel="noopener">
+                  <Button className="cursor-pointer">
+                    Start now
+                    <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
+                  </Button>
+                </a>
+                <a href="https://justtalk.ai" target="_blank" rel="noopener">
+                  <Button variant="outline" className="cursor-pointer">
+                    Learn about JustTalk AI platform
+                    <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -90,7 +95,7 @@ export default function Home() {
         <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
           <div className="text-center mb-16">
             <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray">
-              Seamless experience with the JustTalk platform<br />for one-on-one learning
+              Seamless experience with JustTalk platform<br />for one-on-one learning
             </h2>
           </div>
           
@@ -179,97 +184,7 @@ export default function Home() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="w-full max-w-[1186px] px-10 py-16 md:py-24">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-[27.9px] font-medium leading-[38.31px] tracking-[-0.29px] text-just_cod-gray mb-8">
-              Start improving your English today
-            </h2>
-            <Button variant="outline" className="mx-auto cursor-pointer">
-              View pricing plans
-              <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
-            </Button>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {/* Free Plan */}
-            <div className="border border-just_cod-gray-10 rounded p-6 flex flex-col justify-between">
-              <div>
-                <div className="mb-6">
-                  <h3 className="text-xl font-medium leading-[27.11px] tracking-[-0.217px] text-just_cod-gray mb-2">
-                    Free
-                  </h3>
-                  <p className="text-base font-normal leading-7 tracking-[-0.17px] text-just_cod-gray">
-                    Intelligence for everyday tasks
-                  </p>
-                </div>
-
-                <ul className="space-y-2 mb-6">
-                  {['Advanced reasoning with GPT-5', 'Limited messages and uploads', 'Limited and slower image generation', 'Limited deep research', 'Limited memory and context'].map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-[13.3px] font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
-                      <Image src="/icons/check.svg" alt="" width={16} height={16} />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-
-                <p className="text-[13.3px] font-normal italic leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-6">
-                  Have an existing plan? See <span className="underline">billing help</span>
-                </p>
-              </div>
-
-              <div>
-                <div className="flex items-end gap-2 mb-6">
-                  <span className="text-[21.4px] font-medium leading-[27.11px] tracking-[-0.217px] text-just_cod-gray">$0</span>
-                  <span className="text-[13.9px] font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">/ month</span>
-                </div>
-                <Button className="w-full cursor-pointer">
-                  Get Free
-                  <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
-                </Button>
-              </div>
-            </div>
-
-            {/* Plus Plan */}
-            <div className="border border-just_cod-gray-10 rounded p-6 flex flex-col justify-between">
-              <div>
-                <div className="mb-6">
-                  <h3 className="text-xl font-medium leading-[27.11px] tracking-[-0.217px] text-just_cod-gray mb-2">
-                    Plus
-                  </h3>
-                  <p className="text-base font-normal leading-7 tracking-[-0.17px] text-just_cod-gray">
-                    More access to advanced intelligence
-                  </p>
-                </div>
-
-                <ul className="space-y-2 mb-6">
-                  {['Advanced reasoning with GPT-5', 'Expanded messaging and uploads', 'Expanded and faster image creation', 'Expanded deep research and agent mode', 'Expanded memory and context', 'Projects, tasks and custom GPTs', 'Limited access to Sora 1 video generation', 'Codex agent'].map((feature) => (
-                    <li key={feature} className="flex items-center gap-2 text-[13.3px] font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
-                      <Image src="/icons/check.svg" alt="" width={16} height={16} />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <div className="flex items-end gap-2 mb-6">
-                  <span className="text-[20.9px] font-medium leading-[27.11px] tracking-[-0.217px] text-just_cod-gray">$20</span>
-                  <span className="text-[13.9px] font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">/ month</span>
-                </div>
-                <div className="flex gap-3">
-                  <Button className="flex-1 cursor-pointer">
-                    Get Plus
-                    <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
-                  </Button>
-                  <Button variant="outline" className="whitespace-nowrap cursor-pointer">
-                    Limits apply
-                    <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <PricingSection />
 
         {/* CTA Overlay Section */}
         <section className="w-full max-w-[1186px] px-10 py-16">
@@ -303,9 +218,9 @@ export default function Home() {
             {/* Column 2 */}
             <div>
               <ul className="space-y-3">
-                <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Platform</a></li>
-                <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Voice Chat</a></li>
-                <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Help</a></li>
+                <li><a href="https://justtalk.ai/welcome?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Platform</a></li>
+                <li><a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Voice Chat</a></li>
+                <li><a href="https://docs.justtalk.ai/welcome?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Help</a></li>
               </ul>
             </div>
 
