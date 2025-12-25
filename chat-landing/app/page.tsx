@@ -1,5 +1,9 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";import { PersonalityCarousel } from '@/components/PersonalityCarousel';
+import { Button } from "@/components/ui/button";
+import { PersonalityCarousel } from '@/components/PersonalityCarousel';
+import { HeroCarousel } from '@/components/HeroCarousel';
+import { DialogueAnimation } from '@/components/DialogueAnimation';
+
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-just_white">
@@ -39,13 +43,13 @@ export default function Home() {
       {/* Main Content */}
       <main className="flex flex-col items-center w-full">
         {/* Hero Section */}
-        <section className="w-full max-w-[1320px] px-10 pt-20 md:pt-32 pb-8">
+        <section className="w-full max-w-[1320px] px-10 pt-12 md:pt-32 pb-8">
           <div className="flex flex-col gap-8">
             {/* Top Row: Text and Image */}
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               {/* Hero Text */}
-              <div className="flex flex-col">
-                <h1 className="text-5xl md:text-[64px] font-semibold leading-tight md:leading-[59.29px] tracking-[-1.763px] text-just_cod-gray mb-0">
+              <div className="flex flex-col md:items-start items-center text-center md:text-left">
+                <h1 className="text-5xl md:text-[64px] font-semibold md:leading-[59.29px] tracking-[-1.763px] text-just_cod-gray mb-0">
                   Get better at speaking<br />by speaking
                 </h1>
                 <div className="pt-8">
@@ -56,10 +60,8 @@ export default function Home() {
               </div>
 
               {/* Hero Image */}
-              <div className="relative w-full md:w-[419px] h-[300px] md:h-[503px] rounded-2xl bg-gradient-to-br from-purple-400 via-blue-400 to-pink-400 shrink-0">
-                <div className="absolute inset-0 flex items-center justify-center text-just_white/50 text-sm">
-                  Hero Image Placeholder
-                </div>
+              <div className="relative w-full md:w-[419px] h-[325px] md:h-[450px] shrink-0">
+                <HeroCarousel />
               </div>
             </div>
             
@@ -82,7 +84,7 @@ export default function Home() {
         {/* Platform Section */}
         <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
           <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-[27.8px] font-medium leading-[38.31px] tracking-[-0.29px] text-just_cod-gray">
+            <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray">
               Seamless experience with the JustTalk platform<br />for one-on-one learning
             </h2>
           </div>
@@ -118,8 +120,8 @@ export default function Home() {
                 <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
               </a>
             </div>
-            <div className="relative w-full aspect-square rounded-2xl bg-gradient-to-br from-blue-200 to-purple-200 flex items-center justify-center">
-              <span className="text-just_white/50 text-sm">Feature Image</span>
+            <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
+              <DialogueAnimation />
             </div>
           </div>
 
