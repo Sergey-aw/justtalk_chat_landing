@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { PersonalityCarousel } from '@/components/PersonalityCarousel';
 import { HeroCarousel } from '@/components/HeroCarousel';
 import { DialogueAnimation } from '@/components/DialogueAnimation';
+import { RolePlayCarousel } from '@/components/RolePlayCarousel';
 
 export default function Home() {
   return (
@@ -30,12 +31,16 @@ export default function Home() {
 
           {/* CTA Buttons */}
           <div className="flex items-center gap-2">
-            <Button className="cursor-pointer">
-              Log in
-            </Button>
-            <Button variant="outline" className="cursor-pointer">
-              Sign up
-            </Button>
+            <a href="https://chat.justtalk.ai/signin?ref=justtalk.ai" target="_blank" rel="noopener">
+              <Button className="cursor-pointer">
+                Log in
+              </Button>
+            </a>
+            <a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" target="_blank" rel="noopener">
+              <Button variant="outline" className="cursor-pointer">
+                Sign up
+              </Button>
+            </a>
           </div>
         </div>
       </header>
@@ -109,16 +114,13 @@ export default function Home() {
           {/* Feature 1 - Search the web */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
-              <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                Search the web
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                They remember you
               </h3>
-              <p className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
-                Click the web search icon to get fast, timely<br />answers with links to relevant web sources.
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                Our AI personalities remember previous conversations, allowing you to pick up right where you left off.
               </p>
-              <a href="#" className="inline-flex items-center gap-1 text-[13.7px] font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">
-                Learn more
-                <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
-              </a>
+             
             </div>
             <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
               <DialogueAnimation />
@@ -128,16 +130,13 @@ export default function Home() {
           {/* Feature 2 - Tutors Carousel */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
-              <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                Collaborate on writing and code
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                Talk with different personalities
               </h3>
-              <p className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
-                With canvas, you can work with ChatGPT on<br />projects that require editing and revisions.
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+               Some are supportive. Some challenge you. All help you practice real conversations
               </p>
-              <a href="#" className="inline-flex items-center gap-1 text-[13.7px] font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">
-                Learn more
-                <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
-              </a>
+              
             </div>
             
             {/* Tutors Carousel */}
@@ -153,46 +152,27 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Feature 3 - Same as Feature 2 but repeated */}
+          {/* Feature 3 - Role Play Scenarios */}
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="px-4 md:px-20">
-              <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                Collaborate on writing and code
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                Practice real-world scenarios
               </h3>
-              <p className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
-                With canvas, you can work with ChatGPT on<br />projects that require editing and revisions.
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                Choose from various role-play scenarios to<br />practice conversations in different contexts.
               </p>
-              <a href="#" className="inline-flex items-center gap-1 text-[13.7px] font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">
-                Learn more
-                <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
-              </a>
+              
             </div>
             
-            {/* Tutors Card Grid */}
-            <div className="relative w-full aspect-square rounded-2xl bg-gradient-to-br from-purple-200 to-pink-200 p-6 flex flex-col gap-4 justify-center">
-              <div className="flex gap-4 justify-center">
-                {[1, 2].map((i) => (
-                  <div key={`b-${i}`} className="bg-just_white border border-[#f3f3f3] rounded-[32px] p-2 shadow-md w-[200px]">
-                    <div className="relative h-[200px] rounded-[28px] bg-gradient-to-br from-pink-300 to-orange-200 flex items-center justify-center">
-                      <div className="absolute bottom-2 left-2 right-2 bg-just_white rounded-2xl px-3 py-1.5">
-                        <p className="font-semibold text-xs text-just_black">Samantha</p>
-                        <p className="font-normal text-[10px] text-just_black/75">Supportive · Encouraging</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="flex gap-4 justify-end pr-4">
-                {[1, 2].map((i) => (
-                  <div key={`c-${i}`} className="bg-just_white border border-[#f3f3f3] rounded-[32px] p-2 shadow-md w-[200px]">
-                    <div className="relative h-[200px] rounded-[28px] bg-gradient-to-br from-pink-300 to-orange-200 flex items-center justify-center">
-                      <div className="absolute bottom-2 left-2 right-2 bg-just_white rounded-2xl px-3 py-1.5">
-                        <p className="font-semibold text-xs text-just_black">Samantha</p>
-                        <p className="font-normal text-[10px] text-just_black/75">Supportive · Encouraging</p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+            {/* Role Play Carousel */}
+            <div className="relative w-full aspect-square rounded-2xl overflow-hidden">
+              <img 
+                src="/bg_colored_square.jpg" 
+                alt="" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="relative z-10 w-full h-full flex items-center p-0">
+                <RolePlayCarousel />
               </div>
             </div>
           </div>
@@ -299,11 +279,11 @@ export default function Home() {
             </h2>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button className="cursor-pointer">
-                Try ChatGPT
+                Try JustTalk AI
                 <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
               </Button>
               <Button variant="outline" className="cursor-pointer">
-                Try it on WhatsApp
+                Book a demo
                 <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
               </Button>
             </div>
@@ -312,7 +292,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full border-t border-just_cod-gray-5">
+      <footer className="w-full">
         <div className="mx-auto max-w-[1536px] px-8 py-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {/* Logo */}
@@ -323,9 +303,9 @@ export default function Home() {
             {/* Column 2 */}
             <div>
               <ul className="space-y-3">
-                <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">API</a></li>
-                <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Sora</a></li>
-                <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">News</a></li>
+                <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Platform</a></li>
+                <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Voice Chat</a></li>
+                <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Help</a></li>
               </ul>
             </div>
 
@@ -339,13 +319,13 @@ export default function Home() {
           </div>
 
           {/* Big Brand Text */}
-          <div className="overflow-hidden mb-12">
+          {/* <div className="overflow-hidden mb-12">
             <a href="#" className="block">
               <div className="font-bold text-just_cod-gray hover:opacity-80 transition-opacity text-[clamp(6rem,20vw,20rem)] leading-none tracking-[-0.02em]">
                 JustTalk
               </div>
             </a>
-          </div>
+          </div> */}
 
           {/* Bottom Bar */}
           <div className="border-t border-just_cod-gray-5 pt-4 flex flex-col md:flex-row items-center justify-between gap-4">
