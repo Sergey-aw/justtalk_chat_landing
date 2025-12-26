@@ -20,8 +20,7 @@ const slides: Slide[] = [
   {
     title: 'Try JustTalk Now',
     description: [
-      'Speak freely, without scripts or exercises.',
-      'Start a voice conversation instantly—no signup required.'
+     'Start a voice conversation instantly—no signup required.'
     ]
   },
   {
@@ -87,7 +86,7 @@ export function HeroCarousel() {
                     <div className="flex-1 flex items-center justify-center">
                       {index === 0 ? (
                         /* Voice Conversation Demo for first slide */
-                        <div className="w-full">
+                        <div className="w-full pb-4">
                           <Conversation variant="hero" />
                         </div>
                       ) : (
