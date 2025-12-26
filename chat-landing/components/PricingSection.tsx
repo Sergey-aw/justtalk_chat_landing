@@ -128,10 +128,12 @@ export function PricingSection() {
                 / {billingCycle === 'monthly' ? 'month' : 'year'}
               </span>
             </div>
-            <Button className="w-full cursor-pointer">
-              Get Basic
-              <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
-            </Button>
+            <a href="https://chat.justtalk.ai/?plan=basic&ref=justtalk.ai" target="_blank" rel="noopener">
+              <Button className="w-full cursor-pointer">
+                Get Basic
+                <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
+              </Button>
+            </a>
           </div>
         </div>
 
@@ -222,21 +224,23 @@ export function PricingSection() {
                 </span>
               )}
             </div>
-            <Button 
-              className="w-full cursor-pointer relative overflow-hidden group"
-              style={{
-                transition: 'all 0.3s ease'
-              }}
-            >
-              <span 
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            <a href="https://chat.justtalk.ai/?plan=premium&ref=justtalk.ai" target="_blank" rel="noopener">
+              <Button 
+                className="w-full cursor-pointer relative overflow-hidden group"
                 style={{
-                  background: 'linear-gradient(20deg, #118DEC 0%, rgba(247, 87, 170, 0.80) 100%)'
+                  transition: 'all 0.3s ease'
                 }}
-              />
-              <span className="relative z-10">Get Premium</span>
-              <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert relative z-10" />
-            </Button>
+              >
+                <span 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  style={{
+                    background: 'linear-gradient(20deg, #118DEC 0%, rgba(247, 87, 170, 0.80) 100%)'
+                  }}
+                />
+                <span className="relative z-10">Get Premium</span>
+                <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert relative z-10" />
+              </Button>
+            </a>
           </div>
         </div>
       </div>
