@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, animate } from 'framer-motion';
 import { RotateCcw } from 'lucide-react';
 
 interface Message {
@@ -44,6 +44,7 @@ export function DialogueAnimation() {
   const [isInView, setIsInView] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   const startAnimation = useCallback(async () => {
     setVisibleMessages([]);
@@ -82,6 +83,27 @@ export function DialogueAnimation() {
     return () => obs.disconnect();
   }, [containerRef, hasStarted, startAnimation]);
 
+  // Auto-scroll to bottom with spring animation when new messages appear
+  useEffect(() => {
+    if (!scrollContainerRef.current) return;
+    
+    const scrollElement = scrollContainerRef.current;
+    const targetScroll = scrollElement.scrollHeight - scrollElement.clientHeight;
+    
+    // Animate scroll with spring physics
+    const controls = animate(scrollElement.scrollTop, targetScroll, {
+      type: "spring",
+      stiffness: 300,
+      damping: 30,
+      mass: 0.8,
+      onUpdate: (value) => {
+        scrollElement.scrollTop = value;
+      }
+    });
+
+    return () => controls.stop();
+  }, [visibleMessages]);
+
   const handleReplay = () => {
     if (!isAnimating && isInView) {
       startAnimation();
@@ -91,7 +113,7 @@ export function DialogueAnimation() {
 
   return (
     <div ref={containerRef} className="relative w-full h-full bg-[#F5F5F7] rounded-2xl overflow-hidden">
-      <div className="flex flex-col gap-3 md:gap-4 p-3 md:p-6 overflow-y-auto h-full">
+      <div ref={scrollContainerRef} className="flex flex-col gap-3 md:gap-4 p-3 md:p-6 overflow-y-auto h-full">
         <AnimatePresence>
           {messages.map((message, index) => {
             if (!visibleMessages.includes(index)) return null;
