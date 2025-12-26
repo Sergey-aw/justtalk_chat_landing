@@ -113,7 +113,7 @@ export function DialogueAnimation() {
 
   return (
     <div ref={containerRef} className="relative w-full h-full bg-[#F5F5F7] rounded-2xl overflow-hidden">
-      <div ref={scrollContainerRef} className="flex flex-col gap-3 md:gap-4 p-3 md:p-6 overflow-y-auto h-full">
+      <div ref={scrollContainerRef} className="flex flex-col gap-3 md:gap-4 p-3 md:p-6 overflow-y-auto h-full scrollbar-hide">
         <AnimatePresence>
           {messages.map((message, index) => {
             if (!visibleMessages.includes(index)) return null;
@@ -131,8 +131,14 @@ export function DialogueAnimation() {
               >
                 {/* Avatar */}
                 <div className="shrink-0">
-                  <div className="w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden bg-gradient-to-br from-blue-400 to-blue-600">
-                    {/* Placeholder for avatar image */}
+                  <div className={`w-8 h-8 md:w-10 md:h-10 rounded-full overflow-hidden ${message.isUser ? 'bg-gradient-to-br from-blue-400 to-blue-600' : ''}`}>
+                    {!message.isUser && (
+                      <img 
+                        src={message.avatar} 
+                        alt="" 
+                        className="w-full h-full object-cover"
+                      />
+                    )}
                   </div>
                 </div>
 
