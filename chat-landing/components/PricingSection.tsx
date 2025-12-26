@@ -144,7 +144,16 @@ export function PricingSection() {
           />
           <div className="relative z-10">
             <div className="mb-6">
-              <h3 className="text-xl font-medium leading-[27.11px] tracking-[-0.217px] text-just_cod-gray mb-2">
+              <h3 
+                className="text-xl font-medium leading-[27.11px] tracking-[-0.217px] mb-2"
+                style={{
+                  display: 'inline-block',
+                  background: 'linear-gradient(90deg, #118DEC 0%, rgba(247, 87, 170, 0.80) 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
                 Premium
               </h3>
               <p className="text-base font-normal leading-7 tracking-[-0.17px] text-just_cod-gray">
@@ -213,9 +222,20 @@ export function PricingSection() {
                 </span>
               )}
             </div>
-            <Button className="w-full cursor-pointer">
-              Get Premium
-              <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
+            <Button 
+              className="w-full cursor-pointer relative overflow-hidden group"
+              style={{
+                transition: 'all 0.3s ease'
+              }}
+            >
+              <span 
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                style={{
+                  background: 'linear-gradient(20deg, #118DEC 0%, rgba(247, 87, 170, 0.80) 100%)'
+                }}
+              />
+              <span className="relative z-10">Get Premium</span>
+              <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert relative z-10" />
             </Button>
           </div>
         </div>
