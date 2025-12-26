@@ -9,6 +9,7 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from '@/components/ui/carousel';
+import { Conversation } from '@/components/Conversation';
 
 interface Slide {
   title: string;
@@ -17,10 +18,10 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    title: 'Natural voice conversations',
+    title: 'Try JustTalk Now',
     description: [
       'Speak freely, without scripts or exercises.',
-      'Pause, restart, make mistakes — I\'ll help you keep going and sound more natural.'
+      'Start a voice conversation instantly—no signup required.'
     ]
   },
   {
@@ -84,13 +85,20 @@ export function HeroCarousel() {
                   <div className="relative z-10 flex flex-col h-full px-4 pt-4 pb-3 md:p-8">
                     {/* Icon Section - Top */}
                     <div className="flex-1 flex items-center justify-center">
-                      <div className="w-10 h-10 md:w-14 md:h-14 text-white">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
-                          <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-                          <line x1="12" x2="12" y1="19" y2="22"/>
-                        </svg>
-                      </div>
+                      {index === 0 ? (
+                        /* Voice Conversation Demo for first slide */
+                        <div className="w-full">
+                          <Conversation variant="hero" />
+                        </div>
+                      ) : (
+                        <div className="w-10 h-10 md:w-14 md:h-14 text-white">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                            <line x1="12" x2="12" y1="19" y2="22"/>
+                          </svg>
+                        </div>
+                      )}
                     </div>
 
                     {/* Text Section - Bottom */}

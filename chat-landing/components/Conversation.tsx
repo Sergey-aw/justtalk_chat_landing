@@ -5,7 +5,11 @@ import { useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Mic, MicOff, Phone } from 'lucide-react';
 
-export function Conversation() {
+interface ConversationProps {
+  variant?: 'default' | 'hero';
+}
+
+export function Conversation({ variant = 'default' }: ConversationProps) {
   const conversation = useConversation({
     onConnect: () => console.log('Connected'),
     onDisconnect: () => console.log('Disconnected'),
@@ -49,6 +53,7 @@ export function Conversation() {
   }, [conversation]);
 
   const isConnected = conversation.status === 'connected';
+  const isHeroVariant = variant === 'hero';
 
   return (
     <div className="flex flex-col items-center gap-6">
@@ -59,20 +64,24 @@ export function Conversation() {
             ? conversation.isSpeaking 
               ? 'bg-blue-500 animate-pulse' 
               : 'bg-green-500'
-            : 'bg-just_black-5'
+            : isHeroVariant ? 'bg-white/20' : 'bg-just_black-5'
         } transition-all duration-300`}>
           {isConnected ? (
             <Mic className="w-8 h-8 text-white" />
           ) : (
-            <MicOff className="w-8 h-8 text-just_cod-gray/50" />
+            <MicOff className={`w-8 h-8 ${isHeroVariant ? 'text-white' : 'text-just_cod-gray/50'}`} />
           )}
         </div>
         <div className="text-center">
-          <p className="text-sm font-medium text-just_cod-gray capitalize">
+          <p className={`text-sm font-medium capitalize ${
+            isHeroVariant ? 'text-white' : 'text-just_cod-gray'
+          }`}>
             {conversation.status}
           </p>
           {isConnected && (
-            <p className="text-xs text-just_cod-gray/75">
+            <p className={`text-xs ${
+              isHeroVariant ? 'text-white/75' : 'text-just_cod-gray/75'
+            }`}>
               {conversation.isSpeaking ? 'Agent is speaking' : 'Listening...'}
             </p>
           )}
@@ -85,7 +94,10 @@ export function Conversation() {
           <Button
             onClick={startConversation}
             size="lg"
-            className="cursor-pointer min-w-[180px]"
+            variant={isHeroVariant ? 'default' : 'default'}
+            className={`cursor-pointer min-w-[180px] ${
+              isHeroVariant ? 'bg-white text-just_cod-gray hover:bg-white/90' : ''
+            }`}
           >
             <Phone className="w-4 h-4" />
             Start Talking
@@ -95,7 +107,11 @@ export function Conversation() {
             onClick={stopConversation}
             variant="outline"
             size="lg"
-            className="cursor-pointer min-w-[180px] border-red-500 text-red-500 hover:bg-red-50"
+            className={`cursor-pointer min-w-[180px] ${
+              isHeroVariant 
+                ? 'bg-white text-just_cod-gray hover:bg-white/90 border-0'
+                : 'border-red-500 text-red-500 hover:bg-red-50'
+            }`}
           >
             <Phone className="w-4 h-4" />
             End Conversation
@@ -104,7 +120,7 @@ export function Conversation() {
       </div>
 
       {/* Info Text */}
-      {!isConnected && (
+      {!isConnected && !isHeroVariant && (
         <p className="text-xs text-just_cod-gray/60 text-center max-w-sm">
           Click to start a voice conversation. You'll be asked for microphone permission.
         </p>
