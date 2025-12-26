@@ -62,7 +62,7 @@ function RolePlayCard({ rolePlay }: RolePlayCardProps) {
   
   return (
     <div className="bg-white border border-gray-100 rounded-3xl p-2 shadow-md flex-shrink-0 flex items-center gap-2.5">
-      <div className={`${rolePlay.color} rounded-[18px] w-[50px] h-[50px] flex items-center justify-center flex-shrink-0`}>
+      <div className={`${rolePlay.color} rounded-[18px] w-[40px] h-[40px] md:h-[50px] md:w-[50px] flex items-center justify-center flex-shrink-0`}>
         <Icon className="w-6 h-6 text-gray-700" strokeWidth={2} />
       </div>
       <div className="pr-3">
@@ -152,7 +152,7 @@ function ScrollingRow({ rolePlays, direction = 'left', offset = 0 }: ScrollingRo
 
 export function RolePlayCarousel() {
   return (
-    <div className="flex flex-col gap-2 w-full overflow-hidden max-w-full">
+    <div className="flex flex-col gap-1 md:gap-2 w-full overflow-hidden max-w-full">
       <ScrollingRow rolePlays={row1RolePlays} direction="left" offset={0} />
       <ScrollingRow rolePlays={row2RolePlays} direction="left" offset={-60} />
       <ScrollingRow rolePlays={row3RolePlays} direction="left" offset={-120} />

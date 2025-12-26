@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { RotateCcw } from 'lucide-react';
 
@@ -41,31 +41,56 @@ const messages: Message[] = [
 export function DialogueAnimation() {
   const [visibleMessages, setVisibleMessages] = useState<number[]>([]);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
-  const startAnimation = async () => {
+  const startAnimation = useCallback(async () => {
     setVisibleMessages([]);
     setIsAnimating(true);
-    
+
     for (let i = 0; i < messages.length; i++) {
       await new Promise(resolve => setTimeout(resolve, i === 0 ? 500 : 2000));
       setVisibleMessages(prev => [...prev, i]);
     }
-    
-    setIsAnimating(false);
-  };
 
-  useEffect(() => {
-    startAnimation();
+    setIsAnimating(false);
   }, []);
 
+  useEffect(() => {
+    if (!containerRef.current) return;
+
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setIsInView(true);
+            if (!hasStarted) {
+              startAnimation();
+              setHasStarted(true);
+            }
+          } else {
+            setIsInView(false);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    obs.observe(containerRef.current);
+
+    return () => obs.disconnect();
+  }, [containerRef, hasStarted, startAnimation]);
+
   const handleReplay = () => {
-    if (!isAnimating) {
+    if (!isAnimating && isInView) {
       startAnimation();
+      setHasStarted(true);
     }
   };
 
   return (
-    <div className="relative w-full h-full bg-[#F5F5F7] rounded-2xl overflow-hidden">
+    <div ref={containerRef} className="relative w-full h-full bg-[#F5F5F7] rounded-2xl overflow-hidden">
       <div className="flex flex-col gap-3 md:gap-4 p-3 md:p-6 overflow-y-auto h-full">
         <AnimatePresence>
           {messages.map((message, index) => {
