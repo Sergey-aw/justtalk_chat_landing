@@ -280,7 +280,8 @@ export default function Home() {
               <ul className="space-y-3">
                 <li><a href="https://justtalk.ai/welcome?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Platform</a></li>
                 <li><a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Voice Chat</a></li>
-                <li><a href="https://docs.justtalk.ai/welcome?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Help</a></li>
+                <li><a href="https://docs.justtalk.ai/?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Help</a></li>
+                <li><a href="https://status.justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline inline-flex items-center gap-1.5">Status<span className="w-1 h-1 bg-green-500 rounded-full"></span></a></li>
               </ul>
             </div>
 
