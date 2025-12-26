@@ -116,23 +116,7 @@ export default function Home() {
             </h2>
           </div>
 
-          {/* Feature 1 - Search the web */}
-          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
-            <div className="px-4 md:px-20">
-              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                They remember you
-              </h3>
-              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
-                Our AI personalities remember previous conversations, allowing you to pick up right where you left off.
-              </p>
-             
-            </div>
-            <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
-              <DialogueAnimation />
-            </div>
-          </div>
-
-          {/* Feature 2 - Tutors Carousel */}
+          {/* Feature 1 - Tutors Carousel */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
@@ -154,6 +138,22 @@ export default function Home() {
               <div className="relative z-10 w-full h-full flex items-center p-0 md:p-0">
                 <PersonalityCarousel />
               </div>
+            </div>
+          </div>
+
+          {/* Feature 2 - Memory */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                They remember you
+              </h3>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                Our AI personalities remember previous conversations, allowing you to pick up right where you left off.
+              </p>
+             
+            </div>
+            <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
+              <DialogueAnimation />
             </div>
           </div>
 
@@ -203,6 +203,28 @@ export default function Home() {
               />
             </div>
           </div>
+
+          {/* Feature 5 - Pronunciation Practice */}
+          {/* <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                Perfect your pronunciation
+              </h3>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                Get instant feedback on your pronunciation and improve your accent with targeted practice.
+              </p>
+              
+            </div> */}
+            
+            {/* Pronunciation Image */}
+            {/* <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
+              <img 
+                src="/pronouncation.jpg" 
+                alt="Pronunciation practice" 
+                className="w-full h-full object-cover object-top"
+              />
+            </div> 
+           </div> */}
         </section>
 
         {/* Pricing Section */}

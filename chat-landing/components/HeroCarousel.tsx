@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -43,6 +43,18 @@ export function HeroCarousel() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
+  useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCurrent(api.selectedScrollSnap());
+
+    api.on('select', () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
   return (
     <div className="relative w-full h-full flex flex-col gap-3">
       <div className="flex-1 min-h-0 -mx-10 md:mx-0" style={{ height: '100%' }}>
@@ -51,11 +63,6 @@ export function HeroCarousel() {
           opts={{
             loop: true,
             align: 'center',
-          }}
-          onSelect={() => {
-            if (api) {
-              setCurrent(api.selectedScrollSnap());
-            }
           }}
           className="w-full h-full"
           style={{ height: '100%' }}

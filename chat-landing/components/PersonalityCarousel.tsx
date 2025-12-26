@@ -94,17 +94,19 @@ function ScrollingRow({ personas, direction = 'left', offset = 0 }: ScrollingRow
 
   const handleDragEnd = () => {
     isDragging.current = false;
-    const currentX = x.get();
     
-    // Resume animation from current position
-    controls.start({
-      x: [currentX, currentX + (direction === 'left' ? -totalWidth : totalWidth)],
-      transition: {
-        duration: 40,
-        ease: 'linear',
-        repeat: Infinity,
-      },
-    });
+    // Delay animation restart to allow momentum to complete
+    setTimeout(() => {
+      const currentX = x.get();
+      controls.start({
+        x: [currentX, currentX + (direction === 'left' ? -totalWidth : totalWidth)],
+        transition: {
+          duration: 40,
+          ease: 'linear',
+          repeat: Infinity,
+        },
+      });
+    }, 500);
   };
 
   // Duplicate personas for infinite scroll effect
@@ -117,6 +119,11 @@ function ScrollingRow({ personas, direction = 'left', offset = 0 }: ScrollingRow
         drag="x"
         dragConstraints={{ left: -totalWidth, right: 0 }}
         dragElastic={0.1}
+        dragMomentum={true}
+        dragTransition={{ 
+          power: 0.3,
+          timeConstant: 200
+        }}
         onDragStart={handleDragStart}
         onDragEnd={handleDragEnd}
         animate={controls}

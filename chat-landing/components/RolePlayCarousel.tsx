@@ -114,17 +114,19 @@ function ScrollingRow({ rolePlays, direction = 'left', offset = 0 }: ScrollingRo
 
   const handleDragEnd = () => {
     isDragging.current = false;
-    const currentX = x.get();
     
-    // Resume animation from current position
-    controls.start({
-      x: [currentX, currentX + (direction === 'left' ? -totalWidth : totalWidth)],
-      transition: {
-        duration: 35,
-        ease: 'linear',
-        repeat: Infinity,
-      },
-    });
+    // Delay animation restart to allow momentum to complete
+    setTimeout(() => {
+      const currentX = x.get();
+      controls.start({
+        x: [currentX, currentX + (direction === 'left' ? -totalWidth : totalWidth)],
+        transition: {
+          duration: 35,
+          ease: 'linear',
+          repeat: Infinity,
+        },
+      });
+    }, 500);
   };
 
   // Duplicate rolePlays for infinite scroll effect
@@ -137,6 +139,11 @@ function ScrollingRow({ rolePlays, direction = 'left', offset = 0 }: ScrollingRo
         drag="x"
         dragConstraints={{ left: -totalWidth, right: 0 }}
         dragElastic={0.1}
+        dragMomentum={true}
+        dragTransition={{ 
+          power: 0.3,
+          timeConstant: 200
+        }}
         onDragStart={handleDragStart}
         onDragEnd={handleDragEnd}
         animate={controls}
