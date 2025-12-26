@@ -5,6 +5,7 @@ import { HeroCarousel } from '@/components/HeroCarousel';
 import { DialogueAnimation } from '@/components/DialogueAnimation';
 import { RolePlayCarousel } from '@/components/RolePlayCarousel';
 import { PricingSection } from '@/components/PricingSection';
+import { Conversation } from '@/components/Conversation';
 
 export default function Home() {
   return (
@@ -86,6 +87,21 @@ export default function Home() {
                     <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
                   </Button>
                 </a>
+              </div>
+            </div>
+
+            {/* Voice Conversation Demo */}
+            <div className="pt-12 flex justify-center">
+              <div className="w-full max-w-2xl bg-just_white border border-just_black-5 rounded-2xl p-8">
+                <div className="text-center mb-6">
+                  <h3 className="text-xl md:text-2xl font-semibold tracking-[-0.5px] text-just_cod-gray mb-2">
+                    Try JustTalk Now
+                  </h3>
+                  <p className="text-base text-just_cod-gray/75">
+                    Start a voice conversation instantly—no signup required
+                  </p>
+                </div>
+                <Conversation />
               </div>
             </div>
           </div>
