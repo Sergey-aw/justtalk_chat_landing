@@ -45,10 +45,15 @@ export function PricingSection() {
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
         {/* Basic Plan */}
-        <div className="border border-just_cod-gray-10 rounded-xl p-6 flex flex-col justify-between">
-          <div>
+        <div className="relative border border-just_cod-gray-10 rounded-xl p-6 flex flex-col justify-between overflow-hidden">
+          <img 
+            src="/bg_beige_square.jpg" 
+            alt="" 
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          />
+          <div className="relative z-10">
             <div className="mb-6">
               <h3 className="text-xl font-medium leading-[27.11px] tracking-[-0.217px] text-just_cod-gray mb-2">
                 Basic
@@ -114,8 +119,8 @@ export function PricingSection() {
             </ul>
           </div>
 
-          <div>
-            <div className="flex items-end gap-2 mb-6">
+          <div className="relative z-10">
+            <div className="flex items-baseline gap-2 mb-6 pl-6">
               <span className="text-[21.4px] font-medium leading-[27.11px] tracking-[-0.217px] text-just_cod-gray">
                 ${pricing.basic[billingCycle]}
               </span>
@@ -131,8 +136,13 @@ export function PricingSection() {
         </div>
 
         {/* Premium Plan */}
-        <div className="border border-just_cod-gray-10 rounded-xl p-6 flex flex-col justify-between">
-          <div>
+        <div className="relative border border-just_cod-gray-10 rounded-xl p-6 flex flex-col justify-between overflow-hidden">
+          <img 
+            src="/bg_beige_square.jpg" 
+            alt="" 
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          />
+          <div className="relative z-10">
             <div className="mb-6">
               <h3 className="text-xl font-medium leading-[27.11px] tracking-[-0.217px] text-just_cod-gray mb-2">
                 Premium
@@ -189,8 +199,8 @@ export function PricingSection() {
             </ul>
           </div>
 
-          <div>
-            <div className="flex items-end gap-2 mb-6">
+          <div className="relative z-10">
+            <div className="flex items-baseline gap-2 mb-6 pl-6">
               <span className="text-[21.4px] font-medium leading-[27.11px] tracking-[-0.217px] text-just_cod-gray">
                 ${pricing.premium[billingCycle]}
               </span>
