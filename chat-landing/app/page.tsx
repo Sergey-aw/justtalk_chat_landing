@@ -6,6 +6,7 @@ import { DialogueAnimation } from '@/components/DialogueAnimation';
 import { RolePlayCarousel } from '@/components/RolePlayCarousel';
 import { PricingSection } from '@/components/PricingSection';
 import { Conversation } from '@/components/Conversation';
+import { ProgressChart } from '@/components/ProgressChart';
 
 export default function Home() {
   return (
@@ -211,12 +212,8 @@ export default function Home() {
             </div>
             
             {/* Progress Chart */}
-            <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
-              <img 
-                src="/progress_card.jpg" 
-                alt="Progress tracking chart" 
-                className="w-full h-full object-cover"
-              />
+            <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden bg-gray-50 border border-just_black-5 p-0">
+              <ProgressChart />
             </div>
           </div>
 
@@ -278,7 +275,7 @@ export default function Home() {
             {/* Column 2 */}
             <div>
               <ul className="space-y-3">
-                <li><a href="https://justtalk.ai/welcome?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Platform</a></li>
+                <li><a href="https://justtalk.ai/?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Platform</a></li>
                 <li><a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Voice Chat</a></li>
                 <li><a href="https://docs.justtalk.ai/?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Help</a></li>
                 <li><a href="https://status.justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline inline-flex items-center gap-1.5">Status<span className="w-1 h-1 bg-green-500 rounded-full"></span></a></li>
