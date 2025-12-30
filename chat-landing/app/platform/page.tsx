@@ -10,7 +10,7 @@ import { PricingSection } from '@/components/PricingSection';
 import { Conversation } from '@/components/Conversation';
 import { ProgressChart } from '@/components/ProgressChart';
 
-export default function Home() {
+export default function Platform() {
   return (
     <div className="flex min-h-screen flex-col bg-just_white">
       <Header />
@@ -23,20 +23,24 @@ export default function Home() {
             {/* Top Row: Text and Image */}
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               {/* Hero Text */}
-              <div className="flex flex-col md:items-start items-center text-center md:text-left">
-                <h1 className="text-5xl md:text-[64px] font-semibold md:leading-[59.29px] tracking-[-1.763px] text-just_cod-gray mb-0">
-                  Get better at speaking<br />by speaking
+              <div className="flex flex-col items-start max-w-2xl">
+                <h1 className="text-5xl md:text-[64px] font-semibold leading-12 tracking-tight text-just_cod-gray mb-0 text-center md:text-left md:leading-16">
+                  The Fastest Way to Speak a New Language
                 </h1>
                 <div className="pt-8">
-                  <p className="text-base md:text-[16.3px] font-normal leading-7 tracking-[-0.17px] text-just_cod-gray">
-                    Natural voice conversations that help you improve as you talk
+                  <p className="text-base md:text-[16.3px] font-normal leading-normal tracking-[-0.17px] text-just_cod-gray">
+                    The most powerful seamless experience between JustTalk AI Chat interactions and one-on-one lessons with real human teachers
                   </p>
                 </div>
               </div>
 
               {/* Hero Image */}
-              <div className="relative w-full md:w-[419px] h-[325px] md:h-[450px] shrink-0">
-                <HeroCarousel />
+              <div className="relative w-auto md:w-150 lg:w-175 shrink-0 rounded-2xl overflow-hidden">
+                <img 
+                  src="/hero_blue_2.jpg" 
+                  alt="JustTalk Platform" 
+                  className="w-full object-cover aspect-16/10 md:aspect-auto"
+                />
               </div>
             </div>
             
