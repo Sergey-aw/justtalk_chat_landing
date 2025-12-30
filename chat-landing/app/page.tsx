@@ -266,24 +266,27 @@ export default function Home() {
       {/* Footer */}
       <footer className="w-full">
         <div className="mx-auto max-w-[1536px] px-8 py-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
             {/* Logo */}
             <div>
               <img src="/logo.svg" alt="JustTalk" className="h-6 w-auto" />
             </div>
 
+            {/* Spacer column for extra free space between logo and nav */}
+            <div className="hidden md:block" />
+
             {/* Column 2 */}
-            <div>
+            <div className="md:justify-self-start md:text-left">
               <ul className="space-y-3">
                 <li><a href="https://justtalk.ai/?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Platform</a></li>
                 <li><a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Voice Chat</a></li>
                 <li><a href="https://docs.justtalk.ai/?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Help</a></li>
-                <li><a href="https://status.justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline inline-flex items-center gap-1.5">Status<span className="w-1 h-1 bg-green-500 rounded-full"></span></a></li>
+                <li><a href="https://status.justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline inline-flex items-center gap-1.5 justify-end">Status<span className="w-1 h-1 bg-green-500 rounded-full"></span></a></li>
               </ul>
             </div>
 
             {/* Column 3 */}
-            <div>
+            <div className="md:justify-self-start md:text-left">
               <ul className="space-y-3">
                 <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Terms of Use</a></li>
                 <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Privacy Policy</a></li>

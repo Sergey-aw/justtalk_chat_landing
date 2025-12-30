@@ -180,7 +180,7 @@ export function ProgressChart() {
               /> */}
               <ChartTooltip content={<CustomTooltip />} cursor={{ strokeDasharray: '3 3' }} />
               <Area
-                type="monotone"
+                type="bump"
                 dataKey="totalWords"
                 stroke="#3b82f6"
                 strokeWidth={2.5}
