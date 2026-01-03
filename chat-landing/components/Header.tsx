@@ -10,7 +10,7 @@ export function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-just_white">
-        <div className="mx-auto flex h-16 items-center justify-between px-8">
+        <div className="mx-auto flex h-16 items-center justify-between px-4 md:px-8">
           {/* Logo */}
           <div className="flex items-center">
             <img src="/logo.svg" alt="JustTalk" className="h-6 w-auto" />
@@ -18,14 +18,14 @@ export function Header() {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-2">
-            <a href="#about" className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
-              About
+            <a href="/platform" className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
+              Platform
+            </a>
+            <a href="/" className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
+              JustTalk AI
             </a>
             <a href="#features" className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
               Features
-            </a>
-            <a href="#pricing" className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
-              Pricing
             </a>
           </nav>
 
@@ -70,7 +70,7 @@ export function Header() {
 
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 bg-just_white md:hidden">
+        <div className="fixed inset-0 z-40 bg-just_white md:hidden opacity-0 animate-[fadeIn_0.2s_ease-out_forwards]">
           <div className="flex flex-col h-full">
             {/* Logo */}
             <div className="flex items-center h-16 px-8">
@@ -78,27 +78,27 @@ export function Header() {
             </div>
 
             {/* Navigation Menu */}
-            <nav className="flex-1 flex flex-col px-8 py-8">
+            <nav className="flex-1 flex flex-col px-8 py-8 space-y-4">
               <a 
-                href="#about" 
-                className="py-3 text-lg font-medium text-just_cod-gray"
+                href="/platform" 
+                className="text-lg font-medium text-just_cod-gray"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                About
+                Platform
+              </a>
+              <a 
+                href="/" 
+                className="text-lg font-medium text-just_cod-gray"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                JustTalk AI
               </a>
               <a 
                 href="#features" 
-                className="py-3 text-lg font-medium text-just_cod-gray"
+                className="text-lg font-medium text-just_cod-gray"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Features
-              </a>
-              <a 
-                href="#pricing" 
-                className="py-3 text-lg font-medium text-just_cod-gray"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Pricing
               </a>
             </nav>
 
@@ -118,6 +118,17 @@ export function Header() {
           </div>
         </div>
       )}
+      
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
+      `}</style>
     </>
   );
 }
