@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
@@ -9,8 +11,11 @@ import { RolePlayCarousel } from '@/components/RolePlayCarousel';
 import { PricingSection } from '@/components/PricingSection';
 import { Conversation } from '@/components/Conversation';
 import { ProgressChart } from '@/components/ProgressChart';
+import { useState } from 'react';
 
 export default function Platform() {
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
   return (
     <div className="flex min-h-screen flex-col bg-just_white">
       <Header />
@@ -91,8 +96,18 @@ export default function Platform() {
             <img 
               src="/platform_blue_16x9.jpg" 
               alt="JustTalk Platform" 
-              className="w-full h-auto aspect-4/3 md:aspect-auto object-cover"
+              className={`w-full h-auto aspect-4/3 md:aspect-auto object-cover transition-opacity duration-300 ${isVideoLoaded ? 'opacity-0' : 'opacity-100'}`}
             />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              onLoadedData={() => setIsVideoLoaded(true)}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}
+            >
+              <source src="/platform_1080p_25fps.mp4" type="video/mp4" />
+            </video>
           </div>
         </section>
 
