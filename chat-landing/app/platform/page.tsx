@@ -59,9 +59,9 @@ export default function Platform() {
                     <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
                   </Button>
                 </a>
-                <a href="https://justtalk.ai" target="_blank" rel="noopener">
+                <a href="https://app.justtalk.ai/signup" target="_blank" rel="noopener">
                   <Button variant="outline" className="cursor-pointer">
-                    Learn about JustTalk AI platform
+                    Become a powerful teacher
                     <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
                   </Button>
                 </a>
