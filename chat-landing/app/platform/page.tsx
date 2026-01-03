@@ -11,6 +11,7 @@ import { RolePlayCarousel } from '@/components/RolePlayCarousel';
 import { PricingSection } from '@/components/PricingSection';
 import { Conversation } from '@/components/Conversation';
 import { ProgressChart } from '@/components/ProgressChart';
+import { ChatInterface } from '@/components/ChatInterface';
 import { useState } from 'react';
 
 export default function Platform() {
@@ -123,10 +124,10 @@ export default function Platform() {
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                Talk with different personalities
+                Speak with a live tutor
               </h3>
               <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
-               Some are supportive. Some challenge you. All help you practice real conversations
+                Find a tutor matched to your personal needs and goals. Every tutor is supported by AI insights. Lessons stay personalized, efficient, and focused on your progress.
               </p>
               
             </div>
@@ -134,13 +135,11 @@ export default function Platform() {
             {/* Tutors Carousel */}
             <div className="relative w-full rounded-2xl overflow-hidden aspect-square md:aspect-4/3">
               <img 
-                src="/bg_green_square_.jpg" 
+                src="/platform_feature_1.jpg" 
                 alt="" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="relative z-10 w-full h-full flex items-center p-0 md:p-0">
-                <PersonalityCarousel />
-              </div>
+           
             </div>
           </div>
 
@@ -148,15 +147,15 @@ export default function Platform() {
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                They remember you
+                Practice with AI between lessons
               </h3>
               <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
-                Our AI personalities remember previous conversations, allowing you to pick up right where you left off.
+                Dynamic goal-setting and personalized practice plans. AI remembers your past lessons and conversations with human tutors, creating context-aware practice sessions.
               </p>
              
             </div>
             <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
-              <DialogueAnimation />
+              <ChatInterface />
             </div>
           </div>
 
