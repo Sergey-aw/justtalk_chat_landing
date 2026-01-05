@@ -119,7 +119,7 @@ export function ChatInterface() {
   }, [visibleMessages]);
 
   return (
-    <div ref={containerRef} className="w-full h-full bg-gradient-to-b from-blue-100 to-blue-50 flex flex-col relative">
+    <div ref={containerRef} className="w-full h-full bg-gray-100 flex flex-col relative">
       {/* Restart Button */}
       <button
         onClick={startAnimation}
@@ -131,11 +131,11 @@ export function ChatInterface() {
       </button>
 
       {/* Top Bar */}
-      <div className="flex items-center justify-between px-4 py-3 bg-white/80 backdrop-blur-sm">
+      <div className="flex items-center justify-between px-4 py-3 bg-blue-100/50 backdrop-blur-sm">
         <div className="flex items-center gap-3">
          
           <div className="flex items-center gap-2">
-            <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
+            <div className="w-10 h-10 rounded-full overflow-hidden bg-gray-200">
               <img 
                 src="/images/interview_alina.jpg" 
                 alt="Alina" 
@@ -196,7 +196,7 @@ export function ChatInterface() {
                       ? 'bg-gradient-to-br from-blue-500 to-blue-600 text-white' 
                       : 'bg-white text-gray-900'
                   }`}>
-                    <p className="text-sm whitespace-pre-line leading-relaxed">
+                    <p className="text-sm whitespace-pre-line leading-tight">
                       {message.text}
                     </p>
                     <p className={`text-xs mt-2 ${

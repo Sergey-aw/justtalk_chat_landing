@@ -202,7 +202,7 @@ export default function Platform() {
             {/* Role Play Carousel */}
             <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
               <img 
-                src="/bg_colored_square.jpg" 
+                src="/bg_green_square_.jpg" 
                 alt="" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
