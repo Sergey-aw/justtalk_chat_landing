@@ -1,7 +1,17 @@
+'use client';
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import posthog from 'posthog-js';
 
 export function Footer() {
+  const handleFooterLinkClick = (linkName: string, href: string) => {
+    posthog.capture('footer_link_clicked', {
+      link_name: linkName,
+      href,
+    });
+  };
+
   return (
     <footer className="w-full">
       <div className="mx-auto max-w-[1536px] px-8 py-10">
@@ -17,18 +27,18 @@ export function Footer() {
           {/* Column 2 */}
           <div className="md:justify-self-start md:text-left">
             <ul className="space-y-3">
-              <li><a href="https://justtalk.ai/platform" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Platform</a></li>
-              <li><a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Voice Chat</a></li>
-              <li><a href="https://docs.justtalk.ai/?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Help</a></li>
-              <li><a href="https://status.justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline inline-flex items-center gap-1.5 justify-end">Status<span className="w-1 h-1 bg-green-500 rounded-full"></span></a></li>
+              <li><a href="https://justtalk.ai/platform" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Platform', 'https://justtalk.ai/platform')}>Platform</a></li>
+              <li><a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Voice Chat', 'https://chat.justtalk.ai/welcome?ref=justtalk.ai')}>Voice Chat</a></li>
+              <li><a href="https://docs.justtalk.ai/?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Help', 'https://docs.justtalk.ai/?ref=justtalk.ai')}>Help</a></li>
+              <li><a href="https://status.justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline inline-flex items-center gap-1.5 justify-end" onClick={() => handleFooterLinkClick('Status', 'https://status.justtalk.ai')}>Status<span className="w-1 h-1 bg-green-500 rounded-full"></span></a></li>
             </ul>
           </div>
 
           {/* Column 3 */}
           <div className="md:justify-self-start md:text-left">
             <ul className="space-y-3">
-              <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Terms of Use</a></li>
-              <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline">Privacy Policy</a></li>
+              <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Terms of Use', '#')}>Terms of Use</a></li>
+              <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Privacy Policy', '#')}>Privacy Policy</a></li>
             </ul>
           </div>
         </div>

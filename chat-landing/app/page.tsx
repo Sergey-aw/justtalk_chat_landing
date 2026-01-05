@@ -9,6 +9,7 @@ import { RolePlayCarousel } from '@/components/RolePlayCarousel';
 import { PricingSection } from '@/components/PricingSection';
 import { Conversation } from '@/components/Conversation';
 import { ProgressChart } from '@/components/ProgressChart';
+import { TrackedLink } from '@/components/TrackedLink';
 
 export default function Home() {
   return (
@@ -43,18 +44,30 @@ export default function Home() {
             {/* CTA Buttons - Centered Below */}
             <div className="pt-8 flex justify-center">
               <div className="flex flex-col sm:flex-row gap-[17px] items-center">
-                <a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" target="_blank" rel="noopener">
+                <TrackedLink
+                  href="https://chat.justtalk.ai/welcome?ref=justtalk.ai"
+                  target="_blank"
+                  rel="noopener"
+                  eventName="cta_start_now_clicked"
+                  eventProperties={{ location: 'hero_section' }}
+                >
                   <Button className="cursor-pointer">
                     Start now
                     <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
                   </Button>
-                </a>
-                <a href="https://justtalk.ai" target="_blank" rel="noopener">
+                </TrackedLink>
+                <TrackedLink
+                  href="https://justtalk.ai"
+                  target="_blank"
+                  rel="noopener"
+                  eventName="cta_learn_platform_clicked"
+                  eventProperties={{ location: 'hero_section' }}
+                >
                   <Button variant="outline" className="cursor-pointer">
                     Learn about JustTalk AI platform
                     <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
                   </Button>
-                </a>
+                </TrackedLink>
               </div>
             </div>
 
@@ -217,14 +230,26 @@ export default function Home() {
               Join first and try JustTalk today
             </h2>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button className="cursor-pointer">
-                Try JustTalk AI
-                <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
-              </Button>
-              <Button variant="outline" className="cursor-pointer">
-                Book a demo
-                <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
-              </Button>
+              <TrackedLink
+                href="https://chat.justtalk.ai/welcome?ref=justtalk.ai"
+                eventName="cta_try_justtalk_clicked"
+                eventProperties={{ location: 'bottom_cta_section' }}
+              >
+                <Button className="cursor-pointer">
+                  Try JustTalk AI
+                  <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
+                </Button>
+              </TrackedLink>
+              <TrackedLink
+                href="https://calendly.com/justtalk"
+                eventName="cta_book_demo_clicked"
+                eventProperties={{ location: 'bottom_cta_section' }}
+              >
+                <Button variant="outline" className="cursor-pointer">
+                  Book a demo
+                  <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
+                </Button>
+              </TrackedLink>
             </div>
           </div>
         </section>

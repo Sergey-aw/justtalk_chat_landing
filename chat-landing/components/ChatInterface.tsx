@@ -25,7 +25,7 @@ const messages: Message[] = [
     avatar: "/images/user_avatar.jpg"
   },
   {
-    text: "You're about to have a second date with Alina... this is a more relaxed conversation where you already know a little about each other.\n\nYou might naturally reference something you talked about before, or simply pick up where things left off.\n\nLet the conversation unfold at a comfortable pace.\n\nAlright... let's begin. Here's Alina.",
+    text: "You're about to have a second date with Alina... this is a more relaxed conversation where you already know a little about each other.",
     time: "7:11 PM",
     isUser: false,
     avatar: "/images/interview_alina.jpg"
@@ -133,9 +133,7 @@ export function ChatInterface() {
       {/* Top Bar */}
       <div className="flex items-center justify-between px-4 py-3 bg-white/80 backdrop-blur-sm">
         <div className="flex items-center gap-3">
-          <button className="p-1 hover:bg-gray-100 rounded-full transition-colors">
-            <ArrowLeft className="w-5 h-5 text-gray-700" />
-          </button>
+         
           <div className="flex items-center gap-2">
             <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-200">
               <img 
@@ -149,8 +147,8 @@ export function ChatInterface() {
               />
             </div>
             <div>
-              <h3 className="font-semibold text-sm text-gray-900">Second Date -</h3>
-              <p className="text-sm text-gray-900">Restaurant</p>
+              <h3 className="font-semibold text-sm text-gray-900">Second Date with Alina</h3>
+              
             </div>
           </div>
         </div>

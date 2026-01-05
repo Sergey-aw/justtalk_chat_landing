@@ -4,6 +4,7 @@ import { useConversation } from '@elevenlabs/react';
 import { useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Mic, MicOff, Phone } from 'lucide-react';
+import posthog from 'posthog-js';
 
 interface ConversationProps {
   variant?: 'default' | 'hero';
@@ -11,10 +12,28 @@ interface ConversationProps {
 
 export function Conversation({ variant = 'default' }: ConversationProps) {
   const conversation = useConversation({
-    onConnect: () => console.log('Connected'),
-    onDisconnect: () => console.log('Disconnected'),
+    onConnect: () => {
+      console.log('Connected');
+      posthog.capture('voice_conversation_started', {
+        variant,
+      });
+    },
+    onDisconnect: () => {
+      console.log('Disconnected');
+      posthog.capture('voice_conversation_ended', {
+        variant,
+      });
+    },
     onMessage: (message) => console.log('Message:', message),
-    onError: (error) => console.error('Error:', error),
+    onError: (errorMessage, context) => {
+      console.error('Error:', errorMessage, context);
+      posthog.capture('voice_conversation_error', {
+        error_message: errorMessage,
+        error_context: context,
+        variant,
+      });
+      posthog.captureException(new Error(errorMessage));
+    },
   });
 
   const getSignedUrl = async (): Promise<string> => {
@@ -45,8 +64,14 @@ export function Conversation({ variant = 'default' }: ConversationProps) {
       });
     } catch (error) {
       console.error('Failed to start conversation:', error);
+      posthog.capture('voice_conversation_error', {
+        error_message: error instanceof Error ? error.message : String(error),
+        error_type: 'start_conversation_failed',
+        variant,
+      });
+      posthog.captureException(error);
     }
-  }, [conversation]);
+  }, [conversation, variant]);
 
   const stopConversation = useCallback(async () => {
     await conversation.endSession();

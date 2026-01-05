@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import posthog from 'posthog-js';
 
 export function PricingSection() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
@@ -22,6 +23,29 @@ export function PricingSection() {
   // Calculate discount percentage (using premium plan)
   const annualDiscount = Math.round(((pricing.premium.monthly * 12 - pricing.premium.annual) / (pricing.premium.monthly * 12)) * 100);
 
+  const handleBillingCycleChange = (value: string) => {
+    const newCycle = value as 'monthly' | 'annual';
+    setBillingCycle(newCycle);
+    posthog.capture('pricing_billing_cycle_changed', {
+      new_billing_cycle: newCycle,
+      previous_billing_cycle: billingCycle,
+    });
+  };
+
+  const handleGetBasicClick = () => {
+    posthog.capture('pricing_get_basic_clicked', {
+      billing_cycle: billingCycle,
+      price: pricing.basic[billingCycle],
+    });
+  };
+
+  const handleGetPremiumClick = () => {
+    posthog.capture('pricing_get_premium_clicked', {
+      billing_cycle: billingCycle,
+      price: pricing.premium[billingCycle],
+    });
+  };
+
   return (
     <section id="pricing" className="w-full max-w-[1186px] px-10 py-16 md:py-24">
       <div className="text-center mb-12">
@@ -31,7 +55,7 @@ export function PricingSection() {
 
         {/* Billing Cycle Toggle */}
         <div className="flex justify-center mb-8">
-          <Tabs value={billingCycle} onValueChange={(value) => setBillingCycle(value as 'monthly' | 'annual')} className="w-auto">
+          <Tabs value={billingCycle} onValueChange={handleBillingCycleChange} className="w-auto">
             <TabsList className="grid w-full grid-cols-2 h-10">
               <TabsTrigger value="monthly" className="data-[state=active]:bg-just_cod-gray data-[state=active]:text-white">
                 Monthly
@@ -128,7 +152,7 @@ export function PricingSection() {
                 / {billingCycle === 'monthly' ? 'month' : 'year'}
               </span>
             </div>
-            <a href="https://chat.justtalk.ai/?plan=basic&ref=justtalk.ai" target="_blank" rel="noopener">
+            <a href="https://chat.justtalk.ai/?plan=basic&ref=justtalk.ai" target="_blank" rel="noopener" onClick={handleGetBasicClick}>
               <Button className="w-full cursor-pointer">
                 Get Basic
                 <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
@@ -224,14 +248,14 @@ export function PricingSection() {
                 </span>
               )}
             </div>
-            <a href="https://chat.justtalk.ai/?plan=premium&ref=justtalk.ai" target="_blank" rel="noopener">
-              <Button 
+            <a href="https://chat.justtalk.ai/?plan=premium&ref=justtalk.ai" target="_blank" rel="noopener" onClick={handleGetPremiumClick}>
+              <Button
                 className="w-full cursor-pointer relative overflow-hidden group"
                 style={{
                   transition: 'all 0.3s ease'
                 }}
               >
-                <span 
+                <span
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   style={{
                     background: 'linear-gradient(20deg, #118DEC 0%, rgba(247, 87, 170, 0.80) 100%)'

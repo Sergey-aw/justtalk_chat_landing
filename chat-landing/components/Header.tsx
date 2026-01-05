@@ -3,9 +3,18 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import posthog from 'posthog-js';
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleLoginClick = (location: 'desktop' | 'mobile') => {
+    posthog.capture('header_login_clicked', { location });
+  };
+
+  const handleSignupClick = (location: 'desktop' | 'mobile') => {
+    posthog.capture('header_signup_clicked', { location });
+  };
 
   return (
     <>
@@ -32,21 +41,21 @@ export function Header() {
           {/* CTA Buttons */}
           <div className="flex items-center gap-2">
             {/* Hide Log in button on mobile */}
-            <a href="https://chat.justtalk.ai/signin?ref=justtalk.ai" target="_blank" rel="noopener" className="hidden md:block">
+            <a href="https://chat.justtalk.ai/signin?ref=justtalk.ai" target="_blank" rel="noopener" className="hidden md:block" onClick={() => handleLoginClick('desktop')}>
               <Button variant="outline" className="cursor-pointer">
                 Log in
               </Button>
             </a>
             {/* Show Sign up button on mobile only when menu is closed */}
             {!isMobileMenuOpen && (
-              <a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" target="_blank" rel="noopener" className="md:hidden">
+              <a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" target="_blank" rel="noopener" className="md:hidden" onClick={() => handleSignupClick('mobile')}>
                 <Button className="cursor-pointer">
                   Sign up
                 </Button>
               </a>
             )}
             {/* Show Sign up button on desktop */}
-            <a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" target="_blank" rel="noopener" className="hidden md:block">
+            <a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" target="_blank" rel="noopener" className="hidden md:block" onClick={() => handleSignupClick('desktop')}>
               <Button className="cursor-pointer">
                 Sign up
               </Button>
@@ -104,12 +113,12 @@ export function Header() {
 
             {/* Bottom Buttons */}
             <div className="px-8 pb-8 flex flex-row gap-3">
-              <a href="https://chat.justtalk.ai/signin?ref=justtalk.ai" target="_blank" rel="noopener" className="flex-1">
+              <a href="https://chat.justtalk.ai/signin?ref=justtalk.ai" target="_blank" rel="noopener" className="flex-1" onClick={() => handleLoginClick('mobile')}>
                 <Button variant="outline" className="w-full cursor-pointer">
                   Log in
                 </Button>
               </a>
-              <a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" target="_blank" rel="noopener" className="flex-1">
+              <a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" target="_blank" rel="noopener" className="flex-1" onClick={() => handleSignupClick('mobile')}>
                 <Button className="w-full cursor-pointer">
                   Sign up
                 </Button>
