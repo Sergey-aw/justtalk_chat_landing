@@ -12,10 +12,30 @@ import { PricingSection } from '@/components/PricingSection';
 import { Conversation } from '@/components/Conversation';
 import { ProgressChart } from '@/components/ProgressChart';
 import { ChatInterface } from '@/components/ChatInterface';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import { Fullscreen } from 'lucide-react';
 
 export default function Platform() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleFullscreen = () => {
+    const video = videoRef.current;
+    if (video) {
+      // Standard fullscreen API
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } 
+      // Safari iOS fullscreen API
+      else if ((video as any).webkitEnterFullscreen) {
+        (video as any).webkitEnterFullscreen();
+      }
+      // Fallback for older webkit browsers
+      else if ((video as any).webkitRequestFullscreen) {
+        (video as any).webkitRequestFullscreen();
+      }
+    }
+  };
 
   return (
     <div className="flex min-h-screen flex-col bg-just_white">
@@ -100,6 +120,7 @@ export default function Platform() {
               className={`w-full h-auto aspect-4/3 md:aspect-auto object-cover transition-opacity duration-300 ${isVideoLoaded ? 'opacity-0' : 'opacity-100'}`}
             />
             <video
+              ref={videoRef}
               autoPlay
               loop
               muted
@@ -109,6 +130,13 @@ export default function Platform() {
             >
               <source src="/platform_1080p_25fps.mp4" type="video/mp4" />
             </video>
+            <button
+              onClick={handleFullscreen}
+              className="md:hidden absolute bottom-1 right-1 p-1 text-white hover:opacity-80 transition-opacity"
+              aria-label="Fullscreen"
+            >
+              <Fullscreen className="w-6 h-6" />
+            </button>
           </div>
         </section>
 
