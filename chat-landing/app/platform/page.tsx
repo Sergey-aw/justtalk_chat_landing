@@ -13,7 +13,7 @@ import { Conversation } from '@/components/Conversation';
 import { ProgressChart } from '@/components/ProgressChart';
 import { ChatInterface } from '@/components/ChatInterface';
 import { useState, useRef } from 'react';
-import { Fullscreen } from 'lucide-react';
+import { Fullscreen, User, TrendingUp, Brain, MessageCircle, Shuffle, BarChart3 } from 'lucide-react';
 
 export default function Platform() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
@@ -213,7 +213,7 @@ export default function Platform() {
           </div>
 
           {/* Feature 4 - Progress Tracking */}
-          <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-0">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                 Track your progress over time
@@ -251,6 +251,98 @@ export default function Platform() {
               />
             </div> 
            </div> */}
+        </section>
+
+        {/* Why JustTalk Section */}
+        <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
+         <div className="text-center mb-16">
+            <h2 className="text-2xl md:text-[28px] font-medium leading-[38.31px] tracking-[-0.29px] text-just_cod-gray">
+              How it works
+            </h2>
+             <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4 mt-2 max-w-2xl mx-auto">
+                Effortlessly track student progress, mistakes, and vocabulary—all in one place. Save time and let AI handle the details while you focus on what matters most.
+              </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Card 1 */}
+            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-8">
+              <div className="mb-4">
+                <TrendingUp className="w-8 h-8 text-pink-500" strokeWidth={2} />
+              </div>
+              <h3 className="text-xl font-medium text-just_cod-gray mb-3">
+                True personalization
+              </h3>
+              <p className="text-base text-just_cod-gray/70 leading-tight tracking-[-0.14px]">
+                We track every word you say (and don't) to deliver a hyper-personalized roadmap to fluency.
+              </p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-8">
+              <div className="mb-4">
+                <BarChart3 className="w-8 h-8 text-orange-500" strokeWidth={2} />
+              </div>
+              <h3 className="text-xl font-medium text-just_cod-gray mb-3">
+                CEFR-based progression
+              </h3>
+              <p className="text-base text-just_cod-gray/70 leading-tight tracking-[-0.14px]">
+                Our curriculum is built on CEFR—the global standard—so your progress is real, not just "points".
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-8">
+              <div className="mb-4">
+                <User className="w-8 h-8 text-yellow-500" strokeWidth={2} />
+              </div>
+              <h3 className="text-xl font-medium text-just_cod-gray mb-3">
+                Smarter human tutoring
+              </h3>
+              <p className="text-base text-just_cod-gray/70 leading-tight tracking-[-0.14px]">
+                Every tutor is backed by real-time AI insights to focus each lesson on what matters most for you.
+              </p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-8">
+              <div className="mb-4">
+                <MessageCircle className="w-8 h-8 text-blue-500" strokeWidth={2} />
+              </div>
+              <h3 className="text-xl font-medium text-just_cod-gray mb-3">
+                AI that remembers you
+              </h3>
+              <p className="text-base text-just_cod-gray/70 leading-tight tracking-[-0.14px]">
+                Our AI partner gives you unlimited speaking practice and remembers everything you've discussed with your tutor.
+              </p>
+            </div>
+
+            {/* Card 5 */}
+            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-8">
+              <div className="mb-4">
+                <Shuffle className="w-8 h-8 text-purple-500" strokeWidth={2} />
+              </div>
+              <h3 className="text-xl font-medium text-just_cod-gray mb-3">
+                Seamless integration
+              </h3>
+              <p className="text-base text-just_cod-gray/70 leading-tight tracking-[-0.14px]">
+                AI and tutor work in sync. Everything you say improves your personalized path to fluency.
+              </p>
+            </div>
+
+            {/* Card 6 */}
+            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-8">
+              <div className="mb-4">
+                <Brain className="w-8 h-8 text-indigo-500" strokeWidth={2} />
+              </div>
+              <h3 className="text-xl font-medium text-just_cod-gray mb-3">
+                Visualize Progress
+              </h3>
+              <p className="text-base text-just_cod-gray/70 leading-tight tracking-[-0.14px]">
+                See all the data insights in simple diagrams
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Pricing Section */}
