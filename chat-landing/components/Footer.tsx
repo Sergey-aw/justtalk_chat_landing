@@ -37,7 +37,7 @@ export function Footer() {
           {/* Column 3 */}
           <div className="md:justify-self-start md:text-left">
             <ul className="space-y-3">
-              <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Terms of Use', '#')}>Terms of Use</a></li>
+              <li><a href="/terms" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Terms of Use', '/terms')}>Terms of Use</a></li>
               <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Privacy Policy', '#')}>Privacy Policy</a></li>
             </ul>
           </div>
