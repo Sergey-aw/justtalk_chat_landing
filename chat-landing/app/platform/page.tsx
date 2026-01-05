@@ -266,9 +266,9 @@ export default function Platform() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Card 1 */}
-            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-8">
+            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
               <div className="mb-4">
-                <TrendingUp className="w-8 h-8 text-pink-500" strokeWidth={2} />
+                <TrendingUp className="w-6 h-6 text-pink-500" strokeWidth={2} />
               </div>
               <h3 className="text-xl font-medium text-just_cod-gray mb-3">
                 True personalization
@@ -279,9 +279,9 @@ export default function Platform() {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-8">
+            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
               <div className="mb-4">
-                <BarChart3 className="w-8 h-8 text-orange-500" strokeWidth={2} />
+                <BarChart3 className="w-6 h-6 text-orange-500" strokeWidth={2} />
               </div>
               <h3 className="text-xl font-medium text-just_cod-gray mb-3">
                 CEFR-based progression
@@ -292,9 +292,9 @@ export default function Platform() {
             </div>
 
             {/* Card 3 */}
-            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-8">
+            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
               <div className="mb-4">
-                <User className="w-8 h-8 text-yellow-500" strokeWidth={2} />
+                <User className="w-6 h-6 text-yellow-500" strokeWidth={2} />
               </div>
               <h3 className="text-xl font-medium text-just_cod-gray mb-3">
                 Smarter human tutoring
@@ -305,9 +305,9 @@ export default function Platform() {
             </div>
 
             {/* Card 4 */}
-            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-8">
+            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
               <div className="mb-4">
-                <MessageCircle className="w-8 h-8 text-blue-500" strokeWidth={2} />
+                <MessageCircle className="w-6 h-6 text-blue-500" strokeWidth={2} />
               </div>
               <h3 className="text-xl font-medium text-just_cod-gray mb-3">
                 AI that remembers you
@@ -318,9 +318,9 @@ export default function Platform() {
             </div>
 
             {/* Card 5 */}
-            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-8">
+            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
               <div className="mb-4">
-                <Shuffle className="w-8 h-8 text-purple-500" strokeWidth={2} />
+                <Shuffle className="w-6 h-6 text-purple-500" strokeWidth={2} />
               </div>
               <h3 className="text-xl font-medium text-just_cod-gray mb-3">
                 Seamless integration
@@ -331,9 +331,9 @@ export default function Platform() {
             </div>
 
             {/* Card 6 */}
-            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-8">
+            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
               <div className="mb-4">
-                <Brain className="w-8 h-8 text-indigo-500" strokeWidth={2} />
+                <Brain className="w-6 h-6 text-indigo-500" strokeWidth={2} />
               </div>
               <h3 className="text-xl font-medium text-just_cod-gray mb-3">
                 Visualize Progress
