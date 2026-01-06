@@ -268,7 +268,7 @@ export default function Home() {
               </p>
           </div>
 
-          <div className="bg-[#f8f6f0] rounded-2xl px-8 py-16">
+          <div className="bg-[#f8f6f0] rounded-2xl px-8 py-8">
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
               {/* Image */}
               <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
@@ -280,7 +280,7 @@ export default function Home() {
               </div>
 
               {/* Text Content - 3 Sections */}
-              <div className="px-4 md:px-0 space-y-6">
+              <div className="px-4 md:px-0 space-y-12">
               {/* Section 1 */}
               <div>
                 <h3 className="text-xl md:text-xl font-medium tracking-[-0.5px] text-just_cod-gray mb-1">
@@ -291,15 +291,7 @@ export default function Home() {
                 </p>
               </div>
 
-              {/* Section 2 */}
-              <div>
-                <h3 className="text-xl md:text-xl font-medium tracking-[-0.5px] text-just_cod-gray mb-1">
-                  Tutors see your full AI history
-                </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
-                  Your conversations, progress metrics, and learning patterns are visible to tutors—so they can personalize lessons around what you've already practiced.
-                </p>
-              </div>
+             
 
               {/* Section 3 */}
               <div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import React from 'react';
 import { motion, useAnimation, useMotionValue } from 'framer-motion';
 import { 
   MessageCircle, 
@@ -302,45 +303,19 @@ function ScrollingRow({ series, direction = 'left', offset = 0 }: ScrollingRowPr
   const gap = 16;
   const totalWidth = series.length * (bannerWidth + gap);
 
+  // Update x position when offset prop changes
   useEffect(() => {
-    const animateScroll = async () => {
-      if (isDragging.current) return;
+    x.set(offset);
+  }, [offset, x]);
 
-      const currentX = x.get();
-      const targetX = direction === 'left' ? -totalWidth : totalWidth;
-      
-      await controls.start({
-        x: [currentX, currentX + targetX],
-        transition: {
-          duration: 60,
-          ease: 'linear',
-          repeat: Infinity,
-        },
-      });
-    };
-
-    animateScroll();
-  }, [controls, direction, totalWidth, x]);
+  // No automatic scrolling animation
 
   const handleDragStart = () => {
     isDragging.current = true;
-    controls.stop();
   };
 
   const handleDragEnd = () => {
     isDragging.current = false;
-    
-    setTimeout(() => {
-      const currentX = x.get();
-      controls.start({
-        x: [currentX, currentX + (direction === 'left' ? -totalWidth : totalWidth)],
-        transition: {
-          duration: 60,
-          ease: 'linear',
-          repeat: Infinity,
-        },
-      });
-    }, 500);
   };
 
   const duplicatedSeries = [...series, ...series, ...series];
@@ -350,7 +325,7 @@ function ScrollingRow({ series, direction = 'left', offset = 0 }: ScrollingRowPr
       <motion.div
         className="flex gap-4"
         drag="x"
-        dragConstraints={{ left: -totalWidth, right: 0 }}
+        dragConstraints={{ left: -totalWidth * 2, right: 0 }}
         dragElastic={0.1}
         dragMomentum={true}
         dragTransition={{ 
@@ -359,7 +334,6 @@ function ScrollingRow({ series, direction = 'left', offset = 0 }: ScrollingRowPr
         }}
         onDragStart={handleDragStart}
         onDragEnd={handleDragEnd}
-        animate={controls}
         style={{ x }}
       >
         {duplicatedSeries.map((series, index) => (
@@ -371,9 +345,34 @@ function ScrollingRow({ series, direction = 'left', offset = 0 }: ScrollingRowPr
 }
 
 export function RolePlaySeries() {
+  // Position Dating card (index 3) in the middle
+  // Calculate offset dynamically based on container width
+  const [offset, setOffset] = React.useState(-800);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const updateOffset = () => {
+      if (!containerRef.current) return;
+      
+      const containerWidth = containerRef.current.offsetWidth;
+      const cardWidth = 300;
+      const gap = 16;
+      const datingIndex = 3; // Dating is the 4th card (0-indexed)
+      
+      // Calculate offset to center the Dating card
+      // Offset = -(cards before Dating * (cardWidth + gap)) + (containerWidth / 2) - (cardWidth / 2)
+      const calculatedOffset = -(datingIndex * (cardWidth + gap)) + (containerWidth / 2) - (cardWidth / 2);
+      setOffset(calculatedOffset);
+    };
+
+    updateOffset();
+    window.addEventListener('resize', updateOffset);
+    return () => window.removeEventListener('resize', updateOffset);
+  }, []);
+
   return (
-    <div className="flex flex-col gap-4 w-full overflow-hidden max-w-full h-full">
-      <ScrollingRow series={rolePlaySeries} direction="left" offset={0} />
+    <div ref={containerRef} className="flex flex-col gap-4 w-full overflow-hidden max-w-full h-full">
+      <ScrollingRow series={rolePlaySeries} direction="left" offset={offset} />
     </div>
   );
 }
