@@ -271,11 +271,11 @@ export default function Home() {
           <div className="bg-[#f8f6f0] rounded-2xl px-8 py-8">
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
               {/* Image */}
-              <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
+              <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden">
                 <img 
                   src="/platform_blue_16x9.jpg" 
                   alt="JustTalk AI Platform connecting to tutors" 
-                  className="w-full h-full object-cover"
+                  className="object-cover h-full w-full"
                 />
               </div>
 
