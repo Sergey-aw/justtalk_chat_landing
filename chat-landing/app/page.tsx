@@ -6,6 +6,7 @@ import { PersonalityCarousel } from '@/components/PersonalityCarousel';
 import { HeroCarousel } from '@/components/HeroCarousel';
 import { DialogueAnimation } from '@/components/DialogueAnimation';
 import { RolePlayCarousel } from '@/components/RolePlayCarousel';
+import { RolePlaySeries } from '@/components/RolePlaySeries';
 import { PricingSection } from '@/components/PricingSection';
 import { Conversation } from '@/components/Conversation';
 import { ProgressChart } from '@/components/ProgressChart';
@@ -26,17 +27,17 @@ export default function Home() {
               {/* Hero Text */}
               <div className="flex flex-col md:items-start items-center text-center md:text-left">
                 <h1 className="text-5xl md:text-[64px] font-semibold md:leading-[59.29px] tracking-[-1.763px] text-just_cod-gray mb-0">
-                  Get better at speaking<br />by speaking
+                  Build real speaking confidence in English
                 </h1>
                 <div className="pt-8">
                   <p className="text-base md:text-[16.3px] font-normal leading-7 tracking-[-0.17px] text-just_cod-gray">
-                    Natural voice conversations that help you improve as you talk
+                    Practice English through realistic conversations — interviews, work discussions, and everyday situations — with AI that remembers how you speak and builds every session on the last.
                   </p>
                 </div>
               </div>
 
               {/* Hero Image */}
-              <div className="relative w-full md:w-[419px] h-[325px] md:h-[450px] shrink-0">
+              <div className="relative h-[325px] md:h-[450px] shrink-0 w-full md:max-w-[500px]">
                 <HeroCarousel />
               </div>
             </div>
@@ -92,8 +93,11 @@ export default function Home() {
         <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
           <div className="text-center mb-16">
             <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray">
-              Seamless experience with JustTalk platform<br />for one-on-one learning
+              Talking works—when it’s tracked
             </h2>
+             <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4 mt-2 max-w-2xl mx-auto">
+                Most speaking tools let you talk but don’t track real progress. JustTalk AI analyzes what you say and builds every session on your history—so improvement is cumulative, not random.
+              </p>
           </div>
           
           <div className="relative w-full rounded-2xl overflow-hidden">
@@ -158,10 +162,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                Practice real-world scenarios
+                Practice speaking inside realistic scenarios
               </h3>
               <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
-                Choose from various role-play scenarios to<br />practice conversations in different contexts.
+                Choose the situation, the role, and the difficulty—and build skill inside a consistent context. 
               </p>
               
             </div>
@@ -179,7 +183,32 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Feature 4 - Progress Tracking */}
+          {/* Feature 4 - Role Play Series */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                Ongoing roleplay with memory and personality
+              </h3>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                Some scenarios unfold over multiple sessions. This isn’t one-off roleplay. It’s sustained speaking practice with continuity.
+              </p>
+              
+            </div>
+            
+            {/* Role Play Series */}
+            <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
+              <img 
+                src="/bg_colored_orange.jpg" 
+                alt="" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="relative z-10 w-full h-full flex items-center p-0 pt-3">
+                <RolePlaySeries />
+              </div>
+            </div>
+          </div>
+
+          {/* Feature 5 - Progress Tracking */}
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
@@ -196,6 +225,8 @@ export default function Home() {
               <ProgressChart />
             </div>
           </div>
+
+        
 
           {/* Feature 5 - Pronunciation Practice */}
           {/* <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -218,6 +249,82 @@ export default function Home() {
               />
             </div> 
            </div> */}
+        </section>
+
+         {/* Platform Section */}
+        
+        
+          
+
+        {/* AI to Tutors Section */}
+        <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
+
+            <div className="text-center mb-16">
+            <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray">
+              When you’re ready, AI connects to real tutors
+            </h2>
+             <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4 mt-2 max-w-2xl mx-auto">
+                JustTalk AI is designed to integrate with live tutors. When you take lessons, tutors can build on your AI practice instead of starting from scratch.
+              </p>
+          </div>
+
+          <div className="bg-[#f8f6f0] rounded-2xl px-8 py-16">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+              {/* Image */}
+              <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
+                <img 
+                  src="/platform_blue_16x9.jpg" 
+                  alt="JustTalk AI Platform connecting to tutors" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              {/* Text Content - 3 Sections */}
+              <div className="px-4 md:px-0 space-y-6">
+              {/* Section 1 */}
+              <div>
+                <h3 className="text-xl md:text-xl font-medium tracking-[-0.5px] text-just_cod-gray mb-1">
+                  When you're ready, AI connects to real tutors
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                  JustTalk AI is designed to integrate with live tutors. When you take lessons, tutors can build on your AI practice instead of starting from scratch.
+                </p>
+              </div>
+
+              {/* Section 2 */}
+              <div>
+                <h3 className="text-xl md:text-xl font-medium tracking-[-0.5px] text-just_cod-gray mb-1">
+                  Tutors see your full AI history
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                  Your conversations, progress metrics, and learning patterns are visible to tutors—so they can personalize lessons around what you've already practiced.
+                </p>
+              </div>
+
+              {/* Section 3 */}
+              <div>
+                <h3 className="text-xl md:text-xl font-medium tracking-[-0.5px] text-just_cod-gray mb-1">
+                  Live tutoring marketplace launching soon
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-6">
+                  Connect with experienced tutors who understand your AI practice and can accelerate your progress with targeted guidance.
+                </p>
+                <TrackedLink
+                  href="/platform"
+                  target="_blank"
+                  rel="noopener"
+                  eventName="cta_learn_platform_clicked"
+                  eventProperties={{ location: 'ai_tutors_section' }}
+                >
+                  <Button variant="outline" className="cursor-pointer">
+                    Learn about the platform
+                    <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
+                  </Button>
+                </TrackedLink>
+              </div>
+            </div>
+          </div>
+          </div>
         </section>
 
         {/* Pricing Section */}

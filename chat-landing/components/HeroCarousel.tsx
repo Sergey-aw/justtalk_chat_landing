@@ -24,17 +24,21 @@ const slides: Slide[] = [
     ]
   },
   {
-    title: 'Helpful feedback after you speak',
+    title: 'Speak freely, not through exercises',
     description: [
-      'Practice real conversations — dating, interviews, travel, and more.',
-      'Learn from your own words—after the conversation.'
+      'Have real conversations instead of filling blanks or repeating sentences.'
     ]
   },
   {
-    title: 'Vocabulary that grows with you',
+    title: 'Get feedback based on your speech',
     description: [
-      'Track the words you actually use.',
-      'The words you\'re learning next.'
+      'JustTalk AI adapts to your vocabulary, grammar patterns, and recurring mistakes.'
+    ]
+  },
+  {
+    title: 'Keep improving across sessions',
+    description: [
+      'Your practice doesn’t reset. The AI remembers your progress and adjusts over time.'
     ]
   }
 ];
