@@ -14,15 +14,15 @@ const features: FeatureItem[] = [
   },
   {
     title: 'Analyze',
-    description: 'Get instant feedback on grammar, vocabulary, and fluency.',
+    description: 'JustTalk identifies meaningful patterns in your speaking — vocabulary usage, recurring issues, and communication habits.',
   },
   {
     title: 'Adapt',
-    description: 'AI adjusts to your level and learns from every conversation.',
+    description: 'Future conversations, questions, and lessons adjust automatically.',
   },
   {
     title: 'Continue',
-    description: 'Build on past sessions with memory that never forgets.',
+    description: 'You pick up where you left off. Nothing resets.',
   },
 ];
 
@@ -40,7 +40,7 @@ export function CircularRotation() {
       setTimeout(() => {
         setIsAnimating(false);
       }, 800);
-    }, 3000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
@@ -97,7 +97,7 @@ export function CircularRotation() {
           <circle
             cx="150"
             cy="150"
-            r="150"
+            r="145"
             fill="none"
             stroke="rgba(255, 255, 255, 0.35)"
             strokeWidth="1"
@@ -109,7 +109,7 @@ export function CircularRotation() {
             <text
               key={`text-${index}`}
               fill="rgba(255, 255, 255, 0.95)"
-              fontSize="20"
+              fontSize="21"
               fontWeight="500"
               fontFamily="Inter Tight, sans-serif"
               letterSpacing="0.1"
@@ -132,7 +132,7 @@ export function CircularRotation() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="absolute inset-0 flex items-center justify-center px-8"
+              className="absolute inset-0 flex items-center justify-center px-2"
               style={{
                 opacity: currentIndex === index ? 1 : 0,
                 transform: currentIndex === index 
