@@ -56,52 +56,74 @@ export function CircularRotation() {
         className="absolute inset-0 w-full h-full flex items-center justify-center"
         style={{
           transform: `rotate(${rotation}deg)`,
-          transition: 'transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)',
+          transition: 'transform 0.8s cubic-bezier(0.34, 1.15, 0.64, 1)',
         }}
       >
-        {/* Dashed Circle */}
+        {/* Dashed Circle and Text */}
         <svg
-          className="w-[300px] h-[300px]"
-          viewBox="0 0 300 300"
+          className="w-[340px] h-[340px]"
+          viewBox="-20 -20 340 340"
+          xmlns="http://www.w3.org/2000/svg"
         >
+          <defs>
+            {/* Create circular paths for curved text - positioned at top, right, bottom, left */}
+            {/* Top - Speak */}
+            <path
+              id="circlePath0"
+              d="M 100,10 A 160,160 0 0,1 200,10"
+              fill="none"
+            />
+            {/* Right - Analyze */}
+            <path
+              id="circlePath1"
+              d="M 290,100 A 160,160 0 0,1 290,200"
+              fill="none"
+            />
+            {/* Bottom - Adapt */}
+            <path
+              id="circlePath2"
+              d="M 200,290 A 160,160 0 0,1 100,290"
+              fill="none"
+            />
+            {/* Left - Continue */}
+            <path
+              id="circlePath3"
+              d="M 10,200 A 160,160 0 0,1 10,100"
+              fill="none"
+            />
+          </defs>
+          
+          {/* Dashed circle */}
           <circle
             cx="150"
             cy="150"
             r="150"
             fill="none"
             stroke="rgba(255, 255, 255, 0.35)"
-            strokeWidth="2"
-            strokeDasharray="10 10"
+            strokeWidth="1"
+            strokeDasharray="5 5"
           />
+          
+          {/* Curved text labels along the circle */}
+          {features.map((feature, index) => (
+            <text
+              key={`text-${index}`}
+              fill="rgba(255, 255, 255, 0.95)"
+              fontSize="20"
+              fontWeight="500"
+              fontFamily="Inter Tight, sans-serif"
+              letterSpacing="0.1"
+            >
+              <textPath 
+                href={`#circlePath${index}`} 
+                startOffset="50%" 
+                textAnchor="middle"
+              >
+                {feature.title}
+              </textPath>
+            </text>
+          ))}
         </svg>
-
-        {/* Text Labels positioned around circle - rotated with the circle */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="relative w-[300px] h-[300px]">
-            {features.map((feature, index) => {
-              const angle = (index * 90) * (Math.PI / 180);
-              const labelRadius = radius + 10;
-              const x = centerX + labelRadius * Math.sin(angle);
-              const y = centerY - labelRadius * Math.cos(angle);
-              const textRotation = index * 90;
-              
-              return (
-                <div
-                  key={index}
-                  className="absolute text-white/95 font-medium text-lg whitespace-nowrap"
-                  style={{
-                    left: `${x}px`,
-                    top: `${y}px`,
-                    transform: `translate(-50%, -50%) rotate(${textRotation}deg)`,
-                    fontFamily: 'Inter Tight, sans-serif',
-                  }}
-                >
-                  {feature.title}
-                </div>
-              );
-            })}
-          </div>
-        </div>
       </div>
 
       {/* Center Text with Animation - not rotating */}
@@ -119,11 +141,11 @@ export function CircularRotation() {
                     ? 'translateY(-100%)'
                     : 'translateY(100%)',
                 transition: isAnimating 
-                  ? 'transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease-in-out'
+                  ? 'transform 0.8s cubic-bezier(0.34, 1.15, 0.64, 1), opacity 0.4s ease-in-out'
                   : 'none',
               }}
             >
-              <p className="text-base font-normal leading-[22.96px] text-white/90 text-center">
+              <p className="text-base font-normal leading-tight text-white/80 text-center">
                 {feature.description}
               </p>
             </div>
