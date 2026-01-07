@@ -94,18 +94,18 @@ export default function Home() {
         <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
           <div className="text-center mb-16">
             <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray">
-              Talking works—when it’s tracked
+              Talking works—when it's tracked
             </h2>
              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4 mt-2 max-w-2xl mx-auto">
-                Most speaking tools let you talk but don’t track real progress. JustTalk AI analyzes what you say and builds every session on your history—so improvement is cumulative, not random.
+                Most speaking tools let you talk but don't track real progress. JustTalk AI analyzes what you say and builds every session on your history—so improvement is cumulative, not random.
               </p>
           </div>
           
           <div className="relative w-full rounded-2xl overflow-hidden">
             <img 
-              src="/mobile_blue_16x9_2.jpg" 
+              src="/mobile_blue_16x9_3.jpg" 
               alt="JustTalk AI Platform on mobile device" 
-              className="w-full h-auto aspect-4/3 md:aspect-auto object-cover"
+              className="w-full h-auto aspect-3/2 md:aspect-auto object-cover"
             />
           </div>
         </section>
@@ -215,7 +215,7 @@ export default function Home() {
                 Ongoing roleplay with memory and personality
               </h3>
               <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
-                Some scenarios unfold over multiple sessions. This isn’t one-off roleplay. It’s sustained speaking practice with continuity.
+                Some scenarios unfold over multiple sessions. This isn't one-off roleplay. It's sustained speaking practice with continuity.
               </p>
               
             </div>
@@ -286,7 +286,7 @@ export default function Home() {
 
             <div className="text-center mb-16">
             <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray">
-              When you’re ready, AI connects to real tutors
+              When you're ready, AI connects to real tutors
             </h2>
              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4 mt-2 max-w-2xl mx-auto">
                 JustTalk AI is designed to integrate with live tutors. When you take lessons, tutors can build on your AI practice instead of starting from scratch.
