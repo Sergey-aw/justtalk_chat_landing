@@ -122,10 +122,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                A continuous learning cycle built for you
+                A single learning loop—not separate tools
               </h3>
               <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
-                Every conversation flows into the next. Speak, get analyzed, adapt, and continue—creating a personalized loop that evolves with your progress.
+                JustTalk is built as one system, where everything you do contributes to ongoing improvement.
               </p>
             </div>
             

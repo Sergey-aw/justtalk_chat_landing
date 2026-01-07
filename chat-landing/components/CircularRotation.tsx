@@ -252,7 +252,7 @@ export function CircularRotation() {
               key={`text-${index}`}
               fill="rgba(255, 255, 255, 0.95)"
               fontSize="21"
-              fontWeight="500"
+              fontWeight="semi-bold"
               fontFamily="Inter Tight, sans-serif"
               letterSpacing="0.1"
             >
@@ -274,7 +274,7 @@ export function CircularRotation() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="absolute inset-0 flex items-center justify-center px-2"
+              className="absolute inset-0 flex items-center justify-center px-4 md:px-2"
               style={{
                 opacity: currentIndex === index ? 1 : 0,
                 transform: currentIndex === index 
@@ -287,7 +287,7 @@ export function CircularRotation() {
                   : 'none',
               }}
             >
-              <p className="text-base font-normal leading-tight text-white/80 text-center">
+              <p className="text-sm md:text-base font-normal leading-tight text-white/80 text-center">
                 {feature.description}
               </p>
             </div>
