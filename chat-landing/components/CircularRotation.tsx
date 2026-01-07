@@ -113,31 +113,23 @@ export function CircularRotation() {
   // Handle drag end with inertia
   const handleEnd = () => {
     setIsDragging(false);
-    setVelocity(velocityRef.current);
     
-    // Apply inertia
-    const applyInertia = () => {
-      velocityRef.current *= 0.95; // Friction
-      
-      if (Math.abs(velocityRef.current) > 0.1) {
-        setRotation((prev) => prev + velocityRef.current);
-        animationFrameRef.current = requestAnimationFrame(applyInertia);
-      } else {
-        // Snap to nearest 90 degree position
-        setRotation((prev) => {
-          const normalized = prev % 360;
-          const nearest = Math.round(normalized / 90) * 90;
-          const targetRotation = prev - normalized + nearest;
-          return targetRotation;
-        });
-        setIsAnimating(true);
-        setTimeout(() => setIsAnimating(false), 800);
-      }
-    };
-    
-    if (Math.abs(velocityRef.current) > 0.1) {
-      applyInertia();
-    }
+    // Snap immediately without inertia
+    snapToNearest();
+  };
+
+  // Snap to nearest 90 degree position
+  const snapToNearest = () => {
+    setRotation((prev) => {
+      const normalized = ((prev % 360) + 360) % 360;
+      const nearest = Math.round(normalized / 90) * 90;
+      const diff = nearest - normalized;
+      // Adjust by smallest angle difference
+      const adjustment = diff > 180 ? diff - 360 : diff < -180 ? diff + 360 : diff;
+      return prev + adjustment;
+    });
+    setIsAnimating(true);
+    setTimeout(() => setIsAnimating(false), 800);
   };
 
   // Mouse events
