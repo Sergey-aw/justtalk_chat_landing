@@ -12,18 +12,20 @@ const features: FeatureItem[] = [
     title: 'Speak',
     description: 'Practice English through AI scenarios or live lessons.',
   },
-  {
-    title: 'Analyze',
-    description: 'JustTalk identifies meaningful patterns in your speaking — vocabulary usage, recurring issues, and communication habits.',
+   {
+    title: 'Continue',
+    description: 'You pick up where you left off. Nothing resets.',
   },
+  
   {
     title: 'Adapt',
     description: 'Future conversations, questions, and lessons adjust automatically.',
   },
   {
-    title: 'Continue',
-    description: 'You pick up where you left off. Nothing resets.',
+    title: 'Analyze',
+    description: 'JustTalk identifies meaningful patterns in your speaking — vocabulary usage, recurring issues, and communication habits.',
   },
+ 
 ];
 
 export function CircularRotation() {
@@ -251,10 +253,11 @@ export function CircularRotation() {
             <text
               key={`text-${index}`}
               fill="rgba(255, 255, 255, 0.95)"
-              fontSize="21"
-              fontWeight="semi-bold"
+              fontSize="24"
+              fontWeight="500"
               fontFamily="Inter Tight, sans-serif"
               letterSpacing="0.1"
+              className="md:text-[21px]"
             >
               <textPath 
                 href={`#circlePath${index}`} 
