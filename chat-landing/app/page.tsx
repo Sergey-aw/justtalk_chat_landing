@@ -11,6 +11,7 @@ import { PricingSection } from '@/components/PricingSection';
 import { Conversation } from '@/components/Conversation';
 import { ProgressChart } from '@/components/ProgressChart';
 import { TrackedLink } from '@/components/TrackedLink';
+import { CircularRotation } from '@/components/CircularRotation';
 
 export default function Home() {
   return (
@@ -26,12 +27,12 @@ export default function Home() {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               {/* Hero Text */}
               <div className="flex flex-col md:items-start items-center text-center md:text-left">
-                <h1 className="text-5xl md:text-[64px] font-semibold md:leading-[59.29px] tracking-[-1.763px] text-just_cod-gray mb-0">
+                <h1 className="text-4xl md:text-[64px] font-semibold md:leading-[59.29px] tracking-[-1.763px] text-just_cod-gray mb-0">
                   Build real speaking confidence in English
                 </h1>
                 <div className="pt-8">
-                  <p className="text-base md:text-[16.3px] font-normal leading-7 tracking-[-0.17px] text-just_cod-gray">
-                    Practice English through realistic conversations — interviews, work discussions, and everyday situations — with AI that remembers how you speak and builds every session on the last.
+                  <p className="text-base md:text-[16.3px] font-normal leading-normal tracking-[-0.17px] text-just_cod-gray">
+                    Practice English through realistic conversations with AI that remembers how you speak and builds every session on the last.
                   </p>
                 </div>
               </div>
@@ -117,7 +118,31 @@ export default function Home() {
             </h2>
           </div>
 
-          {/* Feature 1 - Tutors Carousel */}
+          {/* Feature 1 - Learning Loop */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                A continuous learning cycle built for you
+              </h3>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                Every conversation flows into the next. Speak, get analyzed, adapt, and continue—creating a personalized loop that evolves with your progress.
+              </p>
+            </div>
+            
+            {/* Circular Rotation */}
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-square md:aspect-4/3">
+              <img 
+                src="/bg_color_rotating.jpg" 
+                alt="" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="relative z-10 w-full h-full flex items-center justify-center p-8">
+                <CircularRotation />
+              </div>
+            </div>
+          </div>
+
+          {/* Feature 2 - Tutors Carousel */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
@@ -142,7 +167,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Feature 2 - Memory */}
+          {/* Feature 3 - Memory */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
@@ -158,7 +183,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Feature 3 - Role Play Scenarios */}
+          {/* Feature 4 - Role Play Scenarios */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
@@ -183,7 +208,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Feature 4 - Role Play Series */}
+          {/* Feature 5 - Role Play Series */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
@@ -208,7 +233,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Feature 5 - Progress Tracking */}
+          {/* Feature 6 - Progress Tracking */}
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
