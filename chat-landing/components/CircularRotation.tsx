@@ -10,20 +10,20 @@ interface FeatureItem {
 const features: FeatureItem[] = [
   {
     title: 'Speak',
-    description: 'Practice English through AI scenarios or live lessons.',
+    description: 'Real conversations, not exercises',
   },
    {
     title: 'Continue',
-    description: 'You pick up where you left off. Nothing resets.',
+    description: 'Progress compounds over time',
   },
   
   {
     title: 'Adapt',
-    description: 'Future conversations, questions, and lessons adjust automatically.',
+    description: 'Practice shifts to your weak points',
   },
   {
     title: 'Analyze',
-    description: 'JustTalk identifies meaningful patterns in your speaking — vocabulary usage, recurring issues, and communication habits.',
+    description: 'What you use, avoid, and repeat',
   },
  
 ];
@@ -252,7 +252,7 @@ export function CircularRotation() {
           {features.map((feature, index) => (
             <text
               key={`text-${index}`}
-              fill="rgba(255, 255, 255, 0.95)"
+              fill="rgba(255, 255, 255, 1)"
               fontSize="24"
               fontWeight="500"
               fontFamily="Inter Tight, sans-serif"
@@ -290,7 +290,7 @@ export function CircularRotation() {
                   : 'none',
               }}
             >
-              <p className="text-sm md:text-base font-normal leading-tight text-white/80 text-center">
+              <p className="text-base md:text-lg font-base leading-tight text-white/80 text-center">
                 {feature.description}
               </p>
             </div>

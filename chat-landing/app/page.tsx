@@ -103,8 +103,8 @@ export default function Home() {
           
           <div className="relative w-full rounded-2xl overflow-hidden">
             <img 
-              src="/platform_blue_16x9.jpg" 
-              alt="JustTalk Platform" 
+              src="/mobile_blue_16x9_2.jpg" 
+              alt="JustTalk AI Platform on mobile device" 
               className="w-full h-auto aspect-4/3 md:aspect-auto object-cover"
             />
           </div>
@@ -122,10 +122,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                A single learning loop—not separate tools
+                How improvement actually happens
               </h3>
               <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
-                JustTalk is built as one system, where everything you do contributes to ongoing improvement.
+                One conversation doesn't change much. But when every session is tracked, understood, and used to shape the next one, progress compounds naturally.
               </p>
             </div>
             
