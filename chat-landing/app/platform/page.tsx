@@ -14,6 +14,7 @@ import { PricingSection } from '@/components/PricingSection';
 import { Conversation } from '@/components/Conversation';
 import { ProgressChart } from '@/components/ProgressChart';
 import { ChatInterface } from '@/components/ChatInterface';
+import { WaitlistDialog } from '@/components/WaitlistDialog';
 import { useState, useRef } from 'react';
 import { Fullscreen, User, TrendingUp, Brain, MessageCircle, Shuffle, BarChart3, DollarSign, Calendar, Monitor, CreditCard, MessagesSquare } from 'lucide-react';
 
@@ -77,12 +78,12 @@ export default function Platform() {
             {/* CTA Buttons - Centered Below */}
             <div className="pt-8 flex justify-center">
               <div className="flex flex-col sm:flex-row gap-[17px] items-center">
-                <a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" target="_blank" rel="noopener">
+                <WaitlistDialog>
                   <Button className="cursor-pointer">
-                    Start now
+                    Join the waitlist
                     <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
                   </Button>
-                </a>
+                </WaitlistDialog>
                 <a href="https://app.justtalk.ai/signup" target="_blank" rel="noopener">
                   <Button variant="outline" className="cursor-pointer">
                     Become a powerful teacher
