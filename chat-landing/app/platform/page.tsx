@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { motion, AnimatePresence } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PersonalityCarousel } from '@/components/PersonalityCarousel';
@@ -13,10 +15,11 @@ import { Conversation } from '@/components/Conversation';
 import { ProgressChart } from '@/components/ProgressChart';
 import { ChatInterface } from '@/components/ChatInterface';
 import { useState, useRef } from 'react';
-import { Fullscreen, User, TrendingUp, Brain, MessageCircle, Shuffle, BarChart3 } from 'lucide-react';
+import { Fullscreen, User, TrendingUp, Brain, MessageCircle, Shuffle, BarChart3, DollarSign, Calendar, Monitor, CreditCard, MessagesSquare } from 'lucide-react';
 
 export default function Platform() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [activeTab, setActiveTab] = useState("students");
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const handleFullscreen = () => {
@@ -51,11 +54,12 @@ export default function Platform() {
               {/* Hero Text */}
               <div className="flex flex-col items-start max-w-2xl">
                 <h1 className="text-5xl md:text-[64px] font-semibold leading-12 tracking-tight text-just_cod-gray mb-0 text-center md:text-left md:leading-16">
-                  The Fastest Way to Speak a New Language
+                  Learn with real tutors—without starting over
                 </h1>
                 <div className="pt-8">
                   <p className="text-base md:text-[16.3px] font-normal leading-normal tracking-[-0.17px] text-just_cod-gray">
-                    The most powerful seamless experience between JustTalk AI Chat interactions and one-on-one lessons with real human teachers
+                    {/* The most powerful seamless experience between JustTalk AI interactions and one-on-one lessons with real human teachers */}
+                    JustTalk connects live tutoring to your speaking history, so lessons begin with context—not re-diagnosis
                   </p>
                 </div>
               </div>
@@ -141,12 +145,27 @@ export default function Platform() {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="w-full max-w-[1186px] px-10 py-16 md:py-24">
-          <div className="text-center mb-16">
+        <section id="features" className="w-full max-w-[1186px] px-10 py-16 md:py-16">
+          <div className="text-center mb-10">
             <h2 className="text-2xl md:text-[28px] font-medium leading-[38.31px] tracking-[-0.29px] text-just_cod-gray">
               Explore more features in JustTalk AI
             </h2>
           </div>
+
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12">
+              <TabsTrigger value="students">Students</TabsTrigger>
+              <TabsTrigger value="teachers">Teachers</TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="students" className="mt-0">
+              <motion.div
+                key="students"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
 
           {/* Feature 1 - Tutors Carousel */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
@@ -251,102 +270,230 @@ export default function Platform() {
               />
             </div> 
            </div> */}
-        </section>
 
-        {/* Why JustTalk Section */}
-        <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
-         <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-[28px] font-medium leading-[38.31px] tracking-[-0.29px] text-just_cod-gray">
-              How it works
-            </h2>
-             <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4 mt-2 max-w-2xl mx-auto">
+          {/* How it works - Students */}
+          <div className="mt-24">
+            <div className="text-center mb-16">
+              <h2 className="text-2xl md:text-[28px] font-medium leading-[38.31px] tracking-[-0.29px] text-just_cod-gray">
+                How it works
+              </h2>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4 mt-2 max-w-2xl mx-auto">
                 Effortlessly track student progress, mistakes, and vocabulary—all in one place. Save time and let AI handle the details while you focus on what matters most.
               </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {/* Card 1 */}
+              <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                <div className="mb-4">
+                  <TrendingUp className="w-6 h-6 text-pink-500" strokeWidth={2} />
+                </div>
+                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                  True personalization
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                  We track every word you say (and don't) to deliver a hyper-personalized roadmap to fluency.
+                </p>
+              </div>
+
+              {/* Card 2 */}
+              <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                <div className="mb-4">
+                  <BarChart3 className="w-6 h-6 text-orange-500" strokeWidth={2} />
+                </div>
+                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                  CEFR-based progression
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                  Our curriculum is built on CEFR—the global standard—so your progress is real, not just "points".
+                </p>
+              </div>
+
+              {/* Card 3 */}
+              <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                <div className="mb-4">
+                  <User className="w-6 h-6 text-yellow-500" strokeWidth={2} />
+                </div>
+                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                  Smarter human tutoring
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                  Every tutor is backed by real-time AI insights to focus each lesson on what matters most for you.
+                </p>
+              </div>
+
+              {/* Card 4 */}
+              <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                <div className="mb-4">
+                  <MessageCircle className="w-6 h-6 text-blue-500" strokeWidth={2} />
+                </div>
+                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                  AI that remembers you
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                  Our AI partner gives you unlimited speaking practice and remembers everything you've discussed with your tutor.
+                </p>
+              </div>
+
+              {/* Card 5 */}
+              <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                <div className="mb-4">
+                  <Shuffle className="w-6 h-6 text-purple-500" strokeWidth={2} />
+                </div>
+                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                  Seamless integration
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                  AI and tutor work in sync. Everything you say improves your personalized path to fluency.
+                </p>
+              </div>
+
+              {/* Card 6 */}
+              <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                <div className="mb-4">
+                  <Brain className="w-6 h-6 text-indigo-500" strokeWidth={2} />
+                </div>
+                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                  Visualize Progress
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                  See all the data insights in simple diagrams
+                </p>
+              </div>
+            </div>
+          </div>
+              </motion.div>
+            </TabsContent>
+
+            <TabsContent value="teachers" className="mt-0">
+              <motion.div
+                key="teachers"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+
+               {/* Feature 1 - Tutors Carousel */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                Speak with a live tutor
+              </h3>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                Find a tutor matched to your personal needs and goals. Every tutor is supported by AI insights. Lessons stay personalized, efficient, and focused on your progress.
+              </p>
+              
+            </div>
+            
+            {/* Tutors Carousel */}
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-square md:aspect-4/3">
+              <img 
+                src="/platform_feature_1.jpg" 
+                alt="" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+           
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Card 1 */}
-            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
-              <div className="mb-4">
-                <TrendingUp className="w-6 h-6 text-pink-500" strokeWidth={2} />
-              </div>
-              <h3 className="text-xl font-medium text-just_cod-gray mb-3">
-                True personalization
-              </h3>
-              <p className="text-base text-just_cod-gray/70 leading-tight tracking-[-0.14px]">
-                We track every word you say (and don't) to deliver a hyper-personalized roadmap to fluency.
-              </p>
-            </div>
+            
+              {/* How it works - Tutors */}
+              <div className="mt-24">
+                <div className="text-center mb-16">
+                  <h2 className="text-2xl md:text-[28px] font-medium leading-[38.31px] tracking-[-0.29px] text-just_cod-gray">
+                    How it works for teachers
+                  </h2>
+                  <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4 mt-2 max-w-2xl mx-auto">
+                    Empower your teaching with AI-driven insights. Track student progress, identify patterns, and deliver personalized lessons with confidence.
+                  </p>
+                </div>
 
-            {/* Card 2 */}
-            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
-              <div className="mb-4">
-                <BarChart3 className="w-6 h-6 text-orange-500" strokeWidth={2} />
-              </div>
-              <h3 className="text-xl font-medium text-just_cod-gray mb-3">
-                CEFR-based progression
-              </h3>
-              <p className="text-base text-just_cod-gray/70 leading-tight tracking-[-0.14px]">
-                Our curriculum is built on CEFR—the global standard—so your progress is real, not just "points".
-              </p>
-            </div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {/* Card 1 */}
+                  <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                    <div className="mb-4">
+                      <DollarSign className="w-6 h-6 text-indigo-500" strokeWidth={2} />
+                    </div>
+                    <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                      Set your own rates
+                    </h3>
+                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                      Charge what you want, change it anytime
+                    </p>
+                  </div>
 
-            {/* Card 3 */}
-            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
-              <div className="mb-4">
-                <User className="w-6 h-6 text-yellow-500" strokeWidth={2} />
-              </div>
-              <h3 className="text-xl font-medium text-just_cod-gray mb-3">
-                Smarter human tutoring
-              </h3>
-              <p className="text-base text-just_cod-gray/70 leading-tight tracking-[-0.14px]">
-                Every tutor is backed by real-time AI insights to focus each lesson on what matters most for you.
-              </p>
-            </div>
+                  {/* Card 2 */}
+                  <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                    <div className="mb-4">
+                      <Calendar className="w-6 h-6 text-orange-500" strokeWidth={2} />
+                    </div>
+                    <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                      Teach on your schedule
+                    </h3>
+                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                      Open availability when it works for you
+                    </p>
+                  </div>
 
-            {/* Card 4 */}
-            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
-              <div className="mb-4">
-                <MessageCircle className="w-6 h-6 text-blue-500" strokeWidth={2} />
-              </div>
-              <h3 className="text-xl font-medium text-just_cod-gray mb-3">
-                AI that remembers you
-              </h3>
-              <p className="text-base text-just_cod-gray/70 leading-tight tracking-[-0.14px]">
-                Our AI partner gives you unlimited speaking practice and remembers everything you've discussed with your tutor.
-              </p>
-            </div>
+                  {/* Card 3 */}
+                  <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                    <div className="mb-4">
+                      <MessageCircle className="w-6 h-6 text-blue-500" strokeWidth={2} />
+                    </div>
+                    <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                      Message students easily
+                    </h3>
+                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                      All communication in one place
+                    </p>
+                  </div>
 
-            {/* Card 5 */}
-            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
-              <div className="mb-4">
-                <Shuffle className="w-6 h-6 text-purple-500" strokeWidth={2} />
-              </div>
-              <h3 className="text-xl font-medium text-just_cod-gray mb-3">
-                Seamless integration
-              </h3>
-              <p className="text-base text-just_cod-gray/70 leading-tight tracking-[-0.14px]">
-                AI and tutor work in sync. Everything you say improves your personalized path to fluency.
-              </p>
-            </div>
+                  {/* Card 4 */}
+                  <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                    <div className="mb-4">
+                      <MessagesSquare className="w-6 h-6 text-pink-500" strokeWidth={2} />
+                    </div>
+                    <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                      Conversation-based teaching
+                    </h3>
+                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                      Teach through real conversation
+                    </p>
+                  </div>
 
-            {/* Card 6 */}
-            <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
-              <div className="mb-4">
-                <Brain className="w-6 h-6 text-indigo-500" strokeWidth={2} />
+                  {/* Card 5 */}
+                  <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                    <div className="mb-4">
+                      <CreditCard className="w-6 h-6 text-yellow-500" strokeWidth={2} />
+                    </div>
+                    <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                      Payments handled by the platform
+                    </h3>
+                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                      No invoicing or admin required
+                    </p>
+                  </div>
+
+                  {/* Card 6 */}
+                  <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                    <div className="mb-4">
+                      <Monitor className="w-6 h-6 text-purple-500" strokeWidth={2} />
+                    </div>
+                    <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                      A clean, modern teaching workspace
+                    </h3>
+                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                      Designed for online tutoring
+                    </p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-medium text-just_cod-gray mb-3">
-                Visualize Progress
-              </h3>
-              <p className="text-base text-just_cod-gray/70 leading-tight tracking-[-0.14px]">
-                See all the data insights in simple diagrams
-              </p>
-            </div>
-          </div>
+              </motion.div>
+            </TabsContent>
+
+          </Tabs>
         </section>
-
-        {/* Pricing Section */}
-        <PricingSection />
 
         {/* CTA Overlay Section */}
         <section className="w-full max-w-[1186px] px-10 py-16">

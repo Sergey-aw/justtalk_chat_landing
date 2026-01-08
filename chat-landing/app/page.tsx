@@ -281,7 +281,7 @@ export default function Home() {
 
             <div className="text-center mb-16">
             <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray">
-              When you're ready, AI connects to real tutors
+              When you're ready, JustTalk AI connects to real tutors
             </h2>
              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4 mt-2 max-w-2xl mx-auto">
                 JustTalk AI is designed to integrate with live tutors. When you take lessons, tutors can build on your AI practice instead of starting from scratch.
@@ -291,9 +291,9 @@ export default function Home() {
           <div className="bg-[#f8f6f0] rounded-2xl px-8 py-8">
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
               {/* Image */}
-              <div className="relative w-full aspect-4/3 rounded-2xl overflow-hidden">
+              <div className="relative w-full aspect-3/2 rounded-2xl overflow-hidden">
                 <img 
-                  src="/platform_blue_16x9.jpg" 
+                  src="/hero_blue_2.jpg" 
                   alt="JustTalk AI Platform connecting to tutors" 
                   className="object-cover h-full w-full"
                 />
