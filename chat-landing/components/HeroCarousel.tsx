@@ -46,6 +46,20 @@ const slides: Slide[] = [
 export function HeroCarousel() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+    };
+  }, []);
 
   useEffect(() => {
     if (!api) {
@@ -59,9 +73,53 @@ export function HeroCarousel() {
     });
   }, [api]);
 
+  // Desktop: Show only first slide
+  if (!isMobile) {
+    const firstSlide = slides[0];
+    return (
+      <div className="relative w-full h-full">
+        <div className="relative rounded-2xl overflow-hidden w-full h-full">
+          {/* Background Image */}
+          <div className="absolute inset-0">
+            <img 
+              src="/bg_colored1_square.jpg"
+              alt="" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Content */}
+          <div className="relative z-10 flex flex-col h-full p-8">
+            {/* Icon Section - Top */}
+            <div className="flex-1 flex items-center justify-center">
+              <div className="w-full pb-4">
+                <Conversation variant="hero" />
+              </div>
+            </div>
+
+            {/* Text Section - Bottom */}
+            <div className="space-y-4 min-h-[160px] p-2">
+              <h3 className="text-white text-2xl font-semibold tracking-[-0.5px]">
+                {firstSlide.title}
+              </h3>
+              <div className="text-white text-base space-y-1 leading-tight mt-3">
+                {firstSlide.description.map((line, lineIdx) => (
+                  <p key={lineIdx} className="m-0">
+                    {line}
+                  </p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Mobile: Show carousel with all slides
   return (
     <div className="relative w-full h-full flex flex-col gap-3">
-      <div className="flex-1 min-h-0 -mx-10 md:mx-0" style={{ height: '100%' }}>
+      <div className="flex-1 min-h-0 -mx-10" style={{ height: '100%' }}>
         <Carousel 
           setApi={setApi}
           opts={{
@@ -71,9 +129,9 @@ export function HeroCarousel() {
           className="w-full h-full"
           style={{ height: '100%' }}
         >
-          <CarouselContent className="h-full -ml-2 md:-ml-4" style={{ height: '100%' }}>
+          <CarouselContent className="h-full -ml-2" style={{ height: '100%' }}>
             {slides.map((slide, index) => (
-              <CarouselItem key={index} className="h-full pl-2 md:pl-4 basis-[85%] md:basis-full" style={{ height: '100%' }}>
+              <CarouselItem key={index} className="h-full pl-2 basis-[85%]" style={{ height: '100%' }}>
                 <div className="relative rounded-2xl overflow-hidden w-full h-full">
                   {/* Background Image */}
                   <div className="absolute inset-0">
@@ -85,7 +143,7 @@ export function HeroCarousel() {
                   </div>
 
                   {/* Content */}
-                  <div className="relative z-10 flex flex-col h-full px-4 pt-4 pb-3 md:p-8">
+                  <div className="relative z-10 flex flex-col h-full px-4 pt-4 pb-3">
                     {/* Icon Section - Top */}
                     <div className="flex-1 flex items-center justify-center">
                       {index === 0 ? (
@@ -94,7 +152,7 @@ export function HeroCarousel() {
                           <Conversation variant="hero" />
                         </div>
                       ) : (
-                        <div className="w-10 h-10 md:w-14 md:h-14 text-white">
+                        <div className="w-10 h-10 text-white">
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
                             <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
@@ -105,11 +163,11 @@ export function HeroCarousel() {
                     </div>
 
                     {/* Text Section - Bottom */}
-                    <div className="space-y-0 md:space-y-4 min-h-[120px] md:min-h-[160px] p-2">
-                      <h3 className="text-white text-lg md:text-2xl font-semibold tracking-[-0.5px]">
+                    <div className="space-y-0 min-h-[120px] p-2">
+                      <h3 className="text-white text-lg font-semibold tracking-[-0.5px]">
                         {slide.title}
                       </h3>
-                      <div className="text-white text-base md:text-base space-y-0.5 md:space-y-1 leading-tight mt-2 md:mt-3">
+                      <div className="text-white text-base space-y-0.5 leading-tight mt-2">
                         {slide.description.map((line, lineIdx) => (
                           <p key={lineIdx} className="m-0">
                             {line}
