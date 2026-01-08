@@ -55,7 +55,7 @@ export default function Home() {
                   eventProperties={{ location: 'hero_section' }}
                 >
                   <Button className="cursor-pointer">
-                    Start now
+                    Get Started
                     <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
                   </Button>
                 </TrackedLink>
@@ -67,7 +67,7 @@ export default function Home() {
                   eventProperties={{ location: 'hero_section' }}
                 >
                   <Button variant="outline" className="cursor-pointer">
-                    Learn about JustTalk AI platform
+                    Learn about JustTalk Teachers
                     <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
                   </Button>
                 </TrackedLink>
