@@ -78,18 +78,24 @@ export default function Platform() {
             {/* CTA Buttons - Centered Below */}
             <div className="pt-8 flex justify-center">
               <div className="flex flex-col sm:flex-row gap-[17px] items-center">
-                <WaitlistDialog>
-                  <Button className="cursor-pointer">
-                    Join the waitlist
-                    <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
-                  </Button>
-                </WaitlistDialog>
-                <a href="https://app.justtalk.ai/signup" target="_blank" rel="noopener">
-                  <Button variant="outline" className="cursor-pointer">
-                    Become a powerful teacher
-                    <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
-                  </Button>
-                </a>
+                <div className="flex flex-col items-center gap-2 max-w-[240px]">
+                  <WaitlistDialog>
+                    <Button className="cursor-pointer w-full">
+                      Join the waitlist
+                      <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
+                    </Button>
+                  </WaitlistDialog>
+                  <p className="text-sm text-just_cod-gray/70 text-center">Teacher's marketplace coming soon</p>
+                </div>
+                <div className="flex flex-col items-center gap-2">
+                  <a href="https://app.justtalk.ai/signup" target="_blank" rel="noopener">
+                    <Button variant="outline" className="cursor-pointer">
+                      Become a powerful teacher
+                      <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
+                    </Button>
+                  </a>
+                  <p className="text-sm text-transparent select-none whitespace-nowrap">Placeholder</p>
+                </div>
               </div>
             </div>
 

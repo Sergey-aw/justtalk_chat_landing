@@ -38,11 +38,13 @@ export async function POST(req: NextRequest) {
       email: string;
       source: string;
       userGroup: string;
+      role: string;
       mailingLists?: { [key: string]: boolean };
     } = {
       email: email,
       source: "JustTalk Platform Waitlist",
       userGroup: "waitlist",
+      role: "student",
     };
 
     // If LOOPS_LIST_ID is provided, add the contact to that specific mailing list
