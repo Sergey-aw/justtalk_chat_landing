@@ -78,7 +78,7 @@ export function HeroCarousel() {
                   {/* Background Image */}
                   <div className="absolute inset-0">
                     <img 
-                      src="/bg_colored1_square.jpg" 
+                      src={`/bg_colored${index + 1}_square.jpg`}
                       alt="" 
                       className="w-full h-full object-cover"
                     />
