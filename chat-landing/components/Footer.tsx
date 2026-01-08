@@ -27,8 +27,8 @@ export function Footer() {
           {/* Column 2 */}
           <div className="md:justify-self-start md:text-left">
             <ul className="space-y-3">
-              <li><a href="https://justtalk.ai/platform" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Platform', 'https://justtalk.ai/platform')}>Platform</a></li>
-              <li><a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Voice Chat', 'https://chat.justtalk.ai/welcome?ref=justtalk.ai')}>Voice Chat</a></li>
+              <li><a href="https://chat.justtalk.ai/welcome?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Voice Chat', 'https://chat.justtalk.ai/welcome?ref=justtalk.ai')}>JustTalk AI</a></li>
+              <li><a href="https://justtalk.ai/platform" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Teachers', 'https://justtalk.ai/platform')}>JustTalk Teachers</a></li>
               <li><a href="https://docs.justtalk.ai/?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Help', 'https://docs.justtalk.ai/?ref=justtalk.ai')}>Help</a></li>
               <li><a href="https://status.justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline inline-flex items-center gap-1.5 justify-end" onClick={() => handleFooterLinkClick('Status', 'https://status.justtalk.ai')}>Status<span className="w-1 h-1 bg-green-500 rounded-full"></span></a></li>
             </ul>
