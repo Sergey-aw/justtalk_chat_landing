@@ -50,7 +50,7 @@ export function Header() {
               JustTalk AI
             </a>
               <a href="/platform" className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
-              JustTalk Teachers
+              JustTalk Tutors
             </a>
             <a href="#features" className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
               Features
@@ -107,19 +107,20 @@ export function Header() {
 
             {/* Navigation Menu */}
             <nav className="flex-1 flex flex-col px-8 py-8 space-y-4">
-              <a 
-                href="/platform" 
-                className="text-lg font-medium text-just_cod-gray"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Platform
-              </a>
+            
               <a 
                 href="/" 
                 className="text-lg font-medium text-just_cod-gray"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 JustTalk AI
+              </a>
+                <a 
+                href="/platform" 
+                className="text-lg font-medium text-just_cod-gray"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                JustTalk Tutors
               </a>
               <a 
                 href="#features" 

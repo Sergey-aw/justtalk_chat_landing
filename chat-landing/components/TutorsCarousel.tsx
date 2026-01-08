@@ -1,0 +1,178 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
+import { motion, useAnimation, useMotionValue } from 'framer-motion';
+
+interface Tutor {
+  name: string;
+  country: string;
+  rate: number;
+  lessons: number;
+  rating: number;
+  image: string;
+}
+
+const tutors: Tutor[] = [
+  { name: 'Samantha', country: '🇺🇸🇪🇸', rate: 20, lessons: 2524, rating: 5, image: '/images/Naomi.jpeg' },
+  { name: 'Brian', country: '🇺🇸🇫🇷', rate: 25, lessons: 1843, rating: 5, image: '/images/Naomi.jpeg' },
+  { name: 'Alina', country: '🇺🇸🇷🇺', rate: 18, lessons: 3102, rating: 5, image: '/images/Naomi.jpeg' },
+  { name: 'Marcus', country: '🇺🇸🇩🇪', rate: 22, lessons: 2156, rating: 5, image: '/images/Naomi.jpeg' },
+  { name: 'Mateo', country: '🇺🇸🇪🇸', rate: 19, lessons: 1967, rating: 5, image: '/images/Naomi.jpeg' },
+  { name: 'Lucía', country: '🇺🇸🇪🇸', rate: 17, lessons: 2834, rating: 5, image: '/images/Naomi.jpeg' },
+  { name: 'Imani', country: '🇺🇸🇫🇷', rate: 21, lessons: 1654, rating: 5, image: '/images/Naomi.jpeg' },
+  { name: 'Naomi', country: '🇺🇸🇯🇵', rate: 24, lessons: 2987, rating: 5, image: '/images/Naomi.jpeg' },
+  { name: 'Emma', country: '🇺🇸🇩🇪', rate: 23, lessons: 2341, rating: 5, image: '/images/Naomi.jpeg' },
+  { name: 'Diego', country: '🇺🇸🇪🇸', rate: 16, lessons: 1789, rating: 5, image: '/images/Naomi.jpeg' },
+  { name: 'Sophie', country: '🇺🇸🇫🇷', rate: 26, lessons: 3456, rating: 5, image: '/images/Naomi.jpeg' },
+  { name: 'Kai', country: '🇺🇸🇰🇷', rate: 21, lessons: 2098, rating: 5, image: '/images/Naomi.jpeg' },
+];
+
+// Split into three rows
+const row1Tutors = tutors.slice(0, 4);
+const row2Tutors = tutors.slice(4, 8);
+const row3Tutors = tutors.slice(8);
+
+interface TutorCardProps {
+  tutor: Tutor;
+}
+
+function TutorCard({ tutor }: TutorCardProps) {
+  return (
+    <div className="bg-white flex flex-col items-end justify-center overflow-clip p-[12px] relative rounded-2xl flex-shrink-0 shadow-md">
+      <div className="flex gap-[3px] items-start relative shrink-0 w-full">
+        <div className="flex items-start relative self-stretch shrink-0">
+          <div className="aspect-square h-full relative rounded-xl shrink-0 w-[68px]">
+            <img
+              alt={tutor.name}
+              className="absolute inset-0 max-w-none object-center object-cover pointer-events-none rounded-xl size-full aspect-square"
+              src={tutor.image}
+            />
+          </div>
+        </div>
+        <div className="basis-0 flex flex-col gap-[3px] grow h-[50px] items-start justify-center min-h-px min-w-px overflow-clip pl-[13px] pr-0 py-[1px] relative shrink-0">
+          <div className="flex h-[23px] items-start justify-between relative shrink-0 w-full">
+            <div className="basis-0 flex font-semibold grow items-center justify-between leading-normal min-h-px min-w-px relative shrink-0 whitespace-nowrap">
+              <p className="relative shrink-0 text-md text-black">
+                {tutor.name} {tutor.country}
+              </p>
+              <p className="relative shrink-0 text-[#a6a6a6] text-[16px]">
+                ${tutor.rate}/hr
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col items-start relative shrink-0 pt-1">
+            <div className="flex font-semibold gap-[8px] items-center justify-center leading-normal not-italic relative shrink-0 text-[12px] whitespace-nowrap">
+              <p className="relative shrink-0 text-[#9a9a9a]">
+                {tutor.lessons} lessons
+              </p>
+              <p className="relative shrink-0 text-[#a6a6a6] text-xs">
+                ⭐⭐⭐⭐⭐️
+              </p>
+            </div>
+          </div>
+          <div className="basis-0 flex flex-col grow items-end justify-end min-h-px min-w-px relative shrink-0 w-full">
+            {/* <div className="bg-[#282828] flex items-end justify-center px-[8px] py-[5px] relative rounded-[5px] shrink-0 cursor-pointer hover:bg-[#3a3a3a] transition-colors">
+               <p className="font-medium leading-normal relative shrink-0 text-[12px] whitespace-nowrap text-white">
+                book a trial
+              </p> 
+            </div> */}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+interface ScrollingRowProps {
+  tutors: Tutor[];
+  direction?: 'left' | 'right';
+  offset?: number;
+}
+
+function ScrollingRow({ tutors, direction = 'left', offset = 0 }: ScrollingRowProps) {
+  const x = useMotionValue(offset);
+  const controls = useAnimation();
+  const isDragging = useRef(false);
+  // Card width scaled down to ~33% of original Figma design
+  const cardWidth = 175;
+  const totalWidth = tutors.length * cardWidth;
+
+  useEffect(() => {
+    const animateScroll = async () => {
+      if (isDragging.current) return;
+
+      const currentX = x.get();
+      const targetX = direction === 'left' ? -totalWidth : totalWidth;
+      
+      await controls.start({
+        x: [currentX, currentX + targetX],
+        transition: {
+          duration: 50,
+          ease: 'linear',
+          repeat: Infinity,
+        },
+      });
+    };
+
+    animateScroll();
+  }, [controls, direction, totalWidth, x]);
+
+  const handleDragStart = () => {
+    isDragging.current = true;
+    controls.stop();
+  };
+
+  const handleDragEnd = () => {
+    isDragging.current = false;
+    
+    // Delay animation restart to allow momentum to complete
+    setTimeout(() => {
+      const currentX = x.get();
+      controls.start({
+        x: [currentX, currentX + (direction === 'left' ? -totalWidth : totalWidth)],
+        transition: {
+          duration: 50,
+          ease: 'linear',
+          repeat: Infinity,
+        },
+      });
+    }, 500);
+  };
+
+  // Duplicate tutors for infinite scroll effect
+  const duplicatedTutors = [...tutors, ...tutors, ...tutors];
+
+  return (
+    <div className="relative overflow-hidden w-full py-1 md:py-2 max-w-full">
+      <motion.div
+        className="flex gap-[24px]"
+        drag="x"
+        dragConstraints={{ left: -totalWidth, right: 0 }}
+        dragElastic={0.1}
+        dragMomentum={true}
+        dragTransition={{ 
+          power: 0.3,
+          timeConstant: 200
+        }}
+        onDragStart={handleDragStart}
+        onDragEnd={handleDragEnd}
+        animate={controls}
+        style={{ x }}
+      >
+        {duplicatedTutors.map((tutor, index) => (
+          <TutorCard key={`${tutor.name}-${index}`} tutor={tutor} />
+        ))}
+      </motion.div>
+    </div>
+  );
+}
+
+export function TutorsCarousel() {
+  return (
+    <div className="flex flex-col gap-[5px] w-full overflow-hidden max-w-full">
+      <ScrollingRow tutors={row1Tutors} direction="left" offset={0} />
+      <ScrollingRow tutors={row2Tutors} direction="left" offset={-120} />
+      <ScrollingRow tutors={row3Tutors} direction="left" offset={-240} />
+    </div>
+  );
+}

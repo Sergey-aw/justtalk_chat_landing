@@ -9,6 +9,7 @@ import { Footer } from "@/components/Footer";
 import { PersonalityCarousel } from '@/components/PersonalityCarousel';
 import { HeroCarousel } from '@/components/HeroCarousel';
 import { DialogueAnimation } from '@/components/DialogueAnimation';
+import { TutorsCarousel } from '@/components/TutorsCarousel';
 import { RolePlayCarousel } from '@/components/RolePlayCarousel';
 import { PricingSection } from '@/components/PricingSection';
 import { Conversation } from '@/components/Conversation';
@@ -85,7 +86,7 @@ export default function Platform() {
                       <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
                     </Button>
                   </WaitlistDialog>
-                  <p className="text-sm text-just_cod-gray/70 text-center">Teacher's marketplace coming soon</p>
+                  <p className="text-xs text-just_cod-gray/70 text-center">Early access for students</p>
                 </div>
                 <div className="flex flex-col items-center gap-2">
                   <a href="https://app.justtalk.ai/signup" target="_blank" rel="noopener">
@@ -174,7 +175,7 @@ export default function Platform() {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
 
-          {/* Feature 1 - Tutors Carousel */}
+          {/* Feature 1 - Speak with a live tutor */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
@@ -186,18 +187,52 @@ export default function Platform() {
               
             </div>
             
-            {/* Tutors Carousel */}
             <div className="relative w-full rounded-2xl overflow-hidden aspect-square md:aspect-4/3">
               <img 
                 src="/platform_feature_1.jpg" 
                 alt="" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
-           
             </div>
           </div>
 
-          {/* Feature 2 - Memory */}
+          {/* Feature 2 - Tutors Carousel */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                Your progress stays with you
+              </h3>
+              <div className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                <p>
+                  On JustTalk, tutoring isn't tied to a single person.
+                </p>
+                <p className="mb-3">
+                  Your speaking history carries forward, so lessons stay productive even if you change tutors.
+                </p>
+                
+                <ul className="list-none space-y-0 ml-0">
+                  <li>- No rebuilding your foundation</li>
+                  <li>- No repeating the same early lessons</li>
+                  <li>- Freedom to choose tutors based on fit</li>
+                </ul>
+              </div>
+              
+            </div>
+            
+            {/* Tutors Carousel */}
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-square md:aspect-4/3">
+              <img 
+                src="/bg_green_square_.jpg" 
+                alt="" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="relative z-10 w-full h-full flex items-center p-0">
+                <TutorsCarousel />
+              </div>
+            </div>
+          </div>
+
+          {/* Feature 3 - Memory */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
@@ -381,19 +416,30 @@ export default function Platform() {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
 
-               {/* Feature 1 - Tutors Carousel */}
+               {/* Feature 1 - Speak with a live tutor */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                Speak with a live tutor
+                Your progress stays with you
               </h3>
-              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
-                Find a tutor matched to your personal needs and goals. Every tutor is supported by AI insights. Lessons stay personalized, efficient, and focused on your progress.
-              </p>
+              <div className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                <p>
+                  On JustTalk, tutoring isn't tied to a single person.
+                </p>
+                <p className="mb-3">
+                  Your speaking history carries forward, so lessons stay productive even if you change tutors.
+                </p>
+                
+                <ul className="list-none space-y-0 ml-0">
+                  <li>- No rebuilding your foundation</li>
+                  <li>- No repeating the same early lessons</li>
+                  <li>- Freedom to choose tutors based on fit</li>
+                </ul>
+              </div>
               
             </div>
             
-            {/* Tutors Carousel */}
+            {/* Static Image */}
             <div className="relative w-full rounded-2xl overflow-hidden aspect-square md:aspect-4/3">
               <img 
                 src="/platform_feature_1.jpg" 
