@@ -12,6 +12,7 @@ import { Conversation } from '@/components/Conversation';
 import { ProgressChart } from '@/components/ProgressChart';
 import { TrackedLink } from '@/components/TrackedLink';
 import { CircularRotation } from '@/components/CircularRotation';
+import { PlatformMedia } from '@/components/PlatformMedia';
 
 export default function Home() {
   return (
@@ -101,13 +102,7 @@ export default function Home() {
               </p>
           </div>
           
-          <div className="relative w-full rounded-2xl overflow-hidden">
-            <img 
-              src="/mobile_blue_16x9_3.jpg" 
-              alt="JustTalk AI Platform on mobile device" 
-              className="w-full h-auto aspect-3/2 md:aspect-auto object-cover"
-            />
-          </div>
+          <PlatformMedia />
         </section>
 
         {/* Features Section */}
