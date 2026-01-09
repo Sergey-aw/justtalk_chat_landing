@@ -152,6 +152,68 @@ export default function Platform() {
           </div>
         </section>
 
+        {/* Talking Works Section */}
+        <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
+          <div className="text-center mb-16">
+            <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray mb-4">
+              The hidden friction in traditional tutoring
+            </h2>
+            <p className="text-base md:text-[16.3px] font-normal leading-normal tracking-[-0.17px] text-just_cod-gray max-w-3xl mx-auto">
+              Your learning history doesn't travel with you—so every tutor session starts from scratch.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Left Side - Image */}
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-square">
+              <img 
+                src="/bg_platforms0.jpg" 
+                alt="Traditional tutoring platforms" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Right Side - Text Content */}
+            <div className="px-4 md:px-8 space-y-8">
+              <div>
+                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                  Every new tutor asks about your level
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                  Each session starts with the same diagnostic conversation. You waste valuable lesson time explaining what you already know instead of building new skills.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                  You repeat your goals and weak points
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                  The context you've built with previous tutors doesn't transfer, so you're constantly reintroducing yourself.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                  Early lessons feel like warm-ups
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                  Real progress only starts after they've figured out your needs—time you could have spent learning.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                  Changing tutors resets your progress
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                  The new tutor has no visibility into what you've practiced, struggled with, or mastered—so the cycle repeats.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Features Section */}
         <section id="features" className="w-full max-w-[1186px] px-10 py-16 md:py-16">
           <div className="text-center mb-10">
