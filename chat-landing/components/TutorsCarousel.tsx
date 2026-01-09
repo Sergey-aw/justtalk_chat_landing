@@ -27,10 +27,9 @@ const tutors: Tutor[] = [
   { name: 'Kai', country: '🇺🇸🇰🇷', rate: 21, lessons: 2098, rating: 5, image: '/images/Naomi.jpeg' },
 ];
 
-// Split into three rows
-const row1Tutors = tutors.slice(0, 4);
-const row2Tutors = tutors.slice(4, 8);
-const row3Tutors = tutors.slice(8);
+// Split into two columns
+const column1Tutors = tutors.slice(0, 6);
+const column2Tutors = tutors.slice(6);
 
 interface TutorCardProps {
   tutor: Tutor;
@@ -38,34 +37,34 @@ interface TutorCardProps {
 
 function TutorCard({ tutor }: TutorCardProps) {
   return (
-    <div className="bg-white flex flex-col items-end justify-center overflow-clip p-[12px] relative rounded-2xl flex-shrink-0 shadow-md">
-      <div className="flex gap-[3px] items-start relative shrink-0 w-full">
+    <div className="bg-white flex flex-col items-end justify-center overflow-clip p-[6px] sm:p-[8px] md:p-[10px] relative rounded-xl md:rounded-2xl flex-shrink-0 shadow-md">
+      <div className="flex gap-[1px] sm:gap-[2px] items-start relative shrink-0 w-full">
         <div className="flex items-start relative self-stretch shrink-0">
-          <div className="aspect-square h-full relative rounded-xl shrink-0 w-[68px]">
+          <div className="aspect-square h-full relative rounded-lg md:rounded-xl shrink-0 w-[35px] sm:w-[42px] md:w-[50px]">
             <img
               alt={tutor.name}
-              className="absolute inset-0 max-w-none object-center object-cover pointer-events-none rounded-xl size-full aspect-square"
+              className="absolute inset-0 max-w-none object-center object-cover pointer-events-none rounded-lg md:rounded-xl size-full aspect-square"
               src={tutor.image}
             />
           </div>
         </div>
-        <div className="basis-0 flex flex-col gap-[3px] grow h-[50px] items-start justify-center min-h-px min-w-px overflow-clip pl-[13px] pr-0 py-[1px] relative shrink-0">
-          <div className="flex h-[23px] items-start justify-between relative shrink-0 w-full">
+        <div className="basis-0 flex flex-col gap-[2px] sm:gap-[3px] grow h-[35px] sm:h-[42px] md:h-[50px] items-start justify-center min-h-px min-w-px overflow-clip pl-[8px] sm:pl-[10px] md:pl-[13px] pr-0 py-[1px] relative shrink-0">
+          <div className="flex h-auto items-start justify-between relative shrink-0 w-full">
             <div className="basis-0 flex font-semibold grow items-center justify-between leading-normal min-h-px min-w-px relative shrink-0 whitespace-nowrap">
-              <p className="relative shrink-0 text-md text-black">
+              <p className="relative shrink-0 text-xs sm:text-sm md:text-md text-black">
                 {tutor.name} {tutor.country}
               </p>
-              <p className="relative shrink-0 text-[#a6a6a6] text-[16px]">
+              <p className="relative shrink-0 text-[#a6a6a6] text-[12px] sm:text-[14px] md:text-[16px]">
                 ${tutor.rate}/hr
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-start relative shrink-0 pt-1">
-            <div className="flex font-semibold gap-[8px] items-center justify-center leading-normal not-italic relative shrink-0 text-[12px] whitespace-nowrap">
+          <div className="flex flex-col items-start relative shrink-0 pt-0.5 sm:pt-1">
+            <div className="flex font-semibold gap-[4px] sm:gap-[6px] md:gap-[8px] items-center justify-center leading-normal not-italic relative shrink-0 text-[9px] sm:text-[10px] md:text-[12px] whitespace-nowrap">
               <p className="relative shrink-0 text-[#9a9a9a]">
                 {tutor.lessons} lessons
               </p>
-              <p className="relative shrink-0 text-[#a6a6a6] text-xs">
+              <p className="relative shrink-0 text-[#a6a6a6]">
                 ⭐⭐⭐⭐⭐️
               </p>
             </div>
@@ -83,29 +82,29 @@ function TutorCard({ tutor }: TutorCardProps) {
   );
 }
 
-interface ScrollingRowProps {
+interface ScrollingColumnProps {
   tutors: Tutor[];
-  direction?: 'left' | 'right';
+  direction?: 'up' | 'down';
   offset?: number;
 }
 
-function ScrollingRow({ tutors, direction = 'left', offset = 0 }: ScrollingRowProps) {
-  const x = useMotionValue(offset);
+function ScrollingColumn({ tutors, direction = 'up', offset = 0 }: ScrollingColumnProps) {
+  const y = useMotionValue(offset);
   const controls = useAnimation();
   const isDragging = useRef(false);
-  // Card width scaled down to ~33% of original Figma design
-  const cardWidth = 175;
-  const totalWidth = tutors.length * cardWidth;
+  // Card height + gap - responsive
+  const cardHeight = 60; // Adjusted for responsive sizing
+  const totalHeight = tutors.length * cardHeight;
 
   useEffect(() => {
     const animateScroll = async () => {
       if (isDragging.current) return;
 
-      const currentX = x.get();
-      const targetX = direction === 'left' ? -totalWidth : totalWidth;
+      const currentY = y.get();
+      const targetY = direction === 'up' ? -totalHeight : totalHeight;
       
       await controls.start({
-        x: [currentX, currentX + targetX],
+        y: [currentY, currentY + targetY],
         transition: {
           duration: 50,
           ease: 'linear',
@@ -115,7 +114,7 @@ function ScrollingRow({ tutors, direction = 'left', offset = 0 }: ScrollingRowPr
     };
 
     animateScroll();
-  }, [controls, direction, totalWidth, x]);
+  }, [controls, direction, totalHeight, y]);
 
   const handleDragStart = () => {
     isDragging.current = true;
@@ -127,9 +126,9 @@ function ScrollingRow({ tutors, direction = 'left', offset = 0 }: ScrollingRowPr
     
     // Delay animation restart to allow momentum to complete
     setTimeout(() => {
-      const currentX = x.get();
+      const currentY = y.get();
       controls.start({
-        x: [currentX, currentX + (direction === 'left' ? -totalWidth : totalWidth)],
+        y: [currentY, currentY + (direction === 'up' ? -totalHeight : totalHeight)],
         transition: {
           duration: 50,
           ease: 'linear',
@@ -139,15 +138,15 @@ function ScrollingRow({ tutors, direction = 'left', offset = 0 }: ScrollingRowPr
     }, 500);
   };
 
-  // Duplicate tutors for infinite scroll effect
-  const duplicatedTutors = [...tutors, ...tutors, ...tutors];
+  // Duplicate tutors many times for infinite scroll effect (especially for down-scrolling column)
+  const duplicatedTutors = [...tutors, ...tutors, ...tutors, ...tutors, ...tutors, ...tutors];
 
   return (
-    <div className="relative overflow-hidden w-full py-1 md:py-2 max-w-full">
+    <div className="relative overflow-hidden h-full flex-1">
       <motion.div
-        className="flex gap-[24px]"
-        drag="x"
-        dragConstraints={{ left: -totalWidth, right: 0 }}
+        className="flex flex-col gap-[12px] sm:gap-[15px] md:gap-[18px]"
+        drag="y"
+        dragConstraints={{ top: -totalHeight, bottom: 0 }}
         dragElastic={0.1}
         dragMomentum={true}
         dragTransition={{ 
@@ -157,7 +156,7 @@ function ScrollingRow({ tutors, direction = 'left', offset = 0 }: ScrollingRowPr
         onDragStart={handleDragStart}
         onDragEnd={handleDragEnd}
         animate={controls}
-        style={{ x }}
+        style={{ y }}
       >
         {duplicatedTutors.map((tutor, index) => (
           <TutorCard key={`${tutor.name}-${index}`} tutor={tutor} />
@@ -169,10 +168,10 @@ function ScrollingRow({ tutors, direction = 'left', offset = 0 }: ScrollingRowPr
 
 export function TutorsCarousel() {
   return (
-    <div className="flex flex-col gap-[5px] w-full overflow-hidden max-w-full">
-      <ScrollingRow tutors={row1Tutors} direction="left" offset={0} />
-      <ScrollingRow tutors={row2Tutors} direction="left" offset={-120} />
-      <ScrollingRow tutors={row3Tutors} direction="left" offset={-240} />
+    <div className="relative flex gap-2 sm:gap-3 md:gap-4 w-full h-full overflow-hidden px-2 sm:px-3 md:px-4 py-0">
+      <ScrollingColumn tutors={column1Tutors} direction="up" offset={0} />
+      <ScrollingColumn tutors={column2Tutors} direction="down" offset={-200} />
+     
     </div>
   );
 }

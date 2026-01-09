@@ -232,7 +232,7 @@ export default function Platform() {
             </div>
           </div>
 
-          {/* Feature 3 - Memory */}
+          {/* Feature 3 - Memory
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
@@ -246,30 +246,35 @@ export default function Platform() {
             <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
               <ChatInterface />
             </div>
-          </div>
+          </div> */}
 
-          {/* Feature 3 - Role Play Scenarios */}
+          {/* Feature 3 - Focused, speaking-first lessons */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                Practice real-world scenarios
+                Focused, speaking-first lessons
               </h3>
-              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
-                Choose from various role-play scenarios to<br />practice conversations in different contexts.
-              </p>
+              <div className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                <p className="mb-3">
+                  Tutoring on JustTalk is designed around real communication.
+                </p>
+                
+                <ul className="list-none space-y-0 ml-0">
+                  <li>- Lessons centered on speaking, not worksheets</li>
+                  <li>- Clear focus areas instead of generic conversation</li>
+                  <li>- Progress that builds across sessions</li>
+                </ul>
+              </div>
               
             </div>
             
             {/* Role Play Carousel */}
             <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
               <img 
-                src="/bg_green_square_.jpg" 
+                src="/speaking_first_orange2.jpg" 
                 alt="" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="relative z-10 w-full h-full flex items-center p-0">
-                <RolePlayCarousel />
-              </div>
             </div>
           </div>
 
