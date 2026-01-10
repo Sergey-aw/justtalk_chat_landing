@@ -176,37 +176,37 @@ export default function Platform() {
             {/* Right Side - Text Content */}
             <div className="px-4 md:px-8 space-y-8">
               <div>
-                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                   Every new tutor asks about your level
                 </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
-                  Each session starts with the same diagnostic conversation. You waste valuable lesson time explaining what you already know instead of building new skills.
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray/75">
+                  You waste valuable lesson time explaining what you already know instead of building new skills.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                   You repeat your goals and weak points
                 </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray/75">
                   The context you've built with previous tutors doesn't transfer, so you're constantly reintroducing yourself.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                   Early lessons feel like warm-ups
                 </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray/75">
                   Real progress only starts after they've figured out your needs—time you could have spent learning.
                 </p>
               </div>
 
               <div>
-                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                   Changing tutors resets your progress
                 </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray/75">
                   The new tutor has no visibility into what you've practiced, struggled with, or mastered—so the cycle repeats.
                 </p>
               </div>
@@ -393,79 +393,79 @@ export default function Platform() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Card 1 */}
-              <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+              <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
                 <div className="mb-4">
                   <TrendingUp className="w-6 h-6 text-pink-500" strokeWidth={2} />
                 </div>
-                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                   True personalization
                 </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
                   We track every word you say (and don't) to deliver a hyper-personalized roadmap to fluency.
                 </p>
               </div>
 
               {/* Card 2 */}
-              <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+              <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
                 <div className="mb-4">
                   <BarChart3 className="w-6 h-6 text-orange-500" strokeWidth={2} />
                 </div>
-                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                   CEFR-based progression
                 </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
                   Our curriculum is built on CEFR—the global standard—so your progress is real, not just "points".
                 </p>
               </div>
 
               {/* Card 3 */}
-              <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+              <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
                 <div className="mb-4">
                   <User className="w-6 h-6 text-yellow-500" strokeWidth={2} />
                 </div>
-                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                   Smarter human tutoring
                 </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
                   Every tutor is backed by real-time AI insights to focus each lesson on what matters most for you.
                 </p>
               </div>
 
               {/* Card 4 */}
-              <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+              <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
                 <div className="mb-4">
                   <MessageCircle className="w-6 h-6 text-blue-500" strokeWidth={2} />
                 </div>
-                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                   AI that remembers you
                 </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
                   Our AI partner gives you unlimited speaking practice and remembers everything you've discussed with your tutor.
                 </p>
               </div>
 
               {/* Card 5 */}
-              <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+              <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
                 <div className="mb-4">
                   <Shuffle className="w-6 h-6 text-purple-500" strokeWidth={2} />
                 </div>
-                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                   Seamless integration
                 </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
                   AI and tutor work in sync. Everything you say improves your personalized path to fluency.
                 </p>
               </div>
 
               {/* Card 6 */}
-              <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+              <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
                 <div className="mb-4">
                   <Brain className="w-6 h-6 text-indigo-500" strokeWidth={2} />
                 </div>
-                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                   Visualize Progress
                 </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
                   See all the data insights in simple diagrams
                 </p>
               </div>
@@ -531,79 +531,79 @@ export default function Platform() {
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {/* Card 1 */}
-                  <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                  <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
                     <div className="mb-4">
                       <DollarSign className="w-6 h-6 text-indigo-500" strokeWidth={2} />
                     </div>
-                    <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                    <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                       Set your own rates
                     </h3>
-                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
                       Charge what you want, change it anytime
                     </p>
                   </div>
 
                   {/* Card 2 */}
-                  <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                  <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
                     <div className="mb-4">
                       <Calendar className="w-6 h-6 text-orange-500" strokeWidth={2} />
                     </div>
-                    <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                    <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                       Teach on your schedule
                     </h3>
-                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
                       Open availability when it works for you
                     </p>
                   </div>
 
                   {/* Card 3 */}
-                  <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                  <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
                     <div className="mb-4">
                       <MessageCircle className="w-6 h-6 text-blue-500" strokeWidth={2} />
                     </div>
-                    <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                    <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                       Message students easily
                     </h3>
-                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
                       All communication in one place
                     </p>
                   </div>
 
                   {/* Card 4 */}
-                  <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                  <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
                     <div className="mb-4">
                       <MessagesSquare className="w-6 h-6 text-pink-500" strokeWidth={2} />
                     </div>
-                    <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                    <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                       Conversation-based teaching
                     </h3>
-                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
                       Teach through real conversation
                     </p>
                   </div>
 
                   {/* Card 5 */}
-                  <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                  <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
                     <div className="mb-4">
                       <CreditCard className="w-6 h-6 text-yellow-500" strokeWidth={2} />
                     </div>
-                    <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                    <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                       Payments handled by the platform
                     </h3>
-                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
                       No invoicing or admin required
                     </p>
                   </div>
 
                   {/* Card 6 */}
-                  <div className="bg-gray-50 border border-just_black-5 rounded-2xl p-6 md:p-8">
+                  <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
                     <div className="mb-4">
                       <Monitor className="w-6 h-6 text-purple-500" strokeWidth={2} />
                     </div>
-                    <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                    <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                       A clean, modern teaching workspace
                     </h3>
-                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
                       Designed for online tutoring
                     </p>
                   </div>
