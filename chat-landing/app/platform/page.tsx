@@ -518,6 +518,37 @@ export default function Platform() {
             </div>
           </div>
 
+             {/* Feature 2 - AI Insights */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <div className="flex items-start gap-3 mb-2">
+                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray">
+                  AI assistant knows your students better
+                </h3>
+                <span className="bg-gray-800 text-white/90 text-xs font-medium px-2 py-1 rounded">beta</span>
+              </div>
+              <div className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+              
+                <p className="mb-3">
+                  Chat with AI to instantly access student interests, lesson summaries, and conversation history. Get personalized insights before every session to make lessons more relevant and engaging.
+                </p>
+                
+              </div>
+                
+            </div>
+            
+            {/* Static Image */}
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3 md:aspect-4/3 border border-gray-100">
+              <img 
+                src="/tutors_insights.jpg" 
+                alt="" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+           
+            </div>
+          </div>
+
+
             
               {/* How it works - Tutors */}
               <div className="mt-24">
