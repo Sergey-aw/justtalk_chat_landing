@@ -166,9 +166,9 @@ export default function Platform() {
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
             {/* Left Side - Image */}
-            <div className="relative w-full rounded-2xl overflow-hidden aspect-square">
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3">
               <img 
-                src="/bg_platforms0.jpg" 
+                src="/bg_platforms1.jpg" 
                 alt="Traditional tutoring platforms" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
