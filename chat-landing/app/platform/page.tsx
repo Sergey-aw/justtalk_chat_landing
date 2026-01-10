@@ -90,9 +90,9 @@ export default function Platform() {
                   <p className="text-xs text-just_cod-gray/70 text-center">Early access for students</p>
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <a href="https://app.justtalk.ai/signup" target="_blank" rel="noopener">
+                  <a href="/becometeacher" rel="noopener">
                     <Button variant="outline" className="cursor-pointer">
-                      Become a powerful teacher
+                      Become a teacher
                       <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
                     </Button>
                   </a>
@@ -121,8 +121,8 @@ export default function Platform() {
         {/* Platform Section */}
         <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
           <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray">
-              Seamless experience with JustTalk platform<br />for one-on-one learning
+            <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray max-w-lg mx-auto">
+              Seamless experience with JustTalk for one-on-one learning
             </h2>
           </div>
           
@@ -153,73 +153,13 @@ export default function Platform() {
           </div>
         </section>
 
-        {/* Talking Works Section */}
-        <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray mb-4">
-              The hidden friction in traditional tutoring
-            </h2>
-            <p className="text-base md:text-[16.3px] font-normal leading-normal tracking-[-0.17px] text-just_cod-gray max-w-3xl mx-auto">
-              Your learning history doesn't travel with you—so every tutor session starts from scratch.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            {/* Left Side - Image */}
-            <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3">
-              <img 
-                src="/bg_platforms1.jpg" 
-                alt="Traditional tutoring platforms" 
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-            </div>
-
-            {/* Right Side - Text Content */}
-            <div className="px-4 md:px-8 space-y-8">
-              <div>
-                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                  Every new tutor asks about your level
-                </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray/75">
-                  You waste valuable lesson time explaining what you already know instead of building new skills.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                  You repeat your goals and weak points
-                </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray/75">
-                  The context you've built with previous tutors doesn't transfer, so you're constantly reintroducing yourself.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                  Early lessons feel like warm-ups
-                </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray/75">
-                  Real progress only starts after they've figured out your needs—time you could have spent learning.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                  Changing tutors resets your progress
-                </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray/75">
-                  The new tutor has no visibility into what you've practiced, struggled with, or mastered—so the cycle repeats.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+       
 
         {/* Features Section */}
         <section id="features" className="w-full max-w-[1186px] px-10 py-16 md:py-16">
           <div className="text-center mb-10">
             <h2 className="text-2xl md:text-[28px] font-medium leading-[38.31px] tracking-[-0.29px] text-just_cod-gray">
-              Explore more features in JustTalk AI
+              Explore more features on JustTalk Tutors
             </h2>
           </div>
 
@@ -484,7 +424,37 @@ export default function Platform() {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
 
-               {/* Feature 1 - Speak with a live tutor */}
+      {/* Feature 1 - AI Insights */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <div className="flex items-start gap-3 mb-2">
+                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray">
+                  AI assistant knows your students better
+                </h3>
+                <span className="bg-gray-800 text-white/90 text-xs font-medium px-2 py-1 rounded">beta</span>
+              </div>
+              <div className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+              
+                <p className="mb-3">
+                  Chat with AI to instantly access student interests, lesson summaries, and conversation history. Get personalized insights before every session to make lessons more relevant and engaging.
+                </p>
+                
+              </div>
+                
+            </div>
+            
+            {/* Static Image */}
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3 md:aspect-4/3 border border-gray-100">
+              <img 
+                src="/tutors_insights.jpg" 
+                alt="" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+           
+            </div>
+          </div>
+
+               {/* Feature 2 - Speak with a live tutor */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
@@ -518,136 +488,82 @@ export default function Platform() {
             </div>
           </div>
 
-             {/* Feature 2 - AI Insights */}
-          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
-            <div className="px-4 md:px-20">
-              <div className="flex items-start gap-3 mb-2">
-                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray">
-                  AI assistant knows your students better
-                </h3>
-                <span className="bg-gray-800 text-white/90 text-xs font-medium px-2 py-1 rounded">beta</span>
-              </div>
-              <div className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
-              
-                <p className="mb-3">
-                  Chat with AI to instantly access student interests, lesson summaries, and conversation history. Get personalized insights before every session to make lessons more relevant and engaging.
-                </p>
-                
-              </div>
-                
-            </div>
+       
             
-            {/* Static Image */}
-            <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3 md:aspect-4/3 border border-gray-100">
-              <img 
-                src="/tutors_insights.jpg" 
-                alt="" 
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-           
-            </div>
-          </div>
-
-
-            
-              {/* How it works - Tutors */}
-              <div className="mt-24">
-                <div className="text-center mb-16">
-                  <h2 className="text-2xl md:text-[28px] font-medium leading-[38.31px] tracking-[-0.29px] text-just_cod-gray">
-                    How it works
-                  </h2>
-                  <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4 mt-2 max-w-2xl mx-auto">
-                    Empower your teaching with AI-driven insights. Track student progress, identify patterns, and deliver personalized lessons with confidence.
-                  </p>
-                </div>
-
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {/* Card 1 */}
-                  <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
-                    <div className="mb-4">
-                      <DollarSign className="w-6 h-6 text-indigo-500" strokeWidth={2} />
-                    </div>
-                    <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                      Set your own rates
-                    </h3>
-                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
-                      Charge what you want, change it anytime
-                    </p>
-                  </div>
-
-                  {/* Card 2 */}
-                  <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
-                    <div className="mb-4">
-                      <Calendar className="w-6 h-6 text-orange-500" strokeWidth={2} />
-                    </div>
-                    <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                      Teach on your schedule
-                    </h3>
-                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
-                      Open availability when it works for you
-                    </p>
-                  </div>
-
-                  {/* Card 3 */}
-                  <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
-                    <div className="mb-4">
-                      <MessageCircle className="w-6 h-6 text-blue-500" strokeWidth={2} />
-                    </div>
-                    <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                      Message students easily
-                    </h3>
-                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
-                      All communication in one place
-                    </p>
-                  </div>
-
-                  {/* Card 4 */}
-                  <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
-                    <div className="mb-4">
-                      <MessagesSquare className="w-6 h-6 text-pink-500" strokeWidth={2} />
-                    </div>
-                    <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                      Conversation-based teaching
-                    </h3>
-                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
-                      Teach through real conversation
-                    </p>
-                  </div>
-
-                  {/* Card 5 */}
-                  <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
-                    <div className="mb-4">
-                      <CreditCard className="w-6 h-6 text-yellow-500" strokeWidth={2} />
-                    </div>
-                    <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                      Payments handled by the platform
-                    </h3>
-                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
-                      No invoicing or admin required
-                    </p>
-                  </div>
-
-                  {/* Card 6 */}
-                  <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
-                    <div className="mb-4">
-                      <Monitor className="w-6 h-6 text-purple-500" strokeWidth={2} />
-                    </div>
-                    <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                      A clean, modern teaching workspace
-                    </h3>
-                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
-                      Designed for online tutoring
-                    </p>
-                  </div>
-                </div>
-              </div>
               </motion.div>
             </TabsContent>
 
           </Tabs>
         </section>
 
+ {/* Talking Works Section */}
+        {activeTab === "students" && (
+        <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
+          <div className="text-center mb-16">
+            <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray mb-4">
+              The hidden friction in traditional tutoring
+            </h2>
+            <p className="text-base md:text-[16.3px] font-normal leading-normal tracking-[-0.17px] text-just_cod-gray max-w-3xl mx-auto">
+              Your learning history doesn't travel with you—so every tutor session starts from scratch.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Left Side - Image */}
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3">
+              <img 
+                src="/bg_platforms1.jpg" 
+                alt="Traditional tutoring platforms" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Right Side - Text Content */}
+            <div className="px-4 md:px-8 space-y-8">
+              <div>
+                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                  Every new tutor asks about your level
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray/75">
+                  You waste valuable lesson time explaining what you already know instead of building new skills.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                  You repeat your goals and weak points
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray/75">
+                  The context you've built with previous tutors doesn't transfer, so you're constantly reintroducing yourself.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                  Early lessons feel like warm-ups
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray/75">
+                  Real progress only starts after they've figured out your needs—time you could have spent learning.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                  Changing tutors resets your progress
+                </h3>
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray/75">
+                  The new tutor has no visibility into what you've practiced, struggled with, or mastered—so the cycle repeats.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        )}
+
+
         {/* CTA Overlay Section */}
+         {activeTab === "teachers" && (
+        
         <section className="w-full max-w-[1186px] px-10 py-16">
           <div className="bg-[#f8f6f0] rounded-2xl px-8 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
             <h2 className="text-2xl md:text-[27.3px] font-medium leading-[38.31px] tracking-[-0.29px] text-just_cod-gray max-w-md">
@@ -655,7 +571,7 @@ export default function Platform() {
             </h2>
             <div className="flex flex-col sm:flex-row gap-3">
               <Button className="cursor-pointer">
-                Try JustTalk AI
+                Try JustTalk Tutors
                 <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
               </Button>
               <Button variant="outline" className="cursor-pointer">
@@ -665,6 +581,29 @@ export default function Platform() {
             </div>
           </div>
         </section>
+         )}      
+
+            {activeTab === "students" && (
+        
+        <section className="w-full max-w-[1186px] px-10 py-16">
+          <div className="bg-[#f8f6f0] rounded-2xl px-8 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
+            <h2 className="text-2xl md:text-[27.3px] font-medium leading-[38.31px] tracking-[-0.29px] text-just_cod-gray max-w-md">
+              Join first and try JustTalk Tutors
+            </h2>
+            <div className="space-y-2">
+              <WaitlistDialog>
+                    <Button className="cursor-pointer w-fit">
+                      Join the waitlist
+                      <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
+                    </Button>
+                  </WaitlistDialog>
+                  <p className="text-xs text-just_cod-gray/70 text-center">Early access for students</p>
+            </div>
+          </div>
+        </section>
+         )}      
+
+
       </main>
 
       <Footer />

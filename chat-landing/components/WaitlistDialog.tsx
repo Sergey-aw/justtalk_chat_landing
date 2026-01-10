@@ -74,7 +74,7 @@ export function WaitlistDialog({ children }: WaitlistDialogProps) {
             Join the Waitlist
           </DialogTitle>
           <DialogDescription className="text-sm font-normal leading-relaxed tracking-[-0.14px] text-just_cod-gray/70 pt-1">
-            We're currently in beta. Enter your email and we'll send you a personal invite when spots open up.
+            We're currently in beta. Enter your email and we'll send you a personal invite when spots for students open up.
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="space-y-4 pt-2">

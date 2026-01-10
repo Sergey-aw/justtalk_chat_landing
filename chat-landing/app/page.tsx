@@ -32,7 +32,7 @@ export default function Home() {
                   Build real speaking confidence in English
                 </h1>
                 <div className="pt-8">
-                  <p className="text-base md:text-[16.3px] font-normal leading-normal tracking-[-0.17px] text-just_cod-gray">
+                  <p className="text-base md:text-[16.3px] font-normal leading-normal tracking-[-0.17px] text-just_cod-gray max-w-xl">
                     Practice English through realistic conversations with AI that remembers how you speak and builds every session on the last.
                   </p>
                 </div>
@@ -59,18 +59,17 @@ export default function Home() {
                     <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
                   </Button>
                 </TrackedLink>
-                <TrackedLink
-                  href="https://justtalk.ai"
-                  target="_blank"
+                {/* <TrackedLink
+                  href="/platform"
                   rel="noopener"
                   eventName="cta_learn_platform_clicked"
                   eventProperties={{ location: 'hero_section' }}
                 >
                   <Button variant="outline" className="cursor-pointer">
-                    Learn about JustTalk Teachers
+                    Learn about JustTalk Tutors
                     <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
                   </Button>
-                </TrackedLink>
+                </TrackedLink> */}
               </div>
             </div>
 
@@ -274,7 +273,8 @@ export default function Home() {
          {/* Platform Section */}
         
         
-          
+           {/* Pricing Section */}
+        <PricingSection />
 
         {/* AI to Tutors Section */}
         <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
@@ -339,11 +339,10 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <PricingSection />
+       
 
         {/* CTA Overlay Section */}
-        <section className="w-full max-w-[1186px] px-10 py-16">
+        {/* <section className="w-full max-w-[1186px] px-10 py-16">
           <div className="bg-[#f8f6f0] rounded-2xl px-8 py-16 flex flex-col md:flex-row items-center justify-between gap-8">
             <h2 className="text-2xl md:text-[27.3px] font-medium leading-[38.31px] tracking-[-0.29px] text-just_cod-gray max-w-md">
               Join first and try JustTalk today
@@ -371,7 +370,7 @@ export default function Home() {
               </TrackedLink>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
 
       <Footer />

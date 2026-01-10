@@ -52,8 +52,8 @@ export function Header() {
               <a href="/platform" className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
               JustTalk Tutors
             </a>
-            <a href="#features" className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
-              Features
+            <a href="/becometeacher" className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
+              Become a Teacher
             </a>
           </nav>
 
@@ -123,11 +123,11 @@ export function Header() {
                 JustTalk Tutors
               </a>
               <a 
-                href="#features" 
+                href="/becometeacher" 
                 className="text-lg font-medium text-just_cod-gray"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Features
+                Become a Teacher
               </a>
             </nav>
 

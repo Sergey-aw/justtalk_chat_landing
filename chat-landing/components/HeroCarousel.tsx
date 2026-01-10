@@ -18,7 +18,7 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    title: 'Try JustTalk Now',
+    title: 'Try JustTalk AI Now',
     description: [
      'Start a voice conversation instantly—no signup required.'
     ]

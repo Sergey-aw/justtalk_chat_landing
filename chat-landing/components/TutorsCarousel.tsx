@@ -62,7 +62,7 @@ function TutorCard({ tutor }: TutorCardProps) {
               <p className="relative shrink-0 text-[#9a9a9a]">
                 {tutor.lessons} lessons
               </p>
-              <p className="relative shrink-0 text-[#a6a6a6] text-xs md:text-xs">
+              <p className="md:hidden relative shrink-0 text-[#a6a6a6] text-xs">
                 ⭐⭐⭐⭐⭐️
               </p>
             </div>
