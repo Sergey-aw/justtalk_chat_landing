@@ -16,6 +16,7 @@ import { Conversation } from '@/components/Conversation';
 import { ProgressChart } from '@/components/ProgressChart';
 import { ChatInterface } from '@/components/ChatInterface';
 import { WaitlistDialog } from '@/components/WaitlistDialog';
+import { TrackedLink } from '@/components/TrackedLink';
 import { useState, useRef } from 'react';
 import { Fullscreen, User, TrendingUp, Brain, MessageCircle, Shuffle, BarChart3, DollarSign, Calendar, Monitor, CreditCard, MessagesSquare } from 'lucide-react';
 
@@ -487,29 +488,29 @@ export default function Platform() {
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                Your progress stays with you
+                Teach English online—on your terms
               </h3>
               <div className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
-                <p>
-                  On JustTalk, tutoring isn't tied to a single person.
-                </p>
+              
                 <p className="mb-3">
-                  Your speaking history carries forward, so lessons stay productive even if you change tutors.
+                  Set your rates, manage your availability, and teach speaking-focused lessons on a clean, modern platform.
                 </p>
                 
-                <ul className="list-none space-y-0 ml-0">
-                  <li>- No rebuilding your foundation</li>
-                  <li>- No repeating the same early lessons</li>
-                  <li>- Freedom to choose tutors based on fit</li>
-                </ul>
               </div>
-              
+                <div className="pt-4">
+                <TrackedLink href="https://app.justtalk.ai/signup" eventName="apply_to_become_tutor_clicked">
+                  <Button className="cursor-pointer w-fit">
+                        Apply to become a tutor
+                        <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
+                      </Button>
+                </TrackedLink>
+              </div>
             </div>
             
             {/* Static Image */}
             <div className="relative w-full rounded-2xl overflow-hidden aspect-square md:aspect-4/3">
               <img 
-                src="/platform_feature_1.jpg" 
+                src="/teachers_1.jpg" 
                 alt="" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
@@ -522,7 +523,7 @@ export default function Platform() {
               <div className="mt-24">
                 <div className="text-center mb-16">
                   <h2 className="text-2xl md:text-[28px] font-medium leading-[38.31px] tracking-[-0.29px] text-just_cod-gray">
-                    How it works for teachers
+                    How it works
                   </h2>
                   <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4 mt-2 max-w-2xl mx-auto">
                     Empower your teaching with AI-driven insights. Track student progress, identify patterns, and deliver personalized lessons with confidence.

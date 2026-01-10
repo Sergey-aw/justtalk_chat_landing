@@ -46,13 +46,13 @@ function TutorCard({ tutor }: TutorCardProps) {
             />
           </div>
         </div>
-        <div className="basis-0 flex flex-col gap-[2px] sm:gap-[3px] grow h-[60px] sm:h-[50px] md:h-[50px] items-start justify-center min-h-px min-w-px overflow-clip pl-[12px] sm:pl-[12px] md:pl-[13px] pr-0 py-[1px] relative shrink-0">
+        <div className="basis-0 flex flex-col gap-[1px] sm:gap-[2px] grow h-[60px] sm:h-[50px] md:h-[50px] items-start justify-center min-h-px min-w-px overflow-clip pl-[12px] sm:pl-[12px] md:pl-[13px] pr-0 py-[1px] relative shrink-0">
           <div className="flex h-auto items-start justify-between relative shrink-0 w-full">
             <div className="basis-0 flex font-semibold grow items-center justify-between leading-normal min-h-px min-w-px relative shrink-0 whitespace-nowrap">
-              <p className="relative shrink-0 text-[15px] sm:text-sm md:text-md text-black">
+              <p className="relative shrink-0 text-[14px] sm:text-sm md:text-md text-black">
                 {tutor.name} {tutor.country}
               </p>
-              <p className="relative shrink-0 text-[#a6a6a6] text-[15px] sm:text-[14px] md:text-[16px]">
+              <p className="relative shrink-0 text-[#a6a6a6] text-[14px] md:text-[14px]">
                 ${tutor.rate}/hr
               </p>
             </div>
@@ -62,7 +62,7 @@ function TutorCard({ tutor }: TutorCardProps) {
               <p className="relative shrink-0 text-[#9a9a9a]">
                 {tutor.lessons} lessons
               </p>
-              <p className="relative shrink-0 text-[#a6a6a6]">
+              <p className="relative shrink-0 text-[#a6a6a6] text-xs md:text-xs">
                 ⭐⭐⭐⭐⭐️
               </p>
             </div>
