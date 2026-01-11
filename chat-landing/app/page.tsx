@@ -301,17 +301,7 @@ export default function Home() {
 
               {/* Text Content - 3 Sections */}
               <div className="px-4 md:px-0 space-y-12">
-              {/* Section 1 */}
-              <div>
-                <h3 className="text-xl md:text-xl font-medium tracking-[-0.5px] text-just_cod-gray mb-1">
-                  When you're ready, AI connects to real tutors
-                </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
-                  JustTalk AI is designed to integrate with live tutors. When you take lessons, tutors can build on your AI practice instead of starting from scratch.
-                </p>
-              </div>
-
-             
+            
 
               {/* Section 3 */}
               <div>
@@ -323,7 +313,6 @@ export default function Home() {
                 </p>
                 <TrackedLink
                   href="/platform"
-                  target="_blank"
                   rel="noopener"
                   eventName="cta_learn_platform_clicked"
                   eventProperties={{ location: 'ai_tutors_section' }}
