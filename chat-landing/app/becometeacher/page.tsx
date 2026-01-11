@@ -56,7 +56,7 @@ export default function Platform() {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               {/* Hero Text */}
               <div className="flex flex-col items-start max-w-2xl">
-                <h1 className="text-[clamp(3rem,5vw,4rem)] font-semibold leading-[clamp(3rem,5vw,4rem)] tracking-tight text-just_cod-gray mb-0 text-center md:text-left">
+                <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-semibold leading-[clamp(2.5rem,5vw,4rem)] tracking-tight text-just_cod-gray mb-0 text-center md:text-left">
                   Teach English online—on your terms
                 </h1>
                 <div className="pt-8">
@@ -68,7 +68,7 @@ export default function Platform() {
               </div>
 
               {/* Hero Image */}
-              <div className="relative w-3/5 shrink-0 rounded-2xl overflow-hidden">
+              <div className="relative w-full md:w-3/5 shrink-0 rounded-2xl overflow-hidden">
                 <img 
                   src="/hero_blue_2.jpg" 
                   alt="JustTalk Platform" 

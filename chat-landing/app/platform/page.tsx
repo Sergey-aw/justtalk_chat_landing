@@ -56,7 +56,7 @@ export default function Platform() {
             <div className="flex flex-col md:flex-row items-center justify-between gap-8">
               {/* Hero Text */}
               <div className="flex flex-col items-start max-w-2xl">
-                <h1 className="text-5xl md:text-[64px] font-semibold leading-12 tracking-tight text-just_cod-gray mb-0 text-center md:text-left md:leading-16">
+                <h1 className="text-4xl md:text-[64px] font-semibold tracking-tight text-just_cod-gray mb-0 text-center md:text-left md:leading-16">
                   Learn with real tutors—without starting over
                 </h1>
                 <div className="pt-8">
