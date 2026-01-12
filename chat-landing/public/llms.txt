@@ -1,0 +1,31 @@
+# JustTalk AI
+
+> JustTalk AI is an English speaking practice platform that uses AI to provide realistic conversations with memory, tracking progress over time to build speaking confidence through cumulative improvement.
+
+JustTalk AI helps intermediate and advanced English learners improve their speaking skills through:
+- AI conversations that remember previous sessions and build on them
+- Real-time speaking practice without grammar drills or scripted exercises
+- Progress tracking and analytics to measure improvement
+- Multiple AI personalities with different teaching styles
+- Role-play scenarios for practical speaking situations
+- Optional integration with live tutors for advanced learning
+
+## Key Features
+
+- [Platform Overview](https://justtalk.ai/): Main landing page explaining the JustTalk AI approach to speaking practice
+- [Tutoring Platform](https://justtalk.ai/platform): Information about the live tutor marketplace
+- [Become a Teacher](https://justtalk.ai/becometeacher): Information for educators interested in joining as tutors
+- [Terms of Service](https://justtalk.ai/terms): Legal terms and conditions
+
+## Product Information
+
+- Target Audience: Intermediate to advanced English learners who want to improve through speaking
+- Not For: Complete beginners or those looking for grammar lessons and passive study
+- Core Value: Conversations are tracked and used to build each session on the last, making progress cumulative
+- AI Features: Memory across sessions, adaptive conversations, real-time corrections, progress analytics
+- Pricing: Subscription-based with free trial available
+- Platform Access: Web-based at chat.justtalk.ai
+
+## Optional
+
+- [Get Started](https://chat.justtalk.ai/welcome): Direct link to start using JustTalk AI
