@@ -296,6 +296,7 @@ export default function Home() {
                   src="/hero_blue_2.jpg" 
                   alt="JustTalk AI Platform connecting to tutors" 
                   className="object-cover h-full w-full"
+                  fetchpriority="high"
                 />
               </div>
 
