@@ -73,7 +73,7 @@ export default function Platform() {
                   src="/hero_blue_2.jpg" 
                   alt="JustTalk Platform" 
                   className="w-full object-cover aspect-16/10 md:aspect-auto"
-                  fetchpriority="high"
+                  fetchPriority="high"
                 />
               </div>
             </div>
