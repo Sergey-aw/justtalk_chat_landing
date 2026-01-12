@@ -13,6 +13,12 @@ import { ProgressChart } from '@/components/ProgressChart';
 import { TrackedLink } from '@/components/TrackedLink';
 import { CircularRotation } from '@/components/CircularRotation';
 import { PlatformMedia } from '@/components/PlatformMedia';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function Home() {
   return (
@@ -326,6 +332,101 @@ export default function Home() {
               </div>
             </div>
           </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
+          <div className="text-center mb-16">
+            <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="item-1">
+                <AccordionTrigger className="text-lg font-medium text-just_cod-gray">
+                  Is this only for English?
+                </AccordionTrigger>
+                <AccordionContent className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                  Yes. We're currently focused on English to deliver the deepest possible speaking feedback.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-2">
+                <AccordionTrigger className="text-lg font-medium text-just_cod-gray">
+                  Who is this not for?
+                </AccordionTrigger>
+                <AccordionContent className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                  <p className="mb-3">
+                    If you're a beginner, or looking for grammar lessons, exercises, or passive study — this probably isn't the right fit.
+                  </p>
+                  <p>
+                    JustTalk is built for people who want to learn by speaking.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-3">
+                <AccordionTrigger className="text-lg font-medium text-just_cod-gray">
+                  Do I need to prepare anything before starting?
+                </AccordionTrigger>
+                <AccordionContent className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                  No. You can start speaking immediately — no prompts, setup, or exercises.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-4">
+                <AccordionTrigger className="text-lg font-medium text-just_cod-gray">
+                  Is this a lesson or a conversation?
+                </AccordionTrigger>
+                <AccordionContent className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                  <p className="mb-3">
+                    It's a real conversation — guided and adaptive, not exercises or drills.
+                  </p>
+                  <p>
+                    There are no drills or scripted responses. The focus is on expressing ideas clearly and naturally.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-5">
+                <AccordionTrigger className="text-lg font-medium text-just_cod-gray">
+                  Will it correct my grammar?
+                </AccordionTrigger>
+                <AccordionContent className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                  Yes — without interrupting your flow. Most corrections appear after you speak, or during the conversation only when they genuinely help.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-6">
+                <AccordionTrigger className="text-lg font-medium text-just_cod-gray">
+                  Do I need a tutor?
+                </AccordionTrigger>
+                <AccordionContent className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                  No. JustTalk AI works completely on its own. Live tutors are optional.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-7">
+                <AccordionTrigger className="text-lg font-medium text-just_cod-gray">
+                  Can I cancel anytime?
+                </AccordionTrigger>
+                <AccordionContent className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                  Yes. You can manage or cancel your subscription at any time from your account.
+                </AccordionContent>
+              </AccordionItem>
+
+              <AccordionItem value="item-8">
+                <AccordionTrigger className="text-lg font-medium text-just_cod-gray">
+                  Is my conversation data public or shared?
+                </AccordionTrigger>
+                <AccordionContent className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+                  No. Your conversations are private and used only to improve your experience in JustTalk.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </section>
 
