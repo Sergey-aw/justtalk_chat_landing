@@ -71,7 +71,7 @@ export function Header() {
             {!isMobileMenuOpen && (
               <a href={signupUrl}  rel="noopener" className="md:hidden" onClick={() => handleSignupClick('mobile')}>
                 <Button className="cursor-pointer">
-                  Sign up
+                  {signupButtonText}
                 </Button>
               </a>
             )}

@@ -126,7 +126,7 @@ export default function Home() {
             {/* Circular Rotation */}
             <div className="relative w-full rounded-2xl overflow-hidden aspect-square md:aspect-4/3">
               <img 
-                src="/bg_color_rotating.jpg" 
+                src="/bg_color_rotating.webp" 
                 alt="" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
