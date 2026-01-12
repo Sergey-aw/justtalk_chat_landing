@@ -57,12 +57,12 @@ export function PricingSection() {
         <div className="flex justify-center mb-8">
           <Tabs value={billingCycle} onValueChange={handleBillingCycleChange} className="w-auto">
             <TabsList className="grid w-full grid-cols-2 h-10">
-              <TabsTrigger value="monthly" className="data-[state=active]:bg-just_cod-gray data-[state=active]:text-white">
+              <TabsTrigger value="monthly" className="data-[state=active]:bg-just_cod-gray data-[state=active]:text-white" aria-label="Select monthly billing cycle">
                 Monthly
               </TabsTrigger>
-              <TabsTrigger value="annual" className="data-[state=active]:bg-just_cod-gray data-[state=active]:text-white">
+              <TabsTrigger value="annual" className="data-[state=active]:bg-just_cod-gray data-[state=active]:text-white" aria-label="Select annual billing cycle with {annualDiscount}% savings">
                 Annual
-                <span className="ml-1.5 text-xs bg-green-100 text-green-700 px-1.5 py-0.5 rounded">Save {annualDiscount}%</span>
+                <span className="ml-1.5 text-xs bg-green-100 text-green-700 px-1.5 py-0.5 rounded" aria-hidden="true">Save {annualDiscount}%</span>
               </TabsTrigger>
             </TabsList>
           </Tabs>

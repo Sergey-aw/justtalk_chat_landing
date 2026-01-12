@@ -165,8 +165,8 @@ export default function Platform() {
 
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12">
-              <TabsTrigger value="students">Students</TabsTrigger>
-              <TabsTrigger value="teachers">Teachers</TabsTrigger>
+              <TabsTrigger value="students" aria-label="View features for students">Students</TabsTrigger>
+              <TabsTrigger value="teachers" aria-label="View features for teachers">Teachers</TabsTrigger>
             </TabsList>
 
             <TabsContent value="students" className="mt-0">
