@@ -53,7 +53,7 @@ export function Footer() {
           <div className="flex items-center gap-6">
             {/* Social Icons */}
             <div className="flex gap-7">
-              <a href="#" className="hover:opacity-70 transition-opacity" aria-label="X (Twitter)">
+              <a href="https://x.com/JustTalkApp" target="_blank" rel="noopener" className="hover:opacity-70 transition-opacity" aria-label="X (Twitter)" onClick={() => handleFooterLinkClick('Twitter/X', 'https://x.com/JustTalkApp')}>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" className="text-just_cod-gray">
                   <path d="M11.9 9.4L18.9 1H17.2L11.2 8.3L6.5 1H1L8.3 10.9L1 20H2.7L9 12.3L14 20H19.5L11.9 9.4ZM9.8 11.2L9 10.1L3.3 2.3H5.7L10.3 8.7L11.1 9.8L17.2 18.7H14.8L9.8 11.2Z"/>
                 </svg>

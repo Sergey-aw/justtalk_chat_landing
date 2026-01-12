@@ -84,7 +84,7 @@ export function PlatformMedia() {
     return (
       <div className="relative w-full rounded-2xl overflow-hidden">
         <img 
-          src="/mobile_blue_16x9_3.jpg" 
+          src="/mobile_blue_16x9_3.webp" 
           alt="JustTalk AI Platform on mobile device" 
           className="w-full h-auto aspect-[9/16] md:aspect-auto object-cover"
         />

@@ -70,7 +70,7 @@ export default function Platform() {
               {/* Hero Image */}
               <div className="relative w-full md:w-3/5 shrink-0 rounded-2xl overflow-hidden">
                 <img 
-                  src="/become_teacher.jpg" 
+                  src="/become_teacher.webp" 
                   alt="JustTalk Platform" 
                   className="w-full object-cover aspect-16/10"
                 />
@@ -221,7 +221,7 @@ export default function Platform() {
                          {/* Image */}
                          <div className="relative w-full aspect-3/2 rounded-2xl overflow-hidden">
                            <img 
-                             src="/bring_students.jpg" 
+                             src="/bring_students.webp" 
                              alt="JustTalk AI Platform connecting to tutors" 
                              className="object-cover h-full w-full"
                            />
