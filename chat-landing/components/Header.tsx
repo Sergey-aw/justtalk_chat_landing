@@ -43,7 +43,9 @@ export function Header() {
         <div className="mx-auto flex h-16 items-center justify-between px-4 md:px-8">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/logo.svg" alt="JustTalk" className="h-6 w-auto" />
+            <a href="/">
+              <img src="/logo.svg" alt="JustTalk" className="h-6 w-auto" />
+            </a>
           </div>
 
           {/* Navigation */}
@@ -104,7 +106,9 @@ export function Header() {
           <div className="flex flex-col h-full">
             {/* Logo */}
             <div className="flex items-center h-16 px-8">
-              <img src="/logo.svg" alt="JustTalk" className="h-6 w-auto" />
+              <a href="/">
+                <img src="/logo.svg" alt="JustTalk" className="h-6 w-auto" />
+              </a>
             </div>
 
             {/* Navigation Menu */}
