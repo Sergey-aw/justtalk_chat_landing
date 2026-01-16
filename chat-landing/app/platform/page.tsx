@@ -575,10 +575,16 @@ export default function Platform() {
                 Try JustTalk Tutors
                 <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
               </Button>
-              <Button variant="outline" className="cursor-pointer">
-                Book a demo
-                <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
-              </Button>
+              <TrackedLink
+                href="https://cal.com/justtalk/demo"
+                eventName="cta_book_demo_clicked"
+                eventProperties={{ location: 'platform_page' }}
+              >
+                <Button variant="outline" className="cursor-pointer">
+                  Book a demo
+                  <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
+                </Button>
+              </TrackedLink>
             </div>
           </div>
         </section>

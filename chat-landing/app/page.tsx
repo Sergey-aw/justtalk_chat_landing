@@ -450,7 +450,7 @@ export default function Home() {
                 </Button>
               </TrackedLink>
               <TrackedLink
-                href="https://calendly.com/justtalk"
+                href="https://cal.com/justtalk/demo"
                 eventName="cta_book_demo_clicked"
                 eventProperties={{ location: 'bottom_cta_section' }}
               >

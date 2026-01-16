@@ -90,12 +90,16 @@ export default function Platform() {
                   
                 </div>
                 <div className="flex flex-col items-center gap-2">
-                  <a href="/becameteacher" rel="noopener">
+                  <TrackedLink
+                    href="https://cal.com/justtalk/demo"
+                    eventName="cta_book_demo_clicked"
+                    eventProperties={{ location: 'become_teacher_page' }}
+                  >
                     <Button variant="outline" className="cursor-pointer">
                       Book a demo
                       <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
                     </Button>
-                  </a>
+                  </TrackedLink>
                   
                 </div>
               </div>
@@ -237,12 +241,16 @@ export default function Platform() {
                              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-6">
                                Already have students? Invite them to join you on JustTalk and earn more with lower commission rates. We'll help you transition seamlessly.
                              </p>
-                             <a href="https://calendly.com/justtalk" target="_blank" rel="noopener">
+                             <TrackedLink
+                               href="https://cal.com/justtalk/tutors"
+                               eventName="schedule_call_clicked"
+                               eventProperties={{ location: 'become_teacher_bring_students' }}
+                             >
                                <Button className="cursor-pointer">
                                  Schedule a call
                                  <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
                                </Button>
-                             </a>
+                             </TrackedLink>
                            </div>
                          </div>
             </div>
