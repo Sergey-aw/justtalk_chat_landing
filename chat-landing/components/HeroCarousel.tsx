@@ -90,24 +90,10 @@ export function HeroCarousel() {
 
           {/* Content */}
           <div className="relative z-10 flex flex-col h-full p-8">
-            {/* Icon Section - Top */}
+            {/* Voice Conversation Demo - Centered */}
             <div className="flex-1 flex items-center justify-center">
-              <div className="w-full pb-4">
+              <div className="w-full">
                 <Conversation variant="hero" />
-              </div>
-            </div>
-
-            {/* Text Section - Bottom */}
-            <div className="space-y-4 min-h-[160px] p-2">
-              <h3 className="text-white text-2xl font-semibold tracking-[-0.5px]">
-                {firstSlide.title}
-              </h3>
-              <div className="text-white text-base space-y-1 leading-tight mt-3">
-                {firstSlide.description.map((line, lineIdx) => (
-                  <p key={lineIdx} className="m-0">
-                    {line}
-                  </p>
-                ))}
               </div>
             </div>
           </div>
@@ -144,37 +130,41 @@ export function HeroCarousel() {
 
                   {/* Content */}
                   <div className="relative z-10 flex flex-col h-full px-4 pt-4 pb-3">
-                    {/* Icon Section - Top */}
-                    <div className="flex-1 flex items-center justify-center">
-                      {index === 0 ? (
-                        /* Voice Conversation Demo for first slide */
-                        <div className="w-full pb-4">
+                    {/* Voice Conversation Demo - Centered */}
+                    {index === 0 ? (
+                      <div className="flex-1 flex items-center justify-center">
+                        <div className="w-full">
                           <Conversation variant="hero" />
                         </div>
-                      ) : (
-                        <div className="w-10 h-10 text-white">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
-                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-                            <line x1="12" x2="12" y1="19" y2="22"/>
-                          </svg>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Text Section - Bottom */}
-                    <div className="space-y-0 min-h-[120px] p-2">
-                      <h3 className="text-white text-lg font-semibold tracking-[-0.5px]">
-                        {slide.title}
-                      </h3>
-                      <div className="text-white text-base space-y-0.5 leading-tight mt-2">
-                        {slide.description.map((line, lineIdx) => (
-                          <p key={lineIdx} className="m-0">
-                            {line}
-                          </p>
-                        ))}
                       </div>
-                    </div>
+                    ) : (
+                      <>
+                        {/* Icon Section - Top */}
+                        <div className="flex-1 flex items-center justify-center">
+                          <div className="w-10 h-10 text-white">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                              <line x1="12" x2="12" y1="19" y2="22"/>
+                            </svg>
+                          </div>
+                        </div>
+
+                        {/* Text Section - Bottom */}
+                        <div className="space-y-0 min-h-[120px] p-2">
+                          <h3 className="text-white text-lg font-semibold tracking-[-0.5px]">
+                            {slide.title}
+                          </h3>
+                          <div className="text-white text-base space-y-0.5 leading-tight mt-2">
+                            {slide.description.map((line, lineIdx) => (
+                              <p key={lineIdx} className="m-0">
+                                {line}
+                              </p>
+                            ))}
+                          </div>
+                        </div>
+                      </>
+                    )}
                   </div>
                 </div>
               </CarouselItem>

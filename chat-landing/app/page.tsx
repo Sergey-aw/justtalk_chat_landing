@@ -45,7 +45,7 @@ export default function Home() {
               </div>
 
               {/* Hero Image */}
-              <div className="relative h-[325px] md:h-[450px] shrink-0 w-full md:max-w-[500px]">
+              <div className="relative h-[325px] md:h-[400px] shrink-0 w-full md:max-w-[500px]">
                 <HeroCarousel />
               </div>
             </div>
