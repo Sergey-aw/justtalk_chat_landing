@@ -455,7 +455,34 @@ export default function Platform() {
             </div>
           </div>
 
-               {/* Feature 2 - Speak with a live tutor */}
+          {/* Feature 2 - Create Customized Agents */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                Create customized scenarios for your students
+              </h3>
+              <div className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                <p className="mb-3">
+                  Build personalized AI agents tailored to each student's needs using simple prompts. Our comprehensive model extracts helpful insights and evaluates student interactions, giving you full control over the learning experience.
+                </p>
+              </div>
+            </div>
+            
+            {/* Agent Create Image */}
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-square md:aspect-4/3">
+              <picture>
+                <source media="(min-width: 768px)" srcSet="/agent_create.webp" />
+                <img 
+                  src="/agent_create_mob.webp" 
+                  alt="Create customized agent" 
+                  className="absolute inset-0 w-full h-full object-cover"
+                  fetchPriority="high"
+                />
+              </picture>
+            </div>
+          </div>
+
+               {/* Feature 3 - Teach English online—on your terms */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
