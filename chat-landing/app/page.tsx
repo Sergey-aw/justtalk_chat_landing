@@ -233,7 +233,29 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Feature 6 - Progress Tracking */}
+          {/* Feature 6 - Personalized Scenarios */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                Personalized scenarios created for you
+              </h3>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                Teachers can design custom roleplay scenarios tailored to your goals, interests, and skill level—giving you practice that's uniquely relevant to what you need.
+              </p>
+              
+            </div>
+            
+            {/* Personalized Scenarios Image */}
+            <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
+              <img 
+                src="/personalized_agent.webp" 
+                alt="Personalized scenarios" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Feature 7 - Progress Tracking */}
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
