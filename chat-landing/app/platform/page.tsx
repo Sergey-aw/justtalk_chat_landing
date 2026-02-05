@@ -482,6 +482,29 @@ export default function Platform() {
             </div>
           </div>
 
+          {/* Feature 2.5 - Prompt-to-Scenario Engine */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                Build multi-step scenarios with visual flow
+              </h3>
+              <div className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                <p className="mb-3">
+                  Transform simple prompts into complex learning journeys. Design multi-step conversation scenarios and visually connect AI agents to create structured practice paths that adapt to your students' progress.
+                </p>
+              </div>
+            </div>
+            
+            {/* Prompt Engine Image */}
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-square md:aspect-4/3">
+              <img 
+                src="/promt-engine.webp" 
+                alt="Prompt-to-scenario engine with visual flow" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
                {/* Feature 3 - Teach English online—on your terms */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
