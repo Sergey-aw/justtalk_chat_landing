@@ -85,7 +85,7 @@ const rolePlaySeries: RolePlaySeries[] = [
     bgColor: 'bg-orange-50/40',
     steps: [
       { title: 'Speed Date', subtitle: 'First date with someone new', status: 'completed', progress: 75, duration: '1 min', sessions: 1 },
-      { title: 'Calling to Schedule', subtitle: 'Complete previous step to unlock', status: 'locked', duration: '1 min' },
+      { title: 'Calling to Schedule', subtitle: 'Plan your next date', status: 'available', duration: '1 min' },
       { title: 'Second Date - Restaurant', subtitle: 'Continue the conversation', status: 'available', duration: '1 min' },
       { title: 'Post-Date Chat', subtitle: 'Complete previous step to unlock', status: 'locked', duration: '1 min' },
       { title: 'Dating Freetalk', subtitle: 'Complete previous step to unlock', status: 'locked', duration: '1 min' },

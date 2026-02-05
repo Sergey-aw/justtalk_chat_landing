@@ -1,24 +1,56 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import posthog from 'posthog-js';
+import { useFeatureFlagPayload } from 'posthog-js/react';
+
+interface PricingPayload {
+  key: string;
+  basic_monthly: string;
+  basic_annual: string;
+  premium_monthly: string;
+  premium_annual: string;
+}
 
 export function PricingSection() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
+  
+  // Get pricing from PostHog feature flag
+  const pricingPayload = useFeatureFlagPayload('pricing-test-landing') as PricingPayload | undefined;
+  
+  // Explicitly trigger feature flag evaluation to ensure $feature_flag_called event is sent
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      posthog.isFeatureEnabled('pricing-test-landing');
+    }
+  }, []);
 
-  const pricing = {
+  // Default pricing (control)
+  const defaultPricing = {
     basic: {
       monthly: 19.99,
-      annual: 149.99, // Save 37% (12 months would be $239.88)
+      annual: 149.99,
     },
     premium: {
       monthly: 37.99,
-      annual: 299.99, // Save 34% (~$24.99/month, 12 months would be $455.88)
+      annual: 299.99,
     },
   };
+
+  // Use feature flag pricing if available, otherwise use default
+  const pricing = pricingPayload ? {
+    basic: {
+      monthly: parseFloat(pricingPayload.basic_monthly),
+      annual: parseFloat(pricingPayload.basic_annual),
+    },
+    premium: {
+      monthly: parseFloat(pricingPayload.premium_monthly),
+      annual: parseFloat(pricingPayload.premium_annual),
+    },
+  } : defaultPricing;
 
   // Calculate discount percentage (using premium plan)
   const annualDiscount = Math.round(((pricing.premium.monthly * 12 - pricing.premium.annual) / (pricing.premium.monthly * 12)) * 100);
@@ -29,6 +61,7 @@ export function PricingSection() {
     posthog.capture('pricing_billing_cycle_changed', {
       new_billing_cycle: newCycle,
       previous_billing_cycle: billingCycle,
+      pricing_variant: pricingPayload?.key || 'control',
     });
   };
 
@@ -36,6 +69,7 @@ export function PricingSection() {
     posthog.capture('pricing_get_basic_clicked', {
       billing_cycle: billingCycle,
       price: pricing.basic[billingCycle],
+      pricing_variant: pricingPayload?.key || 'control',
     });
   };
 
@@ -43,6 +77,7 @@ export function PricingSection() {
     posthog.capture('pricing_get_premium_clicked', {
       billing_cycle: billingCycle,
       price: pricing.premium[billingCycle],
+      pricing_variant: pricingPayload?.key || 'control',
     });
   };
 
