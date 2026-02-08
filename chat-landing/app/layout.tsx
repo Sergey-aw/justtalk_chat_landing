@@ -9,16 +9,17 @@ const interTight = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://chat.justtalk.ai'),
   title: "JustTalk - AI-Powered Language Learning",
-  description: "Next-generation AI-powered language learning classroom with real-time analytics for ESL teachers and students",
+  description: "Practice speaking inside realistic scenarios with AI-enhanced personalities.",
   authors: [{ name: "JustTalk" }],
   openGraph: {
     title: "JustTalk - AI-Powered Language Learning",
-    description: "Next-generation AI-powered language learning classroom with real-time analytics for ESL teachers and students",
+    description: "Practice speaking inside realistic scenarios. Our AI personalities remember previous conversations, allowing you to pick up right where you left off.",
     type: "website",
     images: [
       {
-        url: "https://storage.googleapis.com/gpt-engineer-file-uploads/vsWUyi8lgTNtEQSKxsBAf0Ssip92/social-images/social-1758484251747-BBJp4i6VeW2gRDoR6RkwAOAO4.png.webp",
+        url: "/og_1.jpg",
       },
     ],
   },
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@JustTalkApp",
     images: [
-      "https://storage.googleapis.com/gpt-engineer-file-uploads/vsWUyi8lgTNtEQSKxsBAf0Ssip92/social-images/social-1758484251747-BBJp4i6VeW2gRDoR6RkwAOAO4.png.webp",
+      "/og_1.jpg",
     ],
   },
   icons: {
