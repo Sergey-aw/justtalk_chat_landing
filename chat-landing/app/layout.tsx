@@ -17,6 +17,8 @@ export const metadata: Metadata = {
     title: "JustTalk - AI-Powered Language Learning",
     description: "Practice speaking inside realistic scenarios. Our AI personalities remember previous conversations, allowing you to pick up right where you left off.",
     type: "website",
+    url: "https://justtalk.ai",
+    siteName: "JustTalk",
     images: [
       {
         url: "/og_1.jpg",
