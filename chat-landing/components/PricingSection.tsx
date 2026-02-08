@@ -81,6 +81,11 @@ export function PricingSection() {
     });
   };
 
+  // Construct URLs with pricing variant
+  const pricingVariant = pricingPayload?.key || 'control';
+  const basicUrl = `https://chat.justtalk.ai/?plan=basic&pricing_variant=${pricingVariant}&ref=justtalk.ai`;
+  const premiumUrl = `https://chat.justtalk.ai/?plan=premium&pricing_variant=${pricingVariant}&ref=justtalk.ai`;
+
   return (
     <section id="pricing" className="w-full max-w-[1186px] px-10 py-16 md:py-24">
       <div className="text-center mb-12">
@@ -187,7 +192,7 @@ export function PricingSection() {
                 / {billingCycle === 'monthly' ? 'month' : 'year'}
               </span>
             </div>
-            <a href="https://chat.justtalk.ai/?plan=basic&ref=justtalk.ai" target="_blank" rel="noopener" onClick={handleGetBasicClick}>
+            <a href={basicUrl} target="_blank" rel="noopener" onClick={handleGetBasicClick}>
               <Button className="w-full cursor-pointer">
                 Get Basic
                 <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
@@ -283,7 +288,7 @@ export function PricingSection() {
                 </span>
               )}
             </div>
-            <a href="https://chat.justtalk.ai/?plan=premium&ref=justtalk.ai" target="_blank" rel="noopener" onClick={handleGetPremiumClick}>
+            <a href={premiumUrl} target="_blank" rel="noopener" onClick={handleGetPremiumClick}>
               <Button
                 className="w-full cursor-pointer relative overflow-hidden group"
                 style={{

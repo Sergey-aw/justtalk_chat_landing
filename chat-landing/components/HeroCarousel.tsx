@@ -156,15 +156,13 @@ export function HeroCarousel() {
                             {slide.title}
                           </h3>
                           <div className="text-white text-base space-y-0.5 leading-tight mt-2">
-                            {slide.description.map((line, lineIdx) => (
-                              <p key={lineIdx} className="m-0">
-                                {line}
-                              </p>
-                            ))}
-                          </div>
-                        </div>
-                      </>
-                    )}
+                        {slide.description.map((line, lineIdx) => (
+                          <p key={lineIdx} className="m-0">
+                            {line}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               </CarouselItem>

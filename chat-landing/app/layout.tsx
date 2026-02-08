@@ -9,7 +9,7 @@ const interTight = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://chat.justtalk.ai'),
+  metadataBase: new URL('https://justtalk.ai'),
   title: "JustTalk - AI-Powered Language Learning",
   description: "Practice speaking inside realistic scenarios with AI-enhanced personalities.",
   authors: [{ name: "JustTalk" }],
