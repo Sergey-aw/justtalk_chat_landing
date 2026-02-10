@@ -1,0 +1,403 @@
+# JustTalk AI - Complete Platform Documentation
+
+> JustTalk AI is an English speaking practice platform that uses AI to provide realistic conversations with memory, tracking progress over time to build speaking confidence through cumulative improvement. It seamlessly integrates with live tutoring for a complete learning experience.
+
+## Overview
+
+JustTalk AI revolutionizes language learning by focusing on what matters most: speaking practice. Unlike traditional apps that rely on grammar drills, translation exercises, or scripted dialogues, JustTalk AI provides natural conversations with AI personalities that remember everything you've discussed and build on previous sessions. Every conversation contributes to your progress, with comprehensive analytics that track your improvement over time.
+
+The platform serves intermediate and advanced English learners who want to:
+- Practice speaking in realistic, unscripted conversations
+- Build confidence through consistent, pressure-free practice
+- Track measurable progress across all speaking dimensions
+- Transition seamlessly between AI practice and live tutoring
+- Learn through scenarios relevant to their goals and interests
+
+## Key Features
+
+- [Platform Overview](https://justtalk.ai/): Main landing page explaining the JustTalk AI approach to speaking practice
+- [Tutoring Platform](https://justtalk.ai/platform): Information about the live tutor marketplace and seamless AI-to-tutor integration
+- [Become a Teacher](https://justtalk.ai/becometeacher): Information for educators interested in joining as tutors
+- [Terms of Service](https://justtalk.ai/terms): Legal terms and conditions
+
+## AI Practice Features - Detailed
+
+### Memory & Continuity
+The AI remembers every conversation you've had, creating a continuous learning experience rather than isolated practice sessions. This means:
+- You can reference topics discussed in previous sessions
+- The AI builds on your past mistakes and successes
+- Vocabulary and grammar corrections carry forward
+- Your interests and preferences shape future conversations
+- You never have to repeat your background or goals
+- Practice feels like talking with someone who knows you
+
+### Adaptive Conversations
+Real, flowing conversations that adapt to your current level and needs, not scripted dialogues or pre-set responses:
+- AI adjusts complexity based on your proficiency
+- Conversations flow naturally without forced prompts
+- Topics emerge organically from the discussion
+- You control the direction and pace
+- No artificial constraints on what you can discuss
+- Practice feels like real communication, not an exercise
+
+### Smart Corrections
+Get grammar and pronunciation feedback without interrupting the natural flow of conversation:
+- Corrections happen at natural breaks, not mid-sentence
+- AI explains why something is incorrect, not just what
+- Feedback is contextual and relevant to what you're practicing
+- You can choose how much correction you want
+- Pronunciation issues are identified and demonstrated
+- Mistakes are tracked to identify patterns over time
+
+### Progress Analytics
+Detailed tracking of your speaking abilities across multiple dimensions:
+- Speaking time and session frequency
+- Vocabulary range and word complexity
+- Grammar accuracy and common errors
+- Pronunciation clarity and accent patterns
+- Fluency metrics and pause patterns
+- CEFR level assessment and progression
+- Confidence trends over time
+- Comparative analysis between sessions
+- Visual charts showing improvement trajectories
+- Insights into strengths and areas for improvement
+
+### Multiple Personalities
+Practice with different AI tutors, each with distinct teaching styles and personalities:
+- Casual conversation partners for relaxed practice
+- Professional tutors for structured learning
+- Specific personality types (encouraging, challenging, patient)
+- Different accents and speaking speeds
+- Varied expertise and background knowledge
+- Personalities remember your history across all interactions
+- Switch between personalities while maintaining progress continuity
+
+### Role-Play Scenarios
+Realistic practice situations with multiple difficulty levels and contexts:
+- Job interviews with industry-specific questions
+- Business meetings and presentations
+- Travel and hospitality situations
+- Social conversations and small talk
+- Customer service interactions
+- Academic discussions and debates
+- Each scenario has beginner to advanced variations
+- Scenarios adapt based on your responses
+- Feedback specific to the scenario context
+- Multiple attempts with different approaches
+
+### Ongoing Series
+Multi-session roleplay scenarios that develop over time with full memory:
+- Story-based scenarios that unfold across multiple sessions
+- Characters remember previous interactions
+- Decisions in one session affect future sessions
+- Build deeper relationships with scenario characters
+- Practice consistency and long-term communication skills
+- More immersive and engaging than single-session scenarios
+
+### Pronunciation Analysis
+Real-time, detailed feedback on pronunciation and accent:
+- Word-level pronunciation scoring
+- Identification of specific phoneme errors
+- Comparison with native speaker pronunciation
+- Accent analysis and patterns
+- Stress and intonation feedback
+- Audio examples of correct pronunciation
+- Progress tracking on specific sounds over time
+- Practice exercises for problem areas
+
+### Vocabulary Tracking
+Comprehensive monitoring of vocabulary usage and gaps:
+- Words you use frequently vs. words you avoid
+- Vocabulary range and sophistication level
+- New words introduced and their usage rate
+- Contextual vocabulary recommendations
+- Industry or topic-specific vocabulary gaps
+- Comparison with target proficiency levels
+- Suggestions for expanding vocabulary naturally
+
+## Live Tutoring Platform (JustTalk Tutors) - Detailed
+
+### Seamless Integration
+Tutors have complete access to your AI practice history and insights, enabling productive lessons from the first minute:
+- Full conversation history available to tutors
+- AI-generated insights about your strengths and weaknesses
+- Progress charts and analytics visible to tutors
+- No time wasted on diagnosis or assessment
+- Tutors can review your practice before lessons
+- Lesson planning based on actual speaking data
+
+### No Starting Over
+Your speaking history and progress data travel with you across all interactions:
+- Switch tutors without losing progress
+- No need to explain your level repeatedly
+- Every tutor sees your complete history
+- Consistent progress tracking regardless of who you talk to
+- Insights accumulate over time across all interactions
+- Your data belongs to you and follows you
+
+### AI Assistant for Tutors
+Teachers can interact with an AI assistant that has access to your complete learning profile:
+- Tutors ask questions about your interests, goals, and history
+- AI provides summaries of recent conversations
+- Quick access to specific topics or problems
+- Recommendations for lesson focus areas
+- Student progress trends and patterns
+- Instant answers without manual data review
+
+### Customized Scenarios
+Tutors can create personalized AI agents tailored specifically to each student:
+- Teachers write custom prompts for AI personalities
+- Create scenarios relevant to student's specific goals
+- Design practice exercises for identified weak areas
+- Build progressive scenario series
+- Adjust difficulty and focus areas as student improves
+- Share custom scenarios with other tutors or students
+
+### Progress Continuity
+Change tutors without losing any progress or having to restart your learning journey:
+- All tutors see the same comprehensive progress data
+- No re-assessment or diagnostic sessions needed
+- Lesson plans build on previous sessions regardless of tutor
+- Consistent tracking across all practice and tutoring
+- Freedom to try different tutors without consequences
+- Your learning journey remains uninterrupted
+
+### Speaking-First Lessons
+Focus on real communication and practical speaking skills, not worksheets or grammar exercises:
+- Entire lesson time dedicated to speaking practice
+- Real-time corrections and feedback
+- Contextual grammar explanations during conversation
+- Practical vocabulary in realistic situations
+- No homework or busy work
+- Lessons reflect how language is actually used
+
+### Comprehensive Analysis
+AI model extracts detailed insights from every interaction and evaluates student performance:
+- Automatic transcription and analysis of lessons
+- Grammar and vocabulary usage patterns
+- Pronunciation and fluency metrics
+- Progress compared to previous sessions
+- Recommendations for future focus areas
+- Objective data alongside tutor observations
+
+### Flexible Teaching
+Tutors have full control over their business and teaching approach:
+- Set your own hourly rates
+- Manage your availability and schedule
+- Choose which students to work with
+- Design your own teaching methodology
+- Create and share custom learning materials
+- Build your personal brand and reputation
+
+### AI-Enhanced Preparation
+Tutors receive personalized insights before every session to maximize effectiveness:
+- Summary of student's recent AI practice
+- Identified problem areas and patterns
+- Progress since last tutor session
+- Recommended focus areas
+- Student interests and preferences
+- Recent topics and conversations
+- All information available before lesson starts
+
+## How It Works For Students
+
+### 1. Start Practicing with AI
+- Sign up and immediately start speaking with AI
+- No placement test or initial assessment required
+- Choose from various conversation types and scenarios
+- Practice anytime, anywhere, for as long as you want
+- No preparation or homework needed
+
+### 2. AI Tracks Everything
+- Every word you speak is analyzed
+- Grammar, vocabulary, pronunciation, and fluency assessed
+- Progress tracked across multiple dimensions
+- Patterns and trends identified automatically
+- CEFR level continuously evaluated
+- Comprehensive analytics generated
+
+### 3. Build on Previous Sessions
+- AI remembers every conversation
+- Each session builds on the last
+- Corrections and feedback carry forward
+- Your profile becomes more accurate over time
+- Practice becomes increasingly personalized
+- Progress is cumulative, not random
+
+### 4. Book Live Tutoring When Ready
+- Browse available tutors and their profiles
+- Filter by specialty, accent, rate, and availability
+- Read reviews and ratings from other students
+- Book sessions at times that work for you
+- Tutors already know your complete history
+- No introductory or diagnostic sessions needed
+
+### 5. Productive Lessons From Minute One
+- Tutors see your AI practice history and analytics
+- Lessons immediately focus on your needs
+- No time wasted on assessment or small talk
+- Real speaking practice for the entire session
+- Targeted feedback on identified weak areas
+- Maximum value from every lesson minute
+
+### 6. Switch Tutors Without Losing Progress
+- Try different tutors to find the best fit
+- Your data and progress follow you
+- Every tutor sees the same comprehensive history
+- No penalty for changing tutors
+- Freedom to explore different teaching styles
+- Consistent progress tracking across all tutors
+
+## How It Works For Teachers
+
+### 1. Access Comprehensive Student Insights
+- View complete AI practice history for each student
+- See detailed progress analytics and trends
+- Identify specific problem areas and patterns
+- Understand student interests and goals
+- Review recent conversations and topics
+- Get AI-generated recommendations for focus areas
+
+### 2. Create Customized AI Scenarios
+- Design personalized AI agents for specific students
+- Write custom prompts and scenarios
+- Create progressive difficulty levels
+- Build scenario series for ongoing practice
+- Tailor content to student interests and needs
+- Share successful scenarios with other tutors
+
+### 3. Review Before Every Lesson
+- Access student conversation history
+- See progress since last tutor session
+- Review AI-generated insights and recommendations
+- Identify topics for discussion
+- Prepare targeted exercises or discussion points
+- Enter every lesson fully prepared
+
+### 4. Teach Speaking-First Lessons
+- Focus entire session on speaking practice
+- Make corrections in context during conversation
+- Use student's actual errors as teaching moments
+- Practice realistic scenarios and situations
+- Build on student's AI practice topics
+- Deliver maximum speaking value
+
+### 5. Set Your Own Business Model
+- Choose your hourly rate
+- Set your availability and schedule
+- Select which students to work with
+- Build your teaching reputation
+- Create your personal teaching brand
+- Grow your tutoring business on your terms
+
+### 6. Use AI-Generated Insights
+- Let AI handle data analysis and pattern recognition
+- Get objective metrics alongside your observations
+- Track student progress automatically
+- Receive personalized teaching recommendations
+- Focus on teaching, not administrative work
+- Make data-driven decisions about lesson focus
+
+## Product Information
+
+### Target Audience
+- Primary: Intermediate to advanced English learners (B1-C2 CEFR levels)
+- Secondary: Anyone who wants to improve English speaking fluency
+- Use cases: Professional development, exam preparation, accent reduction, conversation practice, interview preparation
+
+### Core Value Proposition
+Conversations are tracked and used to build each session on the last, making progress cumulative—not random. Unlike traditional language apps where each session starts from zero, JustTalk AI creates a continuous learning journey where every conversation contributes to measurable improvement.
+
+### AI Practice Features
+- Memory across all sessions with unlimited conversation history
+- Adaptive conversations that match your level and interests
+- Real-time corrections with contextual explanations
+- Comprehensive pronunciation analysis with audio examples
+- Progress analytics across speaking, vocabulary, grammar, and fluency
+- CEFR-based assessment updated continuously
+- Multiple AI personalities with different teaching styles
+- Role-play scenarios with difficulty levels and context
+- Ongoing series scenarios with continuity across sessions
+- Vocabulary tracking showing usage patterns and gaps
+
+### Tutoring Platform Features
+- AI-enhanced tutor preparation with complete student history
+- Progress continuity across tutors with unified data platform
+- Customizable AI scenarios created by tutors for specific students
+- Comprehensive language analysis from all interactions
+- AI assistant for tutors to query student data and history
+- Flexible scheduling and rate-setting for tutors
+- Speaking-first lesson methodology
+- Seamless integration between AI practice and live lessons
+
+### Assessment & Progress
+- CEFR-based progression (Common European Framework of Reference)
+- Continuous assessment, not periodic tests
+- Multiple metrics: fluency, accuracy, complexity, pronunciation
+- Visual progress charts and trend analysis
+- Comparative analysis between sessions
+- Strengths and weaknesses identification
+- Personalized recommendations for improvement
+
+### Pricing
+- AI Practice: Subscription-based with free trial available
+- Live Tutoring: Per-session pricing set by individual tutors
+- Flexible plans for different usage levels
+- No long-term commitments required
+- Access to all AI features with subscription
+
+### Platform Access
+- AI Practice: Available at chat.justtalk.ai
+- Live Tutoring: Marketplace launching soon (currently in beta)
+- Tutor Portal: Separate interface for educators
+- Mobile-optimized web interface
+- No app download required
+
+### Current Status
+- AI practice platform: Fully operational and available
+- Live tutor marketplace: Beta phase with waitlist
+- Teacher onboarding: Accepting applications
+- Platform development: Continuous updates and improvements
+
+## Technical Capabilities
+
+### Voice Recognition
+- Real-time speech-to-text with high accuracy
+- Support for various accents and speaking speeds
+- Noise filtering and audio enhancement
+- Multiple language support for non-native speakers
+
+### AI Conversation Engine
+- Natural language understanding and generation
+- Context awareness across sessions
+- Personality and tone adaptation
+- Memory management for conversation continuity
+- Adaptive difficulty based on user performance
+
+### Analytics & Insights
+- Real-time performance metrics
+- Historical trend analysis
+- Pattern recognition for common errors
+- Predictive insights for improvement areas
+- CEFR level calculation and tracking
+
+### Tutor Platform
+- Comprehensive student dashboard
+- AI assistant with natural language queries
+- Scenario creation and customization tools
+- Scheduling and booking management
+- Payment processing and invoicing
+- Student-tutor communication system
+
+## Optional
+
+- [Get Started with AI Practice](https://chat.justtalk.ai/welcome): Direct link to start using JustTalk AI
+- [Join Waitlist for Live Tutoring](https://justtalk.ai/platform): Sign up for early access to the tutor marketplace
+- [Apply to Become a Teacher](https://justtalk.ai/becometeacher): Start teaching on the JustTalk platform
+
+## Contact & Support
+
+- Platform: justtalk.ai
+- AI Practice: chat.justtalk.ai
+- Social: @JustTalkApp on Twitter
+- Support: Available through platform messaging
