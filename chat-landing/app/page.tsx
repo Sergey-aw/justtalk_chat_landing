@@ -59,6 +59,7 @@ export default function Home() {
                   rel="noopener"
                   eventName="cta_start_now_clicked"
                   eventProperties={{ location: 'hero_section' }}
+                  includePricingVariant={true}
                 >
                   <Button className="cursor-pointer">
                     Get Started

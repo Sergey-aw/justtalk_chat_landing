@@ -5,10 +5,12 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import posthog from 'posthog-js';
+import { usePricingVariant } from '@/hooks/usePricingVariant';
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const pricingVariant = usePricingVariant();
   
   // Use different URLs for platform and becometeacher pages
   const isPlatformPage = pathname === '/platform';
@@ -18,14 +20,15 @@ export function Header() {
     : 'https://chat.justtalk.ai/signin?ref=justtalk.ai';
   const signupUrl = (isPlatformPage || isBecomeTeacherPage)
     ? 'https://app.justtalk.ai/signup' 
-    : 'https://chat.justtalk.ai/welcome?ref=justtalk.ai';
+    : `https://chat.justtalk.ai/welcome?pricing_variant=${pricingVariant}&ref=justtalk.ai`;
   const signupButtonText = isBecomeTeacherPage ? 'Apply' : 'Sign up';
 
   const handleLoginClick = (location: 'desktop' | 'mobile') => {
     posthog.capture('header_login_clicked', { 
       location,
       page: pathname,
-      url: loginUrl
+      url: loginUrl,
+      pricing_variant: pricingVariant,
     });
   };
 
@@ -33,7 +36,8 @@ export function Header() {
     posthog.capture('header_signup_clicked', { 
       location,
       page: pathname,
-      url: signupUrl
+      url: signupUrl,
+      pricing_variant: pricingVariant,
     });
   };
 
