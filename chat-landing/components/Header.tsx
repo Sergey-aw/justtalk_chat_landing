@@ -3,13 +3,18 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { usePathname } from "next/navigation";
+import { useTranslations, useLocale } from 'next-intl';
+import { useRouter, usePathname } from '@/i18n/routing';
 import posthog from 'posthog-js';
 import { usePricingVariant } from '@/hooks/usePricingVariant';
+import { locales, localeNames, type Locale } from '@/i18n/config';
 
 export function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const t = useTranslations('nav');
+  const locale = useLocale() as Locale;
+  const router = useRouter();
   const pathname = usePathname();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pricingVariant = usePricingVariant();
   
   // Use different URLs for platform and becometeacher pages
@@ -21,7 +26,7 @@ export function Header() {
   const signupUrl = (isPlatformPage || isBecomeTeacherPage)
     ? 'https://app.justtalk.ai/signup' 
     : `https://chat.justtalk.ai/welcome?pricing_variant=${pricingVariant}&ref=justtalk.ai`;
-  const signupButtonText = isBecomeTeacherPage ? 'Apply' : 'Sign up';
+  const signupButtonText = isBecomeTeacherPage ? t('apply') : t('signup');
 
   const handleLoginClick = (location: 'desktop' | 'mobile') => {
     posthog.capture('header_login_clicked', { 
@@ -41,27 +46,32 @@ export function Header() {
     });
   };
 
+  const handleLocaleChange = (newLocale: Locale) => {
+    router.replace(pathname, { locale: newLocale });
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <>
       <header className="sticky top-0 z-50 bg-just_white">
         <div className="mx-auto flex h-16 items-center justify-between px-4 md:px-8">
           {/* Logo */}
           <div className="flex items-center">
-            <a href="/">
+            <a href={`/${locale}`}>
               <img src="/logo.svg" alt="JustTalk" className="h-6 w-auto" />
             </a>
           </div>
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-2">
-            <a href="/" className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
-              JustTalk AI
+            <a href={`/${locale}`} className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
+              {t('justtalkAi')}
             </a>
-              <a href="/platform" className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
-              JustTalk Tutors
+              <a href={`/${locale}/platform`} className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
+              {t('justtalkTutors')}
             </a>
-            <a href="/becometeacher" className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
-              Become a Teacher
+            <a href={`/${locale}/becometeacher`} className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
+              {t('becomeTeacher')}
             </a>
           </nav>
 
@@ -70,7 +80,7 @@ export function Header() {
             {/* Hide Log in button on mobile */}
             <a href={loginUrl} rel="noopener" className="hidden md:block" onClick={() => handleLoginClick('desktop')}>
               <Button variant="outline" className="cursor-pointer">
-                Log in
+                {t('login')}
               </Button>
             </a>
             {/* Show Sign up button on mobile only when menu is closed */}
@@ -110,7 +120,7 @@ export function Header() {
           <div className="flex flex-col h-full">
             {/* Logo */}
             <div className="flex items-center h-16 px-8">
-              <a href="/">
+              <a href={`/${locale}`}>
                 <img src="/logo.svg" alt="JustTalk" className="h-6 w-auto" />
               </a>
             </div>
@@ -119,38 +129,58 @@ export function Header() {
             <nav className="flex-1 flex flex-col px-8 py-8 space-y-4">
             
               <a 
-                href="/" 
+                href={`/${locale}`} 
                 className="text-lg font-medium text-just_cod-gray"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                JustTalk AI
+                {t('justtalkAi')}
               </a>
                 <a 
-                href="/platform" 
+                href={`/${locale}/platform`} 
                 className="text-lg font-medium text-just_cod-gray"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                JustTalk Tutors
+                {t('justtalkTutors')}
               </a>
               <a 
-                href="/becometeacher" 
+                href={`/${locale}/becometeacher`} 
                 className="text-lg font-medium text-just_cod-gray"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Become a Teacher
+                {t('becomeTeacher')}
               </a>
+
+              {/* Language Selector in Mobile Menu */}
+              <div className="pt-4 border-t border-just_cod-gray-10 mt-4">
+                <p className="text-sm text-just_cod-gray/70 mb-2">Language / Язык</p>
+                <div className="flex gap-2">
+                  {locales.map((loc) => (
+                    <button
+                      key={loc}
+                      onClick={() => handleLocaleChange(loc)}
+                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
+                        locale === loc 
+                          ? 'bg-just_cod-gray text-white' 
+                          : 'bg-just_black-5 text-just_cod-gray hover:bg-just_black-10'
+                      }`}
+                    >
+                      {localeNames[loc]}
+                    </button>
+                  ))}
+                </div>
+              </div>
             </nav>
 
             {/* Bottom Buttons */}
             <div className="px-8 pb-8 flex flex-row gap-3">
               <a href={loginUrl} target="_blank" rel="noopener" className="flex-1" onClick={() => handleLoginClick('mobile')}>
                 <Button variant="outline" className="w-full cursor-pointer">
-                  Log in
+                  {t('login')}
                 </Button>
               </a>
               <a href={signupUrl} target="_blank" rel="noopener" className="flex-1" onClick={() => handleSignupClick('mobile')}>
                 <Button className="w-full cursor-pointer">
-                  Sign up
+                  {t('signup')}
                 </Button>
               </a>
             </div>

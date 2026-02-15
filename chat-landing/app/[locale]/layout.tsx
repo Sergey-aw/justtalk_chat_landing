@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages, setRequestLocale } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import "../globals.css";
+import { locales, type Locale } from '@/i18n/config';
 
 const interTight = localFont({
-  src: "./assets/inter_tight-var.ttf",
+  src: "../assets/inter_tight-var.ttf",
   variable: "--font-inter-tight",
   weight: "100 900",
 });
@@ -37,13 +41,31 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export function generateStaticParams() {
+  return locales.map((locale) => ({ locale }));
+}
+
+export default async function LocaleLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+  
+  // Validate locale
+  if (!locales.includes(locale as Locale)) {
+    notFound();
+  }
+  
+  // Enable static rendering
+  setRequestLocale(locale);
+  
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link rel="preconnect" href="https://us.i.posthog.com" />
         <link rel="dns-prefetch" href="https://us.i.posthog.com" />
@@ -53,7 +75,9 @@ export default function RootLayout({
       <body
         className={`${interTight.variable} antialiased`}
       >
-        {children}
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

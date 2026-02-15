@@ -1,0 +1,336 @@
+{
+  "metadata": {
+    "title": "JustTalk - Aprendizado de idiomas com IA",
+    "description": "Pratique conversação em cenários realistas com personagens de IA."
+  },
+  "nav": {
+    "justtalkAi": "JustTalk AI",
+    "justtalkTutors": "JustTalk Tutores",
+    "becomeTeacher": "Torne-se um Tutor",
+    "login": "Entrar",
+    "signup": "Cadastrar",
+    "apply": "Aplicar"
+  },
+  "hero": {
+    "headline": "Construa verdadeira confiança ao falar inglês",
+    "subheadline": "Pratique inglês através de conversas realistas com IA que lembra como você fala e constrói cada sessão sobre a anterior.",
+    "getStarted": "Começar"
+  },
+  "platform": {
+    "title": "Conversar funciona — quando é rastreado",
+    "description": "A maioria das ferramentas de conversação permitem que você fale, mas não rastreiam o progresso real. JustTalk AI analisa o que você diz e constrói cada sessão sobre seu histórico — para que a melhoria seja cumulativa, não aleatória."
+  },
+  "features": {
+    "exploreMore": "Explore mais recursos no JustTalk AI",
+    "improvement": {
+      "title": "Como a melhoria realmente acontece",
+      "description": "Uma conversa não muda muito. Mas quando cada sessão é rastreada, compreendida e usada para moldar a próxima, o progresso se acumula naturalmente."
+    },
+    "personalities": {
+      "title": "Converse com diferentes personalidades",
+      "description": "Algumas são solidárias. Algumas te desafiam. Todas ajudam você a praticar conversas reais"
+    },
+    "memory": {
+      "title": "Eles lembram de você",
+      "description": "Nossas personalidades de IA lembram conversas anteriores, permitindo que você continue de onde parou."
+    },
+    "scenarios": {
+      "title": "Pratique falando em cenários realistas",
+      "description": "Escolha a situação, o papel e a dificuldade — e desenvolva habilidades em um contexto consistente."
+    },
+    "roleplay": {
+      "title": "Roleplay contínuo com memória e personalidade",
+      "description": "Alguns cenários se desenrolam ao longo de múltiplas sessões. Isso não é roleplay único. É prática de conversação sustentada com continuidade."
+    },
+    "personalized": {
+      "title": "Cenários personalizados criados para você",
+      "description": "Tutores podem criar cenários de roleplay personalizados adaptados aos seus objetivos, interesses e nível de habilidade — dando a você prática que é exclusivamente relevante para o que você precisa."
+    },
+    "progress": {
+      "title": "Acompanhe seu progresso ao longo do tempo",
+      "description": "Veja como suas habilidades de conversação melhoram com análises detalhadas e gráficos de progresso."
+    }
+  },
+  "tutors": {
+    "title": "Quando estiver pronto, JustTalk AI conecta você a tutores reais",
+    "description": "JustTalk AI é projetado para integrar com tutores ao vivo. Quando você faz aulas, os tutores podem construir sobre sua prática com IA em vez de começar do zero.",
+    "liveTutoring": {
+      "title": "Marketplace de tutores ao vivo em breve",
+      "description": "Conecte-se com tutores experientes que entendem sua prática com IA e podem acelerar seu progresso com orientação direcionada."
+    },
+    "learnPlatform": "Conhecer a plataforma"
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "items": {
+      "languageOnly": {
+        "question": "É apenas para inglês?",
+        "answer": "Sim. Atualmente estamos focados em inglês para oferecer o feedback mais profundo possível sobre a conversação."
+      },
+      "notFor": {
+        "question": "Para quem não é isso?",
+        "answer1": "Se você é iniciante ou procura aulas de gramática, exercícios ou estudo passivo — provavelmente não é a opção certa.",
+        "answer2": "JustTalk é feito para pessoas que querem aprender falando."
+      },
+      "prepare": {
+        "question": "Preciso preparar algo antes de começar?",
+        "answer": "Não. Você pode começar a falar imediatamente — sem prompts, configuração ou exercícios."
+      },
+      "lessonOrConversation": {
+        "question": "É uma aula ou uma conversa?",
+        "answer1": "É uma conversa real — guiada e adaptativa, não exercícios ou drills.",
+        "answer2": "Não há drills ou respostas roteirizadas. O foco está em expressar ideias de forma clara e natural."
+      },
+      "grammar": {
+        "question": "Vai corrigir minha gramática?",
+        "answer": "Sim — sem interromper seu fluxo. A maioria das correções aparece depois que você fala, ou durante a conversa apenas quando realmente ajudam."
+      },
+      "tutor": {
+        "question": "Preciso de um tutor?",
+        "answer": "Não. JustTalk AI funciona completamente sozinho. Tutores ao vivo são opcionais."
+      },
+      "cancel": {
+        "question": "Posso cancelar a qualquer momento?",
+        "answer": "Sim. Você pode gerenciar ou cancelar sua assinatura a qualquer momento pela sua conta."
+      },
+      "privacy": {
+        "question": "Meus dados de conversa são públicos ou compartilhados?",
+        "answer": "Não. Suas conversas são privadas e usadas apenas para melhorar sua experiência no JustTalk."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Comece a melhorar seu inglês hoje",
+    "monthly": "Mensal",
+    "annual": "Anual",
+    "save": "Economize {percent}%",
+    "plans": {
+      "basic": {
+        "name": "Básico",
+        "description": "Comece a praticar conversas",
+        "features": {
+          "voicePractice": {
+            "title": "Prática de voz com IA natural",
+            "description": "Fale naturalmente com vozes de IA de alta qualidade"
+          },
+          "feedback": {
+            "title": "Feedback personalizado após cada conversa",
+            "description": "Obtenha insights sobre seus padrões de fala"
+          },
+          "personalities": {
+            "title": "Múltiplas personalidades de IA",
+            "description": "Pratique com diferentes estilos de conversa"
+          },
+          "scenarios": {
+            "title": "Cenários de roleplay",
+            "description": "Prática de conversas do mundo real"
+          }
+        },
+        "cta": "Obter Básico"
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Acesso completo a todos os recursos",
+        "features": {
+          "everything": {
+            "title": "Tudo no Básico, mais:",
+            "description": ""
+          },
+          "advancedFeedback": {
+            "title": "Feedback avançado de fala",
+            "description": "Análise detalhada de pronúncia e fluência"
+          },
+          "memory": {
+            "title": "Memória de conversas",
+            "description": "A IA lembra suas conversas passadas"
+          },
+          "unlimited": {
+            "title": "Conversas ilimitadas",
+            "description": "Sem limites diários de prática"
+          },
+          "priority": {
+            "title": "Suporte prioritário",
+            "description": "Obtenha ajuda quando precisar"
+          }
+        },
+        "cta": "Obter Premium"
+      }
+    },
+    "perMonth": "/mês"
+  },
+  "footer": {
+    "justtalkAi": "JustTalk AI",
+    "justtalkTutors": "JustTalk Tutores",
+    "help": "Ajuda",
+    "status": "Status",
+    "termsOfUse": "Termos de Uso",
+    "privacyPolicy": "Política de Privacidade",
+    "copyright": "JustTalk AI ©2025–2026",
+    "manageCookies": "Gerenciar cookies",
+    "selectLanguage": "Selecionar idioma"
+  },
+  "platformPage": {
+    "hero": {
+      "headline": "Aprenda com tutores reais—sem começar do zero",
+      "subheadline": "JustTalk conecta tutoria ao vivo ao seu histórico de conversas, então as aulas começam com contexto—não com re-diagnóstico"
+    },
+    "cta": {
+      "joinWaitlist": "Entrar na lista de espera",
+      "earlyAccess": "Acesso antecipado para estudantes",
+      "becomeTeacher": "Torne-se um professor"
+    },
+    "seamless": {
+      "title": "Experiência perfeita com JustTalk para aprendizado um a um"
+    },
+    "exploreFeatures": "Explore mais recursos no JustTalk Tutors",
+    "tabs": {
+      "students": "Estudantes",
+      "teachers": "Professores"
+    },
+    "students": {
+      "speakWithTutor": {
+        "title": "Fale com um tutor ao vivo",
+        "description": "Encontre um tutor adaptado às suas necessidades e objetivos pessoais. Cada tutor é apoiado por insights de IA. As aulas permanecem personalizadas, eficientes e focadas no seu progresso."
+      },
+      "progressStays": {
+        "title": "Seu progresso fica com você",
+        "description": "No JustTalk, a tutoria não está vinculada a uma única pessoa.",
+        "description2": "Seu histórico de conversas é transferido, então as aulas permanecem produtivas mesmo se você mudar de tutores.",
+        "bullet1": "Sem reconstruir sua base",
+        "bullet2": "Sem repetir as mesmas aulas iniciais",
+        "bullet3": "Liberdade para escolher tutores baseado em compatibilidade"
+      },
+      "speakingFirst": {
+        "title": "Aulas focadas em falar primeiro",
+        "description": "A tutoria no JustTalk é projetada em torno da comunicação real.",
+        "bullet1": "Aulas centradas em falar, não em planilhas",
+        "bullet2": "Áreas de foco claras em vez de conversa genérica",
+        "bullet3": "Progresso que se acumula entre sessões"
+      },
+      "trackProgress": {
+        "title": "Acompanhe seu progresso ao longo do tempo",
+        "description": "Veja como suas habilidades de fala melhoram com análises detalhadas e gráficos de progresso."
+      }
+    },
+    "howItWorks": {
+      "title": "Como funciona",
+      "description": "Acompanhe sem esforço o progresso do estudante, erros e vocabulário—tudo em um só lugar. Economize tempo e deixe a IA cuidar dos detalhes enquanto você se concentra no que mais importa.",
+      "cards": {
+        "personalization": {
+          "title": "Personalização real",
+          "description": "Rastreamos cada palavra que você diz (e não diz) para entregar um roteiro hiper-personalizado para a fluência."
+        },
+        "cefr": {
+          "title": "Progressão baseada em CEFR",
+          "description": "Nosso currículo é construído no CEFR—o padrão global—então seu progresso é real, não apenas \"pontos\"."
+        },
+        "smarterTutoring": {
+          "title": "Tutoria humana mais inteligente",
+          "description": "Cada tutor é apoiado por insights de IA em tempo real para focar cada aula no que mais importa para você."
+        },
+        "aiRemembers": {
+          "title": "IA que lembra de você",
+          "description": "Nosso parceiro de IA te dá prática de conversa ilimitada e lembra de tudo que você discutiu com seu tutor."
+        },
+        "integration": {
+          "title": "Integração perfeita",
+          "description": "IA e tutor trabalham em sincronia. Tudo que você diz melhora seu caminho personalizado para a fluência."
+        },
+        "visualize": {
+          "title": "Visualize o Progresso",
+          "description": "Veja todos os dados e insights em diagramas simples"
+        }
+      }
+    },
+    "teachers": {
+      "aiAssistant": {
+        "title": "O assistente de IA conhece seus estudantes melhor",
+        "description": "Converse com a IA para acessar instantaneamente os interesses dos estudantes, resumos de aulas e histórico de conversas. Obtenha insights personalizados antes de cada sessão para tornar as aulas mais relevantes e envolventes."
+      },
+      "customScenarios": {
+        "title": "Crie cenários personalizados para seus estudantes",
+        "description": "Construa agentes de IA personalizados adaptados às necessidades de cada estudante usando prompts simples. Nosso modelo abrangente extrai insights úteis e avalia as interações dos estudantes, dando a você controle total sobre a experiência de aprendizado."
+      },
+      "visualFlow": {
+        "title": "Construa cenários de múltiplos passos com fluxo visual",
+        "description": "Transforme prompts simples em jornadas de aprendizado complexas. Projete cenários de conversa de múltiplos passos e conecte visualmente agentes de IA para criar rotas de prática estruturadas que se adaptam ao progresso dos seus estudantes."
+      },
+      "teachOnline": {
+        "title": "Ensine inglês online—do seu jeito",
+        "description": "Defina suas taxas, gerencie sua disponibilidade e ensine aulas focadas em falar em uma plataforma limpa e moderna.",
+        "cta": "Aplicar para ser tutor"
+      }
+    },
+    "friction": {
+      "title": "O atrito oculto na tutoria tradicional",
+      "description": "Seu histórico de aprendizado não viaja com você—então cada sessão com tutor começa do zero.",
+      "items": {
+        "level": {
+          "title": "Cada novo tutor pergunta sobre seu nível",
+          "description": "Você perde valioso tempo de aula explicando o que já sabe em vez de desenvolver novas habilidades."
+        },
+        "goals": {
+          "title": "Você repete seus objetivos e pontos fracos",
+          "description": "O contexto que você construiu com tutores anteriores não é transferido, então você está constantemente se reapresentando."
+        },
+        "warmups": {
+          "title": "Aulas iniciais parecem aquecimentos",
+          "description": "O progresso real só começa depois que eles descobriram suas necessidades—tempo que você poderia ter gastado aprendendo."
+        },
+        "reset": {
+          "title": "Mudar de tutores reinicia seu progresso",
+          "description": "O novo tutor não tem visibilidade do que você praticou, lutou ou dominou—então o ciclo se repete."
+        }
+      }
+    },
+    "ctaSection": {
+      "joinFirst": "Junte-se primeiro e experimente o JustTalk hoje",
+      "tryTutors": "Experimentar JustTalk Tutors",
+      "bookDemo": "Agendar uma demo",
+      "joinWaitlist": "Entrar na lista de espera"
+    }
+  },
+  "becometeacherPage": {
+    "hero": {
+      "headline": "Ensine inglês online—do seu jeito",
+      "subheadline": "Defina suas taxas, gerencie sua disponibilidade e ensine aulas focadas em falar em uma plataforma limpa e moderna.",
+      "applyToTeach": "Aplicar para ensinar",
+      "bookDemo": "Agendar uma demo"
+    },
+    "howItWorks": {
+      "title": "Como funciona",
+      "description": "Potencialize seu ensino com insights impulsionados por IA. Acompanhe o progresso dos estudantes, identifique padrões e ofereça aulas personalizadas com confiança.",
+      "cards": {
+        "setRates": {
+          "title": "Defina suas próprias taxas",
+          "description": "Cobre o que quiser, mude a qualquer momento"
+        },
+        "schedule": {
+          "title": "Ensine no seu horário",
+          "description": "Abra disponibilidade quando funcionar para você"
+        },
+        "messageStudents": {
+          "title": "Mande mensagens facilmente para estudantes",
+          "description": "Toda comunicação em um só lugar"
+        },
+        "conversationBased": {
+          "title": "Ensino baseado em conversa",
+          "description": "Ensine através de conversa real"
+        },
+        "payments": {
+          "title": "Pagamentos gerenciados pela plataforma",
+          "description": "Baixa comissão—com taxas mais baixas quanto mais você ensina"
+        },
+        "bringStudents": {
+          "title": "Traga seus próprios estudantes",
+          "description": "Ganhe mais quando convida estudantes para aprender com você no JustTalk"
+        }
+      }
+    },
+    "bringStudents": {
+      "title": "Traga seus estudantes",
+      "description": "Já tem estudantes? Convide-os para se juntar a você no JustTalk e ganhe mais com taxas de comissão mais baixas. Ajudaremos você a fazer a transição sem problemas.",
+      "scheduleCall": "Agendar uma chamada"
+    }
+  }
+}

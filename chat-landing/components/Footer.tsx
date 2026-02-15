@@ -2,11 +2,35 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { useTranslations, useLocale } from 'next-intl';
+import { useRouter, usePathname } from '@/i18n/routing';
 import posthog from 'posthog-js';
 import { usePricingVariant } from '@/hooks/usePricingVariant';
+import { locales, localeNames, type Locale } from '@/i18n/config';
+import { useState, useRef, useEffect } from 'react';
 
 export function Footer() {
+  const t = useTranslations('footer');
+  const locale = useLocale() as Locale;
+  const router = useRouter();
+  const pathname = usePathname();
   const pricingVariant = usePricingVariant();
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const langMenuRef = useRef<HTMLDivElement>(null);
+  
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (langMenuRef.current && !langMenuRef.current.contains(event.target as Node)) {
+        setIsLangMenuOpen(false);
+      }
+    };
+    
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
   
   const handleFooterLinkClick = (linkName: string, href: string) => {
     posthog.capture('footer_link_clicked', {
@@ -18,6 +42,11 @@ export function Footer() {
   
   // Construct JustTalk AI URL with pricing_variant
   const justTalkAiUrl = `https://chat.justtalk.ai/welcome?pricing_variant=${pricingVariant}&ref=justtalk.ai`;
+
+  const handleLocaleChange = (newLocale: Locale) => {
+    router.replace(pathname, { locale: newLocale });
+    setIsLangMenuOpen(false);
+  };
 
   return (
     <footer className="w-full">
@@ -34,18 +63,18 @@ export function Footer() {
           {/* Column 2 */}
           <div className="md:justify-self-start md:text-left">
             <ul className="space-y-3">
-              <li><a href={justTalkAiUrl} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Voice Chat', justTalkAiUrl)}>JustTalk AI</a></li>
-              <li><a href="https://justtalk.ai/platform" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Teachers', 'https://justtalk.ai/platform')}>JustTalk Tutors</a></li>
-              <li><a href="https://docs.justtalk.ai/?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Help', 'https://docs.justtalk.ai/?ref=justtalk.ai')}>Help</a></li>
-              <li><a href="https://status.justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline inline-flex items-center gap-1.5 justify-end" onClick={() => handleFooterLinkClick('Status', 'https://status.justtalk.ai')}>Status<span className="w-1 h-1 bg-green-500 rounded-full"></span></a></li>
+              <li><a href={justTalkAiUrl} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Voice Chat', justTalkAiUrl)}>{t('justtalkAi')}</a></li>
+              <li><a href={`https://justtalk.ai/${locale}/platform`} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Teachers', `https://justtalk.ai/${locale}/platform`)}>{t('justtalkTutors')}</a></li>
+              <li><a href="https://docs.justtalk.ai/?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Help', 'https://docs.justtalk.ai/?ref=justtalk.ai')}>{t('help')}</a></li>
+              <li><a href="https://status.justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline inline-flex items-center gap-1.5 justify-end" onClick={() => handleFooterLinkClick('Status', 'https://status.justtalk.ai')}>{t('status')}<span className="w-1 h-1 bg-green-500 rounded-full"></span></a></li>
             </ul>
           </div>
 
           {/* Column 3 */}
           <div className="md:justify-self-start md:text-left">
             <ul className="space-y-3">
-              <li><a href="/terms" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Terms of Use', '/terms')}>Terms of Use</a></li>
-              <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Privacy Policy', '#')}>Privacy Policy</a></li>
+              <li><a href={`/${locale}/terms`} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Terms of Use', `/${locale}/terms`)}>{t('termsOfUse')}</a></li>
+              <li><a href="#" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Privacy Policy', '#')}>{t('privacyPolicy')}</a></li>
             </ul>
           </div>
         </div>
@@ -53,8 +82,8 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-just_cod-gray-5 pt-4 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-1 text-[13.5px] font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
-            <span>JustTalk AI ©2025–2026</span>
-            <a href="#" className="underline hover:no-underline">Manage cookies</a>
+            <span>{t('copyright')}</span>
+            <a href="#" className="underline hover:no-underline">{t('manageCookies')}</a>
           </div>
 
           <div className="flex items-center gap-6">
@@ -74,10 +103,33 @@ export function Footer() {
             </div>
 
             {/* Language Selector */}
-            <Button variant="ghost" className="cursor-pointer">
-              <Image src="/icons/globe.svg" alt="" width={20} height={20} />
-              English (US)
-            </Button>
+            <div className="relative" ref={langMenuRef}>
+              <Button 
+                variant="ghost" 
+                className="cursor-pointer"
+                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+              >
+                <Image src="/icons/globe.svg" alt="" width={20} height={20} />
+                {localeNames[locale]}
+              </Button>
+              
+              {/* Dropdown Menu */}
+              {isLangMenuOpen && (
+                <div className="absolute bottom-full right-0 mb-2 bg-white border border-just_cod-gray-10 rounded-lg shadow-lg overflow-hidden z-50">
+                  {locales.map((loc) => (
+                    <button
+                      key={loc}
+                      onClick={() => handleLocaleChange(loc)}
+                      className={`w-full px-4 py-2 text-left text-sm hover:bg-just_black-5 transition-colors flex items-center gap-2 ${
+                        locale === loc ? 'bg-just_black-5 font-medium' : ''
+                      }`}
+                    >
+                      {localeNames[loc]}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>
