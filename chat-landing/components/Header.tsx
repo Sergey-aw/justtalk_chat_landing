@@ -151,7 +151,7 @@ export function Header() {
               </a>
 
               {/* Language Selector in Mobile Menu */}
-              <div className="pt-4 border-t border-just_cod-gray-10 mt-4">
+              {/* <div className="pt-4 border-t border-just_cod-gray-10 mt-4">
                 <p className="text-sm text-just_cod-gray/70 mb-2">Language / Язык</p>
                 <div className="flex gap-2">
                   {locales.map((loc) => (
@@ -168,7 +168,7 @@ export function Header() {
                     </button>
                   ))}
                 </div>
-              </div>
+              </div> */}
             </nav>
 
             {/* Bottom Buttons */}
