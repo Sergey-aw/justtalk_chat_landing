@@ -54,11 +54,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           {/* Logo */}
           <div>
-            <img src="/logo.svg" alt="JustTalk" className="h-6 w-auto" />
+            {/* <div><img src="/logo.svg" alt="JustTalk" className="h-6 w-auto" /></div> */}
+            <a href="https://elevenlabs.io/startup-grants" target="_blank" rel="noopener"><img src="/elevenlabs_logo.webp" alt="ElevenLabs Grants" className="h-4 w-auto" /></a>
           </div>
 
           {/* Spacer column for extra free space between logo and nav */}
           <div className="hidden md:block" />
+
+          {/* <div>
+            <img src="/elevenlabs_logo.webp" alt="ElevenLabs Grants" className="h-4 w-auto" />
+          </div> */}
 
           {/* Column 2 */}
           <div className="md:justify-self-start md:text-left">
