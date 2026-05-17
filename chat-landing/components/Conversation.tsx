@@ -39,11 +39,11 @@ export function Conversation({ variant = 'default' }: ConversationProps) {
 
   const getSignedUrl = async (): Promise<string> => {
     const response = await fetch('/api/get-signed-url');
+    const data = await response.json();
     if (!response.ok) {
-      throw new Error(`Failed to get signed url: ${response.statusText}`);
+      throw new Error(`Failed to get signed url: ${data?.error || response.statusText}`);
     }
-    const { signedUrl } = await response.json();
-    return signedUrl;
+    return data.signedUrl;
   };
 
   const startConversation = useCallback(async () => {
