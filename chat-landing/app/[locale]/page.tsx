@@ -13,6 +13,7 @@ import { ProgressChart } from '@/components/ProgressChart';
 import { TrackedLink } from '@/components/TrackedLink';
 import { CircularRotation } from '@/components/CircularRotation';
 import { PlatformMedia } from '@/components/PlatformMedia';
+import { IELTSReport } from '@/components/IELTSReport';
 import {
   Accordion,
   AccordionContent,
@@ -190,6 +191,23 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
             </div>
           </div>
 
+          {/* Feature - IELTS Speaking */}
+          <div id="ielts" className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                {t('ielts.feature.title')}
+              </h3>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                {t('ielts.feature.description')}
+              </p>
+            </div>
+
+            {/* IELTS Speaking band report */}
+            <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden bg-gray-50 border border-just_black-5">
+              <IELTSReport />
+            </div>
+          </div>
+
           {/* Feature 5 - Role Play Series */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
@@ -256,9 +274,6 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
           </div>
         </section>
 
-         {/* Platform Section */}
-        
-        
            {/* Pricing Section */}
         <PricingSection />
 

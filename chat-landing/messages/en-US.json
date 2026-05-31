@@ -7,6 +7,7 @@
     "justtalkAi": "JustTalk AI",
     "justtalkTutors": "JustTalk Tutors",
     "becomeTeacher": "Become a Teacher",
+    "ielts": "IELTS",
     "login": "Log in",
     "signup": "Sign up",
     "apply": "Apply"
@@ -49,6 +50,14 @@
     "progress": {
       "title": "Track your progress over time",
       "description": "See how your speaking skills improve with detailed analytics and progress charts."
+    }
+  },
+  "ielts": {
+    "title": "Preparing for IELTS Speaking?",
+    "description": "Sit a realistic 12-minute mock Speaking test, then get a clear band estimate across all four official criteria—so you know exactly what's holding your score back.",
+    "feature": {
+      "title": "Prepare for IELTS Speaking",
+      "description": "Sit a full 12-minute mock test where an AI examiner walks you through all three parts—the Interview, the Long Turn cue card, and the Discussion—exactly like the real exam. The instant you finish, an AI coach scores every answer against the four official band criteria: Fluency & Coherence, Lexical Resource, Grammar, and Pronunciation. You get an estimated overall band, see precisely which criterion is holding you back, and receive targeted drills to practise before your next session."
     }
   },
   "tutors": {
@@ -332,5 +341,116 @@
       "description": "Already have students? Invite them to join you on JustTalk and earn more with lower commission rates. We'll help you transition seamlessly.",
       "scheduleCall": "Schedule a call"
     }
+  },
+  "ieltsPage": {
+    "hero": {
+      "badge": "For IELTS candidates already preparing",
+      "headline": "Why isn't your IELTS Speaking band moving?",
+      "subheadline": "One 12-minute mock test shows which of the four official Speaking criteria is holding your band back — before another retake costs you months of preparation.",
+      "cta": "Start a mock test",
+      "ctaNote": "First mock test free · no card required",
+      "secondaryCta": "See how feedback works"
+    },
+    "stats": {
+      "mockValue": "12 min",
+      "mockLabel": "Full mock Speaking test",
+      "partsValue": "Parts 1–3",
+      "partsLabel": "All three official sections",
+      "criteriaValue": "4 criteria",
+      "criteriaLabel": "Matched to the public rubric",
+      "dailyValue": "15 min/day",
+      "dailyLabel": "Guided practice routine"
+    },
+    "roles": {
+      "title": "Meet the Examiner. Then meet the Coach.",
+      "description": "One simulates the test. The other tells you what to do next. They never run at the same time — so you build real fluency, not coaching-dependent habits.",
+      "examinerTag": "During the test",
+      "examinerTitle": "AI Mock Examiner",
+      "examinerRole": "runs the test",
+      "examinerPitch": "Practise the full IELTS Speaking flow in a realistic, timed session. The examiner guides you through all three parts without coaching you mid-test.",
+      "p1Title": "Interview",
+      "p1Desc": "Answer familiar-topic questions naturally and learn to extend without rambling.",
+      "p2Title": "Long Turn",
+      "p2Desc": "Receive a cue card, prepare for one minute, then speak for up to two minutes.",
+      "p3Title": "Discussion",
+      "p3Desc": "Explain, compare, justify opinions, and speculate about broader issues.",
+      "examinerCallout": "No interruptions while you speak. Feedback comes after your answer, so you build real fluency — not stop-start habits.",
+      "coachTag": "After the test",
+      "coachTitle": "AI Speaking Coach",
+      "coachRole": "gives the feedback",
+      "coachPitch": "When the test ends, switch to Coach mode for clear, criteria-based feedback on what you actually did — and what to work on next.",
+      "aTitle": "Band estimate by criterion",
+      "aDesc": "See your performance across Fluency, Lexical Resource, Grammar, and Pronunciation.",
+      "bTitle": "Vocabulary & grammar tracking",
+      "bDesc": "Spots the words you overuse, the structures you avoid, and what to swap them for.",
+      "cTitle": "Targeted drills",
+      "cDesc": "Practise the next skill you need: chunking, paraphrasing, Part 3 opinion-building.",
+      "frameworksLabel": "Frameworks you'll practise",
+      "fw1": "Part 1 · Answer → Extend → Explain",
+      "fw2": "Part 2 · Cue-card story structure",
+      "fw3": "Part 3 · Point · Reason · Example · Point"
+    },
+    "feedback": {
+      "title": "From vague advice to useful next steps.",
+      "description": "Generic feedback tells you what's wrong. JustTalk tells you what to practise next — with the exact sentence patterns to drill.",
+      "ex1Vague": "Try to use more advanced vocabulary.",
+      "ex1Good": "Swap \"very big\" for \"enormous\" or \"vast\" — you used \"very\" seven times in Part 2.",
+      "ex2Vague": "Work on your fluency.",
+      "ex2Good": "Cut the long pause before answers — open with \"That's an interesting question…\" to keep the flow.",
+      "ex3Vague": "Improve your grammar.",
+      "ex3Good": "You avoided conditionals in Part 3. Practise \"If… I would…\" to show the range the rubric rewards."
+    },
+    "routine": {
+      "title": "A 15-minute session you can repeat every day.",
+      "description": "One mock-test Part a day. Real exam structure, AI-graded, with a coach who reviews your transcript and works the weak spots with you.",
+      "step1Title": "Sit one Part with the AI examiner",
+      "step1Min": "5 min",
+      "step1Desc": "Same timing, same question format, same pressure — a faithful slice of the real test.",
+      "step2Title": "Coach reviews your score and transcript",
+      "step2Min": "5 min",
+      "step2Desc": "Walks through what worked, what didn't, and how to lift your band next session.",
+      "step3Title": "Practise the weak spots, casually",
+      "step3Min": "5 min",
+      "step3Desc": "Drill the areas the coach flagged — low-stakes reps that build the habit without test-day nerves.",
+      "total": "Total: 15 minutes a day",
+      "totalNote": "Repeat for four weeks before your test."
+    },
+    "compare": {
+      "title": "Why not just use ChatGPT, a tutor, or YouTube?",
+      "description": "Fair question. Here's the honest comparison.",
+      "freeName": "Free / self-serve",
+      "freePro": "Free, abundant, available 24/7.",
+      "freeCon1": "No feedback on your speaking — only explanations or generic praise.",
+      "freeCon2": "No criteria-based scoring, no timed mock, no measure of progress.",
+      "jtName": "JustTalk",
+      "jtBadge": "Recommended",
+      "jtPro1": "Criteria-based scoring on all four official Speaking criteria.",
+      "jtPro2": "Daily practice. Cheaper than one tutor hour, less than one retake fee.",
+      "jtCon": "Newer than 1:1 tutoring — strongest when paired with occasional tutor reviews.",
+      "tutorName": "1:1 IELTS tutor",
+      "tutorPro": "Personal, expert, accountable — the best option if you can afford daily sessions.",
+      "tutorCon1": "One hour a week isn't enough reps. Speaking is a habit.",
+      "tutorCon2": "No practice between lessons — you forget the feedback by midweek."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "Is this an official IELTS test?",
+      "a1": "No. JustTalk provides IELTS-style practice with unofficial band estimates. It supports — it does not replace — certified IELTS assessment.",
+      "q2": "How accurate is the band estimate?",
+      "a2": "Estimates are based on the four public Speaking criteria and are meant to guide your practice, not predict your exact official score.",
+      "q3": "Do I need to prepare anything to start?",
+      "a3": "No. Start a mock test immediately — the examiner guides you through every part.",
+      "q4": "How long does a full mock take?",
+      "a4": "About 12 minutes for the full Parts 1–3 flow, plus a few minutes of coach feedback afterwards.",
+      "q5": "Can I use this alongside a tutor?",
+      "a5": "Yes — that's the ideal setup. Daily AI practice between lessons, with a tutor reviewing your progress."
+    },
+    "cta": {
+      "badge": "First mock test free · no card required",
+      "title": "Find out what's holding back your band — in 12 minutes.",
+      "description": "One IELTS-style mock test. One clear report. You see your estimated band, the criterion holding you back, and exactly what to drill next.",
+      "button": "Take your first mock test"
+    },
+    "disclaimer": "JustTalk provides IELTS-style practice and AI-generated feedback with unofficial band estimates. It is not affiliated with IELTS, does not award official scores, and is designed to supplement — not replace — certified IELTS assessment. IELTS is a registered trademark of its respective owners."
   }
 }

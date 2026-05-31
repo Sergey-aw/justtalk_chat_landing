@@ -73,6 +73,9 @@ export function Header() {
             <a href={`/${locale}/becometeacher`} className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
               {t('becomeTeacher')}
             </a>
+            <a href={`/${locale}/ielts`} className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
+              {t('ielts')}
+            </a>
           </nav>
 
           {/* CTA Buttons */}
@@ -142,12 +145,19 @@ export function Header() {
               >
                 {t('justtalkTutors')}
               </a>
-              <a 
-                href={`/${locale}/becometeacher`} 
+              <a
+                href={`/${locale}/becometeacher`}
                 className="text-lg font-medium text-just_cod-gray"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {t('becomeTeacher')}
+              </a>
+              <a
+                href={`/${locale}/ielts`}
+                className="text-lg font-medium text-just_cod-gray"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {t('ielts')}
               </a>
 
               {/* Language Selector in Mobile Menu */}
