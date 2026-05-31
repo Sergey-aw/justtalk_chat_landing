@@ -7,6 +7,7 @@
     "justtalkAi": "JustTalk AI",
     "justtalkTutors": "JustTalk Tutores",
     "becomeTeacher": "Convertirse en Tutor",
+    "ielts": "IELTS",
     "login": "Iniciar sesión",
     "signup": "Registrarse",
     "apply": "Aplicar"
@@ -14,7 +15,8 @@
   "hero": {
     "headline": "Desarrolla verdadera confianza al hablar inglés",
     "subheadline": "Practica inglés a través de conversaciones realistas con IA que recuerda cómo hablas y construye cada sesión sobre la anterior.",
-    "getStarted": "Comenzar"
+    "getStarted": "Comenzar",
+    "getIosApp": "Descargar app de iOS"
   },
   "platform": {
     "title": "Hablar funciona — cuando se rastrea",
@@ -49,6 +51,14 @@
     "progress": {
       "title": "Rastrea tu progreso a lo largo del tiempo",
       "description": "Ve cómo mejoran tus habilidades de conversación con análisis detallados y gráficos de progreso."
+    }
+  },
+  "ielts": {
+    "title": "¿Te preparas para el IELTS Speaking?",
+    "description": "Haz un examen de práctica realista de 12 minutos y recibe una estimación clara de tu banda en los cuatro criterios oficiales, para saber exactamente qué frena tu puntuación.",
+    "feature": {
+      "title": "Prepárate para el IELTS Speaking",
+      "description": "Realiza un examen de práctica completo de 12 minutos en el que un examinador de IA te guía por las tres partes —la Entrevista, la tarjeta del Monólogo y la Discusión— igual que en el examen real. En cuanto terminas, un coach de IA puntúa cada respuesta según los cuatro criterios oficiales: Fluidez y Coherencia, Recursos Léxicos, Gramática y Pronunciación. Obtienes una banda estimada, ves exactamente qué criterio te está frenando y recibes ejercicios específicos para practicar antes de tu próxima sesión."
     }
   },
   "tutors": {
@@ -332,5 +342,117 @@
       "description": "¿Ya tienes estudiantes? Invítalos a unirse a ti en JustTalk y gana más con tarifas de comisión más bajas. Te ayudaremos a hacer la transición sin problemas.",
       "scheduleCall": "Programar una llamada"
     }
+  },
+  "ieltsPage": {
+    "hero": {
+      "badge": "Para candidatos de IELTS que ya se están preparando",
+      "headline": "¿Por qué no sube tu banda de IELTS Speaking?",
+      "subheadline": "Un examen de práctica de 12 minutos te muestra cuál de los cuatro criterios oficiales de Speaking está frenando tu banda, antes de que otra repetición te cueste meses de preparación.",
+      "cta": "Empezar un examen de práctica",
+      "ctaNote": "Primer examen de práctica gratis · sin tarjeta",
+      "secondaryCta": "Mira cómo funciona el feedback",
+      "iosApp": "Descargar app de iOS"
+    },
+    "stats": {
+      "mockValue": "12 min",
+      "mockLabel": "Examen de práctica completo de Speaking",
+      "partsValue": "Partes 1–3",
+      "partsLabel": "Las tres secciones oficiales",
+      "criteriaValue": "4 criterios",
+      "criteriaLabel": "Según la rúbrica pública",
+      "dailyValue": "15 min/día",
+      "dailyLabel": "Rutina de práctica guiada"
+    },
+    "roles": {
+      "title": "Conoce al Examinador. Luego, al Coach.",
+      "description": "Uno simula el examen. El otro te dice qué hacer después. Nunca actúan a la vez, así desarrollas fluidez real, no dependencia del coaching.",
+      "examinerTag": "Durante el examen",
+      "examinerTitle": "Examinador de práctica con IA",
+      "examinerRole": "dirige el examen",
+      "examinerPitch": "Practica el flujo completo de IELTS Speaking en una sesión realista y cronometrada. El examinador te guía por las tres partes sin corregirte durante el examen.",
+      "p1Title": "Entrevista",
+      "p1Desc": "Responde preguntas de temas familiares con naturalidad y aprende a extenderte sin divagar.",
+      "p2Title": "Monólogo",
+      "p2Desc": "Recibe una tarjeta, prepárate un minuto y habla hasta dos minutos.",
+      "p3Title": "Discusión",
+      "p3Desc": "Explica, compara, justifica opiniones y especula sobre temas más amplios.",
+      "examinerCallout": "Sin interrupciones mientras hablas. El feedback llega después de tu respuesta, así desarrollas fluidez real, no hábitos entrecortados.",
+      "coachTag": "Después del examen",
+      "coachTitle": "Coach de Speaking con IA",
+      "coachRole": "da el feedback",
+      "coachPitch": "Cuando termina el examen, cambia al modo Coach para recibir feedback claro y basado en criterios sobre lo que hiciste y en qué trabajar.",
+      "aTitle": "Banda estimada por criterio",
+      "aDesc": "Mira tu desempeño en Fluidez, Recursos Léxicos, Gramática y Pronunciación.",
+      "bTitle": "Seguimiento de vocabulario y gramática",
+      "bDesc": "Detecta las palabras que repites, las estructuras que evitas y por qué cambiarlas.",
+      "cTitle": "Ejercicios específicos",
+      "cDesc": "Practica la siguiente habilidad: agrupar ideas, parafrasear, construir opiniones en la Parte 3.",
+      "frameworksLabel": "Estructuras que practicarás",
+      "fw1": "Parte 1 · Responder → Ampliar → Explicar",
+      "fw2": "Parte 2 · Estructura narrativa de la tarjeta",
+      "fw3": "Parte 3 · Idea · Razón · Ejemplo · Idea"
+    },
+    "feedback": {
+      "title": "Del consejo vago a los siguientes pasos útiles.",
+      "description": "El feedback genérico te dice qué está mal. JustTalk te dice qué practicar después, con los patrones de frases exactos para entrenar.",
+      "ex1Vague": "Intenta usar vocabulario más avanzado.",
+      "ex1Good": "Cambia «very big» por «enormous» o «vast»: usaste «very» siete veces en la Parte 2.",
+      "ex2Vague": "Trabaja tu fluidez.",
+      "ex2Good": "Reduce la pausa larga antes de responder: empieza con «That's an interesting question…» para mantener el ritmo.",
+      "ex3Vague": "Mejora tu gramática.",
+      "ex3Good": "Evitaste los condicionales en la Parte 3. Practica «If… I would…» para mostrar el rango que premia la rúbrica."
+    },
+    "routine": {
+      "title": "Una sesión de 15 minutos que puedes repetir cada día.",
+      "description": "Una parte del examen de práctica al día. Estructura real del examen, evaluada por IA, con un coach que revisa tu transcripción y trabaja contigo los puntos débiles.",
+      "step1Title": "Haz una parte con el examinador de IA",
+      "step1Min": "5 min",
+      "step1Desc": "Mismo tiempo, mismo formato de preguntas, misma presión: una porción fiel del examen real.",
+      "step2Title": "El coach revisa tu puntuación y transcripción",
+      "step2Min": "5 min",
+      "step2Desc": "Repasa qué funcionó, qué no y cómo subir tu banda en la próxima sesión.",
+      "step3Title": "Practica los puntos débiles, sin presión",
+      "step3Min": "5 min",
+      "step3Desc": "Entrena las áreas que marcó el coach: repeticiones de bajo riesgo que crean el hábito sin los nervios del examen.",
+      "total": "Total: 15 minutos al día",
+      "totalNote": "Repite durante cuatro semanas antes de tu examen."
+    },
+    "compare": {
+      "title": "¿Por qué no usar ChatGPT, un profesor o YouTube?",
+      "description": "Pregunta justa. Aquí va la comparación honesta.",
+      "freeName": "Gratis / por tu cuenta",
+      "freePro": "Gratis, abundante, disponible 24/7.",
+      "freeCon1": "Sin feedback sobre tu speaking: solo explicaciones o elogios genéricos.",
+      "freeCon2": "Sin puntuación por criterios, sin examen cronometrado, sin medir el progreso.",
+      "jtName": "JustTalk",
+      "jtBadge": "Recomendado",
+      "jtPro1": "Puntuación por criterios en los cuatro criterios oficiales de Speaking.",
+      "jtPro2": "Práctica diaria. Más barato que una hora de profesor, menos que una repetición.",
+      "jtCon": "Más nuevo que la tutoría 1:1: rinde más combinado con revisiones ocasionales de un profesor.",
+      "tutorName": "Profesor de IELTS 1:1",
+      "tutorPro": "Personal, experto, responsable: la mejor opción si puedes pagar sesiones diarias.",
+      "tutorCon1": "Una hora a la semana no son suficientes repeticiones. Hablar es un hábito.",
+      "tutorCon2": "Sin práctica entre clases: olvidas el feedback a mitad de semana."
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "q1": "¿Es este un examen oficial de IELTS?",
+      "a1": "No. JustTalk ofrece práctica al estilo IELTS con estimaciones de banda no oficiales. Apoya, no reemplaza, la evaluación oficial de IELTS.",
+      "q2": "¿Qué tan precisa es la estimación de banda?",
+      "a2": "Las estimaciones se basan en los cuatro criterios públicos de Speaking y sirven para guiar tu práctica, no para predecir tu puntuación oficial exacta.",
+      "q3": "¿Necesito preparar algo para empezar?",
+      "a3": "No. Empieza un examen de práctica de inmediato: el examinador te guía por cada parte.",
+      "q4": "¿Cuánto dura un examen completo?",
+      "a4": "Unos 12 minutos para el flujo completo de las Partes 1–3, más unos minutos de feedback del coach.",
+      "q5": "¿Puedo usarlo junto con un profesor?",
+      "a5": "Sí, es la combinación ideal. Práctica diaria con IA entre clases, con un profesor que revisa tu progreso."
+    },
+    "cta": {
+      "badge": "Primer examen de práctica gratis · sin tarjeta",
+      "title": "Descubre qué frena tu banda, en 12 minutos.",
+      "description": "Un examen de práctica al estilo IELTS. Un informe claro. Ves tu banda estimada, el criterio que te frena y exactamente qué entrenar después.",
+      "button": "Haz tu primer examen de práctica"
+    },
+    "disclaimer": "JustTalk ofrece práctica al estilo IELTS y feedback generado por IA con estimaciones de banda no oficiales. No está afiliado a IELTS, no otorga puntuaciones oficiales y está diseñado para complementar, no reemplazar, la evaluación oficial de IELTS. IELTS es una marca registrada de sus respectivos propietarios."
   }
 }
