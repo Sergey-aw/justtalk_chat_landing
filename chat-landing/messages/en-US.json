@@ -15,7 +15,8 @@
   "hero": {
     "headline": "Build real speaking confidence in English",
     "subheadline": "Practice English through realistic conversations with AI that remembers how you speak and builds every session on the last.",
-    "getStarted": "Get Started"
+    "getStarted": "Get Started",
+    "getIosApp": "Get iOS app"
   },
   "platform": {
     "title": "Talking works—when it's tracked",
@@ -349,7 +350,8 @@
       "subheadline": "One 12-minute mock test shows which of the four official Speaking criteria is holding your band back — before another retake costs you months of preparation.",
       "cta": "Start a mock test",
       "ctaNote": "First mock test free · no card required",
-      "secondaryCta": "See how feedback works"
+      "secondaryCta": "See how feedback works",
+      "iosApp": "Get iOS app"
     },
     "stats": {
       "mockValue": "12 min",

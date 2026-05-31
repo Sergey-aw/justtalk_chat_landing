@@ -15,7 +15,8 @@
   "hero": {
     "headline": "Construa verdadeira confiança ao falar inglês",
     "subheadline": "Pratique inglês através de conversas realistas com IA que lembra como você fala e constrói cada sessão sobre a anterior.",
-    "getStarted": "Começar"
+    "getStarted": "Começar",
+    "getIosApp": "Baixar o app iOS"
   },
   "platform": {
     "title": "Conversar funciona — quando é rastreado",
@@ -349,7 +350,8 @@
       "subheadline": "Um teste de prática de 12 minutos mostra qual dos quatro critérios oficiais de Speaking está segurando sua banda — antes que outra repetição custe meses de preparação.",
       "cta": "Iniciar um teste de prática",
       "ctaNote": "Primeiro teste de prática grátis · sem cartão",
-      "secondaryCta": "Veja como funciona o feedback"
+      "secondaryCta": "Veja como funciona o feedback",
+      "iosApp": "Baixar o app iOS"
     },
     "stats": {
       "mockValue": "12 min",

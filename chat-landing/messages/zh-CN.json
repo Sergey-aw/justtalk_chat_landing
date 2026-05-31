@@ -15,7 +15,8 @@
   "hero": {
     "headline": "建立真正的英语口语自信",
     "subheadline": "通过与AI进行真实对话练习英语，AI会记住你的说话方式，并在每次会话中不断积累。",
-    "getStarted": "开始使用"
+    "getStarted": "开始使用",
+    "getIosApp": "获取 iOS 应用"
   },
   "platform": {
     "title": "对话有效——当它被追踪时",
@@ -349,7 +350,8 @@
       "subheadline": "一次 12 分钟的模拟测试，就能告诉你四项官方口语评分标准中是哪一项拖住了你的分数——别让下一次重考再花掉你几个月的备考时间。",
       "cta": "开始模拟测试",
       "ctaNote": "首次模拟测试免费 · 无需绑卡",
-      "secondaryCta": "看看反馈如何运作"
+      "secondaryCta": "看看反馈如何运作",
+      "iosApp": "获取 iOS 应用"
     },
     "stats": {
       "mockValue": "12 分钟",
