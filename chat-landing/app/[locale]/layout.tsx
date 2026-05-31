@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: "JustTalk - AI-Powered Language Learning",
   description: "Practice speaking inside realistic scenarios with AI-enhanced personalities.",
   authors: [{ name: "JustTalk" }],
+  itunes: {
+    appId: "6760475574",
+  },
   openGraph: {
     title: "JustTalk - AI-Powered Language Learning",
     description: "Practice speaking inside realistic scenarios. Our AI personalities remember previous conversations, allowing you to pick up right where you left off.",
