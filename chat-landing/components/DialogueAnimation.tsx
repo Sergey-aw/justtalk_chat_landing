@@ -196,6 +196,7 @@ export function DialogueAnimation() {
         transition={{ delay: 1 }}
         onClick={handleReplay}
         disabled={isAnimating}
+        aria-label="Replay dialogue animation"
         className="absolute bottom-3 right-3 w-7 h-7 md:w-8 md:h-8 rounded-full hover:bg-gray-200/50 disabled:opacity-30 disabled:cursor-not-allowed flex items-center justify-center transition-all cursor-pointer group"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}

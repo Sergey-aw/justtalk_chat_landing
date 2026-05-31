@@ -1,0 +1,336 @@
+{
+  "metadata": {
+    "title": "JustTalk - AI驱动的语言学习",
+    "description": "在真实场景中与AI角色练习对话。"
+  },
+  "nav": {
+    "justtalkAi": "JustTalk AI",
+    "justtalkTutors": "JustTalk 导师",
+    "becomeTeacher": "成为导师",
+    "login": "登录",
+    "signup": "注册",
+    "apply": "申请"
+  },
+  "hero": {
+    "headline": "建立真正的英语口语自信",
+    "subheadline": "通过与AI进行真实对话练习英语，AI会记住你的说话方式，并在每次会话中不断积累。",
+    "getStarted": "开始使用"
+  },
+  "platform": {
+    "title": "对话有效——当它被追踪时",
+    "description": "大多数口语工具让你说话，但不追踪真正的进步。JustTalk AI分析你说的内容，并在你的历史记录基础上构建每次会话——让进步累积，而非随机。"
+  },
+  "features": {
+    "exploreMore": "探索JustTalk AI更多功能",
+    "improvement": {
+      "title": "进步是如何真正发生的",
+      "description": "一次对话不会带来太大改变。但当每次会话都被追踪、理解并用于塑造下一次时，进步会自然累积。"
+    },
+    "personalities": {
+      "title": "与不同性格对话",
+      "description": "有些性格支持你。有些性格挑战你。所有性格都帮助你练习真实对话"
+    },
+    "memory": {
+      "title": "它们记得你",
+      "description": "我们的AI性格会记住之前的对话，让你可以从上次停下的地方继续。"
+    },
+    "scenarios": {
+      "title": "在真实场景中练习口语",
+      "description": "选择情境、角色和难度——在一致的语境中培养技能。"
+    },
+    "roleplay": {
+      "title": "具有记忆和性格的持续角色扮演",
+      "description": "有些场景会在多次会话中展开。这不是一次性的角色扮演。这是具有连续性的持续口语练习。"
+    },
+    "personalized": {
+      "title": "为你创建的个性化场景",
+      "description": "导师可以设计根据你的目标、兴趣和技能水平定制的角色扮演场景——给你与你需求独特相关的练习。"
+    },
+    "progress": {
+      "title": "追踪你的进步",
+      "description": "通过详细的分析和进步图表，查看你的口语技能如何提升。"
+    }
+  },
+  "tutors": {
+    "title": "当你准备好时，JustTalk AI会连接真正的导师",
+    "description": "JustTalk AI设计为与真人导师整合。当你上课时，导师可以在你的AI练习基础上构建，而不是从零开始。",
+    "liveTutoring": {
+      "title": "真人导师市场即将推出",
+      "description": "与了解你AI练习的经验丰富的导师联系，通过有针对性的指导加速你的进步。"
+    },
+    "learnPlatform": "了解平台"
+  },
+  "faq": {
+    "title": "常见问题",
+    "items": {
+      "languageOnly": {
+        "question": "只支持英语吗？",
+        "answer": "是的。我们目前专注于英语，以提供最深入的口语反馈。"
+      },
+      "notFor": {
+        "question": "这不适合谁？",
+        "answer1": "如果你是初学者，或正在寻找语法课、练习或被动学习——这可能不是合适的选择。",
+        "answer2": "JustTalk专为想通过口语学习的人而建。"
+      },
+      "prepare": {
+        "question": "开始前需要准备什么吗？",
+        "answer": "不需要。你可以立即开始说话——无需提示、设置或练习。"
+      },
+      "lessonOrConversation": {
+        "question": "这是课程还是对话？",
+        "answer1": "这是真正的对话——引导性和适应性的，不是练习或训练。",
+        "answer2": "没有训练或脚本化的回答。重点是清晰自然地表达想法。"
+      },
+      "grammar": {
+        "question": "会纠正我的语法吗？",
+        "answer": "会——不会打断你的流程。大多数纠正出现在你说话后，或在对话中只有真正有帮助时才出现。"
+      },
+      "tutor": {
+        "question": "我需要导师吗？",
+        "answer": "不需要。JustTalk AI完全独立工作。真人导师是可选的。"
+      },
+      "cancel": {
+        "question": "我可以随时取消吗？",
+        "answer": "可以。你可以随时从账户中管理或取消订阅。"
+      },
+      "privacy": {
+        "question": "我的对话数据是公开或共享的吗？",
+        "answer": "不是。你的对话是私密的，仅用于改善你在JustTalk的体验。"
+      }
+    }
+  },
+  "pricing": {
+    "title": "今天开始提升你的英语",
+    "monthly": "每月",
+    "annual": "每年",
+    "save": "节省{percent}%",
+    "plans": {
+      "basic": {
+        "name": "基础版",
+        "description": "开始练习对话",
+        "features": {
+          "voicePractice": {
+            "title": "自然AI语音练习",
+            "description": "用高质量的AI声音自然地说话"
+          },
+          "feedback": {
+            "title": "每次对话后的个性化反馈",
+            "description": "获取你说话模式的洞察"
+          },
+          "personalities": {
+            "title": "多种AI性格",
+            "description": "与不同的对话风格练习"
+          },
+          "scenarios": {
+            "title": "角色扮演场景",
+            "description": "真实世界对话练习"
+          }
+        },
+        "cta": "获取基础版"
+      },
+      "premium": {
+        "name": "高级版",
+        "description": "完全访问所有功能",
+        "features": {
+          "everything": {
+            "title": "基础版所有功能，加上：",
+            "description": ""
+          },
+          "advancedFeedback": {
+            "title": "高级口语反馈",
+            "description": "详细的发音和流利度分析"
+          },
+          "memory": {
+            "title": "对话记忆",
+            "description": "AI记得你过去的对话"
+          },
+          "unlimited": {
+            "title": "无限对话",
+            "description": "没有每日练习限制"
+          },
+          "priority": {
+            "title": "优先支持",
+            "description": "在需要时获得帮助"
+          }
+        },
+        "cta": "获取高级版"
+      }
+    },
+    "perMonth": "/月"
+  },
+  "footer": {
+    "justtalkAi": "JustTalk AI",
+    "justtalkTutors": "JustTalk 导师",
+    "help": "帮助",
+    "status": "状态",
+    "termsOfUse": "使用条款",
+    "privacyPolicy": "隐私政策",
+    "copyright": "JustTalk AI ©2025–2026",
+    "manageCookies": "管理Cookie",
+    "selectLanguage": "选择语言"
+  },
+  "platformPage": {
+    "hero": {
+      "headline": "与真正的导师学习——无需从头开始",
+      "subheadline": "JustTalk将实时辅导与您的对话历史连接起来，让课程从背景开始——而不是重新诊断"
+    },
+    "cta": {
+      "joinWaitlist": "加入候补名单",
+      "earlyAccess": "学生抢先体验",
+      "becomeTeacher": "成为教师"
+    },
+    "seamless": {
+      "title": "JustTalk一对一学习的无缝体验"
+    },
+    "exploreFeatures": "探索JustTalk导师的更多功能",
+    "tabs": {
+      "students": "学生",
+      "teachers": "教师"
+    },
+    "students": {
+      "speakWithTutor": {
+        "title": "与真人导师对话",
+        "description": "找到符合您个人需求和目标的导师。每位导师都有AI洞察支持。课程保持个性化、高效，并专注于您的进步。"
+      },
+      "progressStays": {
+        "title": "您的进步与您同在",
+        "description": "在JustTalk，辅导不与单个人绑定。",
+        "description2": "您的对话历史会延续，即使更换导师，课程仍然高效。",
+        "bullet1": "无需重建基础",
+        "bullet2": "无需重复相同的初级课程",
+        "bullet3": "根据匹配度自由选择导师"
+      },
+      "speakingFirst": {
+        "title": "专注口语优先的课程",
+        "description": "JustTalk的辅导围绕真实交流设计。",
+        "bullet1": "课程以口语为中心，而非练习题",
+        "bullet2": "明确的重点领域而非泛泛的对话",
+        "bullet3": "跨课程累积的进步"
+      },
+      "trackProgress": {
+        "title": "随时间追踪您的进步",
+        "description": "通过详细的分析和进度图表，查看您的口语技能如何提升。"
+      }
+    },
+    "howItWorks": {
+      "title": "如何运作",
+      "description": "轻松追踪学生进度、错误和词汇——一切尽在一处。节省时间，让AI处理细节，让您专注于最重要的事情。",
+      "cards": {
+        "personalization": {
+          "title": "真正的个性化",
+          "description": "我们追踪您说的每一个词（和没说的），为您提供超个性化的流利度路线图。"
+        },
+        "cefr": {
+          "title": "基于CEFR的进阶",
+          "description": "我们的课程建立在CEFR——全球标准——之上，所以您的进步是真实的，不仅仅是\"积分\"。"
+        },
+        "smarterTutoring": {
+          "title": "更智能的人工辅导",
+          "description": "每位导师都有实时AI洞察支持，将每节课专注于对您最重要的内容。"
+        },
+        "aiRemembers": {
+          "title": "记住您的AI",
+          "description": "我们的AI伙伴为您提供无限的口语练习，并记住您与导师讨论的一切。"
+        },
+        "integration": {
+          "title": "无缝集成",
+          "description": "AI和导师同步工作。您说的一切都会改善您个性化的流利度之路。"
+        },
+        "visualize": {
+          "title": "可视化进度",
+          "description": "在简单的图表中查看所有数据洞察"
+        }
+      }
+    },
+    "teachers": {
+      "aiAssistant": {
+        "title": "AI助手更了解您的学生",
+        "description": "与AI聊天，即时获取学生兴趣、课程摘要和对话历史。在每节课前获得个性化洞察，让课程更加相关和吸引人。"
+      },
+      "customScenarios": {
+        "title": "为学生创建定制场景",
+        "description": "使用简单的提示为每位学生的需求构建定制的AI代理。我们的综合模型提取有用的洞察并评估学生互动，让您完全控制学习体验。"
+      },
+      "visualFlow": {
+        "title": "用可视化流程构建多步骤场景",
+        "description": "将简单的提示转化为复杂的学习旅程。设计多步骤对话场景，可视化连接AI代理，创建适应学生进步的结构化练习路径。"
+      },
+      "teachOnline": {
+        "title": "在线教授英语——按您的方式",
+        "description": "在简洁现代的平台上设定您的费率、管理您的可用时间，并教授以口语为重点的课程。",
+        "cta": "申请成为导师"
+      }
+    },
+    "friction": {
+      "title": "传统辅导中的隐性摩擦",
+      "description": "您的学习历史不会跟随您——所以每次导师课程都从零开始。",
+      "items": {
+        "level": {
+          "title": "每位新导师都询问您的水平",
+          "description": "您浪费宝贵的课程时间解释您已经知道的内容，而不是发展新技能。"
+        },
+        "goals": {
+          "title": "您重复您的目标和弱点",
+          "description": "您与之前导师建立的背景不会转移，所以您不断重新介绍自己。"
+        },
+        "warmups": {
+          "title": "早期课程感觉像热身",
+          "description": "真正的进步只有在他们了解您的需求后才开始——这本可以用来学习的时间。"
+        },
+        "reset": {
+          "title": "更换导师会重置您的进步",
+          "description": "新导师看不到您练习过什么、挣扎过什么或掌握了什么——所以循环重复。"
+        }
+      }
+    },
+    "ctaSection": {
+      "joinFirst": "抢先加入，立即体验JustTalk",
+      "tryTutors": "试用JustTalk导师",
+      "bookDemo": "预约演示",
+      "joinWaitlist": "加入候补名单"
+    }
+  },
+  "becometeacherPage": {
+    "hero": {
+      "headline": "在线教授英语——按您的方式",
+      "subheadline": "在简洁现代的平台上设定您的费率、管理您的可用时间，并教授以口语为重点的课程。",
+      "applyToTeach": "申请教学",
+      "bookDemo": "预约演示"
+    },
+    "howItWorks": {
+      "title": "如何运作",
+      "description": "用AI驱动的洞察增强您的教学。追踪学生进度、识别模式，并自信地提供个性化课程。",
+      "cards": {
+        "setRates": {
+          "title": "设定您自己的费率",
+          "description": "收取您想要的费用，随时更改"
+        },
+        "schedule": {
+          "title": "按您的时间表教学",
+          "description": "在适合您的时间开放可用时间"
+        },
+        "messageStudents": {
+          "title": "轻松给学生发消息",
+          "description": "所有沟通在一处"
+        },
+        "conversationBased": {
+          "title": "基于对话的教学",
+          "description": "通过真实对话教学"
+        },
+        "payments": {
+          "title": "平台处理付款",
+          "description": "低佣金——教得越多费率越低"
+        },
+        "bringStudents": {
+          "title": "带您自己的学生",
+          "description": "邀请学生在JustTalk上跟您学习，赚取更多"
+        }
+      }
+    },
+    "bringStudents": {
+      "title": "带您的学生来",
+      "description": "已经有学生了？邀请他们在JustTalk上加入您，以更低的佣金费率赚取更多。我们将帮助您无缝过渡。",
+      "scheduleCall": "预约通话"
+    }
+  }
+}

@@ -37,7 +37,7 @@ interface PersonaCardProps {
 
 function PersonaCard({ persona }: PersonaCardProps) {
   return (
-    <div className="bg-white border border-gray-100 rounded-[20px] md:rounded-[32px] p-1 shadow-md w-[120px] md:w-[160px] flex-shrink-0">
+    <div className="bg-white border border-gray-100 rounded-[20px] md:rounded-[32px] p-0.5 md:p-1 shadow-md w-[120px] md:w-[160px] flex-shrink-0">
       <div className="relative h-[120px] md:h-[160px] w-full rounded-[16px] md:rounded-[28px] overflow-hidden flex items-end p-1.5 md:p-2">
         <img
           src={persona.image}

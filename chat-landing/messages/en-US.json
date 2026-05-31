@@ -1,0 +1,336 @@
+{
+  "metadata": {
+    "title": "JustTalk - AI-Powered Language Learning",
+    "description": "Practice speaking inside realistic scenarios with AI-enhanced personalities."
+  },
+  "nav": {
+    "justtalkAi": "JustTalk AI",
+    "justtalkTutors": "JustTalk Tutors",
+    "becomeTeacher": "Become a Teacher",
+    "login": "Log in",
+    "signup": "Sign up",
+    "apply": "Apply"
+  },
+  "hero": {
+    "headline": "Build real speaking confidence in English",
+    "subheadline": "Practice English through realistic conversations with AI that remembers how you speak and builds every session on the last.",
+    "getStarted": "Get Started"
+  },
+  "platform": {
+    "title": "Talking works—when it's tracked",
+    "description": "Most speaking tools let you talk but don't track real progress. JustTalk AI analyzes what you say and builds every session on your history—so improvement is cumulative, not random."
+  },
+  "features": {
+    "exploreMore": "Explore more features in JustTalk AI",
+    "improvement": {
+      "title": "How improvement actually happens",
+      "description": "One conversation doesn't change much. But when every session is tracked, understood, and used to shape the next one, progress compounds naturally."
+    },
+    "personalities": {
+      "title": "Talk with different personalities",
+      "description": "Some are supportive. Some challenge you. All help you practice real conversations"
+    },
+    "memory": {
+      "title": "They remember you",
+      "description": "Our AI personalities remember previous conversations, allowing you to pick up right where you left off."
+    },
+    "scenarios": {
+      "title": "Practice speaking inside realistic scenarios",
+      "description": "Choose the situation, the role, and the difficulty—and build skill inside a consistent context."
+    },
+    "roleplay": {
+      "title": "Ongoing roleplay with memory and personality",
+      "description": "Some scenarios unfold over multiple sessions. This isn't one-off roleplay. It's sustained speaking practice with continuity."
+    },
+    "personalized": {
+      "title": "Personalized scenarios created for you",
+      "description": "Teachers can design custom roleplay scenarios tailored to your goals, interests, and skill level—giving you practice that's uniquely relevant to what you need."
+    },
+    "progress": {
+      "title": "Track your progress over time",
+      "description": "See how your speaking skills improve with detailed analytics and progress charts."
+    }
+  },
+  "tutors": {
+    "title": "When you're ready, JustTalk AI connects to real tutors",
+    "description": "JustTalk AI is designed to integrate with live tutors. When you take lessons, tutors can build on your AI practice instead of starting from scratch.",
+    "liveTutoring": {
+      "title": "Live tutoring marketplace launching soon",
+      "description": "Connect with experienced tutors who understand your AI practice and can accelerate your progress with targeted guidance."
+    },
+    "learnPlatform": "Learn about the platform"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "languageOnly": {
+        "question": "Is this only for English?",
+        "answer": "Yes. We're currently focused on English to deliver the deepest possible speaking feedback."
+      },
+      "notFor": {
+        "question": "Who is this not for?",
+        "answer1": "If you're a beginner, or looking for grammar lessons, exercises, or passive study — this probably isn't the right fit.",
+        "answer2": "JustTalk is built for people who want to learn by speaking."
+      },
+      "prepare": {
+        "question": "Do I need to prepare anything before starting?",
+        "answer": "No. You can start speaking immediately — no prompts, setup, or exercises."
+      },
+      "lessonOrConversation": {
+        "question": "Is this a lesson or a conversation?",
+        "answer1": "It's a real conversation — guided and adaptive, not exercises or drills.",
+        "answer2": "There are no drills or scripted responses. The focus is on expressing ideas clearly and naturally."
+      },
+      "grammar": {
+        "question": "Will it correct my grammar?",
+        "answer": "Yes — without interrupting your flow. Most corrections appear after you speak, or during the conversation only when they genuinely help."
+      },
+      "tutor": {
+        "question": "Do I need a tutor?",
+        "answer": "No. JustTalk AI works completely on its own. Live tutors are optional."
+      },
+      "cancel": {
+        "question": "Can I cancel anytime?",
+        "answer": "Yes. You can manage or cancel your subscription at any time from your account."
+      },
+      "privacy": {
+        "question": "Is my conversation data public or shared?",
+        "answer": "No. Your conversations are private and used only to improve your experience in JustTalk."
+      }
+    }
+  },
+  "pricing": {
+    "title": "Start improving your English today",
+    "monthly": "Monthly",
+    "annual": "Annual",
+    "save": "Save {percent}%",
+    "plans": {
+      "basic": {
+        "name": "Basic",
+        "description": "Start practicing conversations",
+        "features": {
+          "voicePractice": {
+            "title": "Natural AI voice practice",
+            "description": "Speak naturally with high-quality AI voices"
+          },
+          "feedback": {
+            "title": "Personalized feedback after every conversation",
+            "description": "Get insights on your speaking patterns"
+          },
+          "personalities": {
+            "title": "Multiple AI personalities",
+            "description": "Practice with different conversation styles"
+          },
+          "scenarios": {
+            "title": "Role-play scenarios",
+            "description": "Real-world conversation practice"
+          }
+        },
+        "cta": "Get Basic"
+      },
+      "premium": {
+        "name": "Premium",
+        "description": "Full access to all features",
+        "features": {
+          "everything": {
+            "title": "Everything in Basic, plus:",
+            "description": ""
+          },
+          "advancedFeedback": {
+            "title": "Advanced speaking feedback",
+            "description": "Detailed pronunciation and fluency analysis"
+          },
+          "memory": {
+            "title": "Conversation memory",
+            "description": "AI remembers your past conversations"
+          },
+          "unlimited": {
+            "title": "Unlimited conversations",
+            "description": "No daily limits on practice time"
+          },
+          "priority": {
+            "title": "Priority support",
+            "description": "Get help when you need it"
+          }
+        },
+        "cta": "Get Premium"
+      }
+    },
+    "perMonth": "/month"
+  },
+  "footer": {
+    "justtalkAi": "JustTalk AI",
+    "justtalkTutors": "JustTalk Tutors",
+    "help": "Help",
+    "status": "Status",
+    "termsOfUse": "Terms of Use",
+    "privacyPolicy": "Privacy Policy",
+    "copyright": "JustTalk AI ©2025–2026",
+    "manageCookies": "Manage cookies",
+    "selectLanguage": "Select language"
+  },
+  "platformPage": {
+    "hero": {
+      "headline": "Learn with real tutors—without starting over",
+      "subheadline": "JustTalk connects live tutoring to your speaking history, so lessons begin with context—not re-diagnosis"
+    },
+    "cta": {
+      "joinWaitlist": "Join the waitlist",
+      "earlyAccess": "Early access for students",
+      "becomeTeacher": "Become a teacher"
+    },
+    "seamless": {
+      "title": "Seamless experience with JustTalk for one-on-one learning"
+    },
+    "exploreFeatures": "Explore more features on JustTalk Tutors",
+    "tabs": {
+      "students": "Students",
+      "teachers": "Teachers"
+    },
+    "students": {
+      "speakWithTutor": {
+        "title": "Speak with a live tutor",
+        "description": "Find a tutor matched to your personal needs and goals. Every tutor is supported by AI insights. Lessons stay personalized, efficient, and focused on your progress."
+      },
+      "progressStays": {
+        "title": "Your progress stays with you",
+        "description": "On JustTalk, tutoring isn't tied to a single person.",
+        "description2": "Your speaking history carries forward, so lessons stay productive even if you change tutors.",
+        "bullet1": "No rebuilding your foundation",
+        "bullet2": "No repeating the same early lessons",
+        "bullet3": "Freedom to choose tutors based on fit"
+      },
+      "speakingFirst": {
+        "title": "Focused, speaking-first lessons",
+        "description": "Tutoring on JustTalk is designed around real communication.",
+        "bullet1": "Lessons centered on speaking, not worksheets",
+        "bullet2": "Clear focus areas instead of generic conversation",
+        "bullet3": "Progress that builds across sessions"
+      },
+      "trackProgress": {
+        "title": "Track your progress over time",
+        "description": "See how your speaking skills improve with detailed analytics and progress charts."
+      }
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "description": "Effortlessly track student progress, mistakes, and vocabulary—all in one place. Save time and let AI handle the details while you focus on what matters most.",
+      "cards": {
+        "personalization": {
+          "title": "True personalization",
+          "description": "We track every word you say (and don't) to deliver a hyper-personalized roadmap to fluency."
+        },
+        "cefr": {
+          "title": "CEFR-based progression",
+          "description": "Our curriculum is built on CEFR—the global standard—so your progress is real, not just \"points\"."
+        },
+        "smarterTutoring": {
+          "title": "Smarter human tutoring",
+          "description": "Every tutor is backed by real-time AI insights to focus each lesson on what matters most for you."
+        },
+        "aiRemembers": {
+          "title": "AI that remembers you",
+          "description": "Our AI partner gives you unlimited speaking practice and remembers everything you've discussed with your tutor."
+        },
+        "integration": {
+          "title": "Seamless integration",
+          "description": "AI and tutor work in sync. Everything you say improves your personalized path to fluency."
+        },
+        "visualize": {
+          "title": "Visualize Progress",
+          "description": "See all the data insights in simple diagrams"
+        }
+      }
+    },
+    "teachers": {
+      "aiAssistant": {
+        "title": "AI assistant knows your students better",
+        "description": "Chat with AI to instantly access student interests, lesson summaries, and conversation history. Get personalized insights before every session to make lessons more relevant and engaging."
+      },
+      "customScenarios": {
+        "title": "Create customized scenarios for your students",
+        "description": "Build personalized AI agents tailored to each student's needs using simple prompts. Our comprehensive model extracts helpful insights and evaluates student interactions, giving you full control over the learning experience."
+      },
+      "visualFlow": {
+        "title": "Build multi-step scenarios with visual flow",
+        "description": "Transform simple prompts into complex learning journeys. Design multi-step conversation scenarios and visually connect AI agents to create structured practice paths that adapt to your students' progress."
+      },
+      "teachOnline": {
+        "title": "Teach English online—on your terms",
+        "description": "Set your rates, manage your availability, and teach speaking-focused lessons on a clean, modern platform.",
+        "cta": "Apply to become a tutor"
+      }
+    },
+    "friction": {
+      "title": "The hidden friction in traditional tutoring",
+      "description": "Your learning history doesn't travel with you—so every tutor session starts from scratch.",
+      "items": {
+        "level": {
+          "title": "Every new tutor asks about your level",
+          "description": "You waste valuable lesson time explaining what you already know instead of building new skills."
+        },
+        "goals": {
+          "title": "You repeat your goals and weak points",
+          "description": "The context you've built with previous tutors doesn't transfer, so you're constantly reintroducing yourself."
+        },
+        "warmups": {
+          "title": "Early lessons feel like warm-ups",
+          "description": "Real progress only starts after they've figured out your needs—time you could have spent learning."
+        },
+        "reset": {
+          "title": "Changing tutors resets your progress",
+          "description": "The new tutor has no visibility into what you've practiced, struggled with, or mastered—so the cycle repeats."
+        }
+      }
+    },
+    "ctaSection": {
+      "joinFirst": "Join first and try JustTalk today",
+      "tryTutors": "Try JustTalk Tutors",
+      "bookDemo": "Book a demo",
+      "joinWaitlist": "Join the waitlist"
+    }
+  },
+  "becometeacherPage": {
+    "hero": {
+      "headline": "Teach English online—on your terms",
+      "subheadline": "Set your rates, manage your availability, and teach speaking-focused lessons on a clean, modern platform.",
+      "applyToTeach": "Apply to teach",
+      "bookDemo": "Book a demo"
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "description": "Empower your teaching with AI-driven insights. Track student progress, identify patterns, and deliver personalized lessons with confidence.",
+      "cards": {
+        "setRates": {
+          "title": "Set your own rates",
+          "description": "Charge what you want, change it anytime"
+        },
+        "schedule": {
+          "title": "Teach on your schedule",
+          "description": "Open availability when it works for you"
+        },
+        "messageStudents": {
+          "title": "Message students easily",
+          "description": "All communication in one place"
+        },
+        "conversationBased": {
+          "title": "Conversation-based teaching",
+          "description": "Teach through real conversation"
+        },
+        "payments": {
+          "title": "Payments handled by the platform",
+          "description": "Low commission—with lower rates as you teach more"
+        },
+        "bringStudents": {
+          "title": "Bring your own students",
+          "description": "Earn more when you invite students to learn with you on JustTalk"
+        }
+      }
+    },
+    "bringStudents": {
+      "title": "Bring your students",
+      "description": "Already have students? Invite them to join you on JustTalk and earn more with lower commission rates. We'll help you transition seamlessly.",
+      "scheduleCall": "Schedule a call"
+    }
+  }
+}
