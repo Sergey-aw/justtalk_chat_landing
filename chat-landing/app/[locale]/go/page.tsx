@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { headers } from "next/headers";
-import { redirect } from "next/navigation";
+import { ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { TrackedLink } from "@/components/TrackedLink";
 import { GoTracker } from "./GoTracker";
-import { InAppEscape } from "./InAppEscape";
+import { CopyLinkButton } from "./CopyLinkButton";
 
 const APP_STORE_URL = "https://apps.apple.com/app/id6760475574";
 const WEB_APP_URL = "https://chat.justtalk.ai";
@@ -20,8 +20,9 @@ function detectPlatform(userAgent: string): Platform {
 
 // In-app browsers (TikTok, Instagram, Facebook, etc.) run inside a restricted
 // WKWebView that refuses to hand `apps.apple.com` links off to the App Store
-// — the tap fails with "Action can't be completed". We detect these so iOS
-// users can be bounced out to real Safari first.
+// — the tap fails with "Action can't be completed". iOS gives webviews no
+// programmatic way out (custom schemes like x-safari are blocked), so for these
+// the only working path is asking the user to open the page in the real browser.
 function isInAppBrowser(userAgent: string): boolean {
   return /FBAN|FBAV|FB_IAB|Instagram|musical_ly|Bytedance|TikTok|Trill|Snapchat|Pinterest|LinkedInApp|MicroMessenger|Line\/|WhatsApp|GSA/i.test(
     userAgent,
@@ -36,26 +37,57 @@ function AppleIcon() {
   );
 }
 
-export default async function Go({
-  searchParams,
-}: {
-  searchParams: Promise<{ dl?: string }>;
-}) {
+export default async function Go() {
   const h = await headers();
   const userAgent = h.get("user-agent") ?? "";
   const platform = detectPlatform(userAgent);
   const inApp = isInAppBrowser(userAgent);
-  const { dl } = await searchParams;
 
-  // Arrived in real Safari via the in-app escape (?dl=1) — now that the App
-  // Store hand-off works, send the user straight there.
-  if (dl === "1" && platform === "ios" && !inApp) {
-    redirect(APP_STORE_URL);
-  }
-
-  // Absolute URL that the `x-safari-https://` scheme reopens in real Safari.
   const host = h.get("x-forwarded-host") ?? h.get("host") ?? "justtalk.ai";
-  const escapeUrl = `x-safari-https://${host}/go?dl=1`;
+  const pageUrl = `https://${host}/go`;
+
+  // iOS inside an in-app browser: the App Store hand-off is blocked and there's
+  // no programmatic escape, so make the "open in your browser" instruction the
+  // hero — pinned to the top, large — and give a Copy-link action as backup.
+  if (platform === "ios" && inApp) {
+    return (
+      <div className="flex min-h-screen flex-col bg-just_white">
+        <GoTracker platform={platform} inApp={inApp} />
+
+        <div className="w-full bg-just_cod-gray px-5 py-5 text-just_white">
+          <div className="mx-auto flex max-w-md items-start gap-3">
+            <ArrowUpRight className="mt-0.5 h-7 w-7 shrink-0" strokeWidth={2.5} />
+            <p className="text-xl font-semibold leading-snug tracking-[-0.3px]">
+              Tap <span className="font-bold">•••</span> at the top-right, then
+              choose <span className="font-bold">“Open in browser”</span> to
+              install the app.
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-1 flex-col items-center justify-center px-6 py-12">
+          <div className="flex w-full max-w-sm flex-col items-center text-center">
+            <Image
+              src={APP_ICON}
+              alt="JustTalk"
+              width={120}
+              height={120}
+              priority
+              className="rounded-[26px] shadow-lg"
+            />
+            <h1 className="mt-7 text-3xl font-semibold tracking-[-0.5px] text-just_cod-gray">
+              JustTalk
+            </h1>
+            <p className="mt-3 text-base leading-normal tracking-[-0.17px] text-just_scorpion">
+              The App Store can&apos;t open inside {appName(userAgent)}. Open
+              this page in your browser to download the app.
+            </p>
+            <CopyLinkButton url={pageUrl} />
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-just_white px-6 py-12">
@@ -74,17 +106,7 @@ export default async function Go({
           JustTalk
         </h1>
 
-        {platform === "ios" && inApp && (
-          <>
-            <p className="mt-3 text-base leading-normal tracking-[-0.17px] text-just_scorpion">
-              Practice speaking with AI. Tap below to open in Safari and install
-              the app.
-            </p>
-            <InAppEscape escapeUrl={escapeUrl} />
-          </>
-        )}
-
-        {platform === "ios" && !inApp && (
+        {platform === "ios" && (
           <>
             <p className="mt-3 text-base leading-normal tracking-[-0.17px] text-just_scorpion">
               Practice speaking with AI. Download the app for iPhone and iPad.
@@ -155,4 +177,13 @@ export default async function Go({
       </div>
     </div>
   );
+}
+
+// Friendly name of the in-app browser for the instruction copy.
+function appName(userAgent: string): string {
+  if (/musical_ly|Bytedance|TikTok|Trill/i.test(userAgent)) return "TikTok";
+  if (/Instagram/i.test(userAgent)) return "Instagram";
+  if (/FBAN|FBAV|FB_IAB/i.test(userAgent)) return "Facebook";
+  if (/Snapchat/i.test(userAgent)) return "Snapchat";
+  return "this app";
 }
