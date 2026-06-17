@@ -341,6 +341,91 @@
       "title": "Bring your students",
       "description": "Already have students? Invite them to join you on JustTalk and earn more with lower commission rates. We'll help you transition seamlessly.",
       "scheduleCall": "Schedule a call"
+    },
+    "seamless": {
+      "title": "Seamless experience with JustTalk for one-on-one learning"
+    },
+    "teachers": {
+      "aiAssistant": {
+        "title": "AI assistant knows your students better",
+        "description": "Chat with AI to instantly access student interests, lesson summaries, and conversation history. Get personalized insights before every session to make lessons more relevant and engaging."
+      },
+      "customScenarios": {
+        "title": "Create customized scenarios for your students",
+        "description": "Build personalized AI agents tailored to each student's needs using simple prompts. Our comprehensive model extracts helpful insights and evaluates student interactions, giving you full control over the learning experience."
+      },
+      "visualFlow": {
+        "title": "Build multi-step scenarios with visual flow",
+        "description": "Transform simple prompts into complex learning journeys. Design multi-step conversation scenarios and visually connect AI agents to create structured practice paths that adapt to your students' progress."
+      },
+      "teachOnline": {
+        "title": "Teach English online—on your terms",
+        "description": "Set your rates, manage your availability, and teach speaking-focused lessons on a clean, modern platform.",
+        "cta": "Apply to become a tutor"
+      }
+    },
+    "learningScience": {
+      "title": "The learning science under the hood",
+      "intro": "Every live lesson and every minute of AI practice is built on established second-language acquisition research—so your students improve faster, and you can see exactly how.",
+      "cards": {
+        "speakingFirst": {
+          "title": "Speaking-first",
+          "description": "Students learn to speak by speaking. Every interaction is real spoken dialogue at a natural pace—no multiple choice, no typing."
+        },
+        "taskBased": {
+          "title": "Task-based learning",
+          "description": "Each scenario has a concrete goal to achieve, not open-ended chatter—so practice stays motivated and purposeful."
+        },
+        "mastery": {
+          "title": "Mastery-based progression",
+          "description": "Scenarios are multi-step with clear success criteria. The next step unlocks only once a student actually hits the goal."
+        },
+        "feedback": {
+          "title": "Immediate feedback",
+          "description": "A live panel tracks target words, target grammar, and mistakes as students speak—enabling correction in the moment."
+        },
+        "spacedRepetition": {
+          "title": "Spaced repetition",
+          "description": "Vocabulary is tracked from aimed-for to actively-used to mastered, then weak words are cycled back into future conversations."
+        },
+        "cefr": {
+          "title": "CEFR-aligned",
+          "description": "Proficiency is measured against the Common European Framework (A1–C2)—not a proprietary score."
+        },
+        "adaptive": {
+          "title": "Adaptive personalization",
+          "description": "The platform spots recurring weaknesses and generates targeted scenarios to close those specific gaps."
+        },
+        "activeRecall": {
+          "title": "Active recall",
+          "description": "Retrieving language through live conversation drives far better retention than passive review or flashcards."
+        }
+      },
+      "highlight": {
+        "title": "Two surfaces, one progress loop",
+        "description": "Your live lessons and your students' daily AI practice feed the same progress tracker—so you walk into every session knowing exactly what to work on."
+      }
+    },
+    "featureDeepDives": {
+      "title": "Feature deep-dives",
+      "items": {
+        "howItWorks": {
+          "title": "How JustTalk works — one hour of teaching, many hours of practice",
+          "description": "Students get a mobile app for voice-first AI role-plays and a web app for 1:1 video lessons. Both share one backend, one profile, one progress timeline. AI practice fills the gap between every lesson; live tracking runs in the call and a full report lands after. Teachers see everything before the next lesson and can generate scenarios for recurring weaknesses or author their own. The idea: AI makes the live teacher more effective — students arrive warm, with vocabulary already in motion and mistakes already surfaced."
+        },
+        "rolePlays": {
+          "title": "AI role-plays between lessons",
+          "description": "Real voice conversations, not chat. Every scenario has a goal, not just a topic. Multi-step with unlock-to-advance. A side panel tracks target words, grammar, and mistakes live so students self-correct. On iOS the conversation collapses into the Dynamic Island, so practice keeps running on a walk or in another app. Instant debrief after every call; vocabulary adapts via spaced repetition; sessions share one progress view with live lessons — so students walk into the next lesson already warm."
+        },
+        "knowStudent": {
+          "title": "Know every student before the lesson",
+          "description": "Every session — live or AI — produces a transcript and an AI summary. Vocabulary is tracked by category (new vs. mastered); grammar is tagged A1–C2 with the exact sentences where it appeared. Recommend words on demand and the mobile app prioritizes them. Chat with an AI that knows the student to pull goals, focus areas, and recurring mistake patterns in seconds — especially useful when inheriting a student from another teacher."
+        },
+        "visualFlow": {
+          "title": "Build multi-step scenarios with visual flow",
+          "description": "Draft a whole scenario from a single prompt (\"job interview at Meta\", \"ordering in a French café\"), then fine-tune. Chain steps with per-step success criteria; each step is its own AI agent with its own prompt and evaluation logic. A visual node editor lets you drag, connect, and reorder steps. Assign to one student or many and see where each gets stuck. Example — a 5-step Meta interview: Greet → Skills → Technical Q → HR Q → Offer, where the student only reaches the offer after defending their CV and answering technical questions correctly."
+        }
+      }
     }
   },
   "ieltsPage": {

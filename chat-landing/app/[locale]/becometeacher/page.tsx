@@ -5,12 +5,31 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TrackedLink } from "@/components/TrackedLink";
+import { LearningScience } from "@/components/LearningScience";
+import { FeatureDeepDives } from "@/components/FeatureDeepDives";
 import { useState, useRef } from 'react';
 import { useTranslations } from 'next-intl';
-import { DollarSign, Calendar, MessageCircle, User, CreditCard, MessagesSquare } from 'lucide-react';
+import { Fullscreen } from 'lucide-react';
 
 export default function BecomeTeacher() {
   const t = useTranslations('becometeacherPage');
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleFullscreen = () => {
+    const video = videoRef.current;
+    if (video) {
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      }
+      else if ((video as any).webkitEnterFullscreen) {
+        (video as any).webkitEnterFullscreen();
+      }
+      else if ((video as any).webkitRequestFullscreen) {
+        (video as any).webkitRequestFullscreen();
+      }
+    }
+  };
 
   return (
     <div className="flex min-h-screen flex-col bg-just_white">
@@ -72,101 +91,144 @@ export default function BecomeTeacher() {
                 </div>
               </div>
             </div>
-          </div> 
+          </div>
         </section>
 
-        {/* How it works - Tutors */}
+        {/* Seamless experience - Video */}
         <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
-          <div>
-            <div className="text-center mb-16">
-              <h2 className="text-2xl md:text-[28px] font-medium leading-[38.31px] tracking-[-0.29px] text-just_cod-gray">
-                {t('howItWorks.title')}
-              </h2>
-              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4 mt-2 max-w-2xl mx-auto">
-                {t('howItWorks.description')}
+          <div className="text-center mb-16">
+            <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray max-w-lg mx-auto">
+              {t('seamless.title')}
+            </h2>
+          </div>
+
+          <div className="relative w-full rounded-2xl overflow-hidden">
+            <img
+              src="/platform_blue_16x9.jpg"
+              alt="JustTalk Platform"
+              className={`w-full h-auto aspect-4/3 md:aspect-auto object-cover transition-opacity duration-300 ${isVideoLoaded ? 'opacity-0' : 'opacity-100'}`}
+            />
+            <video
+              ref={videoRef}
+              autoPlay
+              loop
+              muted
+              playsInline
+              onLoadedData={() => setIsVideoLoaded(true)}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${isVideoLoaded ? 'opacity-100' : 'opacity-0'}`}
+            >
+              <source src="/platform_1080p_25fps.mp4" type="video/mp4" />
+            </video>
+            <button
+              onClick={handleFullscreen}
+              className="md:hidden absolute bottom-1 right-1 p-1 text-white hover:opacity-80 transition-opacity"
+              aria-label="Fullscreen"
+            >
+              <Fullscreen className="w-6 h-6" />
+            </button>
+          </div>
+        </section>
+
+        {/* Teacher Features */}
+        <section className="w-full max-w-[1186px] px-10 py-16 md:py-16">
+          {/* AI Insights */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <div className="flex items-start gap-3 mb-2">
+                <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray">
+                  {t('teachers.aiAssistant.title')}
+                </h3>
+                <span className="bg-gray-800 text-white/90 text-xs font-medium px-2 py-1 rounded">beta</span>
+              </div>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                {t('teachers.aiAssistant.description')}
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Card 1 */}
-              <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
-                <div className="mb-4">
-                  <DollarSign className="w-6 h-6 text-indigo-500" strokeWidth={2} />
-                </div>
-                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                  {t('howItWorks.cards.setRates.title')}
-                </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
-                  {t('howItWorks.cards.setRates.description')}
-                </p>
-              </div>
-
-              {/* Card 2 */}
-              <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
-                <div className="mb-4">
-                  <Calendar className="w-6 h-6 text-orange-500" strokeWidth={2} />
-                </div>
-                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                  {t('howItWorks.cards.schedule.title')}
-                </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
-                  {t('howItWorks.cards.schedule.description')}
-                </p>
-              </div>
-
-              {/* Card 3 */}
-              <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
-                <div className="mb-4">
-                  <MessageCircle className="w-6 h-6 text-blue-500" strokeWidth={2} />
-                </div>
-                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                  {t('howItWorks.cards.messageStudents.title')}
-                </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
-                  {t('howItWorks.cards.messageStudents.description')}
-                </p>
-              </div>
-
-              {/* Card 4 */}
-              <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
-                <div className="mb-4">
-                  <MessagesSquare className="w-6 h-6 text-pink-500" strokeWidth={2} />
-                </div>
-                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                  {t('howItWorks.cards.conversationBased.title')}
-                </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
-                  {t('howItWorks.cards.conversationBased.description')}
-                </p>
-              </div>
-
-              {/* Card 5 */}
-              <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
-                <div className="mb-4">
-                  <CreditCard className="w-6 h-6 text-yellow-500" strokeWidth={2} />
-                </div>
-                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                  {t('howItWorks.cards.payments.title')}
-                </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
-                  {t('howItWorks.cards.payments.description')}
-                </p>
-              </div>
-
-              {/* Card 6 */}
-              <div className="bg-gray-50 rounded-2xl p-6 md:p-8">
-                <div className="mb-4">
-                  <User className="w-6 h-6 text-purple-500" strokeWidth={2} />
-                </div>
-                <h3 className="text-lg font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                  {t('howItWorks.cards.bringStudents.title')}
-                </h3>
-                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-2">
-                  {t('howItWorks.cards.bringStudents.description')}
-                </p>
-              </div>
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-4/3 md:aspect-4/3 border border-gray-100">
+              <img
+                src="/tutors_insights.jpg"
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
           </div>
+
+          {/* Custom Scenarios */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                {t('teachers.customScenarios.title')}
+              </h3>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                {t('teachers.customScenarios.description')}
+              </p>
+            </div>
+
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-square md:aspect-4/3">
+              <picture>
+                <source media="(min-width: 768px)" srcSet="/agent_create.webp" />
+                <img
+                  src="/agent_create_mob.webp"
+                  alt="Create customized agent"
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </picture>
+            </div>
+          </div>
+
+          {/* Visual Flow */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                {t('teachers.visualFlow.title')}
+              </h3>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                {t('teachers.visualFlow.description')}
+              </p>
+            </div>
+
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-square md:aspect-4/3">
+              <img
+                src="/promt-engine.webp"
+                alt="Prompt-to-scenario engine"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Teach Online */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-0">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                {t('teachers.teachOnline.title')}
+              </h3>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                {t('teachers.teachOnline.description')}
+              </p>
+              <div className="pt-4">
+                <TrackedLink href="https://app.justtalk.ai/signup" eventName="apply_to_become_tutor_clicked" eventProperties={{ location: 'become_teacher_features' }}>
+                  <Button className="cursor-pointer w-fit">
+                    {t('teachers.teachOnline.cta')}
+                    <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
+                  </Button>
+                </TrackedLink>
+              </div>
+            </div>
+
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-square md:aspect-4/3">
+              <img
+                src="/teachers_1.jpg"
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Learning Science */}
+        <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
+          <LearningScience />
         </section>
 
         {/* AI to Tutors Connection Section */}
@@ -206,6 +268,11 @@ export default function BecomeTeacher() {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* Feature Deep-Dives */}
+        <section className="w-full max-w-[820px] px-10 py-16 md:py-24">
+          <FeatureDeepDives />
         </section>
       </main>
 
