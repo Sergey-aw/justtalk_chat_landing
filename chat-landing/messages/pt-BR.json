@@ -341,6 +341,91 @@
       "title": "Traga seus estudantes",
       "description": "Já tem estudantes? Convide-os para se juntar a você no JustTalk e ganhe mais com taxas de comissão mais baixas. Ajudaremos você a fazer a transição sem problemas.",
       "scheduleCall": "Agendar uma chamada"
+    },
+    "seamless": {
+      "title": "Experiência perfeita com JustTalk para aprendizado um a um"
+    },
+    "teachers": {
+      "aiAssistant": {
+        "title": "O assistente de IA conhece seus estudantes melhor",
+        "description": "Converse com a IA para acessar instantaneamente os interesses dos estudantes, resumos de aulas e histórico de conversas. Obtenha insights personalizados antes de cada sessão para tornar as aulas mais relevantes e envolventes."
+      },
+      "customScenarios": {
+        "title": "Crie cenários personalizados para seus estudantes",
+        "description": "Construa agentes de IA personalizados adaptados às necessidades de cada estudante usando prompts simples. Nosso modelo abrangente extrai insights úteis e avalia as interações dos estudantes, dando a você controle total sobre a experiência de aprendizado."
+      },
+      "visualFlow": {
+        "title": "Construa cenários de múltiplos passos com fluxo visual",
+        "description": "Transforme prompts simples em jornadas de aprendizado complexas. Projete cenários de conversa de múltiplos passos e conecte visualmente agentes de IA para criar rotas de prática estruturadas que se adaptam ao progresso dos seus estudantes."
+      },
+      "teachOnline": {
+        "title": "Ensine inglês online—do seu jeito",
+        "description": "Defina suas taxas, gerencie sua disponibilidade e ensine aulas focadas em falar em uma plataforma limpa e moderna.",
+        "cta": "Aplicar para ser tutor"
+      }
+    },
+    "learningScience": {
+      "title": "A ciência do aprendizado por trás de tudo",
+      "intro": "Cada aula ao vivo e cada minuto de prática com IA se baseia em pesquisa consolidada sobre aquisição de segunda língua, para que seus estudantes melhorem mais rápido e você veja exatamente como.",
+      "cards": {
+        "speakingFirst": {
+          "title": "Falar primeiro",
+          "description": "Aprende-se a falar falando. Cada interação é um diálogo real em ritmo natural: sem múltipla escolha, sem digitar."
+        },
+        "taskBased": {
+          "title": "Aprendizado baseado em tarefas",
+          "description": "Cada cenário tem um objetivo concreto a alcançar, não uma conversa aberta, para que a prática continue motivada e com propósito."
+        },
+        "mastery": {
+          "title": "Progressão baseada em domínio",
+          "description": "Os cenários têm vários passos com critérios de sucesso claros. O próximo passo só é desbloqueado quando o estudante realmente atinge o objetivo."
+        },
+        "feedback": {
+          "title": "Feedback imediato",
+          "description": "Um painel ao vivo acompanha as palavras-alvo, a gramática-alvo e os erros enquanto o estudante fala, permitindo corrigir na hora."
+        },
+        "spacedRepetition": {
+          "title": "Repetição espaçada",
+          "description": "O vocabulário é acompanhado do almejado ao usado e ao dominado, e as palavras fracas voltam a aparecer em conversas futuras."
+        },
+        "cefr": {
+          "title": "Alinhado ao QECR",
+          "description": "A proficiência é medida pelo Quadro Comum Europeu (A1–C2), não por uma pontuação proprietária."
+        },
+        "adaptive": {
+          "title": "Personalização adaptativa",
+          "description": "A plataforma identifica fraquezas recorrentes e gera cenários específicos para fechar essas lacunas."
+        },
+        "activeRecall": {
+          "title": "Recuperação ativa",
+          "description": "Recuperar a língua por meio de conversa ao vivo gera muito mais retenção do que revisão passiva ou flashcards."
+        }
+      },
+      "highlight": {
+        "title": "Duas superfícies, um único ciclo de progresso",
+        "description": "Suas aulas ao vivo e a prática diária com IA dos seus estudantes alimentam o mesmo acompanhamento de progresso, então você chega a cada sessão sabendo exatamente o que trabalhar."
+      }
+    },
+    "featureDeepDives": {
+      "title": "Análises detalhadas dos recursos",
+      "items": {
+        "howItWorks": {
+          "title": "Como o JustTalk funciona: uma hora de ensino, muitas horas de prática",
+          "description": "Os estudantes têm um app móvel para role-plays com IA por voz e um app web para aulas 1:1 por vídeo. Ambos compartilham um mesmo backend, um mesmo perfil e uma mesma linha de progresso. A prática com IA preenche o intervalo entre cada aula; o acompanhamento ao vivo acontece durante a chamada e depois chega um relatório completo. Os professores veem tudo antes da próxima aula e podem gerar cenários para fraquezas recorrentes ou criar os seus. A ideia: a IA torna o professor ao vivo mais eficaz — os estudantes chegam aquecidos, com o vocabulário já em movimento e os erros já identificados."
+        },
+        "rolePlays": {
+          "title": "Role-plays com IA entre as aulas",
+          "description": "Conversas de voz reais, não chat. Cada cenário tem um objetivo, não apenas um tema. De vários passos, com desbloqueio para avançar. Um painel lateral acompanha ao vivo as palavras-alvo, a gramática e os erros para o estudante se autocorrigir. No iOS a conversa se recolhe na Dynamic Island, então a prática continua durante uma caminhada ou em outro app. Resumo instantâneo após cada chamada; o vocabulário se adapta com repetição espaçada; as sessões compartilham uma mesma visão de progresso com as aulas ao vivo — para o estudante chegar aquecido à próxima aula."
+        },
+        "knowStudent": {
+          "title": "Conheça cada estudante antes da aula",
+          "description": "Cada sessão — ao vivo ou com IA — gera uma transcrição e um resumo com IA. O vocabulário é acompanhado por categoria (novo vs. dominado); a gramática é marcada A1–C2 com as frases exatas em que apareceu. Recomende palavras quando quiser e o app móvel as prioriza. Converse com uma IA que conhece o estudante para obter objetivos, áreas de foco e padrões de erro recorrentes em segundos — especialmente útil ao herdar um estudante de outro professor."
+        },
+        "visualFlow": {
+          "title": "Crie cenários de vários passos com fluxo visual",
+          "description": "Rascunhe um cenário inteiro a partir de um único prompt (\"entrevista de emprego na Meta\", \"pedir em um café francês\") e depois ajuste. Encadeie passos com critérios de sucesso por passo; cada passo é seu próprio agente de IA com seu próprio prompt e lógica de avaliação. Um editor visual de nós permite arrastar, conectar e reordenar passos. Atribua a um estudante ou a vários e veja onde cada um trava. Exemplo: uma entrevista da Meta de 5 passos: Saudação → Habilidades → Pergunta técnica → Pergunta de RH → Oferta, em que o estudante só chega à oferta após defender seu currículo e responder corretamente às perguntas técnicas."
+        }
+      }
     }
   },
   "ieltsPage": {
