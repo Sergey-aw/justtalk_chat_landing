@@ -20,6 +20,7 @@ import {
   CheckCircle2,
 } from 'lucide-react';
 import { agents, type Agent } from '@/lib/agents';
+import { TrackedLink } from '@/components/TrackedLink';
 
 /** What the top card shows once a call has ended. */
 type Phase = 'idle' | 'feedback' | 'thanks';
@@ -393,19 +394,38 @@ function Card({
                 <CheckCircle2 className="h-8 w-8 text-white" strokeWidth={1.5} />
                 <h4 className="mt-3 text-lg font-semibold text-white">Thanks!</h4>
                 <p className="mt-1 text-sm leading-[19px] text-white/75">
-                  Your results are on the way. Meanwhile, there are other people to
-                  talk to.
+                  Your results are on the way. Create a free account to save your
+                  progress and keep practising.
                 </p>
-                <button
-                  type="button"
-                  onClick={onTryAnother}
-                  className="mt-4 inline-flex cursor-pointer items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-medium text-just_cod-gray transition-transform hover:scale-[1.03] active:scale-95"
-                >
-                  Try another scenario
-                </button>
+                <div className="mt-4 flex w-full items-center gap-2">
+                  <TrackedLink
+                    href="https://chat.justtalk.ai/welcome?ref=justtalk.ai"
+                    target="_blank"
+                    rel="noopener"
+                    eventName="agent_deck_signup_clicked"
+                    eventProperties={{ location: 'agent_deck_thanks', agent: agent.id }}
+                    includePricingVariant={true}
+                    className="inline-flex flex-1 cursor-pointer items-center justify-center whitespace-nowrap rounded-full bg-white px-4 py-2.5 text-sm font-medium text-just_cod-gray transition-transform hover:scale-[1.03] active:scale-95"
+                  >
+                    Create account
+                  </TrackedLink>
+                  <button
+                    type="button"
+                    onClick={onTryAnother}
+                    className="inline-flex shrink-0 cursor-pointer items-center justify-center whitespace-nowrap rounded-full border border-white/40 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10"
+                  >
+                    Try another
+                  </button>
+                </div>
               </div>
             )}
           </motion.div>
+        )}
+
+        {/* Extra scrim during an active call: the cue rows sit higher up the card than
+            the title block, so darken the bottom half for readability over the photo. */}
+        {isConnected && (
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/55 to-transparent" />
         )}
 
         {/* Content */}
@@ -456,7 +476,7 @@ function Card({
               <h3 className="text-2xl font-semibold tracking-[-0.5px] text-white">
                 {agent.scenario}
               </h3>
-              <p className="mt-0.5 text-sm font-medium text-white/75">{agent.name}</p>
+              <p className="mt-0.5 text-base font-semibold text-white/75">{agent.name}</p>
 
               {/* description + CTA only on the top card */}
               <motion.div
