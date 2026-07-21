@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback, useEffect, useRef } from 'react';
+import { useState, useCallback, useEffect, useLayoutEffect, useRef } from 'react';
 import {
   motion,
   animate,
@@ -59,6 +59,11 @@ const COACHING_LINES = [
 
 const randInt = (min: number, max: number) =>
   min + Math.floor(Math.random() * (max - min + 1));
+
+// runs before paint on the client, no-op on the server — lets us reorder the deck
+// after hydration but before the first visible frame, so there's no reshuffle flash
+const useIsomorphicLayoutEffect =
+  typeof window !== 'undefined' ? useLayoutEffect : useEffect;
 
 /** Client-only (called from a call-ended event, never during SSR). */
 function generateReport(): Report {
@@ -512,6 +517,17 @@ export function AgentDeck() {
   // both must outlive the call itself — the email is submitted after the session ends
   const conversationIdRef = useRef<string | null>(null);
   const lastCallSecondsRef = useRef(0);
+
+  // Randomize which card leads, once on mount. Done in an effect (not the initial state)
+  // so server and first client render agree — Math.random here would break hydration.
+  // A layout effect swaps the order before the first paint, so the default order is
+  // never visible. Rotates rather than shuffles, keeping the curated order after the lead.
+  useIsomorphicLayoutEffect(() => {
+    const start = Math.floor(Math.random() * agents.length);
+    if (start > 0) {
+      setDeck([...agents.slice(start), ...agents.slice(0, start)]);
+    }
+  }, []);
 
   const topAgent = deck[0];
 
