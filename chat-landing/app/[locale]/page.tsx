@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PersonalityCarousel } from '@/components/PersonalityCarousel';
-import { HeroCarousel } from '@/components/HeroCarousel';
+import { AgentDeck } from '@/components/AgentDeck';
 import { DialogueAnimation } from '@/components/DialogueAnimation';
 import { RolePlayCarousel } from '@/components/RolePlayCarousel';
 import { RolePlaySeries } from '@/components/RolePlaySeries';
@@ -53,8 +53,8 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
               </div>
 
               {/* Hero Image */}
-              <div className="relative h-[325px] md:h-[400px] shrink-0 w-full md:max-w-[500px]">
-                <HeroCarousel />
+              <div className="relative h-[440px] md:h-[480px] shrink-0 w-full max-w-[340px] md:max-w-[380px]">
+                <AgentDeck />
               </div>
             </div>
             
