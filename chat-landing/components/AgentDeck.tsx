@@ -24,13 +24,53 @@ import { agents, type Agent } from '@/lib/agents';
 /** What the top card shows once a call has ended. */
 type Phase = 'idle' | 'feedback' | 'thanks';
 
-/** Placeholder scores — deliberately blurred, so the numbers are only ever decorative. */
-const REPORT_METRICS = [
-  { label: 'Fluency', score: 78 },
-  { label: 'Vocabulary', score: 64 },
-  { label: 'Grammar', score: 81 },
-  { label: 'Pronunciation', score: 72 },
+/**
+ * The report is entirely decorative — it's blurred out and exists to tease the real
+ * breakdown behind the email gate. Scores and lines are randomised per call so the
+ * teaser doesn't look identical every time.
+ */
+interface Report {
+  metrics: { label: string; score: number }[];
+  lines: string[];
+  paragraph: string;
+}
+
+const METRIC_LABELS = ['Fluency', 'Vocabulary', 'Grammar', 'Pronunciation'] as const;
+
+const SUMMARY_PARAGRAPHS = [
+  'Overall this was a confident, natural conversation — you held the thread well and recovered smoothly whenever you reached for a word. The main thing holding you back is consistency under pressure: the small slips that creep in as you speed up. Slow down by a beat and most of them disappear.',
+  'You clearly have the vocabulary to express complex ideas, and your answers were well organised from start to finish. Grammar was mostly accurate, with a few slips in tense and article use. Tightening those would lift your fluency score noticeably next time.',
+  'A strong performance with good range and real expression in your voice. Your pronunciation is clear and easy to follow throughout. The quickest win now is stretching each answer with a reason and an example, rather than stopping as soon as the point is made.',
+  'Really promising — you took risks with longer sentences instead of playing it safe, and that is exactly how progress happens. A couple of structures wobbled, but your meaning always came through. With a little polish on connected speech you will sound markedly more fluent.',
 ];
+
+const COACHING_LINES = [
+  'Confident, natural pace — you rarely paused mid-sentence.',
+  'Good vocabulary range; a few word choices could be sharper.',
+  'Watch article usage — "a" vs "the" slipped once or twice.',
+  'Past-tense endings dropped under pressure a couple of times.',
+  'Strong openings, but some answers trailed off at the end.',
+  'Nice linking words tying your ideas together.',
+  'Third-person "-s" went missing on a verb or two.',
+  'You self-corrected well — a sign of real control.',
+  'Clear pronunciation; a handful of vowel sounds to refine.',
+  'Great detail — you backed up your points with examples.',
+];
+
+const randInt = (min: number, max: number) =>
+  min + Math.floor(Math.random() * (max - min + 1));
+
+/** Client-only (called from a call-ended event, never during SSR). */
+function generateReport(): Report {
+  const metrics = METRIC_LABELS.map((label) => ({ label, score: randInt(58, 94) }));
+  const pool = [...COACHING_LINES];
+  const lines: string[] = [];
+  for (let i = 0; i < 3 && pool.length; i++) {
+    lines.push(pool.splice(randInt(0, pool.length - 1), 1)[0]);
+  }
+  const paragraph = SUMMARY_PARAGRAPHS[randInt(0, SUMMARY_PARAGRAPHS.length - 1)];
+  return { metrics, lines, paragraph };
+}
 
 /** Why a call failed to start, so the card can explain it rather than doing nothing. */
 type CallError = 'mic-denied' | 'mic-missing' | 'connection';
@@ -169,6 +209,7 @@ interface CardProps {
   isConnecting: boolean;
   error: CallError | null;
   phase: Phase;
+  report: Report | null;
   getOutputData: () => Uint8Array<ArrayBuffer> | undefined;
   getInputData: () => Uint8Array<ArrayBuffer> | undefined;
   onStart: () => void;
@@ -189,6 +230,7 @@ function Card({
   isConnecting,
   error,
   phase,
+  report,
   getOutputData,
   getInputData,
   onStart,
@@ -274,10 +316,10 @@ function Card({
 
                 {/* blurred so the scores read as "locked", never as real data */}
                 <div
-                  className="mt-3 select-none space-y-2.5 blur-[5px]"
+                  className="mt-3 select-none space-y-2 blur-[8px]"
                   aria-hidden="true"
                 >
-                  {REPORT_METRICS.map((m) => (
+                  {(report?.metrics ?? []).map((m) => (
                     <div key={m.label}>
                       <div className="flex justify-between text-[11px] text-white/80">
                         <span>{m.label}</span>
@@ -293,7 +335,24 @@ function Card({
                   ))}
                 </div>
 
-                <h4 className="mt-5 text-base font-semibold text-white">
+                {/* teaser coaching notes — also locked/blurred */}
+                <div
+                  className="mt-3 select-none space-y-1 blur-[5px]"
+                  aria-hidden="true"
+                >
+                  {(report?.lines ?? []).map((line, i) => (
+                    <p key={i} className="text-[11px] leading-[15px] text-white/80">
+                      {line}
+                    </p>
+                  ))}
+                  {report?.paragraph && (
+                    <p className="pt-1 text-[11px] leading-[15px] text-white/80">
+                      {report.paragraph}
+                    </p>
+                  )}
+                </div>
+
+                <h4 className="mt-4 text-base font-semibold text-white">
                   Get your full results
                 </h4>
                 <p className="mt-1 text-xs leading-[16px] text-white/70">
@@ -445,6 +504,7 @@ export function AgentDeck() {
   const [isConnecting, setIsConnecting] = useState(false);
   const [error, setError] = useState<CallError | null>(null);
   const [phase, setPhase] = useState<Phase>('idle');
+  const [report, setReport] = useState<Report | null>(null);
   // onDisconnect also fires for calls that never connected — only those count as "ended"
   const hasConnectedRef = useRef(false);
   // wall-clock start, so call duration doesn't depend on a possibly-stale state closure
@@ -471,7 +531,10 @@ export function AgentDeck() {
         durationSeconds = (Date.now() - callStartedAtRef.current) / 1000;
         lastCallSecondsRef.current = durationSeconds;
         // only offer a report once there's actually been enough speech to report on
-        if (durationSeconds >= MIN_FEEDBACK_SECONDS) setPhase('feedback');
+        if (durationSeconds >= MIN_FEEDBACK_SECONDS) {
+          setReport(generateReport());
+          setPhase('feedback');
+        }
       }
       posthog.capture('voice_conversation_ended', {
         variant: 'agent_deck',
@@ -695,6 +758,7 @@ export function AgentDeck() {
           isConnecting={i === 0 && isConnecting}
           error={i === 0 ? error : null}
           phase={i === 0 ? phase : 'idle'}
+          report={i === 0 ? report : null}
           getOutputData={conversation.getOutputByteFrequencyData}
           getInputData={conversation.getInputByteFrequencyData}
           onStart={startConversation}
