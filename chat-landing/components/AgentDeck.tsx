@@ -403,7 +403,7 @@ function Card({
                     target="_blank"
                     rel="noopener"
                     eventName="agent_deck_signup_clicked"
-                    eventProperties={{ location: 'agent_deck_thanks', agent: agent.id }}
+                    eventProperties={{ location: 'agent_deck_thanks', agent: agent.id, agent_scenario: agent.scenario }}
                     includePricingVariant={true}
                     className="inline-flex flex-1 cursor-pointer items-center justify-center whitespace-nowrap rounded-full bg-white px-4 py-2.5 text-sm font-medium text-just_cod-gray transition-transform hover:scale-[1.03] active:scale-95"
                   >
@@ -558,6 +558,7 @@ export function AgentDeck() {
       posthog.capture('voice_conversation_started', {
         variant: 'agent_deck',
         agent: topAgent?.id,
+        agent_scenario: topAgent?.scenario,
       });
     },
     onDisconnect: () => {
@@ -575,6 +576,7 @@ export function AgentDeck() {
       posthog.capture('voice_conversation_ended', {
         variant: 'agent_deck',
         agent: topAgent?.id,
+        agent_scenario: topAgent?.scenario,
         duration_seconds: Math.round(durationSeconds),
         report_offered: durationSeconds >= MIN_FEEDBACK_SECONDS,
       });
@@ -585,6 +587,8 @@ export function AgentDeck() {
         error_message: errorMessage,
         error_context: context,
         variant: 'agent_deck',
+        agent: topAgent?.id,
+        agent_scenario: topAgent?.scenario,
       });
       posthog.captureException(new Error(errorMessage));
     },
@@ -602,6 +606,7 @@ export function AgentDeck() {
           variant: 'agent_deck',
           error_type: 'media_devices_unavailable',
           agent: topAgent?.id,
+          agent_scenario: topAgent?.scenario,
         });
         return;
       }
@@ -623,6 +628,7 @@ export function AgentDeck() {
             kind === 'mic-missing' ? 'microphone_not_found' : 'microphone_permission_denied',
           error_name: name,
           agent: topAgent?.id,
+          agent_scenario: topAgent?.scenario,
         });
         return;
       }
@@ -647,6 +653,7 @@ export function AgentDeck() {
         error_type: 'start_conversation_failed',
         variant: 'agent_deck',
         agent: topAgent?.id,
+        agent_scenario: topAgent?.scenario,
       });
       posthog.captureException(error);
     } finally {
@@ -695,6 +702,7 @@ export function AgentDeck() {
     posthog.identify(email, { email });
     posthog.capture('agent_report_email_submitted', {
       agent: topAgent?.id,
+      agent_scenario: topAgent?.scenario,
       conversation_id: conversationId,
       duration_seconds: durationSeconds,
     });
@@ -721,6 +729,7 @@ export function AgentDeck() {
         posthog.capture('agent_report_save_failed', {
           email,
           agent: topAgent?.id,
+          agent_scenario: topAgent?.scenario,
           conversation_id: conversationId,
           error_message: err instanceof Error ? err.message : String(err),
         });
