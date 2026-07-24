@@ -1,13 +1,24 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
+import { AGENT_IDS } from '@/lib/agents';
 
-export async function GET() {
+export async function GET(req: NextRequest) {
   try {
-    if (!process.env.ELEVENLABS_API_KEY || !process.env.NEXT_PUBLIC_AGENT_ID) {
-      throw new Error(`Missing env vars: hasApiKey=${!!process.env.ELEVENLABS_API_KEY}, hasAgentId=${!!process.env.NEXT_PUBLIC_AGENT_ID}`);
+    const defaultAgentId = process.env.NEXT_PUBLIC_AGENT_ID;
+
+    if (!process.env.ELEVENLABS_API_KEY || !defaultAgentId) {
+      throw new Error(`Missing env vars: hasApiKey=${!!process.env.ELEVENLABS_API_KEY}, hasAgentId=${!!defaultAgentId}`);
     }
 
+    // Per-card agent id, but allow-listed: only ids we actually ship (or the env default)
+    // are honoured, so nobody can use our key to open a session on an arbitrary agent.
+    const requested = req.nextUrl.searchParams.get('agentId');
+    const agentId =
+      requested && (AGENT_IDS.has(requested) || requested === defaultAgentId)
+        ? requested
+        : defaultAgentId;
+
     const response = await fetch(
-      `https://api.elevenlabs.io/v1/convai/conversation/get-signed-url?agent_id=${process.env.NEXT_PUBLIC_AGENT_ID}`,
+      `https://api.elevenlabs.io/v1/convai/conversation/get-signed-url?agent_id=${agentId}`,
       {
         headers: {
           'xi-api-key': process.env.ELEVENLABS_API_KEY,
