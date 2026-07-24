@@ -222,6 +222,9 @@ interface CardProps {
   onStop: () => void;
   onSubmitEmail: (email: string) => void;
   onTryAnother: () => void;
+  /** run the one-time "swipeable" nudge on this (top) card */
+  hint: boolean;
+  onHintDone: () => void;
 }
 
 function Card({
@@ -243,6 +246,8 @@ function Card({
   onStop,
   onSubmitEmail,
   onTryAnother,
+  hint,
+  onHintDone,
 }: CardProps) {
   const isTop = index === 0;
   const showReport = isTop && phase !== 'idle';
@@ -252,6 +257,49 @@ function Card({
   // base tilt for the cards sitting under the top one
   const baseRotate = index === 0 ? 0 : index % 2 === 1 ? -4 : 3.5;
   const rotate = useTransform(x, [-220, 0, 220], [-16, baseRotate, 16]);
+
+  // One-time affordance nudge: after the top card settles, spring it to the right and
+  // bounce it back so touch users see the deck is swipeable. Cancelled the moment the
+  // user touches the card (their own gesture takes over).
+  const hintCtrlRef = useRef<ReturnType<typeof animate> | null>(null);
+  const hintActiveRef = useRef(false);
+
+  useEffect(() => {
+    if (!hint) return;
+    hintActiveRef.current = true;
+    const run = async () => {
+      hintCtrlRef.current = animate(x, 66, { type: 'spring', stiffness: 280, damping: 15 });
+      try {
+        await hintCtrlRef.current.finished;
+      } catch {
+        return;
+      }
+      if (!hintActiveRef.current) return;
+      // low damping on the return = a little bounce as it settles back to centre
+      hintCtrlRef.current = animate(x, 0, { type: 'spring', stiffness: 240, damping: 9 });
+      try {
+        await hintCtrlRef.current.finished;
+      } catch {
+        return;
+      }
+      if (hintActiveRef.current) onHintDone();
+    };
+    const timer = setTimeout(run, 750);
+    return () => {
+      hintActiveRef.current = false;
+      clearTimeout(timer);
+      hintCtrlRef.current?.stop();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hint]);
+
+  const interruptHint = () => {
+    if (!hintActiveRef.current) return;
+    hintActiveRef.current = false;
+    hintCtrlRef.current?.stop();
+    x.set(0);
+    onHintDone();
+  };
 
   // `x` is a MotionValue we own, so the fly-out has to be animated imperatively —
   // a declarative `exit` can't drive a value bound through `style`.
@@ -275,6 +323,7 @@ function Card({
       drag={isTop && !isConnected && flyOut === null && !showReport ? 'x' : false}
       dragElastic={0.7}
       dragConstraints={{ left: 0, right: 0 }}
+      onPointerDown={isTop ? interruptHint : undefined}
       onDragEnd={isTop ? handleDragEnd : undefined}
       initial={{ scale: 0.88, y: 44, opacity: 0 }}
       animate={{
@@ -530,6 +579,9 @@ export function AgentDeck() {
   const [error, setError] = useState<CallError | null>(null);
   const [phase, setPhase] = useState<Phase>('idle');
   const [report, setReport] = useState<Report | null>(null);
+  // the swipe-affordance nudge is touch-only and fires at most once
+  const [canHint, setCanHint] = useState(false);
+  const [hintDone, setHintDone] = useState(false);
   // onDisconnect also fires for calls that never connected — only those count as "ended"
   const hasConnectedRef = useRef(false);
   // wall-clock start, so call duration doesn't depend on a possibly-stale state closure
@@ -547,6 +599,14 @@ export function AgentDeck() {
     if (start > 0) {
       setDeck([...agents.slice(start), ...agents.slice(0, start)]);
     }
+  }, []);
+
+  // Enable the nudge only on touch-sized screens (desktop has visible arrows) and when
+  // the user hasn't asked to reduce motion. Checked once on mount.
+  useEffect(() => {
+    const isTouch = window.matchMedia('(max-width: 767px)').matches;
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (isTouch && !reduceMotion) setCanHint(true);
   }, []);
 
   const topAgent = deck[0];
@@ -683,6 +743,7 @@ export function AgentDeck() {
 
   // start the fly-out; the card calls back once it's off-screen
   const handleSwipe = (dir: number) => {
+    setHintDone(true); // any real navigation makes the affordance nudge unnecessary
     if (flyOut === null) setFlyOut(dir);
   };
 
@@ -810,6 +871,8 @@ export function AgentDeck() {
           onStop={stopConversation}
           onSubmitEmail={handleSubmitEmail}
           onTryAnother={handleTryAnother}
+          hint={i === 0 && canHint && !hintDone && !isConnected && flyOut === null}
+          onHintDone={() => setHintDone(true)}
         />
       ))}
     </div>
