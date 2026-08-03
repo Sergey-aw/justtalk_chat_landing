@@ -61,7 +61,9 @@ export default function AmbassadorProgram() {
               </h1>
 
               <p className="mt-5 max-w-[30em] text-lg leading-[1.44] tracking-[-0.18px] text-just_cod-gray/70 text-pretty">
-                {t("hero.subheadline")}
+                {t("hero.subheadline", {
+                  keep: 100 - AMBASSADOR_OFFER.takeRate,
+                })}
               </p>
 
               <div className="flex flex-wrap gap-3 mt-8">

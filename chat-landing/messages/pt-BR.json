@@ -546,8 +546,8 @@
       "description": "Traga os alunos que você já ensina, convide os professores com quem já conversa e publique os role-plays com IA que você cria. Embaixadores ficam com 90% do que os alunos pagam."
     },
     "hero": {
-      "headline": "Ensine com a JustTalk. Fique com 90%.",
-      "subheadline": "Traga os alunos que você já ensina, convide os professores com quem já conversa e publique os role-plays com IA que você cria. Embaixadores tocam a própria carteira na JustTalk — a gente cuida dos agendamentos, dos pagamentos e da prática de conversação entre as aulas.",
+      "headline": "Seja um dos primeiros embaixadores da JustTalk.",
+      "subheadline": "Traga os alunos que você já ensina, convide os professores com quem já conversa e publique os role-plays com IA que você cria — e fique com {keep}% do que seus alunos pagam. A gente cuida dos agendamentos, dos pagamentos e da prática de conversação entre as aulas.",
       "apply": "Inscreva-se",
       "deadline": "As inscrições para a primeira turma encerram em 30 de setembro de 2026",
       "imageAlt": "Uma aula individual ao vivo na JustTalk, com acompanhamento de progresso e insights de IA"

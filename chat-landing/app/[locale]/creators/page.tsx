@@ -53,9 +53,8 @@ export default function CreatorProgram() {
       <main className="flex flex-col w-full">
         {/* Hero */}
         <section className={`${SECTION} pt-12 md:pt-18 pb-16 md:pb-24`}>
-          {/* 2:3 — the artwork carries more weight than the copy */}
-          <div className="grid md:grid-cols-5 gap-10 md:gap-14 items-center">
-            <div className="md:col-span-2">
+          <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+            <div>
               {/* Same display treatment as the /becometeacher hero */}
               <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-semibold leading-[clamp(2.5rem,5vw,4rem)] tracking-tight text-just_cod-gray text-balance">
                 {t("hero.headline")}
@@ -79,7 +78,7 @@ export default function CreatorProgram() {
             </div>
 
             {/* 3:2 matches the asset, so object-cover crops nothing off the pills */}
-            <div className="md:col-span-3 relative w-full aspect-3/2 rounded-3xl overflow-hidden">
+            <div className="relative w-full aspect-3/2 rounded-3xl overflow-hidden">
               <img
                 src="/justtalk_creators.webp"
                 alt={t("hero.imageAlt")}
