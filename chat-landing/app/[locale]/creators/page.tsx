@@ -53,15 +53,11 @@ export default function CreatorProgram() {
       <main className="flex flex-col w-full">
         {/* Hero */}
         <section className={`${SECTION} pt-12 md:pt-18 pb-16 md:pb-24`}>
-          <div className="grid md:grid-cols-2 gap-10 md:gap-14 items-center">
-            <div>
-              <div className="inline-flex items-center gap-2 pl-2.5 pr-3 py-1.5 border border-just_cod-gray-10 rounded-full text-[11px] font-medium uppercase tracking-[0.025em] text-just_scorpion">
-                <span className="w-1.5 h-1.5 rounded-full bg-just_cod-gray" />
-                {t("hero.eyebrow")}
-              </div>
-
+          {/* 2:3 — the artwork carries more weight than the copy */}
+          <div className="grid md:grid-cols-5 gap-10 md:gap-14 items-center">
+            <div className="md:col-span-2">
               {/* Same display treatment as the /becometeacher hero */}
-              <h1 className="mt-5 text-[clamp(2.5rem,5vw,4rem)] font-semibold leading-[clamp(2.5rem,5vw,4rem)] tracking-tight text-just_cod-gray text-balance">
+              <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-semibold leading-[clamp(2.5rem,5vw,4rem)] tracking-tight text-just_cod-gray text-balance">
                 {t("hero.headline")}
               </h1>
 
@@ -83,7 +79,7 @@ export default function CreatorProgram() {
             </div>
 
             {/* 3:2 matches the asset, so object-cover crops nothing off the pills */}
-            <div className="relative w-full aspect-3/2 rounded-3xl overflow-hidden">
+            <div className="md:col-span-3 relative w-full aspect-3/2 rounded-3xl overflow-hidden">
               <img
                 src="/justtalk_creators.webp"
                 alt={t("hero.imageAlt")}
