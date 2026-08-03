@@ -287,22 +287,30 @@ export default function AmbassadorProgram() {
         </section>
 
         {/* Apply */}
-        <section id="apply" className="w-full bg-just_cod-gray text-just_white">
-          <div className={`${SECTION} py-24 md:py-28 text-center`}>
+        <section
+          id="apply"
+          className="relative w-full overflow-hidden text-just_cod-gray"
+        >
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: "url('/bg_rose_banner.webp')" }}
+            aria-hidden="true"
+          />
+          <div className={`relative ${SECTION} py-24 md:py-28 text-center`}>
             <h2 className="mx-auto max-w-[20em] text-[clamp(2.25rem,5vw,4rem)] font-medium leading-[0.93] tracking-[-0.0276em] text-balance">
               {t("cta.title")}
             </h2>
-            <p className="mx-auto mt-5 max-w-[34em] text-lg leading-[1.44] tracking-[-0.18px] text-just_white/70">
+            <p className="mx-auto mt-5 max-w-[34em] text-lg leading-[1.44] tracking-[-0.18px] text-just_cod-gray/70">
               {t("cta.description")}
             </p>
             <div className="flex justify-center flex-wrap gap-3 mt-9">
               <AmbassadorApplyDialog location="ambassador_footer_cta">
-                <Button size="lg" variant="secondary" className="cursor-pointer">
+                <Button size="lg" className="cursor-pointer">
                   {t("cta.button")}
                 </Button>
               </AmbassadorApplyDialog>
             </div>
-            <p className="mt-4.5 text-[13px] tracking-[-0.14px] text-just_white/50">
+            <p className="mt-4.5 text-[13px] tracking-[-0.14px] text-just_cod-gray/55">
               {t("hero.deadline")}
             </p>
           </div>
