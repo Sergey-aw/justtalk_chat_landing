@@ -60,7 +60,8 @@ export default function CreatorProgram() {
                 {t("hero.eyebrow")}
               </div>
 
-              <h1 className="mt-5 text-[clamp(2.5rem,5.4vw,4rem)] font-medium leading-[0.93] tracking-[-0.0276em] text-just_cod-gray text-balance">
+              {/* Same display treatment as the /becometeacher hero */}
+              <h1 className="mt-5 text-[clamp(2.5rem,5vw,4rem)] font-semibold leading-[clamp(2.5rem,5vw,4rem)] tracking-tight text-just_cod-gray text-balance">
                 {t("hero.headline")}
               </h1>
 
