@@ -200,11 +200,9 @@ export default function AmbassadorProgram() {
         <section className="relative w-full overflow-hidden bg-just_cod-gray text-just_white">
           <div
             className="absolute inset-0 bg-[#12B0BA] bg-cover bg-center"
-            style={{ backgroundImage: "url('/bg_green_square_.jpg')" }}
+            style={{ backgroundImage: "url('/bg_green_banner.webp')" }}
             aria-hidden="true"
           />
-          {/* Scrim — the backdrop is light enough to swallow white text without it. */}
-          <div className="absolute inset-0 bg-just_cod-gray/55" aria-hidden="true" />
           <div className={`relative ${SECTION} pt-16 md:pt-22 pb-6`}>
             <div className="grid md:grid-cols-2 gap-8 items-end">
               <h2 className={`${H2} text-balance`}>{t("roleplays.title")}</h2>
