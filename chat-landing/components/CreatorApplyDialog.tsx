@@ -20,36 +20,38 @@ import {
 } from "@/lib/apply-form";
 
 /** Values are stable analytics keys; labels come from the catalogue. */
-const PLATFORMS = [
-  "own",
-  "preply",
-  "italki",
-  "cambly",
-  "verbling",
-  "superprof",
-  "school",
-  "university",
-  "company",
+const CHANNELS = [
+  "youtube",
+  "tiktok",
+  "instagram",
+  "blog",
+  "newsletter",
+  "podcast",
+  "x",
   "other",
 ] as const;
 
-const TRACKS = ["students", "teachers", "roleplays"] as const;
+const AUDIENCE_SIZES = [
+  "under1k",
+  "1kto10k",
+  "10kto50k",
+  "50kto250k",
+  "over250k",
+] as const;
 
-const ROSTER_SIZES = ["starting", "1to5", "6to15", "16to30", "over30"] as const;
-
-interface AmbassadorApplyDialogProps {
+interface CreatorApplyDialogProps {
   /** The trigger element that opens the dialog. */
   children: React.ReactNode;
   /** Where on the page the dialog was opened from — sent to PostHog. */
   location: string;
 }
 
-export function AmbassadorApplyDialog({
+export function CreatorApplyDialog({
   children,
   location,
-}: AmbassadorApplyDialogProps) {
-  const t = useTranslations("ambassadorPage.apply");
-  const tHero = useTranslations("ambassadorPage.hero");
+}: CreatorApplyDialogProps) {
+  const t = useTranslations("creatorsPage.apply");
+  const tHero = useTranslations("creatorsPage.hero");
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
@@ -58,7 +60,7 @@ export function AmbassadorApplyDialog({
   const handleOpenChange = (next: boolean) => {
     setOpen(next);
     if (next) {
-      posthog.capture("ambassador_apply_opened", { location });
+      posthog.capture("creator_apply_opened", { location });
       setError("");
     }
   };
@@ -73,18 +75,15 @@ export function AmbassadorApplyDialog({
       name: String(data.get("name") ?? ""),
       email: String(data.get("email") ?? ""),
       based: String(data.get("based") ?? ""),
-      platforms: data.getAll("platform").map(String),
-      platformOther: String(data.get("platformOther") ?? ""),
-      students: String(data.get("students") ?? ""),
-      tracks: data.getAll("track").map(String),
-      linkedin: String(data.get("linkedin") ?? ""),
-      social: String(data.get("social") ?? ""),
-      reach: String(data.get("reach") ?? ""),
-      built: String(data.get("built") ?? ""),
+      channels: data.getAll("channel").map(String),
+      primaryUrl: String(data.get("primaryUrl") ?? ""),
+      audience: String(data.get("audience") ?? ""),
+      topics: String(data.get("topics") ?? ""),
+      ideas: String(data.get("ideas") ?? ""),
     };
 
     try {
-      const response = await fetch("/api/ambassador-apply", {
+      const response = await fetch("/api/creator-apply", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -94,11 +93,10 @@ export function AmbassadorApplyDialog({
 
       if (result.success) {
         setSent(true);
-        posthog.capture("ambassador_application_submitted", {
+        posthog.capture("creator_application_submitted", {
           location,
-          platforms: payload.platforms,
-          tracks: payload.tracks,
-          students: payload.students,
+          channels: payload.channels,
+          audience: payload.audience,
         });
       } else {
         setError(result.error || t("error"));
@@ -140,11 +138,11 @@ export function AmbassadorApplyDialog({
           >
             <div className="grid sm:grid-cols-2 gap-4">
               <div>
-                <label htmlFor="af-name" className={labelClass}>
+                <label htmlFor="cf-name" className={labelClass}>
                   {t("fields.name")}
                 </label>
                 <input
-                  id="af-name"
+                  id="cf-name"
                   name="name"
                   type="text"
                   required
@@ -153,11 +151,11 @@ export function AmbassadorApplyDialog({
                 />
               </div>
               <div>
-                <label htmlFor="af-email" className={labelClass}>
+                <label htmlFor="cf-email" className={labelClass}>
                   {t("fields.email")}
                 </label>
                 <input
-                  id="af-email"
+                  id="cf-email"
                   name="email"
                   type="email"
                   required
@@ -168,11 +166,11 @@ export function AmbassadorApplyDialog({
             </div>
 
             <div>
-              <label htmlFor="af-based" className={labelClass}>
+              <label htmlFor="cf-based" className={labelClass}>
                 {t("fields.based")}
               </label>
               <input
-                id="af-based"
+                id="cf-based"
                 name="based"
                 type="text"
                 required
@@ -182,119 +180,83 @@ export function AmbassadorApplyDialog({
             </div>
 
             <fieldset>
-              <legend className={labelClass}>{t("fields.platforms")}</legend>
+              <legend className={labelClass}>{t("fields.channels")}</legend>
               <div className="grid sm:grid-cols-2 gap-2">
-                {PLATFORMS.map((platform) => (
-                  <label key={platform} className={checkboxLabelClass}>
+                {CHANNELS.map((channel) => (
+                  <label key={channel} className={checkboxLabelClass}>
                     <input
                       type="checkbox"
-                      name="platform"
-                      value={platform}
+                      name="channel"
+                      value={channel}
                       className={checkboxClass}
                     />
-                    {t(`platforms.${platform}`)}
+                    {t(`channels.${channel}`)}
                   </label>
                 ))}
               </div>
-              <input
-                name="platformOther"
-                type="text"
-                placeholder={t("placeholders.platformOther")}
-                className={`${fieldClass} mt-2.5`}
-              />
             </fieldset>
 
             <div>
-              <label htmlFor="af-students" className={labelClass}>
-                {t("fields.students")}
+              <label htmlFor="cf-url" className={labelClass}>
+                {t("fields.primaryUrl")}
+              </label>
+              <input
+                id="cf-url"
+                name="primaryUrl"
+                type="text"
+                required
+                placeholder={t("placeholders.primaryUrl")}
+                className={fieldClass}
+              />
+            </div>
+
+            <div>
+              <label htmlFor="cf-audience" className={labelClass}>
+                {t("fields.audience")}
               </label>
               <select
-                id="af-students"
-                name="students"
+                id="cf-audience"
+                name="audience"
                 required
                 defaultValue=""
                 className={fieldClass}
               >
                 <option value="" disabled>
-                  {t("placeholders.students")}
+                  {t("placeholders.audience")}
                 </option>
-                {ROSTER_SIZES.map((size) => (
+                {AUDIENCE_SIZES.map((size) => (
                   <option key={size} value={size}>
-                    {t(`rosterSizes.${size}`)}
+                    {t(`audienceSizes.${size}`)}
                   </option>
                 ))}
               </select>
             </div>
 
-            <fieldset>
-              <legend className={labelClass}>{t("fields.tracks")}</legend>
-              <div className="flex flex-col gap-2">
-                {TRACKS.map((track) => (
-                  <label key={track} className={checkboxLabelClass}>
-                    <input
-                      type="checkbox"
-                      name="track"
-                      value={track}
-                      className={checkboxClass}
-                    />
-                    {t(`tracks.${track}`)}
-                  </label>
-                ))}
-              </div>
-            </fieldset>
-
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="af-linkedin" className={labelClass}>
-                  {t("fields.linkedin")}
-                </label>
-                <input
-                  id="af-linkedin"
-                  name="linkedin"
-                  type="text"
-                  placeholder={t("placeholders.linkedin")}
-                  className={fieldClass}
-                />
-              </div>
-              <div>
-                <label htmlFor="af-social" className={labelClass}>
-                  {t("fields.social")}
-                </label>
-                <input
-                  id="af-social"
-                  name="social"
-                  type="text"
-                  placeholder={t("placeholders.social")}
-                  className={fieldClass}
-                />
-              </div>
-            </div>
-
             <div>
-              <label htmlFor="af-reach" className={labelClass}>
-                {t("fields.reach")}
+              <label htmlFor="cf-topics" className={labelClass}>
+                {t("fields.topics")}
               </label>
               <textarea
-                id="af-reach"
-                name="reach"
+                id="cf-topics"
+                name="topics"
                 rows={3}
-                placeholder={t("placeholders.reach")}
+                placeholder={t("placeholders.topics")}
                 className={`${fieldClass} resize-y`}
               />
             </div>
 
             <div>
-              <label htmlFor="af-built" className={labelClass}>
-                {t("fields.built")}{" "}
+              <label htmlFor="cf-ideas" className={labelClass}>
+                {t("fields.ideas")}{" "}
                 <span className="font-normal text-just_cod-gray/55">
                   {t("fields.optional")}
                 </span>
               </label>
               <textarea
-                id="af-built"
-                name="built"
+                id="cf-ideas"
+                name="ideas"
                 rows={3}
-                placeholder={t("placeholders.built")}
+                placeholder={t("placeholders.ideas")}
                 className={`${fieldClass} resize-y`}
               />
             </div>
@@ -315,7 +277,7 @@ export function AmbassadorApplyDialog({
                 {loading ? t("sending") : t("submit")}
               </Button>
               <span className="text-[13px] tracking-[-0.14px] text-just_cod-gray/55">
-                {tHero("deadline")}
+                {tHero("note")}
               </span>
             </div>
           </form>

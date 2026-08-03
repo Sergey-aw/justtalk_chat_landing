@@ -753,5 +753,168 @@
         "close": "Close"
       }
     }
+  },
+  "creatorsPage": {
+    "meta": {
+      "title": "Creator Program — get paid to teach English online",
+      "description": "Make content about JustTalk and earn up to 50% of what the people you send us pay. Cash, free Pro, and a team that promotes your work back."
+    },
+    "hero": {
+      "eyebrow": "Creator program",
+      "headline": "Get paid to help the internet speak English.",
+      "subheadline": "Make the videos, posts and newsletters you were going to make anyway — about a product people actually stick with. You earn cash on every subscription you send us, and we push your work back out to our audience.",
+      "apply": "Apply to the program",
+      "note": "Three easy steps. Applications reviewed within a week."
+    },
+    "offer": {
+      "title": "Cash and rewards",
+      "description": "One link, three things you get back. No minimum audience, no exclusivity, no lock-in.",
+      "cash": {
+        "label": "up to, in cash",
+        "description": "Earn up to {rate}% of every subscription payment made by someone who came from your link. Your rate is agreed when you join and grows with your results."
+      },
+      "pro": {
+        "label": "free, for you",
+        "description": "Full JustTalk Pro while you're an active creator — so you can film it, screenshot it and speak from real use."
+      },
+      "reach": {
+        "label": "we promote you",
+        "description": "We feature creator work across our own channels and send our audience to it. Your reach grows while you grow ours."
+      }
+    },
+    "steps": {
+      "title": "Three easy steps",
+      "step": "Step {number}",
+      "apply": {
+        "title": "Apply",
+        "description": "Tell us where you publish and who watches. A few questions, about three minutes — no media kit needed."
+      },
+      "share": {
+        "title": "Share your link",
+        "description": "You get a tracked link and a starter kit: b-roll, screenshots, talking points and a discount your audience can actually use."
+      },
+      "earn": {
+        "title": "Get paid",
+        "description": "Every subscription that comes from your link earns you up to {rate}%. Watch it land in your dashboard, month after month."
+      }
+    },
+    "formats": {
+      "title": "Whatever you already make, works here.",
+      "video": {
+        "title": "Video",
+        "description": "The product demos well — it talks back. Screen recordings of a real conversation do most of the work for you.",
+        "idea": "Try: \"I spoke only English to an AI for 30 days\""
+      },
+      "writing": {
+        "title": "Blogs and newsletters",
+        "description": "Long-form is where learners actually decide. Reviews, comparisons and study plans convert quietly and keep converting.",
+        "idea": "Try: a week-by-week speaking plan your readers can follow"
+      },
+      "audio": {
+        "title": "Podcasts and shorts",
+        "description": "A single clear recommendation in an episode you were making anyway. Read the link, we handle the rest.",
+        "idea": "Try: what fluency actually takes, with a tool that proves it"
+      }
+    },
+    "product": {
+      "title": "What your audience gets on the other side of the link",
+      "description": "Real conversations with AI personalities who remember what was said last time. No drills, no scripts — people speak from day one, which is why they stay long enough for you to keep earning."
+    },
+    "who": {
+      "title": "Who we're looking for",
+      "teachers": {
+        "title": "Teachers who publish",
+        "description": "You already explain the past perfect to strangers on the internet. Recommending something you'd use in a lesson costs you nothing."
+      },
+      "creators": {
+        "title": "Language and study creators",
+        "description": "Polyglots, exam prep, study-with-me, immigration and relocation. Anywhere speaking confidence is the real subject."
+      },
+      "communities": {
+        "title": "Community builders",
+        "description": "A Discord, a Telegram channel, a subreddit, a Facebook group. Small and trusted beats large and passive, every time."
+      }
+    },
+    "faq": {
+      "title": "Questions creators ask",
+      "cost": {
+        "question": "Does it cost anything to join?",
+        "answer": "No. Joining is free, and active creators get JustTalk Pro at no charge so you can make content from real use rather than guesswork."
+      },
+      "paid": {
+        "question": "How and when do I get paid?",
+        "answer": "Monthly, once your balance clears the payout minimum. We confirm the exact minimum, method and currency with you during onboarding, before you share a single link."
+      },
+      "attribution": {
+        "question": "How is a referral tracked?",
+        "answer": "Through your unique link — anyone who signs up after clicking it is credited to you, and you can see them in your dashboard. We'll walk you through the attribution window when you join."
+      },
+      "audience": {
+        "question": "Do I need a big audience?",
+        "answer": "No. We care far more about whether your audience trusts you than how many of them there are. Small, engaged communities routinely outperform large passive ones."
+      },
+      "claims": {
+        "question": "What am I allowed to say about JustTalk?",
+        "answer": "Your honest opinion, including the parts you don't like. We ask only that you disclose the partnership as your platform and local rules require, and that you don't promise results we can't back up."
+      },
+      "ambassador": {
+        "question": "I also teach. Can I join the ambassador program too?",
+        "answer": "Yes. The creator program pays you for the audience you send us; the ambassador program is for running your own lessons on JustTalk. Plenty of people do both — mention it in your application."
+      }
+    },
+    "cta": {
+      "title": "Start earning from the content you already make",
+      "description": "A few questions, about three minutes. If it's a fit, your link and starter kit land within a week.",
+      "button": "Apply to the program"
+    },
+    "apply": {
+      "title": "Apply to the JustTalk creator program",
+      "description": "A few questions, about three minutes. If it's a fit, your link and starter kit land within a week.",
+      "submit": "Send application",
+      "sending": "Sending…",
+      "error": "Something went wrong. Please try again.",
+      "fields": {
+        "name": "Your name",
+        "email": "Email",
+        "based": "Where are you based?",
+        "channels": "Where do you publish? Pick everything that applies.",
+        "primaryUrl": "Your main channel or site",
+        "audience": "Roughly how many people follow you there",
+        "topics": "What do you make content about?",
+        "ideas": "Anything you'd want to make about JustTalk",
+        "optional": "(optional)"
+      },
+      "placeholders": {
+        "name": "Marta Silva",
+        "email": "you@example.com",
+        "based": "Lisbon, Portugal",
+        "primaryUrl": "youtube.com/@yourchannel",
+        "audience": "Choose one",
+        "topics": "English for work, IELTS prep, moving abroad — and who tends to watch",
+        "ideas": "A 30-day speaking challenge, an honest review, a comparison with what I use now"
+      },
+      "channels": {
+        "youtube": "YouTube",
+        "tiktok": "TikTok",
+        "instagram": "Instagram",
+        "blog": "A blog or website",
+        "newsletter": "A newsletter",
+        "podcast": "A podcast",
+        "x": "X",
+        "other": "Somewhere else"
+      },
+      "audienceSizes": {
+        "under1k": "Under 1,000",
+        "1kto10k": "1,000–10,000",
+        "10kto50k": "10,000–50,000",
+        "50kto250k": "50,000–250,000",
+        "over250k": "More than 250,000"
+      },
+      "success": {
+        "title": "Application received.",
+        "description": "We read every one. Expect an email within a week — if it's a yes, it'll have your tracked link and the starter kit.",
+        "close": "Close"
+      }
+    }
   }
 }

@@ -753,5 +753,168 @@
         "close": "Cerrar"
       }
     }
+  },
+  "creatorsPage": {
+    "meta": {
+      "title": "Programa de creadores — gana dinero enseñando inglés online",
+      "description": "Crea contenido sobre JustTalk y gana hasta el 50% de lo que paguen las personas que nos envíes. Dinero, Pro gratis y un equipo que promociona tu trabajo."
+    },
+    "hero": {
+      "eyebrow": "Programa de creadores",
+      "headline": "Gana dinero ayudando a internet a hablar inglés.",
+      "subheadline": "Haz los vídeos, publicaciones y newsletters que ibas a hacer igualmente, pero sobre un producto que la gente sí sigue usando. Ganas dinero por cada suscripción que nos envías, y nosotros llevamos tu trabajo a nuestra audiencia.",
+      "apply": "Postúlate al programa",
+      "note": "Tres pasos sencillos. Revisamos las postulaciones en una semana."
+    },
+    "offer": {
+      "title": "Dinero y recompensas",
+      "description": "Un enlace, tres cosas que recibes. Sin audiencia mínima, sin exclusividad, sin permanencia.",
+      "cash": {
+        "label": "hasta, en dinero",
+        "description": "Gana hasta el {rate}% de cada pago de suscripción de alguien que llegó por tu enlace. Tu porcentaje se acuerda al entrar y crece con tus resultados."
+      },
+      "pro": {
+        "label": "gratis, para ti",
+        "description": "JustTalk Pro completo mientras seas creador activo, para que puedas grabarlo, capturarlo y hablar desde el uso real."
+      },
+      "reach": {
+        "label": "te promocionamos",
+        "description": "Destacamos el trabajo de los creadores en nuestros propios canales y les enviamos nuestra audiencia. Tu alcance crece mientras haces crecer el nuestro."
+      }
+    },
+    "steps": {
+      "title": "Tres pasos sencillos",
+      "step": "Paso {number}",
+      "apply": {
+        "title": "Postúlate",
+        "description": "Cuéntanos dónde publicas y quién te ve. Unas preguntas, unos tres minutos: no hace falta media kit."
+      },
+      "share": {
+        "title": "Comparte tu enlace",
+        "description": "Recibes un enlace con seguimiento y un kit inicial: material de vídeo, capturas, argumentos y un descuento que tu audiencia puede usar de verdad."
+      },
+      "earn": {
+        "title": "Cobra",
+        "description": "Cada suscripción que llega por tu enlace te da hasta un {rate}%. Míralo llegar a tu panel, mes tras mes."
+      }
+    },
+    "formats": {
+      "title": "Lo que ya haces encaja aquí.",
+      "video": {
+        "title": "Vídeo",
+        "description": "El producto se demuestra solo: te responde. Una grabación de pantalla con una conversación real hace casi todo el trabajo por ti.",
+        "idea": "Prueba: «Hablé solo inglés con una IA durante 30 días»"
+      },
+      "writing": {
+        "title": "Blogs y newsletters",
+        "description": "El formato largo es donde los estudiantes deciden de verdad. Reseñas, comparativas y planes de estudio convierten sin ruido y siguen convirtiendo.",
+        "idea": "Prueba: un plan de conversación semana a semana que tus lectores puedan seguir"
+      },
+      "audio": {
+        "title": "Pódcasts y shorts",
+        "description": "Una recomendación clara en un episodio que ibas a grabar igualmente. Lee el enlace y del resto nos encargamos nosotros.",
+        "idea": "Prueba: qué hace falta de verdad para tener fluidez, con una herramienta que lo demuestra"
+      }
+    },
+    "product": {
+      "title": "Lo que encuentra tu audiencia al otro lado del enlace",
+      "description": "Conversaciones reales con personalidades de IA que recuerdan lo que se dijo la última vez. Sin ejercicios ni guiones: la gente habla desde el primer día, y por eso se queda el tiempo suficiente para que tú sigas ganando."
+    },
+    "who": {
+      "title": "A quién buscamos",
+      "teachers": {
+        "title": "Profesores que publican",
+        "description": "Ya le explicas el present perfect a desconocidos en internet. Recomendar algo que usarías en clase no te cuesta nada."
+      },
+      "creators": {
+        "title": "Creadores de idiomas y estudio",
+        "description": "Políglotas, preparación de exámenes, study-with-me, inmigración y mudanzas. Donde el tema real sea la confianza al hablar."
+      },
+      "communities": {
+        "title": "Quienes construyen comunidad",
+        "description": "Un Discord, un canal de Telegram, un subreddit, un grupo de Facebook. Pequeño y de confianza le gana a grande y pasivo, siempre."
+      }
+    },
+    "faq": {
+      "title": "Preguntas que hacen los creadores",
+      "cost": {
+        "question": "¿Cuesta algo unirse?",
+        "answer": "No. Entrar es gratis, y los creadores activos tienen JustTalk Pro sin coste para crear contenido desde el uso real y no desde suposiciones."
+      },
+      "paid": {
+        "question": "¿Cómo y cuándo cobro?",
+        "answer": "Cada mes, en cuanto tu saldo supere el mínimo de pago. Confirmamos contigo el mínimo exacto, el método y la moneda durante la incorporación, antes de que compartas ningún enlace."
+      },
+      "attribution": {
+        "question": "¿Cómo se registra una referencia?",
+        "answer": "A través de tu enlace único: quien se registre después de hacer clic queda atribuido a ti y lo verás en tu panel. Te explicamos la ventana de atribución al entrar."
+      },
+      "audience": {
+        "question": "¿Necesito una audiencia grande?",
+        "answer": "No. Nos importa mucho más que tu audiencia confíe en ti que cuánta gente sea. Las comunidades pequeñas e implicadas superan con frecuencia a las grandes y pasivas."
+      },
+      "claims": {
+        "question": "¿Qué puedo decir sobre JustTalk?",
+        "answer": "Tu opinión sincera, incluidas las partes que no te gusten. Solo te pedimos que declares la colaboración según las normas de tu plataforma y de tu país, y que no prometas resultados que no podamos respaldar."
+      },
+      "ambassador": {
+        "question": "También doy clases. ¿Puedo entrar además en el programa de embajadores?",
+        "answer": "Sí. El programa de creadores te paga por la audiencia que nos envías; el de embajadores es para dar tus propias clases en JustTalk. Mucha gente hace las dos cosas: menciónalo en tu postulación."
+      }
+    },
+    "cta": {
+      "title": "Empieza a ganar con el contenido que ya haces",
+      "description": "Unas preguntas, unos tres minutos. Si encajas, tu enlace y tu kit inicial llegan en menos de una semana.",
+      "button": "Postúlate al programa"
+    },
+    "apply": {
+      "title": "Postúlate al programa de creadores de JustTalk",
+      "description": "Unas preguntas, unos tres minutos. Si encajas, tu enlace y tu kit inicial llegan en menos de una semana.",
+      "submit": "Enviar postulación",
+      "sending": "Enviando…",
+      "error": "Algo salió mal. Inténtalo de nuevo.",
+      "fields": {
+        "name": "Tu nombre",
+        "email": "Email",
+        "based": "¿Dónde resides?",
+        "channels": "¿Dónde publicas? Marca todo lo que corresponda.",
+        "primaryUrl": "Tu canal o sitio principal",
+        "audience": "Cuánta gente te sigue ahí, más o menos",
+        "topics": "¿Sobre qué haces contenido?",
+        "ideas": "Algo que te gustaría hacer sobre JustTalk",
+        "optional": "(opcional)"
+      },
+      "placeholders": {
+        "name": "Marta Silva",
+        "email": "tu@ejemplo.com",
+        "based": "Lisboa, Portugal",
+        "primaryUrl": "youtube.com/@tucanal",
+        "audience": "Elige una opción",
+        "topics": "Inglés para el trabajo, preparación de IELTS, mudarse al extranjero — y quién suele verte",
+        "ideas": "Un reto de 30 días hablando, una reseña sincera, una comparativa con lo que uso ahora"
+      },
+      "channels": {
+        "youtube": "YouTube",
+        "tiktok": "TikTok",
+        "instagram": "Instagram",
+        "blog": "Un blog o sitio web",
+        "newsletter": "Una newsletter",
+        "podcast": "Un pódcast",
+        "x": "X",
+        "other": "En otro sitio"
+      },
+      "audienceSizes": {
+        "under1k": "Menos de 1.000",
+        "1kto10k": "1.000–10.000",
+        "10kto50k": "10.000–50.000",
+        "50kto250k": "50.000–250.000",
+        "over250k": "Más de 250.000"
+      },
+      "success": {
+        "title": "Postulación recibida.",
+        "description": "Las leemos todas. Espera un email en menos de una semana: si es un sí, incluirá tu enlace con seguimiento y el kit inicial.",
+        "close": "Cerrar"
+      }
+    }
   }
 }
