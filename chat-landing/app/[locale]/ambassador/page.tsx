@@ -74,9 +74,6 @@ export default function AmbassadorProgram() {
                     {t("hero.apply")}
                   </Button>
                 </AmbassadorApplyDialog>
-                <Button asChild size="lg" variant="outline" className="cursor-pointer">
-                  <a href="#math">{t("hero.seeEarnings")}</a>
-                </Button>
               </div>
 
               <p className="mt-4.5 text-[13px] tracking-[-0.14px] text-just_cod-gray/55">
