@@ -539,5 +539,220 @@
       "button": "Take your first mock test"
     },
     "disclaimer": "JustTalk provides IELTS-style practice and AI-generated feedback with unofficial band estimates. It is not affiliated with IELTS, does not award official scores, and is designed to supplement — not replace — certified IELTS assessment. IELTS is a registered trademark of its respective owners."
+  },
+  "ambassadorPage": {
+    "meta": {
+      "title": "Ambassador Program — JustTalk for teachers",
+      "description": "Bring the students you already teach, invite the teachers you already talk to, and publish the AI role-plays you build. Ambassadors keep 90% of what their students pay."
+    },
+    "hero": {
+      "eyebrow": "Ambassador program",
+      "headline": "Teach with JustTalk. Keep 90% of it.",
+      "subheadline": "Bring the students you already teach, invite the teachers you already talk to, and publish the AI role-plays you build. Ambassadors run their own practice on JustTalk — we handle booking, payments and the speaking practice between lessons.",
+      "apply": "Apply now",
+      "seeEarnings": "See what you'd earn",
+      "deadline": "Applications for the first cohort close 30 September 2026"
+    },
+    "offer": {
+      "title": "The 10/10/10 offer",
+      "description": "One offer, three numbers. It applies from the day you're accepted — nothing to negotiate.",
+      "takeRate": {
+        "label": "take rate",
+        "description": "JustTalk keeps {rate}% of what your students pay. You keep the other {keep}%, at your own prices."
+      },
+      "weeks": {
+        "label": "weeks",
+        "description": "The rate is locked for your first {weeks} weeks as an ambassador — long enough to move a full roster over."
+      },
+      "freeLessons": {
+        "label": "free lessons",
+        "description": "{lessons} free lessons to hand out across your students, however you like. No card, no payment, no reason to say no."
+      }
+    },
+    "earnings": {
+      "title": "What ten weeks looks like for you",
+      "roster": {
+        "title": "Your roster",
+        "description": "Three numbers you already know.",
+        "students": "Students you bring",
+        "price": "Your price per lesson",
+        "lessons": "Lessons per student, per week"
+      },
+      "result": {
+        "title": "You keep, per week",
+        "gross": "Student payments",
+        "fee": "JustTalk fee ({rate}%)",
+        "total": "Over {weeks} weeks",
+        "note": "Illustrative. Your first {lessons} lessons are on us, so the first week or two usually costs nobody anything."
+      }
+    },
+    "tracks": {
+      "title": "Pick one. Do all three if you want.",
+      "students": {
+        "title": "Bring your own students",
+        "description": "Move the students you already teach onto JustTalk. Same lessons, same prices, same relationships — plus daily AI speaking practice between them, so your students show up warmer.",
+        "fit": "Right for you if: you have an active roster and you'd rather stop chasing invoices."
+      },
+      "teachers": {
+        "title": "Grow the teacher circle",
+        "description": "Invite the teachers you already talk to — your staffroom, your Telegram group, your TikTok comments. Every teacher who joins through your link starts on 10/10/10 too, and you're credited for it.",
+        "fit": "Right for you if: you're the teacher other teachers ask for advice."
+      },
+      "roleplays": {
+        "title": "Share your role-plays",
+        "description": "Publish the AI role-plays you build to the shared library. Other teachers assign them, your name stays on them, and you can unpublish anything at any time.",
+        "fit": "Right for you if: you write your own materials instead of using the coursebook."
+      }
+    },
+    "steps": {
+      "title": "Four steps, about a week",
+      "step": "Step {number}",
+      "apply": {
+        "title": "Apply",
+        "description": "A few questions about what, where and who you teach. Three minutes, no portfolio."
+      },
+      "setup": {
+        "title": "Get set up",
+        "description": "A 30-minute call with our team, your ambassador link, and your teacher profile live."
+      },
+      "invite": {
+        "title": "Invite",
+        "description": "Send the link to your students and to the teachers you learn with. Your first {lessons} lessons are on us."
+      },
+      "teach": {
+        "title": "Teach and build",
+        "description": "Run your lessons, publish a role-play when you make a good one, keep {keep}%."
+      }
+    },
+    "roleplays": {
+      "title": "The role-plays you build, in other teachers' classrooms",
+      "description": "Write a scenario, set the character and the level, test it once. Ambassadors publish theirs to the shared library — the most-assigned ones get featured, and the teacher who wrote them gets the credit."
+    },
+    "perks": {
+      "title": "What you get",
+      "offer": {
+        "title": "10/10/10, from day one",
+        "description": "A {rate}% take rate for {weeks} weeks, plus {lessons} free lessons to hand out to the students you bring."
+      },
+      "pro": {
+        "title": "JustTalk Pro, free",
+        "description": "Full access while you're an active ambassador. Build unlimited role-plays and use them in your own lessons."
+      },
+      "spotlight": {
+        "title": "A spotlight",
+        "description": "We feature ambassadors and their role-plays across our channels, and send new students your way."
+      },
+      "directLine": {
+        "title": "A direct line",
+        "description": "A private room with the other ambassadors and the people building JustTalk. Ask for a feature, watch it ship."
+      }
+    },
+    "who": {
+      "title": "Who we're looking for",
+      "teach": {
+        "title": "You actually teach",
+        "description": "Online, in a school, or at a kitchen table. You have students who'd follow you to a new tool because they trust you."
+      },
+      "connect": {
+        "title": "You bring teachers together",
+        "description": "A staffroom, a group chat, a conference talk, a comment section. You're already sharing what works with other teachers."
+      },
+      "build": {
+        "title": "You build your own materials",
+        "description": "You improvise scenarios, write your own prompts, and enjoy the part where you make something new for one specific student."
+      }
+    },
+    "faq": {
+      "title": "Questions teachers ask",
+      "cost": {
+        "question": "Does it cost anything to join?",
+        "answer": "No. Ambassadors get JustTalk Pro free while they're active, and you get {lessons} free lessons to hand out to the students you bring — no card needed from them either."
+      },
+      "rate": {
+        "question": "What happens after the ten weeks?",
+        "answer": "You move onto standard ambassador terms, and we tell you exactly what those are before week eight — never as a surprise. Students you've already brought keep their history and their teacher."
+      },
+      "own": {
+        "question": "Do I keep my students and set my own prices?",
+        "answer": "Yes to both. You set your rates, you keep the relationship. JustTalk handles scheduling, payments, and the AI practice your students do between lessons."
+      },
+      "following": {
+        "question": "Do I need a big following?",
+        "answer": "No. Most ambassadors start with a handful of students and one teacher group. We care more that people listen to you than how many."
+      },
+      "time": {
+        "question": "How much time does this take?",
+        "answer": "Beyond teaching, about two hours a month: onboard the students you bring, invite teachers when it's natural, and publish a role-play you'd use yourself."
+      },
+      "ip": {
+        "question": "Who owns the role-plays I share?",
+        "answer": "You do. Publishing puts your name on it and lets other teachers assign it. Unpublish whenever you like."
+      }
+    },
+    "cta": {
+      "title": "Applications are open for the first cohort",
+      "description": "A few questions, about three minutes. If it's a fit, we'll be on a call with you inside a week.",
+      "button": "Apply to be an ambassador"
+    },
+    "apply": {
+      "title": "Apply to be a JustTalk ambassador",
+      "description": "A few questions, about three minutes. If it's a fit, we'll be on a call with you inside a week.",
+      "submit": "Send application",
+      "sending": "Sending…",
+      "error": "Something went wrong. Please try again.",
+      "fields": {
+        "name": "Your name",
+        "email": "Email",
+        "based": "Where are you based?",
+        "platforms": "Where do you teach? Pick everything that applies.",
+        "students": "Students you teach right now",
+        "tracks": "What do you want to lead?",
+        "linkedin": "LinkedIn",
+        "social": "Instagram, TikTok or YouTube",
+        "reach": "Where do you reach other teachers?",
+        "built": "Something you've made for your students",
+        "optional": "(optional)"
+      },
+      "placeholders": {
+        "name": "Marta Silva",
+        "email": "you@example.com",
+        "based": "Lisbon, Portugal — teaching in CET and GMT",
+        "platformOther": "Somewhere else? Name the platform or school",
+        "students": "Choose one",
+        "linkedin": "linkedin.com/in/yourname",
+        "social": "@yourhandle",
+        "reach": "A Telegram group of 400 ESL teachers, a Facebook group, my staffroom, conference talks — links help",
+        "built": "A role-play, a worksheet, a course — anything you'd show another teacher"
+      },
+      "platforms": {
+        "own": "My own private students",
+        "preply": "Preply",
+        "italki": "italki",
+        "cambly": "Cambly",
+        "verbling": "Verbling",
+        "superprof": "Superprof",
+        "school": "A school or language academy",
+        "university": "A university or college",
+        "company": "In-company / corporate",
+        "other": "Somewhere else"
+      },
+      "rosterSizes": {
+        "starting": "Just getting started",
+        "1to5": "1–5 students",
+        "6to15": "6–15 students",
+        "16to30": "16–30 students",
+        "over30": "More than 30"
+      },
+      "tracks": {
+        "students": "Bring my own students",
+        "teachers": "Grow the teacher circle",
+        "roleplays": "Share the role-plays I build"
+      },
+      "success": {
+        "title": "Application received.",
+        "description": "We read every one. Expect an email within a week — if it's a yes, it'll have a link to book your setup call.",
+        "close": "Close"
+      }
+    }
   }
 }

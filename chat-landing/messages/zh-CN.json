@@ -539,5 +539,220 @@
       "button": "开始你的第一次模拟测试"
     },
     "disclaimer": "JustTalk 提供雅思风格的练习和由 AI 生成的反馈，附带非官方分数估算。本服务与 IELTS 无任何隶属关系，不颁发官方分数，旨在补充而非替代官方雅思评估。IELTS 是其各自所有者的注册商标。"
+  },
+  "ambassadorPage": {
+    "meta": {
+      "title": "大使计划 — JustTalk 教师版",
+      "description": "把你已经在教的学生带过来，邀请你常联系的同行，并发布你搭建的 AI 情景对话。大使可保留学生付费的 90%。"
+    },
+    "hero": {
+      "eyebrow": "大使计划",
+      "headline": "在 JustTalk 授课，收入的 90% 归你。",
+      "subheadline": "把你已经在教的学生带过来，邀请你常联系的同行，并发布你搭建的 AI 情景对话。大使在 JustTalk 上经营自己的课程——预约、收款以及课间的口语练习都由我们负责。",
+      "apply": "立即申请",
+      "seeEarnings": "看看你能赚多少",
+      "deadline": "首期大使申请将于 2026 年 9 月 30 日截止"
+    },
+    "offer": {
+      "title": "10/10/10 方案",
+      "description": "一个方案，三个数字。从你被录取那天起生效——无需谈判。",
+      "takeRate": {
+        "label": "抽成",
+        "description": "JustTalk 从学生支付的费用中收取 {rate}%，其余 {keep}% 归你，价格由你自己定。"
+      },
+      "weeks": {
+        "label": "周",
+        "description": "这个费率在你成为大使的前 {weeks} 周内锁定——足够把整批学生迁过来。"
+      },
+      "freeLessons": {
+        "label": "节免费课",
+        "description": "{lessons} 节免费课，随你分配给学生。不用绑卡、不用付费，也就没有理由拒绝。"
+      }
+    },
+    "earnings": {
+      "title": "这十周对你意味着什么",
+      "roster": {
+        "title": "你的学生",
+        "description": "三个你早就知道的数字。",
+        "students": "你带来的学生数",
+        "price": "你的每节课价格",
+        "lessons": "每位学生每周上几节课"
+      },
+      "result": {
+        "title": "你每周所得",
+        "gross": "学生支付总额",
+        "fee": "JustTalk 服务费（{rate}%）",
+        "total": "{weeks} 周合计",
+        "note": "仅供参考。前 {lessons} 节课由我们承担，所以头一两周通常谁都不用花钱。"
+      }
+    },
+    "tracks": {
+      "title": "选一条走。想全做也可以。",
+      "students": {
+        "title": "带来你自己的学生",
+        "description": "把你已经在教的学生迁到 JustTalk。同样的课、同样的价格、同样的关系——外加课间每天的 AI 口语练习，学生上课时状态更好。",
+        "fit": "适合你，如果：你手上有稳定的学生，又不想再追着催款。"
+      },
+      "teachers": {
+        "title": "扩大教师圈子",
+        "description": "邀请你常联系的同行——办公室、Telegram 群、TikTok 评论区。每位通过你的链接加入的老师同样享受 10/10/10，而这会记在你名下。",
+        "fit": "适合你，如果：同行遇到问题时会来问你。"
+      },
+      "roleplays": {
+        "title": "分享你的情景对话",
+        "description": "把你搭建的 AI 情景对话发布到共享库。其他老师可以布置给学生，署名依然是你，你也可以随时取消发布。",
+        "fit": "适合你，如果：你自己写教学材料，而不是照着教材上课。"
+      }
+    },
+    "steps": {
+      "title": "四步，大约一周",
+      "step": "第 {number} 步",
+      "apply": {
+        "title": "提交申请",
+        "description": "几个关于你教什么、在哪教、教谁的问题。三分钟，不用作品集。"
+      },
+      "setup": {
+        "title": "完成设置",
+        "description": "与我们团队进行 30 分钟通话，拿到你的大使链接，教师主页正式上线。"
+      },
+      "invite": {
+        "title": "发出邀请",
+        "description": "把链接发给你的学生和你常交流的同行。前 {lessons} 节课由我们承担。"
+      },
+      "teach": {
+        "title": "授课并创作",
+        "description": "上你的课，做出好的情景对话就发布出来，收入的 {keep}% 归你。"
+      }
+    },
+    "roleplays": {
+      "title": "你搭建的情景对话，出现在其他老师的课堂上",
+      "description": "写一个场景，设定角色和难度，测试一遍即可。大使把自己的作品发布到共享库——被布置最多的会获得推荐位，署名归写它的老师。"
+    },
+    "perks": {
+      "title": "你会得到什么",
+      "offer": {
+        "title": "10/10/10，从第一天起",
+        "description": "{weeks} 周内 {rate}% 的抽成，外加 {lessons} 节免费课，分给你带来的学生。"
+      },
+      "pro": {
+        "title": "免费的 JustTalk Pro",
+        "description": "在你是活跃大使期间享有完整权限。无限量搭建情景对话，并用在自己的课上。"
+      },
+      "spotlight": {
+        "title": "曝光机会",
+        "description": "我们会在各个渠道推荐大使和他们的情景对话，并把新学生介绍给你。"
+      },
+      "directLine": {
+        "title": "直达通道",
+        "description": "一个只有其他大使和 JustTalk 团队的私密房间。提一个需求，看着它上线。"
+      }
+    },
+    "who": {
+      "title": "我们在找什么样的人",
+      "teach": {
+        "title": "你真的在教书",
+        "description": "线上、学校里，或是自家餐桌旁。你有一批因为信任你、愿意跟着你换工具的学生。"
+      },
+      "connect": {
+        "title": "你把老师们聚在一起",
+        "description": "一间办公室、一个群聊、一场会议演讲、一片评论区。你已经在跟同行分享有效的方法。"
+      },
+      "build": {
+        "title": "你自己做教学材料",
+        "description": "你即兴设计场景、自己写提示词，也享受为某一位学生量身做点新东西的过程。"
+      }
+    },
+    "faq": {
+      "title": "老师们常问的问题",
+      "cost": {
+        "question": "加入需要花钱吗？",
+        "answer": "不需要。大使在活跃期间免费使用 JustTalk Pro，你还会获得 {lessons} 节免费课分给你带来的学生——他们也不需要绑卡。"
+      },
+      "rate": {
+        "question": "十周之后会怎样？",
+        "answer": "你会转入标准大使条款，我们会在第八周之前把具体内容告诉你——绝不搞突然袭击。你已经带来的学生会保留学习记录和原来的老师。"
+      },
+      "own": {
+        "question": "学生还是我的吗？价格由我定吗？",
+        "answer": "都是。价格由你定，师生关系也归你。JustTalk 负责排课、收款，以及学生在课间与 AI 的练习。"
+      },
+      "following": {
+        "question": "需要很多粉丝吗？",
+        "answer": "不需要。大多数大使起步时只有几个学生和一个教师群。比起人数，我们更看重别人是否听你的。"
+      },
+      "time": {
+        "question": "这需要花多少时间？",
+        "answer": "除授课外，每月大约两小时：帮你带来的学生完成上手、在自然的场合邀请同行，再发布一个你自己也会用的情景对话。"
+      },
+      "ip": {
+        "question": "我分享的情景对话归谁所有？",
+        "answer": "归你。发布会为它署上你的名字，并允许其他老师布置使用。你随时可以取消发布。"
+      }
+    },
+    "cta": {
+      "title": "首期大使申请现已开放",
+      "description": "几个问题，大约三分钟。如果合适，我们会在一周内与你通话。",
+      "button": "申请成为大使"
+    },
+    "apply": {
+      "title": "申请成为 JustTalk 大使",
+      "description": "几个问题，大约三分钟。如果合适，我们会在一周内与你通话。",
+      "submit": "提交申请",
+      "sending": "提交中…",
+      "error": "出了点问题，请再试一次。",
+      "fields": {
+        "name": "你的姓名",
+        "email": "邮箱",
+        "based": "你常驻在哪里？",
+        "platforms": "你在哪里授课？符合的都可以选。",
+        "students": "你目前教多少学生",
+        "tracks": "你想主攻哪一块？",
+        "linkedin": "领英",
+        "social": "Instagram、TikTok 或 YouTube",
+        "reach": "你在哪里接触其他老师？",
+        "built": "你为学生做过的东西",
+        "optional": "（选填）"
+      },
+      "placeholders": {
+        "name": "张老师",
+        "email": "you@example.com",
+        "based": "葡萄牙里斯本 — 按 CET 和 GMT 时区授课",
+        "platformOther": "还有别的？写下平台或学校名称",
+        "students": "请选择",
+        "linkedin": "linkedin.com/in/yourname",
+        "social": "@yourhandle",
+        "reach": "一个 400 人的英语教师 Telegram 群、一个 Facebook 小组、我们办公室、会议演讲——附上链接更好",
+        "built": "一个情景对话、一份练习纸、一门课程——任何你会拿给同行看的东西"
+      },
+      "platforms": {
+        "own": "我自己的私教学生",
+        "preply": "Preply",
+        "italki": "italki",
+        "cambly": "Cambly",
+        "verbling": "Verbling",
+        "superprof": "Superprof",
+        "school": "学校或语言培训机构",
+        "university": "大学或学院",
+        "company": "企业内训",
+        "other": "其他地方"
+      },
+      "rosterSizes": {
+        "starting": "刚刚起步",
+        "1to5": "1–5 名学生",
+        "6to15": "6–15 名学生",
+        "16to30": "16–30 名学生",
+        "over30": "30 名以上"
+      },
+      "tracks": {
+        "students": "带来我自己的学生",
+        "teachers": "扩大教师圈子",
+        "roleplays": "分享我搭建的情景对话"
+      },
+      "success": {
+        "title": "申请已收到。",
+        "description": "每一份我们都会看。一周内会收到邮件——如果通过，邮件里会附上预约设置通话的链接。",
+        "close": "关闭"
+      }
+    }
   }
 }

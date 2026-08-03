@@ -539,5 +539,220 @@
       "button": "Haz tu primer examen de práctica"
     },
     "disclaimer": "JustTalk ofrece práctica al estilo IELTS y feedback generado por IA con estimaciones de banda no oficiales. No está afiliado a IELTS, no otorga puntuaciones oficiales y está diseñado para complementar, no reemplazar, la evaluación oficial de IELTS. IELTS es una marca registrada de sus respectivos propietarios."
+  },
+  "ambassadorPage": {
+    "meta": {
+      "title": "Programa de embajadores — JustTalk para profesores",
+      "description": "Trae a los alumnos que ya enseñas, invita a los profesores con los que ya hablas y publica los role-plays con IA que creas. Los embajadores se quedan con el 90% de lo que pagan sus alumnos."
+    },
+    "hero": {
+      "eyebrow": "Programa de embajadores",
+      "headline": "Enseña con JustTalk. Quédate con el 90%.",
+      "subheadline": "Trae a los alumnos que ya enseñas, invita a los profesores con los que ya hablas y publica los role-plays con IA que creas. Los embajadores dirigen su propia práctica en JustTalk: nosotros nos ocupamos de las reservas, los pagos y la práctica oral entre clases.",
+      "apply": "Postúlate ahora",
+      "seeEarnings": "Mira cuánto ganarías",
+      "deadline": "Las postulaciones para la primera cohorte cierran el 30 de septiembre de 2026"
+    },
+    "offer": {
+      "title": "La oferta 10/10/10",
+      "description": "Una oferta, tres números. Se aplica desde el día en que te aceptamos: no hay nada que negociar.",
+      "takeRate": {
+        "label": "de comisión",
+        "description": "JustTalk se queda con el {rate}% de lo que pagan tus alumnos. Tú te quedas con el otro {keep}%, con tus propios precios."
+      },
+      "weeks": {
+        "label": "semanas",
+        "description": "La comisión queda fija durante tus primeras {weeks} semanas como embajador: tiempo de sobra para trasladar toda tu cartera."
+      },
+      "freeLessons": {
+        "label": "clases gratis",
+        "description": "{lessons} clases gratis para repartir entre tus alumnos como quieras. Sin tarjeta, sin pago, sin motivos para decir que no."
+      }
+    },
+    "earnings": {
+      "title": "Así serían tus diez semanas",
+      "roster": {
+        "title": "Tu cartera",
+        "description": "Tres números que ya conoces.",
+        "students": "Alumnos que traes",
+        "price": "Tu precio por clase",
+        "lessons": "Clases por alumno, por semana"
+      },
+      "result": {
+        "title": "Te quedas, por semana",
+        "gross": "Pagos de los alumnos",
+        "fee": "Comisión de JustTalk ({rate}%)",
+        "total": "En {weeks} semanas",
+        "note": "Cifras ilustrativas. Tus primeras {lessons} clases corren por nuestra cuenta, así que la primera semana o dos no suelen costarle nada a nadie."
+      }
+    },
+    "tracks": {
+      "title": "Elige una. O haz las tres, si quieres.",
+      "students": {
+        "title": "Trae a tus propios alumnos",
+        "description": "Traslada a JustTalk a los alumnos que ya enseñas. Las mismas clases, los mismos precios, la misma relación, y además práctica oral diaria con IA entre sesiones, para que lleguen más preparados.",
+        "fit": "Es para ti si: tienes una cartera activa y prefieres dejar de perseguir facturas."
+      },
+      "teachers": {
+        "title": "Haz crecer el círculo de profesores",
+        "description": "Invita a los profesores con los que ya hablas: tu sala de profesores, tu grupo de Telegram, los comentarios de tu TikTok. Cada profesor que entre con tu enlace también empieza con 10/10/10, y a ti se te reconoce por ello.",
+        "fit": "Es para ti si: eres el profesor al que otros profesores piden consejo."
+      },
+      "roleplays": {
+        "title": "Comparte tus role-plays",
+        "description": "Publica en la biblioteca compartida los role-plays con IA que crees. Otros profesores los asignan, tu nombre sigue en ellos y puedes retirarlos cuando quieras.",
+        "fit": "Es para ti si: escribes tus propios materiales en lugar de seguir el libro de texto."
+      }
+    },
+    "steps": {
+      "title": "Cuatro pasos, una semana más o menos",
+      "step": "Paso {number}",
+      "apply": {
+        "title": "Postúlate",
+        "description": "Unas preguntas sobre qué, dónde y a quién enseñas. Tres minutos, sin portafolio."
+      },
+      "setup": {
+        "title": "Prepáralo todo",
+        "description": "Una llamada de 30 minutos con nuestro equipo, tu enlace de embajador y tu perfil de profesor en marcha."
+      },
+      "invite": {
+        "title": "Invita",
+        "description": "Envía el enlace a tus alumnos y a los profesores con los que aprendes. Tus primeras {lessons} clases corren por nuestra cuenta."
+      },
+      "teach": {
+        "title": "Enseña y crea",
+        "description": "Da tus clases, publica un role-play cuando te salga uno bueno y quédate con el {keep}%."
+      }
+    },
+    "roleplays": {
+      "title": "Los role-plays que creas, en las clases de otros profesores",
+      "description": "Escribe un escenario, define el personaje y el nivel, pruébalo una vez. Los embajadores publican los suyos en la biblioteca compartida: los más asignados se destacan, y el profesor que los escribió se lleva el crédito."
+    },
+    "perks": {
+      "title": "Lo que recibes",
+      "offer": {
+        "title": "10/10/10, desde el primer día",
+        "description": "Una comisión del {rate}% durante {weeks} semanas, más {lessons} clases gratis para repartir entre los alumnos que traigas."
+      },
+      "pro": {
+        "title": "JustTalk Pro, gratis",
+        "description": "Acceso completo mientras seas embajador activo. Crea role-plays ilimitados y úsalos en tus propias clases."
+      },
+      "spotlight": {
+        "title": "Visibilidad",
+        "description": "Destacamos a los embajadores y sus role-plays en nuestros canales, y te enviamos alumnos nuevos."
+      },
+      "directLine": {
+        "title": "Línea directa",
+        "description": "Una sala privada con el resto de embajadores y con quienes construyen JustTalk. Pide una función y verás cómo se lanza."
+      }
+    },
+    "who": {
+      "title": "A quién buscamos",
+      "teach": {
+        "title": "Enseñas de verdad",
+        "description": "Online, en una escuela o en la mesa de la cocina. Tienes alumnos que te seguirían a una herramienta nueva porque confían en ti."
+      },
+      "connect": {
+        "title": "Reúnes a otros profesores",
+        "description": "Una sala de profesores, un grupo de chat, una charla en un congreso, una sección de comentarios. Ya compartes con otros profesores lo que funciona."
+      },
+      "build": {
+        "title": "Creas tus propios materiales",
+        "description": "Improvisas escenarios, escribes tus propios prompts y disfrutas de crear algo nuevo para un alumno concreto."
+      }
+    },
+    "faq": {
+      "title": "Preguntas que hacen los profesores",
+      "cost": {
+        "question": "¿Cuesta algo unirse?",
+        "answer": "No. Los embajadores tienen JustTalk Pro gratis mientras estén activos, y recibes {lessons} clases gratis para repartir entre los alumnos que traigas: ellos tampoco necesitan tarjeta."
+      },
+      "rate": {
+        "question": "¿Qué pasa después de las diez semanas?",
+        "answer": "Pasas a las condiciones estándar de embajador, y te decimos exactamente cuáles son antes de la semana ocho, nunca por sorpresa. Los alumnos que ya trajiste conservan su historial y su profesor."
+      },
+      "own": {
+        "question": "¿Mantengo a mis alumnos y fijo mis propios precios?",
+        "answer": "Sí a las dos cosas. Tú pones tus tarifas y conservas la relación. JustTalk se encarga de la agenda, los pagos y la práctica con IA que hacen tus alumnos entre clases."
+      },
+      "following": {
+        "question": "¿Necesito muchos seguidores?",
+        "answer": "No. La mayoría de los embajadores empiezan con un puñado de alumnos y un grupo de profesores. Nos importa más que te escuchen que cuántos sean."
+      },
+      "time": {
+        "question": "¿Cuánto tiempo lleva?",
+        "answer": "Además de dar clase, unas dos horas al mes: dar la bienvenida a los alumnos que traigas, invitar a profesores cuando surja de forma natural y publicar un role-play que tú mismo usarías."
+      },
+      "ip": {
+        "question": "¿De quién son los role-plays que comparto?",
+        "answer": "Tuyos. Publicarlos pone tu nombre en ellos y permite que otros profesores los asignen. Puedes retirarlos cuando quieras."
+      }
+    },
+    "cta": {
+      "title": "Las postulaciones están abiertas para la primera cohorte",
+      "description": "Unas preguntas, unos tres minutos. Si encajas, hablamos contigo por llamada en menos de una semana.",
+      "button": "Postúlate como embajador"
+    },
+    "apply": {
+      "title": "Postúlate como embajador de JustTalk",
+      "description": "Unas preguntas, unos tres minutos. Si encajas, hablamos contigo por llamada en menos de una semana.",
+      "submit": "Enviar postulación",
+      "sending": "Enviando…",
+      "error": "Algo salió mal. Inténtalo de nuevo.",
+      "fields": {
+        "name": "Tu nombre",
+        "email": "Email",
+        "based": "¿Dónde resides?",
+        "platforms": "¿Dónde enseñas? Marca todo lo que corresponda.",
+        "students": "Alumnos a los que enseñas ahora mismo",
+        "tracks": "¿Qué quieres liderar?",
+        "linkedin": "LinkedIn",
+        "social": "Instagram, TikTok o YouTube",
+        "reach": "¿Dónde llegas a otros profesores?",
+        "built": "Algo que hayas creado para tus alumnos",
+        "optional": "(opcional)"
+      },
+      "placeholders": {
+        "name": "Marta Silva",
+        "email": "tu@ejemplo.com",
+        "based": "Lisboa, Portugal — enseño en CET y GMT",
+        "platformOther": "¿En otro sitio? Indica la plataforma o la escuela",
+        "students": "Elige una opción",
+        "linkedin": "linkedin.com/in/tunombre",
+        "social": "@tuusuario",
+        "reach": "Un grupo de Telegram con 400 profesores de inglés, un grupo de Facebook, mi sala de profesores, charlas en congresos — los enlaces ayudan",
+        "built": "Un role-play, una ficha, un curso: cualquier cosa que le enseñarías a otro profesor"
+      },
+      "platforms": {
+        "own": "Mis propios alumnos particulares",
+        "preply": "Preply",
+        "italki": "italki",
+        "cambly": "Cambly",
+        "verbling": "Verbling",
+        "superprof": "Superprof",
+        "school": "Una escuela o academia de idiomas",
+        "university": "Una universidad o instituto superior",
+        "company": "En empresas / corporativo",
+        "other": "En otro sitio"
+      },
+      "rosterSizes": {
+        "starting": "Estoy empezando",
+        "1to5": "1–5 alumnos",
+        "6to15": "6–15 alumnos",
+        "16to30": "16–30 alumnos",
+        "over30": "Más de 30"
+      },
+      "tracks": {
+        "students": "Traer a mis propios alumnos",
+        "teachers": "Hacer crecer el círculo de profesores",
+        "roleplays": "Compartir los role-plays que creo"
+      },
+      "success": {
+        "title": "Postulación recibida.",
+        "description": "Las leemos todas. Espera un email en menos de una semana: si es un sí, incluirá un enlace para agendar tu llamada de configuración.",
+        "close": "Cerrar"
+      }
+    }
   }
 }
