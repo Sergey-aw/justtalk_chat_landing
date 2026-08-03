@@ -290,7 +290,7 @@ export default function AmbassadorProgram() {
         <section id="apply" className={`${SECTION} py-16 md:py-24`}>
           <div className="relative overflow-hidden rounded-2xl text-just_cod-gray">
             <img
-              src="/bg_rose_banner.webp"
+              src="/bg_rose_banner_light.webp"
               alt=""
               aria-hidden="true"
               className="absolute inset-0 w-full h-full object-cover"
