@@ -5,7 +5,6 @@ import { Clapperboard, Mic, PenLine } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { CircularRotation } from "@/components/CircularRotation";
 import { PersonalityCarousel } from "@/components/PersonalityCarousel";
 import { CreatorApplyDialog } from "@/components/CreatorApplyDialog";
 import {
@@ -82,16 +81,13 @@ export default function CreatorProgram() {
               </p>
             </div>
 
-            <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden">
+            {/* 3:2 matches the asset, so object-cover crops nothing off the pills */}
+            <div className="relative w-full aspect-3/2 rounded-3xl overflow-hidden">
               <img
-                src="/bg_color_rotating.webp"
-                alt=""
-                aria-hidden="true"
+                src="/justtalk_creators.webp"
+                alt={t("hero.imageAlt")}
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="relative z-10 w-full h-full flex items-center justify-center p-8">
-                <CircularRotation />
-              </div>
             </div>
           </div>
         </section>
