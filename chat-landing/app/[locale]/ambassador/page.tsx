@@ -5,7 +5,6 @@ import { Handshake, Sparkles, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { DialogueAnimation } from "@/components/DialogueAnimation";
 import { RolePlayCarousel } from "@/components/RolePlayCarousel";
 import { AmbassadorApplyDialog } from "@/components/AmbassadorApplyDialog";
 import { AmbassadorEarnings } from "@/components/AmbassadorEarnings";
@@ -82,8 +81,13 @@ export default function AmbassadorProgram() {
               </p>
             </div>
 
-            <div className="relative w-full aspect-4/3 rounded-3xl overflow-hidden bg-[#FAFAFA] border border-just_cod-gray-5">
-              <DialogueAnimation />
+            {/* 16:10 matches the asset, as on /becometeacher */}
+            <div className="relative w-full aspect-16/10 rounded-3xl overflow-hidden">
+              <img
+                src="/become_teacher.webp"
+                alt={t("hero.imageAlt")}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
           </div>
         </section>
