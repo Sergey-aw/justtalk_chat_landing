@@ -251,7 +251,8 @@ export default function CreatorProgram() {
 
         {/* Apply */}
         <section id="apply" className={`${SECTION} py-16 md:py-24`}>
-          <div className="relative overflow-hidden rounded-2xl text-just_cod-gray">
+          {/* Deep purple rather than cod gray — picked out of the banner itself */}
+          <div className="relative overflow-hidden rounded-2xl text-[#440052]">
             <img
               src="/bg_rose_banner_light.webp"
               alt=""
@@ -262,7 +263,7 @@ export default function CreatorProgram() {
               <h2 className="mx-auto max-w-[20em] text-[clamp(2.25rem,5vw,4rem)] font-medium leading-[0.93] tracking-[-0.0276em] text-balance">
                 {t("cta.title")}
               </h2>
-              <p className="mx-auto mt-5 max-w-[34em] text-lg leading-[1.44] tracking-[-0.18px] text-just_cod-gray/70">
+              <p className="mx-auto mt-5 max-w-[34em] text-lg leading-[1.44] tracking-[-0.18px] text-[#440052]/75">
                 {t("cta.description")}
               </p>
               <div className="flex justify-center flex-wrap gap-3 mt-9">
@@ -272,7 +273,7 @@ export default function CreatorProgram() {
                   </Button>
                 </CreatorApplyDialog>
               </div>
-              <p className="mt-4.5 text-[13px] tracking-[-0.14px] text-just_cod-gray/55">
+              <p className="mt-4.5 text-[13px] tracking-[-0.14px] text-[#440052]/65">
                 {t("hero.note")}
               </p>
             </div>
