@@ -171,6 +171,8 @@
   "footer": {
     "justtalkAi": "JustTalk AI",
     "justtalkTutors": "JustTalk 导师",
+    "ambassadors": "大使计划",
+    "creators": "创作者计划",
     "help": "帮助",
     "status": "状态",
     "termsOfUse": "使用条款",
@@ -539,5 +541,382 @@
       "button": "开始你的第一次模拟测试"
     },
     "disclaimer": "JustTalk 提供雅思风格的练习和由 AI 生成的反馈，附带非官方分数估算。本服务与 IELTS 无任何隶属关系，不颁发官方分数，旨在补充而非替代官方雅思评估。IELTS 是其各自所有者的注册商标。"
+  },
+  "ambassadorPage": {
+    "meta": {
+      "title": "大使计划 — JustTalk 教师版",
+      "description": "把你已经在教的学生带过来，邀请你常联系的同行，并发布你搭建的 AI 情景对话。大使可保留学生付费的 90%。"
+    },
+    "hero": {
+      "headline": "成为首批 JustTalk 大使。",
+      "subheadline": "把你已经在教的学生带过来，邀请你常联系的同行，发布你搭建的 AI 情景对话——并保留学生付费的 {keep}%。预约、收款以及课间的口语练习都由我们负责。",
+      "apply": "立即申请",
+      "deadline": "首期大使申请将于 2026 年 9 月 30 日截止",
+      "imageAlt": "JustTalk 上的一对一实时课程，带进度追踪和 AI 洞察"
+    },
+    "offer": {
+      "title": "10/10/10 方案",
+      "description": "一个方案，三个数字。从你被录取那天起生效——无需谈判。",
+      "takeRate": {
+        "label": "抽成",
+        "description": "JustTalk 从学生支付的费用中收取 {rate}%，其余 {keep}% 归你，价格由你自己定。"
+      },
+      "weeks": {
+        "label": "周",
+        "description": "这个费率在你成为大使的前 {weeks} 周内锁定——足够把整批学生迁过来。"
+      },
+      "freeLessons": {
+        "label": "节免费课",
+        "description": "{lessons} 节免费课，随你分配给学生。不用绑卡、不用付费，也就没有理由拒绝。"
+      }
+    },
+    "earnings": {
+      "title": "这十周对你意味着什么",
+      "roster": {
+        "title": "你的学生",
+        "description": "三个你早就知道的数字。",
+        "students": "你带来的学生数",
+        "price": "你的每节课价格",
+        "lessons": "每位学生每周上几节课"
+      },
+      "result": {
+        "title": "你每周所得",
+        "gross": "学生支付总额",
+        "fee": "JustTalk 服务费（{rate}%）",
+        "total": "{weeks} 周合计",
+        "note": "仅供参考。前 {lessons} 节课由我们承担，所以头一两周通常谁都不用花钱。"
+      }
+    },
+    "tracks": {
+      "title": "选一条走。想全做也可以。",
+      "students": {
+        "title": "带来你自己的学生",
+        "description": "把你已经在教的学生迁到 JustTalk。同样的课、同样的价格、同样的关系——外加课间每天的 AI 口语练习，学生上课时状态更好。",
+        "fit": "适合你，如果：你手上有稳定的学生，又不想再追着催款。"
+      },
+      "teachers": {
+        "title": "扩大教师圈子",
+        "description": "邀请你常联系的同行——办公室、Telegram 群、TikTok 评论区。每位通过你的链接加入的老师同样享受 10/10/10，而这会记在你名下。",
+        "fit": "适合你，如果：同行遇到问题时会来问你。"
+      },
+      "roleplays": {
+        "title": "分享你的情景对话",
+        "description": "把你搭建的 AI 情景对话发布到共享库。其他老师可以布置给学生，署名依然是你，你也可以随时取消发布。",
+        "fit": "适合你，如果：你自己写教学材料，而不是照着教材上课。"
+      }
+    },
+    "steps": {
+      "title": "四步，大约一周",
+      "step": "第 {number} 步",
+      "apply": {
+        "title": "提交申请",
+        "description": "几个关于你教什么、在哪教、教谁的问题。三分钟，不用作品集。"
+      },
+      "setup": {
+        "title": "完成设置",
+        "description": "与我们团队进行 30 分钟通话，拿到你的大使链接，教师主页正式上线。"
+      },
+      "invite": {
+        "title": "发出邀请",
+        "description": "把链接发给你的学生和你常交流的同行。前 {lessons} 节课由我们承担。"
+      },
+      "teach": {
+        "title": "授课并创作",
+        "description": "上你的课，做出好的情景对话就发布出来，收入的 {keep}% 归你。"
+      }
+    },
+    "roleplays": {
+      "title": "你搭建的情景对话，出现在其他老师的课堂上",
+      "description": "写一个场景，设定角色和难度，测试一遍即可。大使把自己的作品发布到共享库——被布置最多的会获得推荐位，署名归写它的老师。"
+    },
+    "perks": {
+      "title": "你会得到什么",
+      "offer": {
+        "title": "10/10/10，从第一天起",
+        "description": "{weeks} 周内 {rate}% 的抽成，外加 {lessons} 节免费课，分给你带来的学生。"
+      },
+      "pro": {
+        "title": "免费的 JustTalk Pro",
+        "description": "在你是活跃大使期间享有完整权限。无限量搭建情景对话，并用在自己的课上。"
+      },
+      "spotlight": {
+        "title": "曝光机会",
+        "description": "我们会在各个渠道推荐大使和他们的情景对话，并把新学生介绍给你。"
+      },
+      "directLine": {
+        "title": "直达通道",
+        "description": "一个只有其他大使和 JustTalk 团队的私密房间。提一个需求，看着它上线。"
+      }
+    },
+    "who": {
+      "title": "我们在找什么样的人",
+      "teach": {
+        "title": "你真的在教书",
+        "description": "线上、学校里，或是自家餐桌旁。你有一批因为信任你、愿意跟着你换工具的学生。"
+      },
+      "connect": {
+        "title": "你把老师们聚在一起",
+        "description": "一间办公室、一个群聊、一场会议演讲、一片评论区。你已经在跟同行分享有效的方法。"
+      },
+      "build": {
+        "title": "你自己做教学材料",
+        "description": "你即兴设计场景、自己写提示词，也享受为某一位学生量身做点新东西的过程。"
+      }
+    },
+    "faq": {
+      "title": "老师们常问的问题",
+      "cost": {
+        "question": "加入需要花钱吗？",
+        "answer": "不需要。大使在活跃期间免费使用 JustTalk Pro，你还会获得 {lessons} 节免费课分给你带来的学生——他们也不需要绑卡。"
+      },
+      "rate": {
+        "question": "十周之后会怎样？",
+        "answer": "你会转入标准大使条款，我们会在第八周之前把具体内容告诉你——绝不搞突然袭击。你已经带来的学生会保留学习记录和原来的老师。"
+      },
+      "own": {
+        "question": "学生还是我的吗？价格由我定吗？",
+        "answer": "都是。价格由你定，师生关系也归你。JustTalk 负责排课、收款，以及学生在课间与 AI 的练习。"
+      },
+      "following": {
+        "question": "需要很多粉丝吗？",
+        "answer": "不需要。大多数大使起步时只有几个学生和一个教师群。比起人数，我们更看重别人是否听你的。"
+      },
+      "time": {
+        "question": "这需要花多少时间？",
+        "answer": "除授课外，每月大约两小时：帮你带来的学生完成上手、在自然的场合邀请同行，再发布一个你自己也会用的情景对话。"
+      },
+      "ip": {
+        "question": "我分享的情景对话归谁所有？",
+        "answer": "归你。发布会为它署上你的名字，并允许其他老师布置使用。你随时可以取消发布。"
+      }
+    },
+    "cta": {
+      "title": "首期大使申请现已开放",
+      "description": "几个问题，大约三分钟。如果合适，我们会在一周内与你通话。",
+      "button": "申请成为大使"
+    },
+    "apply": {
+      "title": "申请成为 JustTalk 大使",
+      "description": "几个问题，大约三分钟。如果合适，我们会在一周内与你通话。",
+      "submit": "提交申请",
+      "sending": "提交中…",
+      "error": "出了点问题，请再试一次。",
+      "fields": {
+        "name": "你的姓名",
+        "email": "邮箱",
+        "based": "你常驻在哪里？",
+        "platforms": "你在哪里授课？符合的都可以选。",
+        "students": "你目前教多少学生",
+        "tracks": "你想主攻哪一块？",
+        "linkedin": "领英",
+        "social": "Instagram、TikTok 或 YouTube",
+        "reach": "你在哪里接触其他老师？",
+        "built": "你为学生做过的东西",
+        "optional": "（选填）"
+      },
+      "placeholders": {
+        "name": "张老师",
+        "email": "you@example.com",
+        "based": "葡萄牙里斯本 — 按 CET 和 GMT 时区授课",
+        "platformOther": "还有别的？写下平台或学校名称",
+        "students": "请选择",
+        "linkedin": "linkedin.com/in/yourname",
+        "social": "@yourhandle",
+        "reach": "一个 400 人的英语教师 Telegram 群、一个 Facebook 小组、我们办公室、会议演讲——附上链接更好",
+        "built": "一个情景对话、一份练习纸、一门课程——任何你会拿给同行看的东西"
+      },
+      "platforms": {
+        "own": "我自己的私教学生",
+        "preply": "Preply",
+        "italki": "italki",
+        "cambly": "Cambly",
+        "verbling": "Verbling",
+        "superprof": "Superprof",
+        "school": "学校或语言培训机构",
+        "university": "大学或学院",
+        "company": "企业内训",
+        "other": "其他地方"
+      },
+      "rosterSizes": {
+        "starting": "刚刚起步",
+        "1to5": "1–5 名学生",
+        "6to15": "6–15 名学生",
+        "16to30": "16–30 名学生",
+        "over30": "30 名以上"
+      },
+      "tracks": {
+        "students": "带来我自己的学生",
+        "teachers": "扩大教师圈子",
+        "roleplays": "分享我搭建的情景对话"
+      },
+      "success": {
+        "title": "申请已收到。",
+        "description": "每一份我们都会看。一周内会收到邮件——如果通过，邮件里会附上预约设置通话的链接。",
+        "close": "关闭"
+      }
+    }
+  },
+  "creatorsPage": {
+    "meta": {
+      "title": "创作者计划 — 做英语内容，拿现金分成",
+      "description": "围绕 JustTalk 做内容，从你带来的订阅中最高可拿 50% 分成。现金、免费 Pro，还有我们帮你推广作品。"
+    },
+    "hero": {
+      "headline": "做内容帮大家开口说英语，顺便赚钱。",
+      "subheadline": "你本来就要做的视频、图文和邮件通讯，换成一个用户真的会长期用下去的产品。每一笔通过你带来的订阅都有现金回报，我们也会把你的作品推给自己的受众。",
+      "apply": "申请加入计划",
+      "note": "三个简单步骤。申请一周内审核完毕。",
+      "imageAlt": "现金与回馈、免费 JustTalk Pro、建立社群、赚到真金白银"
+    },
+    "offer": {
+      "title": "现金与回馈",
+      "description": "一个链接，三份回报。没有粉丝门槛，不要求独家，也不绑定你。",
+      "cash": {
+        "label": "最高现金分成",
+        "description": "通过你的链接注册的用户，每一笔订阅付款你最高可拿 {rate}%。具体比例在加入时确定，并随你的成绩上调。"
+      },
+      "pro": {
+        "label": "免费，给你用",
+        "description": "只要你是活跃创作者，就能免费用完整版 JustTalk Pro——方便你录屏、截图，也让你说的都是真实体验。"
+      },
+      "reach": {
+        "label": "我们推广你",
+        "description": "我们会在自己的渠道推荐创作者的作品，把受众带过去。你帮我们涨，我们也帮你涨。"
+      }
+    },
+    "steps": {
+      "title": "三个简单步骤",
+      "step": "第 {number} 步",
+      "apply": {
+        "title": "提交申请",
+        "description": "告诉我们你在哪里发内容、谁在看。几个问题，大约三分钟——不需要媒体资料包。"
+      },
+      "share": {
+        "title": "分享你的链接",
+        "description": "你会拿到一条可追踪的链接和一套启动素材：空镜、截图、话术要点，以及一个受众真的用得上的折扣。"
+      },
+      "earn": {
+        "title": "拿到收入",
+        "description": "每一笔来自你链接的订阅，最高给你 {rate}%。在后台看着它一个月接一个月地到账。"
+      }
+    },
+    "formats": {
+      "title": "你现在做的形式，这里都吃得开。",
+      "video": {
+        "title": "视频",
+        "description": "这个产品很好演示——它会回话。一段真实对话的录屏，基本就替你把内容做完了。",
+        "idea": "可以试试：《我连续 30 天只用英语和 AI 聊天》"
+      },
+      "writing": {
+        "title": "博客与邮件通讯",
+        "description": "长文才是学习者真正做决定的地方。测评、对比和学习计划安静地转化，而且会一直转化下去。",
+        "idea": "可以试试：一份读者能照着走的每周口语计划"
+      },
+      "audio": {
+        "title": "播客与短视频",
+        "description": "在你本来就要录的一期里，给出一句清楚的推荐。念出链接，剩下交给我们。",
+        "idea": "可以试试：流利到底需要什么，用一个能证明这点的工具讲清楚"
+      }
+    },
+    "product": {
+      "title": "点开链接之后，你的受众会看到什么",
+      "description": "和 AI 角色进行真实对话，它们记得上次聊过什么。没有练习题，没有台词——用户第一天就开口，也正因为这样才留得够久，让你能持续拿到分成。"
+    },
+    "who": {
+      "title": "我们在找什么样的人",
+      "teachers": {
+        "title": "会发内容的老师",
+        "description": "你本来就在网上给陌生人讲现在完成时。推荐一个你自己上课也会用的工具，对你没有任何成本。"
+      },
+      "creators": {
+        "title": "语言与学习类创作者",
+        "description": "多语者、考试备考、陪学直播、移民与搬家。凡是真正主题是「敢开口」的地方都算。"
+      },
+      "communities": {
+        "title": "社群运营者",
+        "description": "一个 Discord、一个 Telegram 频道、一个贴吧板块、一个 Facebook 群。小而信任，永远赢过大而沉默。"
+      }
+    },
+    "faq": {
+      "title": "创作者常问的问题",
+      "cost": {
+        "question": "加入需要花钱吗？",
+        "answer": "不需要。加入免费，活跃创作者还能免费使用 JustTalk Pro，让你的内容来自真实使用而不是猜测。"
+      },
+      "paid": {
+        "question": "怎么结算？什么时候到账？",
+        "answer": "每月结算一次，余额达到提现门槛即可。具体门槛、方式和币种会在你上手时确认，在你分享第一条链接之前就说清楚。"
+      },
+      "attribution": {
+        "question": "推荐是怎么统计的？",
+        "answer": "通过你的专属链接——点击后完成注册的用户会计到你名下，你在后台就能看到。归因周期会在你加入时一并说明。"
+      },
+      "audience": {
+        "question": "需要很多粉丝吗？",
+        "answer": "不需要。比起人数，我们更在意你的受众是否信任你。小而活跃的社群经常跑赢大而被动的账号。"
+      },
+      "claims": {
+        "question": "我可以怎么评价 JustTalk？",
+        "answer": "说你真实的看法，包括你不满意的部分。我们只要求你按平台规则和当地法规披露合作关系，并且不要承诺我们兑现不了的效果。"
+      },
+      "ambassador": {
+        "question": "我也在教课，可以同时加入大使计划吗？",
+        "answer": "可以。创作者计划为你带来的受众付费，大使计划则是让你在 JustTalk 上开自己的课。两边都做的人不少——在申请里说明一下即可。"
+      }
+    },
+    "cta": {
+      "title": "让你已经在做的内容开始赚钱",
+      "description": "几个问题，大约三分钟。如果合适，你的链接和启动素材会在一周内送到。",
+      "button": "申请加入计划"
+    },
+    "apply": {
+      "title": "申请加入 JustTalk 创作者计划",
+      "description": "几个问题，大约三分钟。如果合适，你的链接和启动素材会在一周内送到。",
+      "submit": "提交申请",
+      "sending": "提交中…",
+      "error": "出了点问题，请再试一次。",
+      "fields": {
+        "name": "你的姓名",
+        "email": "邮箱",
+        "based": "你常驻在哪里？",
+        "channels": "你在哪些平台发内容？符合的都可以选。",
+        "primaryUrl": "你的主要频道或网站",
+        "audience": "那里大概有多少人关注你",
+        "topics": "你做什么方向的内容？",
+        "ideas": "你想围绕 JustTalk 做点什么",
+        "optional": "（选填）"
+      },
+      "placeholders": {
+        "name": "张老师",
+        "email": "you@example.com",
+        "based": "葡萄牙里斯本",
+        "primaryUrl": "youtube.com/@yourchannel",
+        "audience": "请选择",
+        "topics": "职场英语、雅思备考、出国生活——以及通常是谁在看",
+        "ideas": "30 天开口挑战、一篇实话实说的测评、和我现在用的工具做对比"
+      },
+      "channels": {
+        "youtube": "YouTube",
+        "tiktok": "TikTok",
+        "instagram": "Instagram",
+        "blog": "博客或网站",
+        "newsletter": "邮件通讯",
+        "podcast": "播客",
+        "x": "X",
+        "other": "其他平台"
+      },
+      "audienceSizes": {
+        "under1k": "1,000 以下",
+        "1kto10k": "1,000–10,000",
+        "10kto50k": "10,000–50,000",
+        "50kto250k": "50,000–250,000",
+        "over250k": "250,000 以上"
+      },
+      "success": {
+        "title": "申请已收到。",
+        "description": "每一份我们都会看。一周内会收到邮件——如果通过，里面会附上你的专属链接和启动素材。",
+        "close": "关闭"
+      }
+    }
   }
 }

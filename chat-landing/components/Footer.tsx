@@ -70,14 +70,16 @@ export function Footer() {
             <ul className="space-y-3">
               <li><a href={justTalkAiUrl} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Voice Chat', justTalkAiUrl)}>{t('justtalkAi')}</a></li>
               <li><a href={`https://justtalk.ai/${locale}/platform`} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Teachers', `https://justtalk.ai/${locale}/platform`)}>{t('justtalkTutors')}</a></li>
-              <li><a href="https://docs.justtalk.ai/?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Help', 'https://docs.justtalk.ai/?ref=justtalk.ai')}>{t('help')}</a></li>
-              <li><a href="https://status.justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline inline-flex items-center gap-1.5 justify-end" onClick={() => handleFooterLinkClick('Status', 'https://status.justtalk.ai')}>{t('status')}<span className="w-1 h-1 bg-green-500 rounded-full"></span></a></li>
+              <li><a href={`/${locale}/ambassador`} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Ambassadors', `/${locale}/ambassador`)}>{t('ambassadors')}</a></li>
+              <li><a href={`/${locale}/creators`} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Creators', `/${locale}/creators`)}>{t('creators')}</a></li>
             </ul>
           </div>
 
-          {/* Column 3 */}
+          {/* Column 3 — support and legal */}
           <div className="md:justify-self-start md:text-left">
             <ul className="space-y-3">
+              <li><a href="https://docs.justtalk.ai/?ref=justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Help', 'https://docs.justtalk.ai/?ref=justtalk.ai')}>{t('help')}</a></li>
+              <li><a href="https://status.justtalk.ai" className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline inline-flex items-center gap-1.5 justify-end" onClick={() => handleFooterLinkClick('Status', 'https://status.justtalk.ai')}>{t('status')}<span className="w-1 h-1 bg-green-500 rounded-full"></span></a></li>
               <li><a href={`/${locale}/terms`} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Terms of Use', `/${locale}/terms`)}>{t('termsOfUse')}</a></li>
               <li><a href={`/${locale}/privacy`} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Privacy Policy', `/${locale}/privacy`)}>{t('privacyPolicy')}</a></li>
             </ul>
