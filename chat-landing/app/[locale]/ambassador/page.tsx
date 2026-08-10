@@ -23,9 +23,9 @@ const H2 =
 
 /** The 10/10/10 cards rest on beige and bloom into colour on hover. */
 const OFFER_CARDS = [
-  { key: "takeRate", value: `${AMBASSADOR_OFFER.takeRate}%`, hover: "/bg_colored3_square.jpg" },
-  { key: "weeks", value: `${AMBASSADOR_OFFER.weeks}`, hover: "/bg_green_square_.jpg" },
-  { key: "freeLessons", value: `${AMBASSADOR_OFFER.freeLessons}`, hover: "/bg_colored4_square.jpg" },
+  { key: "takeRate", value: `${AMBASSADOR_OFFER.takeRate}%`, hover: "/bg_blue_banner.webp" },
+  { key: "weeks", value: `${AMBASSADOR_OFFER.weeks}`, hover: "/bg_green_banner.webp" },
+  { key: "freeLessons", value: `${AMBASSADOR_OFFER.freeLessons}`, hover: "/bg_rose_banner.webp" },
 ] as const;
 
 const TRACKS = [
