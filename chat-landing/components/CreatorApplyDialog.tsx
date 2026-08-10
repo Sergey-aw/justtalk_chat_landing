@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import posthog from "posthog-js";
 import { Button } from "@/components/ui/button";
 import {
@@ -52,6 +52,7 @@ export function CreatorApplyDialog({
 }: CreatorApplyDialogProps) {
   const t = useTranslations("creatorsPage.apply");
   const tHero = useTranslations("creatorsPage.hero");
+  const locale = useLocale();
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
@@ -80,6 +81,7 @@ export function CreatorApplyDialog({
       audience: String(data.get("audience") ?? ""),
       topics: String(data.get("topics") ?? ""),
       ideas: String(data.get("ideas") ?? ""),
+      locale,
     };
 
     try {

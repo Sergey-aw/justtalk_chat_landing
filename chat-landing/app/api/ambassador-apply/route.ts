@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { recordApplication } from "@/lib/application-sink";
 
 const LOOPS_BASE = "https://app.loops.so/api/v1";
 
@@ -14,6 +15,7 @@ interface ApplicationPayload {
   social?: string;
   reach?: string;
   built?: string;
+  locale?: string;
 }
 
 /** Keeps free-text answers inside Loops' event-property limits. */
@@ -129,6 +131,35 @@ export async function POST(req: NextRequest) {
     const tracks = Array.isArray(body.tracks)
       ? body.tracks.map((tr) => trim(tr, 40)).filter(Boolean)
       : [];
+
+    // Notion is the system of record — a failure here is fatal, so the
+    // applicant is told to retry rather than having their answers vanish.
+    // Loops already handles the duplicate contact on a resubmit.
+    try {
+      await recordApplication(
+        {
+          program: "Ambassador",
+          name,
+          email,
+          based: trim(body.based, 200),
+          channels: platforms,
+          otherChannel: trim(body.platformOther, 120),
+          audience: trim(body.students, 40),
+          tracks,
+          links: [trim(body.linkedin, 200), trim(body.social, 200)],
+          reach: trim(body.reach),
+          portfolio: trim(body.built),
+          locale: trim(body.locale, 10),
+        },
+        new Date().toISOString()
+      );
+    } catch (error) {
+      console.error("recordApplication failed:", error);
+      return NextResponse.json(
+        { success: false, error: "Failed to send application" },
+        { status: 502 }
+      );
+    }
 
     const eventResponse = await fetch(`${LOOPS_BASE}/events/send`, {
       method: "POST",

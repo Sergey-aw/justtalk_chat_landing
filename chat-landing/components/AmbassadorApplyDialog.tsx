@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import posthog from "posthog-js";
 import { Button } from "@/components/ui/button";
 import {
@@ -50,6 +50,7 @@ export function AmbassadorApplyDialog({
 }: AmbassadorApplyDialogProps) {
   const t = useTranslations("ambassadorPage.apply");
   const tHero = useTranslations("ambassadorPage.hero");
+  const locale = useLocale();
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
@@ -81,6 +82,7 @@ export function AmbassadorApplyDialog({
       social: String(data.get("social") ?? ""),
       reach: String(data.get("reach") ?? ""),
       built: String(data.get("built") ?? ""),
+      locale,
     };
 
     try {
