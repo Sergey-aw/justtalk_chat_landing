@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "check:survey": "node scripts/check-survey-labels.mjs",
+    "prebuild": "npm run check:survey",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
