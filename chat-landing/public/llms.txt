@@ -1,76 +1,95 @@
 # JustTalk AI
 
-> JustTalk AI is an English speaking practice platform that uses AI to provide realistic conversations with memory, tracking progress over time to build speaking confidence through cumulative improvement. It seamlessly integrates with live tutoring for a complete learning experience.
+> JustTalk is an English speaking practice product built around one compounding context. You take a 1-on-1 class with a real tutor from the marketplace, practice the same material between classes with AI role-plays built from that class, and the insights generated along the way feed the next class. Nothing resets between sessions.
 
-JustTalk AI helps intermediate and advanced English learners improve their speaking skills through:
-- AI conversations that remember previous sessions and build on them
-- Real-time speaking practice without grammar drills or scripted exercises
-- Comprehensive language analysis including pronunciation feedback
-- Progress tracking and analytics that carry across all sessions
-- Multiple AI personalities with different teaching styles
-- Role-play scenarios for practical speaking situations
-- Personalized scenarios created by teachers tailored to individual needs
-- Seamless integration with live tutors for one-on-one lessons
-- CEFR-based progression tracking (globally recognized standard)
+JustTalk helps intermediate and advanced English learners build speaking confidence through:
+- 1-on-1 classes with real tutors, taken inside the JustTalk classroom with live tracking, shared notes and AI insights
+- AI role-plays built from your own lessons and replayed with different personas
+- AI personalities that remember previous conversations, so you pick up where you left off
+- Insights that accumulate: active vocabulary by level, the mistakes you repeat, what to practice next
+- IELTS Speaking mock tests with an estimated band across all four official criteria
+- Progress tracking and CEFR-based progression (a globally recognized standard)
+- Real conversations rather than grammar drills or scripted exercises
+- Access on the web and through a native iOS app
 
-## Key Features
+## Site
 
-- [Platform Overview](https://justtalk.ai/): Main landing page explaining the JustTalk AI approach to speaking practice
-- [Tutoring Platform](https://justtalk.ai/platform): Information about the live tutor marketplace and seamless AI-to-tutor integration
-- [Become a Teacher](https://justtalk.ai/becometeacher): Information for educators interested in joining as tutors
-- [Terms of Service](https://justtalk.ai/terms): Legal terms and conditions
+- [Home](https://justtalk.ai/): How the loop works — a class with a real tutor, AI practice built from it, and insights that carry into the next class
+- [JustTalk AI](https://justtalk.ai/ai): The AI practice product in depth — personalities, memory, role-play scenarios and series, progress tracking, and pricing
+- [JustTalk Tutors](https://justtalk.ai/platform): The live tutor marketplace and how tutors build on your AI practice
+- [IELTS Speaking](https://justtalk.ai/ielts): A 12-minute mock Speaking test with an AI examiner and an estimated band across all four official criteria
+- [Become a Teacher](https://justtalk.ai/becometeacher): For educators interested in teaching on JustTalk
+- [Ambassador Program](https://justtalk.ai/ambassador): For teachers who bring the students they already teach
+- [Creator Program](https://justtalk.ai/creators): Affiliate program for creators, writers and community builders
+- [Terms of Use](https://justtalk.ai/terms): Legal terms and conditions
+- [Privacy Policy](https://justtalk.ai/privacy): How learner data is handled
+
+## Apps, Docs and Access
+
+- [Start practicing on the web](https://chat.justtalk.ai/welcome): The AI practice app
+- [iOS app on the App Store](https://apps.apple.com/app/id6760475574): JustTalk for iPhone and iPad (Apple App ID 6760475574)
+- [Documentation](https://docs.justtalk.ai): Product documentation, guides and help articles
+- [Tutor and teacher platform](https://app.justtalk.ai): Sign-in for tutors and teachers
+- [Service status](https://status.justtalk.ai): Live availability and incident history
+
+## How It Works
+
+1. Book a 1-on-1 class with a tutor from the marketplace and take it inside JustTalk
+2. Live tracking and shared notes capture the class — corrections, new words, and the focus you agreed on
+3. Between classes, speak with AI role-plays built from that lesson, with different personas
+4. Insights accumulate along the way: active vocabulary by level, repeated mistakes, and what to practice next
+5. Your tutor sees those insights before the next class begins
+6. Each pass around the loop carries everything from the one before, so no session starts from scratch
 
 ## AI Practice Features
 
-- Memory & Continuity: AI remembers every conversation and builds on previous sessions
-- Adaptive Conversations: Real conversations (not drills) that adapt to your level and needs
-- Smart Corrections: Grammar and pronunciation feedback without interrupting flow
-- Progress Analytics: Detailed tracking of speaking metrics over time
-- Multiple Personalities: Practice with different AI tutors who have varied teaching styles
-- Role-Play Scenarios: Realistic situations with multiple difficulty levels
-- Ongoing Series: Multi-session roleplay scenarios with continuity and memory
-- Pronunciation Analysis: Real-time feedback on pronunciation and accent
-- Vocabulary Tracking: Monitors words used and not used for targeted practice
+- Memory and continuity: the AI remembers previous conversations and builds on them
+- Adaptive conversations: real conversations, not drills, that adapt to your level and needs
+- Multiple personalities: practice with personas that are supportive, challenging, assertive or analytical
+- Role-play scenarios: realistic situations with a choice of role and difficulty
+- Ongoing series: multi-session role-plays that unfold over several sittings with continuity
+- Personalized scenarios: tutors can design custom role-plays for a specific student
+- Smart corrections: grammar and pronunciation feedback without interrupting your flow
+- Pronunciation analysis: feedback on pronunciation and accent
+- Vocabulary tracking: active vocabulary by CEFR level, and the words you avoid
+- Progress analytics: speaking metrics tracked across every session
 
-## Live Tutoring Platform (JustTalk Tutors)
+## Live Tutoring (JustTalk Tutors)
 
-- Seamless Integration: Tutors access your complete AI practice history and insights
-- No Starting Over: Your speaking history travels with you—no re-diagnosis needed
-- AI Assistant for Tutors: Teachers can chat with AI to instantly access student interests, lesson summaries, and conversation history
-- Customized Scenarios: Tutors can create personalized AI agents tailored to each student using prompts
-- Progress Continuity: Change tutors without losing progress—your data stays with you
-- Speaking-First Lessons: Focus on real communication, not worksheets
-- Comprehensive Analysis: AI model extracts insights and evaluates student interactions for tutors
-- Flexible Teaching: Tutors set their own rates and manage availability
-- AI-Enhanced Preparation: Tutors get personalized insights before every session
+- Seamless integration: tutors can access your AI practice history and insights
+- No starting over: your speaking history travels with you, so there is no re-diagnosis
+- AI assistant for tutors: teachers can chat with an AI to reach student interests, lesson summaries and conversation history
+- Customized scenarios: tutors can create AI role-plays tailored to each student
+- Progress continuity: change tutors without losing progress, because the data stays with you
+- Speaking-first lessons: focused on real communication rather than worksheets
+- Flexible teaching: tutors set their own rates and manage their availability
 
-## How It Works For Students
-1. Practice speaking with AI anytime—no preparation needed
-2. AI tracks everything you say and analyzes your progress
-3. Every session builds on the last with memory and continuity
-4. When ready, book lessons with live tutors who see your full history
-5. Tutors use AI insights to make lessons immediately productive
-6. Switch tutors without losing progress—your data follows you
+## IELTS Speaking Preparation
 
-## How It Works For Teachers
-1. Access comprehensive student insights through AI assistant
-2. Create customized AI scenarios tailored to each student's needs
-3. Review student conversation history and progress before lessons
-4. Teach speaking-first lessons with clear focus areas
-5. Set your own rates and manage your schedule
-6. Use AI-generated insights to personalize every session
+- A full 12-minute mock test covering all three parts: the Interview, the Long Turn cue card, and the Discussion
+- An AI examiner runs the test in the same shape as the real exam
+- Scored against the four official criteria: Fluency and Coherence, Lexical Resource, Grammar, and Pronunciation
+- An estimated overall band, plus which criterion is holding the score back
+- Targeted drills to practice before the next attempt
+- The band is an unofficial estimate that supports, and does not replace, certified IELTS assessment
+
+## Programs
+
+- Ambassador Program: for teachers who bring the students they already teach. JustTalk keeps 10% of student payments, that rate is locked for 10 weeks, and ambassadors get 10 free lessons to hand out. Applications for the first cohort close 30 September 2026.
+- Creator Program: for creators, writers and community builders. Up to 50% revenue share on referred subscriptions, with the exact rate agreed during onboarding.
 
 ## Product Information
 
-- Target Audience: Intermediate to advanced English learners who want to improve through speaking
-- Core Value: Conversations are tracked and used to build each session on the last, making progress cumulative—not random
-- AI Features: Memory across sessions, adaptive conversations, real-time corrections, pronunciation analysis, progress analytics, CEFR-based assessment
-- Tutoring Features: AI-enhanced preparation, progress continuity, customizable scenarios, comprehensive language analysis
+- Target audience: intermediate to advanced English learners who want to improve by speaking
+- Core value: what you say is tracked and reused, so each session builds on the last and progress compounds rather than resetting
+- Language: practice is English only; the marketing site is available in English, Spanish, Portuguese (Brazil), Simplified Chinese and Russian
 - Assessment: CEFR-based progression (Common European Framework of Reference)
-- Pricing: Subscription-based with free trial available for AI practice; live tutoring priced per session by individual tutors
-- Platform Access: AI practice at chat.justtalk.ai; Live tutoring marketplace launching soon
-- Status: AI practice fully available; Live tutor marketplace in beta with waitlist
+- Pricing: subscription tiers (Basic and Premium) with monthly and annual billing, shown on the JustTalk AI page (https://justtalk.ai/ai). Subscriptions can be cancelled at any time. Live tutoring is priced per session by individual tutors
+- Platform access: web app at chat.justtalk.ai, iOS app on the App Store, tutor and teacher platform at app.justtalk.ai
+- Status: AI practice is fully available on web and iOS; the live tutor marketplace is launching soon, with a waitlist open at https://justtalk.ai/platform
+- Privacy: conversations are private and used only to improve the learner's own experience
 
 ## Optional
 
 - [Get Started](https://chat.justtalk.ai/welcome): Direct link to start using JustTalk AI
+- [X (Twitter)](https://x.com/JustTalkApp): Product updates and announcements
