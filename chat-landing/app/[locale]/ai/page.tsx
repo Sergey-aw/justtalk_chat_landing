@@ -13,7 +13,7 @@ import { ProgressChart } from '@/components/ProgressChart';
 import { TrackedLink } from '@/components/TrackedLink';
 import { CircularRotation } from '@/components/CircularRotation';
 import { PlatformMedia } from '@/components/PlatformMedia';
-import { IELTSReport } from '@/components/IELTSReport';
+// import { IELTSReport } from '@/components/IELTSReport';
 import {
   Accordion,
   AccordionContent,
@@ -205,7 +205,7 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
             </div>
           </div>
 
-          {/* Feature - IELTS Speaking */}
+          {/* Feature - IELTS Speaking — commented out
           <div id="ielts" className="grid md:grid-cols-2 gap-8 items-center mb-24">
             <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
@@ -216,11 +216,12 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
               </p>
             </div>
 
-            {/* IELTS Speaking band report */}
+            IELTS Speaking band report
             <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden bg-gray-50 border border-just_black-5">
               <IELTSReport />
             </div>
           </div>
+          */}
 
           {/* Feature 5 - Role Play Series */}
           <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
