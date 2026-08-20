@@ -18,6 +18,52 @@
     "getStarted": "开始使用",
     "getIosApp": "获取 iOS 应用"
   },
+  "loop": {
+    "title": "你做的每一件事，都在积累同一份上下文",
+    "description": "和真人老师上一节课，用这节课生成 AI 角色扮演，再把洞察带进下一节课。你说过的话不会被浪费。",
+    "steps": {
+      "lesson": {
+        "title": "从真人老师开始",
+        "description": "在市场里预约 1 对 1 课程，直接在 JustTalk 里上课。老师负责教，应用在旁记录：你说了什么、卡在哪里、约定要练什么。"
+      },
+      "practice": {
+        "title": "趁没忘，先练起来",
+        "description": "两节课之间，用你自己那节课生成的 AI 角色扮演开口说：同样的情境、老师给你的词，换上不同性格的对象，练到有压力也说得出来。"
+      },
+      "insights": {
+        "title": "洞察在过程中不断累积",
+        "description": "按等级划分的活跃词汇、反复出现的错误、下一步值得练的情境。你能看到，老师在下节课开始前也能看到。"
+      }
+    },
+    "compounding": {
+      "title": "下一节课，从上一节结束的地方开始",
+      "description": "上课、练习、洞察，再回到课堂。每转一圈都会带上之前的一切，你不必从零开始，也不用重新介绍自己。",
+      "nodes": {
+        "lesson": "1 对 1 课程",
+        "practice": "AI 角色扮演",
+        "insights": "洞察",
+        "next": "下一节课，更进一步"
+      }
+    }
+  },
+  "practice": {
+    "title": "会适应你的练习",
+    "description": "有不同性格的对象可以对话，也有把上下文从一次对话带到下一次的记忆。"
+  },
+  "paths": {
+    "title": "两种开始方式",
+    "description": "可以走完整个循环，也可以先从更适合你现在的一边开始。",
+    "tutors": {
+      "title": "JustTalk Tutors",
+      "description": "在市场里挑选契合你目标的老师，在 JustTalk 课堂上 1 对 1 课程——自带记录、共享笔记和洞察。",
+      "cta": "了解平台"
+    },
+    "ai": {
+      "title": "JustTalk AI",
+      "description": "单独使用 AI 部分：记得你的 AI 角色、跨多次会话展开的角色扮演系列、IELTS 口语模考和进度追踪。",
+      "cta": "探索 JustTalk AI"
+    }
+  },
   "platform": {
     "title": "对话有效——当它被追踪时",
     "description": "大多数口语工具让你说话，但不追踪真正的进步。JustTalk AI分析你说的内容，并在你的历史记录基础上构建每次会话——让进步累积，而非随机。"

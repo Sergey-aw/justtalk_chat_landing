@@ -18,6 +18,52 @@
     "getStarted": "Get Started",
     "getIosApp": "Get iOS app"
   },
+  "loop": {
+    "title": "Everything you do builds one context",
+    "description": "A class with a real tutor. AI role-plays built from that class. Insights that carry into the next one. Nothing you say gets thrown away.",
+    "steps": {
+      "lesson": {
+        "title": "Start with a real tutor",
+        "description": "Book a 1-on-1 class from the marketplace and take it inside JustTalk. Your tutor teaches — the app follows along, capturing what you said, where you struggled, and what you agreed to work on."
+      },
+      "practice": {
+        "title": "Practice it before you forget it",
+        "description": "Between classes, speak with AI role-plays built from your own lesson — the same situations, the words your tutor gave you, replayed with different personas until they hold up under pressure."
+      },
+      "insights": {
+        "title": "Insights build up along the way",
+        "description": "Active vocabulary by level, the mistakes you keep repeating, the scenarios worth practicing next. You see all of it — and so does your tutor, before the next class starts."
+      }
+    },
+    "compounding": {
+      "title": "The next class starts where the last one ended",
+      "description": "Class, practice, insights — then back to class. Each pass carries everything from the one before, so you never start from scratch or re-explain yourself.",
+      "nodes": {
+        "lesson": "1-on-1 class",
+        "practice": "AI role-plays",
+        "insights": "Insights",
+        "next": "Next class, further along"
+      }
+    }
+  },
+  "practice": {
+    "title": "Practice that adapts to you",
+    "description": "Different personalities to speak with, and memory that carries your context from one conversation to the next."
+  },
+  "paths": {
+    "title": "Two ways in",
+    "description": "Use the whole loop, or start with the side that fits you today.",
+    "tutors": {
+      "title": "JustTalk Tutors",
+      "description": "Browse the marketplace, pick a tutor who fits your goals, and take 1-on-1 classes in the JustTalk classroom — with tracking, shared notes, and insights built in.",
+      "cta": "Learn about the platform"
+    },
+    "ai": {
+      "title": "JustTalk AI",
+      "description": "The AI side on its own: personalities that remember you, role-play series that unfold over sessions, IELTS mock tests, and progress tracking.",
+      "cta": "Explore JustTalk AI"
+    }
+  },
   "platform": {
     "title": "Talking works—when it's tracked",
     "description": "Most speaking tools let you talk but don't track real progress. JustTalk AI analyzes what you say and builds every session on your history—so improvement is cumulative, not random."
