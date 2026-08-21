@@ -64,7 +64,7 @@ export function Header() {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-2">
-            <a href={`/${locale}`} className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
+            <a href={`/${locale}/ai`} className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
               {t('justtalkAi')}
             </a>
               <a href={`/${locale}/platform`} className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
@@ -132,7 +132,7 @@ export function Header() {
             <nav className="flex-1 flex flex-col px-8 py-8 space-y-4">
             
               <a 
-                href={`/${locale}`} 
+                href={`/${locale}/ai`} 
                 className="text-lg font-medium text-just_cod-gray"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

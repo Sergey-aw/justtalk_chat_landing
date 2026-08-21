@@ -18,6 +18,52 @@
     "getStarted": "Começar",
     "getIosApp": "Baixar o app iOS"
   },
+  "loop": {
+    "title": "Tudo o que você faz constrói um mesmo contexto",
+    "description": "Uma aula com um professor de verdade. Role-plays com IA criados a partir dessa aula. Insights que seguem para a próxima. Nada do que você fala se perde.",
+    "steps": {
+      "lesson": {
+        "title": "Comece com um professor de verdade",
+        "description": "Agende uma aula 1 a 1 no marketplace e faça ela dentro do JustTalk. Seu professor ensina; o app acompanha, registrando o que você disse, onde travou e o que ficou combinado de treinar."
+      },
+      "practice": {
+        "title": "Pratique antes de esquecer",
+        "description": "Entre as aulas, fale com role-plays de IA criados a partir da sua própria aula: as mesmas situações e as palavras que o professor te deu, com personagens diferentes até saírem naturalmente sob pressão."
+      },
+      "insights": {
+        "title": "Os insights se acumulam pelo caminho",
+        "description": "Vocabulário ativo por nível, os erros que você repete e os cenários que vale a pena praticar em seguida. Você vê tudo — e seu professor também, antes da próxima aula."
+      }
+    },
+    "compounding": {
+      "title": "A próxima aula começa onde a última parou",
+      "description": "Aula, prática, insights — e de volta para a aula. Cada volta carrega tudo o que veio antes, então você nunca começa do zero nem precisa se explicar de novo.",
+      "nodes": {
+        "lesson": "Aula 1 a 1",
+        "practice": "Role-plays com IA",
+        "insights": "Insights",
+        "next": "Próxima aula, mais adiante"
+      }
+    }
+  },
+  "practice": {
+    "title": "Uma prática que se adapta a você",
+    "description": "Personalidades diferentes para conversar e uma memória que leva seu contexto de uma conversa para a próxima."
+  },
+  "paths": {
+    "title": "Dois jeitos de começar",
+    "description": "Use o ciclo inteiro ou comece pelo lado que faz mais sentido hoje.",
+    "tutors": {
+      "title": "JustTalk Tutors",
+      "description": "Explore o marketplace, escolha um professor alinhado aos seus objetivos e faça aulas 1 a 1 na sala do JustTalk — com acompanhamento, notas compartilhadas e insights inclusos.",
+      "cta": "Conheça a plataforma"
+    },
+    "ai": {
+      "title": "JustTalk AI",
+      "description": "O lado de IA sozinho: personalidades que lembram de você, séries de role-play que evoluem a cada sessão, simulados de IELTS e acompanhamento do seu progresso.",
+      "cta": "Conheça o JustTalk AI"
+    }
+  },
   "platform": {
     "title": "Conversar funciona — quando é rastreado",
     "description": "A maioria das ferramentas de conversação permitem que você fale, mas não rastreiam o progresso real. JustTalk AI analisa o que você diz e constrói cada sessão sobre seu histórico — para que a melhoria seja cumulativa, não aleatória."

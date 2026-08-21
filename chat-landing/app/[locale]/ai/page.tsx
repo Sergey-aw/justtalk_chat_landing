@@ -2,10 +2,18 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { AgentDeck } from '@/components/AgentDeck';
 import { PersonalityCarousel } from '@/components/PersonalityCarousel';
+import { AgentDeck } from '@/components/AgentDeck';
 import { DialogueAnimation } from '@/components/DialogueAnimation';
+import { RolePlayCarousel } from '@/components/RolePlayCarousel';
+import { RolePlaySeries } from '@/components/RolePlaySeries';
+import { PricingSection } from '@/components/PricingSection';
+import { Conversation } from '@/components/Conversation';
+import { ProgressChart } from '@/components/ProgressChart';
 import { TrackedLink } from '@/components/TrackedLink';
+import { CircularRotation } from '@/components/CircularRotation';
+import { PlatformMedia } from '@/components/PlatformMedia';
+// import { IELTSReport } from '@/components/IELTSReport';
 import {
   Accordion,
   AccordionContent,
@@ -15,34 +23,10 @@ import {
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 
-const loopSteps = [
-  { key: 'lesson', image: '/1-on-1-lesson.webp' },
-  { key: 'practice', image: '/ai-mobile-app.webp' },
-  { key: 'insights', image: '/insights.webp' },
-] as const;
-
-const loopNodes = ['lesson', 'practice', 'insights', 'next'] as const;
-
-/** Rests on beige, blooms into colour on hover — same treatment as /creators. */
-const pathCards = [
-  {
-    key: 'tutors',
-    href: '/platform',
-    eventName: 'cta_learn_platform_clicked',
-    hover: '/bg_colored_square.jpg',
-  },
-  {
-    key: 'ai',
-    href: '/ai',
-    eventName: 'cta_explore_justtalk_ai_clicked',
-    hover: '/bg_colored4_square.jpg',
-  },
-] as const;
-
 export default function Home({ params }: { params: Promise<{ locale: string }> }) {
   // Enable static rendering
   params.then(({ locale }) => setRequestLocale(locale));
-
+  
   const t = useTranslations();
 
   return (
@@ -73,7 +57,7 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
                 <AgentDeck />
               </div>
             </div>
-
+            
             {/* CTA Buttons - Centered Below */}
             <div className="pt-8 flex justify-center">
               <div className="flex flex-col sm:flex-row gap-[17px] items-center">
@@ -106,200 +90,258 @@ export default function Home({ params }: { params: Promise<{ locale: string }> }
                 </TrackedLink>
               </div>
             </div>
-          </div>
+          </div> 
         </section>
 
-        {/* The Loop Section */}
-        <section id="how-it-works" className="w-full max-w-[1186px] px-10 py-16 md:py-24">
-          <div className="text-center mb-16 max-w-2xl mx-auto">
+        {/* Platform Section */}
+        <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
+          <div className="text-center mb-16">
             <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray">
-              {t('loop.title')}
+              {t('platform.title')}
             </h2>
-            <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mt-2">
-              {t('loop.description')}
-            </p>
+             <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4 mt-2 max-w-2xl mx-auto">
+                {t('platform.description')}
+              </p>
+          </div>
+          
+          <PlatformMedia />
+        </section>
+
+        {/* Features Section */}
+        <section id="features" className="w-full max-w-[1186px] px-10 py-16 md:py-24">
+          <div className="text-center mb-16">
+            <h2 className="text-2xl md:text-[28px] font-medium leading-[38.31px] tracking-[-0.29px] text-just_cod-gray">
+              {t('features.exploreMore')}
+            </h2>
           </div>
 
-          <div className="flex flex-col gap-16 md:gap-24">
-            {loopSteps.map((step) => (
-              <div key={step.key}>
-                <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                  {/* Text */}
-                  <div className="px-4 md:px-0 md:pr-8">
-                    <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
-                      {t(`loop.steps.${step.key}.title`)}
-                    </h3>
-                    <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
-                      {t(`loop.steps.${step.key}.description`)}
-                    </p>
-                  </div>
-
-                  {/* Image */}
-                  <div className="relative w-full aspect-[1618/990] rounded-2xl overflow-hidden">
-                    <Image
-                      src={step.image}
-                      alt={t(`loop.steps.${step.key}.title`)}
-                      fill
-                      sizes="(min-width: 768px) 560px, 100vw"
-                      className="object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Compounding band */}
-          <div className="mt-16 md:mt-24 bg-[#f8f6f0] rounded-2xl px-8 py-10 md:py-14">
-            <div className="text-center max-w-2xl mx-auto">
-              <h3 className="text-xl md:text-xl font-medium tracking-[-0.5px] text-just_cod-gray mb-2">
-                {t('loop.compounding.title')}
+          {/* Feature 1 - Learning Loop */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                {t('features.improvement.title')}
               </h3>
-              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
-                {t('loop.compounding.description')}
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                {t('features.improvement.description')}
               </p>
             </div>
-
-            <div className="mt-10 flex flex-col md:flex-row items-center justify-center gap-3">
-              {loopNodes.map((node, index) => (
-                <div key={node} className="flex flex-col md:flex-row items-center gap-3">
-                  <span
-                    className={`rounded-xl px-4 py-3 text-sm font-medium tracking-[-0.14px] text-center ${
-                      node === 'next'
-                        ? 'bg-just_cod-gray text-just_white'
-                        : 'bg-just_white text-just_cod-gray'
-                    }`}
-                  >
-                    {t(`loop.compounding.nodes.${node}`)}
-                  </span>
-                  {index < loopNodes.length - 1 && (
-                    <svg viewBox="0 0 16 16" fill="none" className="h-4 w-4 shrink-0 text-just_scorpion rotate-90 md:rotate-0" aria-hidden="true">
-                      <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            <div className="mt-10 flex justify-center">
-              <TrackedLink
-                href="https://chat.justtalk.ai/welcome?ref=justtalk.ai"
-                target="_blank"
-                rel="noopener"
-                eventName="cta_start_now_clicked"
-                eventProperties={{ location: 'loop_section' }}
-                includePricingVariant={true}
-              >
-                <Button className="cursor-pointer">
-                  {t('hero.getStarted')}
-                  <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} className="brightness-0 invert" />
-                </Button>
-              </TrackedLink>
+            
+            {/* Circular Rotation */}
+            <div className="relative w-full rounded-2xl overflow-hidden aspect-square md:aspect-4/3">
+              <img 
+                src="/bg_color_rotating.webp" 
+                alt="" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="relative z-10 w-full h-full flex items-center justify-center p-8">
+                <CircularRotation />
+              </div>
             </div>
           </div>
-        </section>
 
-        {/* Practice detail */}
-        <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
-          <div className="text-center mb-16 max-w-2xl mx-auto">
-            <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray">
-              {t('practice.title')}
-            </h2>
-            <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mt-2">
-              {t('practice.description')}
-            </p>
-          </div>
-
-          {/* Different personalities */}
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16 md:mb-24">
-            <div className="px-4 md:px-0 md:pr-8">
+          {/* Feature 2 - Tutors Carousel */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                 {t('features.personalities.title')}
               </h3>
-              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
                 {t('features.personalities.description')}
               </p>
+              
             </div>
-
+            
+            {/* Tutors Carousel */}
             <div className="relative w-full rounded-2xl overflow-hidden aspect-square md:aspect-4/3">
-              <img
-                src="/bg_green_square_.jpg"
-                alt=""
+              <img 
+                src="/bg_green_square_.jpg" 
+                alt="" 
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="relative z-10 w-full h-full flex items-center">
+              <div className="relative z-10 w-full h-full flex items-center p-0 md:p-0">
                 <PersonalityCarousel />
               </div>
             </div>
           </div>
 
-          {/* They remember you */}
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-            <div className="px-4 md:px-0 md:pr-8">
+          {/* Feature 3 - Memory */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
               <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
                 {t('features.memory.title')}
               </h3>
-              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray">
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
                 {t('features.memory.description')}
               </p>
+             
             </div>
-
             <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
               <DialogueAnimation />
             </div>
           </div>
-        </section>
 
-        {/* Two ways in */}
-        <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
-          <div className="text-center mb-16 max-w-2xl mx-auto">
-            <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray">
-              {t('paths.title')}
-            </h2>
-            <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mt-2">
-              {t('paths.description')}
-            </p>
+          {/* Feature 4 - Role Play Scenarios */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                {t('features.scenarios.title')}
+              </h3>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                {t('features.scenarios.description')}
+              </p>
+              
+            </div>
+            
+            {/* Role Play Carousel */}
+            <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
+              <img 
+                src="/bg_colored_square.jpg" 
+                alt="" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="relative z-10 w-full h-full flex items-center p-0">
+                <RolePlayCarousel />
+              </div>
+            </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {pathCards.map(({ key, href, eventName, hover }) => (
-              <TrackedLink
-                key={key}
-                href={href}
-                rel="noopener"
-                eventName={eventName}
-                eventProperties={{ location: 'paths_section' }}
-                className="group relative flex flex-col overflow-hidden rounded-2xl p-8 text-just_cod-gray hover:text-just_white transition-colors duration-300"
-              >
-                <img
-                  src="/bg_beige_square.jpg"
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <img
-                  src={hover}
-                  alt=""
-                  aria-hidden="true"
-                  className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                />
+          {/* Feature - IELTS Speaking — commented out
+          <div id="ielts" className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                {t('ielts.feature.title')}
+              </h3>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                {t('ielts.feature.description')}
+              </p>
+            </div>
 
-                <h3 className="relative z-10 text-xl font-medium leading-[23.15px] tracking-[-0.177px] mb-2">
-                  {t(`paths.${key}.title`)}
+            IELTS Speaking band report
+            <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden bg-gray-50 border border-just_black-5">
+              <IELTSReport />
+            </div>
+          </div>
+          */}
+
+          {/* Feature 5 - Role Play Series */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                {t('features.roleplay.title')}
+              </h3>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                {t('features.roleplay.description')}
+              </p>
+              
+            </div>
+            
+            {/* Role Play Series */}
+            <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
+              <img 
+                src="/bg_colored_orange.jpg" 
+                alt="" 
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <div className="relative z-10 w-full h-full flex items-center p-0 pt-3">
+                <RolePlaySeries />
+              </div>
+            </div>
+          </div>
+
+          {/* Feature 6 - Personalized Scenarios */}
+          <div className="grid md:grid-cols-2 gap-8 items-center mb-24">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                {t('features.personalized.title')}
+              </h3>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                {t('features.personalized.description')}
+              </p>
+              
+            </div>
+            
+            {/* Personalized Scenarios Image */}
+            <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden">
+              <img 
+                src="/personalized_agent.webp" 
+                alt="Personalized scenarios" 
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Feature 7 - Progress Tracking */}
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div className="px-4 md:px-20">
+              <h3 className="text-xl font-medium leading-[23.15px] tracking-[-0.177px] text-just_cod-gray mb-2">
+                {t('features.progress.title')}
+              </h3>
+              <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4">
+                {t('features.progress.description')}
+              </p>
+              
+            </div>
+            
+            {/* Progress Chart */}
+            <div className="relative w-full aspect-square md:aspect-4/3 rounded-2xl overflow-hidden bg-gray-50 border border-just_black-5 p-0">
+              <ProgressChart />
+            </div>
+          </div>
+        </section>
+
+           {/* Pricing Section */}
+        <PricingSection />
+
+        {/* AI to Tutors Section */}
+        <section className="w-full max-w-[1186px] px-10 py-16 md:py-24">
+
+            <div className="text-center mb-16">
+            <h2 className="text-2xl md:text-[27.8px] font-medium tracking-[-0.29px] text-just_cod-gray">
+              {t('tutors.title')}
+            </h2>
+             <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-4 mt-2 max-w-2xl mx-auto">
+                {t('tutors.description')}
+              </p>
+          </div>
+
+          <div className="bg-[#f8f6f0] rounded-2xl px-8 py-8">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
+              {/* Image */}
+              <div className="relative w-full aspect-3/2 rounded-2xl overflow-hidden">
+                <img 
+                  src="/hero_blue_2.jpg" 
+                  alt="JustTalk AI Platform connecting to tutors" 
+                  className="object-cover h-full w-full"
+                  fetchPriority="high"
+                />
+              </div>
+
+              {/* Text Content - 3 Sections */}
+              <div className="px-4 md:px-0 space-y-12">
+            
+
+              {/* Section 3 */}
+              <div>
+                <h3 className="text-xl md:text-xl font-medium tracking-[-0.5px] text-just_cod-gray mb-1">
+                  {t('tutors.liveTutoring.title')}
                 </h3>
-                <p className="relative z-10 text-base font-normal leading-[22.96px] tracking-[-0.14px] mb-6 grow">
-                  {t(`paths.${key}.description`)}
+                <p className="text-base font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray mb-6">
+                  {t('tutors.liveTutoring.description')}
                 </p>
-                <div className="relative z-10">
-                  <Button variant="outline" asChild>
-                    <span className="cursor-pointer text-just_cod-gray">
-                      {t(`paths.${key}.cta`)}
-                      <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
-                    </span>
+                <TrackedLink
+                  href="/platform"
+                  rel="noopener"
+                  eventName="cta_learn_platform_clicked"
+                  eventProperties={{ location: 'ai_tutors_section' }}
+                >
+                  <Button variant="outline" className="cursor-pointer">
+                    {t('tutors.learnPlatform')}
+                    <Image src="/icons/arrow-right.svg" alt="" width={16} height={16} />
                   </Button>
-                </div>
-              </TrackedLink>
-            ))}
+                </TrackedLink>
+              </div>
+            </div>
+          </div>
           </div>
         </section>
 
