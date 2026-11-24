@@ -70,6 +70,8 @@ export function Footer() {
             <ul className="space-y-3">
               <li><a href={justTalkAiUrl} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Voice Chat', justTalkAiUrl)}>{t('justtalkAi')}</a></li>
               <li><a href={`https://justtalk.ai/${locale}/platform`} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Teachers', `https://justtalk.ai/${locale}/platform`)}>{t('justtalkTutors')}</a></li>
+              <li><a href={`/${locale}/ielts`} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('IELTS', `/${locale}/ielts`)}>{t('ielts')}</a></li>
+              <li><a href={`/${locale}/becometeacher`} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Become a Teacher', `/${locale}/becometeacher`)}>{t('becomeTeacher')}</a></li>
               <li><a href={`/${locale}/ambassador`} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Ambassadors', `/${locale}/ambassador`)}>{t('ambassadors')}</a></li>
               <li><a href={`/${locale}/creators`} className="text-sm font-normal leading-[22.96px] tracking-[-0.14px] text-just_cod-gray hover:underline" onClick={() => handleFooterLinkClick('Creators', `/${locale}/creators`)}>{t('creators')}</a></li>
             </ul>

@@ -6,6 +6,7 @@
   "nav": {
     "justtalkAi": "JustTalk AI",
     "justtalkTutors": "JustTalk 导师",
+    "interviewPrep": "面试准备",
     "becomeTeacher": "成为导师",
     "ielts": "雅思",
     "login": "登录",
@@ -217,6 +218,8 @@
   "footer": {
     "justtalkAi": "JustTalk AI",
     "justtalkTutors": "JustTalk 导师",
+    "ielts": "雅思",
+    "becomeTeacher": "成为导师",
     "ambassadors": "大使计划",
     "creators": "创作者计划",
     "help": "帮助",

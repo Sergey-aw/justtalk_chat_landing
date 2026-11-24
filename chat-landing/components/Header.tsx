@@ -9,6 +9,23 @@ import posthog from 'posthog-js';
 import { usePricingVariant } from '@/hooks/usePricingVariant';
 import { locales, localeNames, type Locale } from '@/i18n/config';
 
+/**
+ * Interview Prep lives on its own subdomain. `ref` matches how every other
+ * outbound link on the site is tagged; the utm_* params are what PostHog
+ * records automatically on the destination's pageview, and utm_content
+ * tells the desktop nav apart from the mobile menu.
+ */
+function interviewPrepUrl(location: 'desktop' | 'mobile') {
+  const params = new URLSearchParams({
+    ref: 'justtalk.ai',
+    utm_source: 'justtalk.ai',
+    utm_medium: 'nav',
+    utm_campaign: 'interview_prep',
+    utm_content: `header_${location}`,
+  });
+  return `https://interview.justtalk.ai/?${params}`;
+}
+
 export function Header() {
   const t = useTranslations('nav');
   const locale = useLocale() as Locale;
@@ -46,6 +63,14 @@ export function Header() {
     });
   };
 
+  const handleInterviewPrepClick = (location: 'desktop' | 'mobile') => {
+    posthog.capture('header_interview_prep_clicked', {
+      location,
+      page: pathname,
+      url: interviewPrepUrl(location),
+    });
+  };
+
   const handleLocaleChange = (newLocale: Locale) => {
     router.replace(pathname, { locale: newLocale });
     setIsMobileMenuOpen(false);
@@ -70,11 +95,8 @@ export function Header() {
               <a href={`/${locale}/platform`} className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
               {t('justtalkTutors')}
             </a>
-            <a href={`/${locale}/becometeacher`} className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
-              {t('becomeTeacher')}
-            </a>
-            <a href={`/${locale}/ielts`} className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
-              {t('ielts')}
+            <a href={interviewPrepUrl('desktop')} rel="noopener" onClick={() => handleInterviewPrepClick('desktop')} className="px-[10px] py-[6px] rounded-lg text-just_scorpion text-sm font-medium tracking-[-0.14px] hover:bg-just_black-5 transition-colors">
+              {t('interviewPrep')}
             </a>
           </nav>
 
@@ -146,18 +168,15 @@ export function Header() {
                 {t('justtalkTutors')}
               </a>
               <a
-                href={`/${locale}/becometeacher`}
+                href={interviewPrepUrl('mobile')}
+                rel="noopener"
                 className="text-lg font-medium text-just_cod-gray"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => {
+                  handleInterviewPrepClick('mobile');
+                  setIsMobileMenuOpen(false);
+                }}
               >
-                {t('becomeTeacher')}
-              </a>
-              <a
-                href={`/${locale}/ielts`}
-                className="text-lg font-medium text-just_cod-gray"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {t('ielts')}
+                {t('interviewPrep')}
               </a>
 
               {/* Language Selector in Mobile Menu */}
