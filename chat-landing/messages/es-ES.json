@@ -6,6 +6,7 @@
   "nav": {
     "justtalkAi": "JustTalk AI",
     "justtalkTutors": "JustTalk Tutores",
+    "interviewPrep": "Preparación de entrevistas",
     "becomeTeacher": "Convertirse en Tutor",
     "ielts": "IELTS",
     "login": "Iniciar sesión",
@@ -217,6 +218,8 @@
   "footer": {
     "justtalkAi": "JustTalk AI",
     "justtalkTutors": "JustTalk Tutores",
+    "ielts": "IELTS",
+    "becomeTeacher": "Convertirse en Tutor",
     "ambassadors": "Embajadores",
     "creators": "Creadores",
     "help": "Ayuda",
