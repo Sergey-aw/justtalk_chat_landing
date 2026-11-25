@@ -15,10 +15,10 @@ import { INTERVIEW_HERO_FLAG, isHeroVariant, type HeroVariant } from '@/lib/inte
 export type HeroVariantSource = 'flag' | 'default' | 'fallback' | 'preview';
 
 /**
- * How long the copy may stay hidden waiting for flags. Measured from a far-from-US
- * machine, PostHog's US endpoint answers in ~1.1–2.8s through the /ingest proxy, so
- * anything shorter silently drops assigned visitors back to control. Server-side
- * assignment (see the experiment notes) removes this wait altogether.
+ * How long a visitor can be switched off control once their flag arrives. Control is
+ * on screen meanwhile; past this, they stay on it and out of the experiment rather than
+ * see the copy change under them late. Measured from a far-from-US machine, PostHog's
+ * US endpoint answers in ~1.1–2.8s through the /ingest proxy.
  */
 const FLAG_TIMEOUT_MS = 3000;
 

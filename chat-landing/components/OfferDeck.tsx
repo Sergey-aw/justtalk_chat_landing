@@ -7,6 +7,16 @@ import { TrackedLink } from '@/components/TrackedLink';
 import { SwipeCard, useSwipeDeck } from '@/components/SwipeDeck';
 import type { Offer } from '@/lib/interview-hero';
 
+/** An offer with its words filled in for the visitor's locale. */
+export interface OfferCard extends Offer {
+  title: string;
+  /** line 2 on the card */
+  subtitle: string;
+  /** shown on the top card only */
+  description: string;
+  cta: string;
+}
+
 interface OfferLink {
   href: string;
   eventName: string;
@@ -35,11 +45,14 @@ const readReducedMotion = () => window.matchMedia('(prefers-reduced-motion: redu
 export function OfferDeck({
   offers,
   linkFor,
+  describe,
 }: {
   /** in display order: the first one starts on top */
-  offers: Offer[];
+  offers: OfferCard[];
   /** builds each card's tracked link, so the page decides where clicks go and what's sent */
-  linkFor: (offer: Offer, rotations: number) => OfferLink;
+  linkFor: (offer: OfferCard, rotations: number) => OfferLink;
+  /** the stack's accessible name, given the title of the card on top */
+  describe: (title: string) => string;
 }) {
   // sent with each click: did they take the lead offer, or one that came round later?
   const [rotations, setRotations] = useState(0);
@@ -66,7 +79,7 @@ export function OfferDeck({
       className="relative h-full w-full select-none rounded-3xl"
       role="group"
       aria-roledescription="carousel"
-      aria-label={`Ways to prepare. Showing ${top?.title}.`}
+      aria-label={describe(top?.title ?? '')}
       onPointerEnter={() => setHovered(true)}
       onPointerLeave={() => setHovered(false)}
       onFocus={() => setFocused(true)}

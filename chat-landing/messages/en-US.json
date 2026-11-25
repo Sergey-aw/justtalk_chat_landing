@@ -19,6 +19,43 @@
     "getStarted": "Get Started",
     "getIosApp": "Get iOS app"
   },
+  "interviewHero": {
+    "variants": {
+      "control": {
+        "headline": "Interview abroad at the level you’ve earned",
+        "subheadline": "A live 50-minute mock interview for your target role, then an expert report within 24 hours: what strengthens your case, what weakens it, and what to fix first."
+      },
+      "problem": {
+        "headline": "You know your work. Make your answers sound like it",
+        "subheadline": "Interviewing in English when it isn’t your first language? Rehearse a live mock for the role you want, and an expert shows you exactly what to fix first."
+      }
+    },
+    "cta": {
+      "primary": "Get your Interview Audit",
+      "secondary": "See how the Audit works"
+    },
+    "offers": {
+      "audit": {
+        "title": "Interview Audit",
+        "subtitle": "Live mock + expert report",
+        "description": "A 50-minute mock interview built from your CV and the job details. An expert report follows within 24 hours, with what to fix first.",
+        "cta": "Get your Audit"
+      },
+      "report": {
+        "title": "Expert report",
+        "subtitle": "Within 24 hours",
+        "description": "Your mock reviewed across Content, Structure, Delivery, Interaction and Language: strengths, weaknesses and priority fixes, with directions to practise.",
+        "cta": "Get your Audit"
+      },
+      "sessions": {
+        "title": "Inside a real mock",
+        "subtitle": "On video",
+        "description": "Short clips from real JustTalk mock interviews. See how the live interview every Audit starts with actually runs.",
+        "cta": "Watch the clips"
+      }
+    },
+    "deckLabel": "Ways to prepare. Showing {title}."
+  },
   "loop": {
     "title": "Everything you do builds one context",
     "description": "A class with a real tutor. AI role-plays built from that class. Insights that carry into the next one. Nothing you say gets thrown away.",

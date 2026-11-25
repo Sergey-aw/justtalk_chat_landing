@@ -19,6 +19,43 @@
     "getStarted": "Comenzar",
     "getIosApp": "Descargar app de iOS"
   },
+  "interviewHero": {
+    "variants": {
+      "control": {
+        "headline": "Haz entrevistas en el extranjero al nivel que te has ganado",
+        "subheadline": "Una entrevista simulada en directo de 50 minutos para el puesto que buscas y, en menos de 24 horas, un informe de un experto: qué refuerza tu candidatura, qué la debilita y qué corregir primero."
+      },
+      "problem": {
+        "headline": "Conoces tu trabajo. Haz que tus respuestas lo demuestren",
+        "subheadline": "¿Haces entrevistas en inglés y no es tu lengua materna? Ensaya una entrevista simulada en directo para el puesto que quieres y un experto te mostrará exactamente qué corregir primero."
+      }
+    },
+    "cta": {
+      "primary": "Consigue tu Interview Audit",
+      "secondary": "Mira cómo funciona el Audit"
+    },
+    "offers": {
+      "audit": {
+        "title": "Interview Audit",
+        "subtitle": "Simulación en directo + informe de experto",
+        "description": "Una entrevista simulada de 50 minutos basada en tu CV y en la oferta de empleo. En menos de 24 horas recibes un informe de un experto con lo que debes corregir primero.",
+        "cta": "Consigue tu Audit"
+      },
+      "report": {
+        "title": "Informe de experto",
+        "subtitle": "En menos de 24 horas",
+        "description": "Tu simulación revisada en contenido, estructura, expresión oral, interacción y lenguaje: puntos fuertes, puntos débiles y prioridades, con indicaciones para practicar.",
+        "cta": "Consigue tu Audit"
+      },
+      "sessions": {
+        "title": "Dentro de una simulación real",
+        "subtitle": "En vídeo",
+        "description": "Fragmentos de entrevistas simuladas reales de JustTalk. Mira cómo es la entrevista en directo con la que empieza cada Audit.",
+        "cta": "Ver los vídeos"
+      }
+    },
+    "deckLabel": "Formas de prepararte. Mostrando {title}."
+  },
   "loop": {
     "title": "Todo lo que haces construye un mismo contexto",
     "description": "Una clase con un profesor real. Role-plays con IA creados a partir de esa clase. Insights que pasan a la siguiente. Nada de lo que dices se pierde.",
