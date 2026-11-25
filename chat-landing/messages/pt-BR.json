@@ -19,6 +19,43 @@
     "getStarted": "Começar",
     "getIosApp": "Baixar o app iOS"
   },
+  "interviewHero": {
+    "variants": {
+      "control": {
+        "headline": "Faça entrevistas no exterior no nível que você conquistou",
+        "subheadline": "Uma entrevista simulada ao vivo de 50 minutos para a vaga que você quer e, em até 24 horas, um relatório de um especialista: o que fortalece sua candidatura, o que a enfraquece e o que corrigir primeiro."
+      },
+      "problem": {
+        "headline": "Você conhece seu trabalho. Faça suas respostas mostrarem isso",
+        "subheadline": "Vai fazer entrevistas em inglês e não é sua língua nativa? Ensaie uma entrevista simulada ao vivo para a vaga que você quer, e um especialista mostra exatamente o que corrigir primeiro."
+      }
+    },
+    "cta": {
+      "primary": "Garanta seu Interview Audit",
+      "secondary": "Veja como o Audit funciona"
+    },
+    "offers": {
+      "audit": {
+        "title": "Interview Audit",
+        "subtitle": "Simulação ao vivo + relatório de especialista",
+        "description": "Uma entrevista simulada de 50 minutos montada a partir do seu currículo e da descrição da vaga. Em até 24 horas, um especialista envia um relatório com o que corrigir primeiro.",
+        "cta": "Garanta seu Audit"
+      },
+      "report": {
+        "title": "Relatório de especialista",
+        "subtitle": "Em até 24 horas",
+        "description": "Sua simulação avaliada em conteúdo, estrutura, expressão oral, interação e linguagem: pontos fortes, pontos fracos e prioridades, com orientações para praticar.",
+        "cta": "Garanta seu Audit"
+      },
+      "sessions": {
+        "title": "Por dentro de uma simulação real",
+        "subtitle": "Em vídeo",
+        "description": "Trechos de entrevistas simuladas reais do JustTalk. Veja como funciona a entrevista ao vivo que abre cada Audit.",
+        "cta": "Ver os vídeos"
+      }
+    },
+    "deckLabel": "Formas de se preparar. Mostrando {title}."
+  },
   "loop": {
     "title": "Tudo o que você faz constrói um mesmo contexto",
     "description": "Uma aula com um professor de verdade. Role-plays com IA criados a partir dessa aula. Insights que seguem para a próxima. Nada do que você fala se perde.",

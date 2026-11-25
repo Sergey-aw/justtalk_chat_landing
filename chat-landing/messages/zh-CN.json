@@ -19,6 +19,43 @@
     "getStarted": "开始使用",
     "getIosApp": "获取 iOS 应用"
   },
+  "interviewHero": {
+    "variants": {
+      "control": {
+        "headline": "在海外面试中，发挥你应有的水平",
+        "subheadline": "针对你的目标岗位进行一场 50 分钟的真人模拟面试，24 小时内收到专家报告：哪些地方加分、哪些地方减分，以及最先要改进什么。"
+      },
+      "problem": {
+        "headline": "你懂你的工作，让你的回答也体现出来",
+        "subheadline": "英语不是你的母语，却要用英语面试？针对你想要的岗位演练一场真人模拟面试，专家会准确告诉你最先要改进什么。"
+      }
+    },
+    "cta": {
+      "primary": "获取 Interview Audit",
+      "secondary": "了解 Audit 如何进行"
+    },
+    "offers": {
+      "audit": {
+        "title": "Interview Audit",
+        "subtitle": "真人模拟面试 + 专家报告",
+        "description": "根据你的简历和职位描述定制的 50 分钟模拟面试。24 小时内收到专家报告，告诉你最先要改进什么。",
+        "cta": "获取 Audit"
+      },
+      "report": {
+        "title": "专家报告",
+        "subtitle": "24 小时内送达",
+        "description": "从内容、结构、表达、互动和语言五个方面评估你的模拟面试：优势、不足和优先改进点，并附练习指导。",
+        "cta": "获取 Audit"
+      },
+      "sessions": {
+        "title": "真实模拟面试现场",
+        "subtitle": "视频",
+        "description": "JustTalk 真实模拟面试的片段。看看每次 Audit 开头的那场真人面试是怎样进行的。",
+        "cta": "观看视频"
+      }
+    },
+    "deckLabel": "备考方式。当前：{title}。"
+  },
   "loop": {
     "title": "你做的每一件事，都在积累同一份上下文",
     "description": "和真人老师上一节课，用这节课生成 AI 角色扮演，再把洞察带进下一节课。你说过的话不会被浪费。",
